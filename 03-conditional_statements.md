@@ -229,8 +229,7 @@ The correct answer is  **c)** 2013.
 If this algorithm/pseudo-code is translated to Python language, it will look like this:
 
 
-```python
-
+``` python
 a_total = 2
 
 b_total = 9
@@ -250,7 +249,7 @@ while (current_total > 1):
 print(current_year)
 ```
 
-```{.output}
+``` output
 2013
 ```
 :::::::::::::::::::::
@@ -276,7 +275,7 @@ To implement conditional statements in Python, we use 3 syntaxes:
 * To initiate the statement, we use the syntax <kbd>if</kbd> followed by the condition and a colon;
 
 
-```python
+``` python
 students_present = 15
 
 # Conditional statement:
@@ -285,7 +284,7 @@ if students_present > 10:  # Initiation
     print('More than 10 students are present.')
 ```
 
-```{.output}
+``` output
 More than 10 students are present.
 ```
 
@@ -294,7 +293,7 @@ More than 10 students are present.
 * To create an alternative condition after the first condition has been defined, we use the syntax <kbd>elif</kbd> followed by the new condition and a colon;
 
 
-```python
+``` python
 students_present = 5
 
 # Conditional statement:
@@ -307,7 +306,7 @@ elif 0 < students_present < 10:
     print('Less than 10 students are present.')
 ```
 
-```{.output}
+``` output
 Less than 10 students are present.
 ```
 
@@ -316,7 +315,7 @@ Less than 10 students are present.
 
 
 
-```python
+``` python
 students_present = 0
 
 # Conditional statement:
@@ -333,7 +332,7 @@ else:  # Default (none of the conditions are met).
     print('There is no one!')
 ```
 
-```{.output}
+``` output
 There is no one!
 ```
 
@@ -356,8 +355,7 @@ The indented part of the code is known as a *block*. A block represents a part o
 </p>
 
 
-```python
-
+``` python
 value = 10
 
 # Statement A:
@@ -392,7 +390,7 @@ else:
     print('The value is zero.')
 ```
 
-```{.output}
+``` output
 The value is positive.
 The value is not a single digit.
 ```
@@ -406,7 +404,7 @@ On that note, where possible, it is better to use conjunctions and disjunctions,
 </p>
 
 
-```python
+``` python
 value = 10
 
 if value > 9:
@@ -421,7 +419,7 @@ else:
   print('The value is zero.')
 ```
 
-```{.output}
+``` output
 The value is positive.
 The value is not a single digit.
 ```
@@ -483,7 +481,7 @@ Classification: XXX
 :::::::::::::::::: solution
 
 
-```python
+``` python
 #Constructing the codons:
 
 glutamine_codon = 'CAG'
@@ -532,7 +530,7 @@ print('Status:', status)
 #Repeat this with 15, 39, 32, 36, and 54 codons.
 ```
 
-```{.output}
+``` output
 PolyQ chain with 26.0 number of CAG codons:
 Classification: Intermediate
 Status: Unaffected
@@ -560,7 +558,7 @@ In the following example, the first condition is ```True```, therefore its corre
 </p>
 
 
-```python
+``` python
 TATA_BOX = 'TATA'
 
 promoter_region = 'GTAACTGTGGTATAATCGT'
@@ -575,7 +573,7 @@ else:
     print('There is no "TATA" box in this promoter region.')
 ```
 
-```{.output}
+``` output
 There is a "TATA" box in this promoter region.
 ```
 
@@ -591,14 +589,14 @@ We have also learned that in conditional statements, we use *double* equals} or 
 </p>
 
 
-```python
+``` python
 variable = False
 
 if variable == False:
     print('The variable is False.')
 ```
 
-```{.output}
+``` output
 The variable is False.
 ```
 
@@ -609,21 +607,21 @@ This works, and it looks simple enough. However, this is the **wrong approach** 
 The correct way to test the *truth value* of a *boolean* variable is by using <kbd>is</kbd> as follows:
 
 
-```python
+``` python
 variable = False
 
 if variable is False:
     print('The variable is False.')
 ```
 
-```{.output}
+``` output
 The variable is False.
 ```
 
 and the negative test is:
 
 
-```python
+``` python
 variable = True
 
 if variable is not False:
@@ -631,7 +629,7 @@ if variable is not False:
     print('The variable is True.')
 ```
 
-```{.output}
+``` output
 The variable is True.
 ```
 
@@ -644,7 +642,7 @@ In short; as far as *boolean* variables are concerned, we should always use <kbd
 Consequently, we can now write the example [algorithm](#ex:roomAndLight) (room and light) as follows:
 
 
-```python
+``` python
 light_status = False
 
 if light_status is True:
@@ -657,7 +655,7 @@ else:
 print(action)
 ```
 
-```{.output}
+``` output
 The light is off... turn it on.
 ```
 
@@ -670,7 +668,7 @@ In an <kbd>if</kbd> statement, Python expects the result of the condition to be 
 </p>
 
 
-```python
+``` python
 light_status = False
 
 if light_status:
@@ -684,7 +682,7 @@ else:
 print(action)
 ```
 
-```{.output}
+``` output
 The light is off... turn it on.
 ```
 
@@ -693,7 +691,7 @@ Sometime, however, we might need to test for a ```False``` outcome. To do so, we
 </p>
 
 
-```python
+``` python
 # Note that we have changed the order of the condition
 # and added a "not" before "light_status"
 if not light_status:
@@ -707,7 +705,7 @@ else:
 print(action)
 ```
 
-```{.output}
+``` output
 The light is off... turn it on.
 ```
 
@@ -726,7 +724,7 @@ The classification protocol is as follows:
 * Below 40\%: Fail.
 
 
-```python
+``` python
 mark = 63
 
 # Thresholds
@@ -749,7 +747,7 @@ else:
 print('The student obtained a', classification, 'in their studies.')
 ```
 
-```{.output}
+``` output
 The student obtained a Second Class (upper division) in their studies.
 ```
 
@@ -803,7 +801,7 @@ If there is a match, our programme should display the name of the corresponding 
 ## Please check these solutions only after submitting the assignments.
 
 
-```python
+``` python
 peptide = (
  	"PVWNETFVFNLKPGDVERRLSVEVWDWDRTSRNDFMGAMSFGVSELLK"
  	"APVDGWYKLLNQEEGEYYNVPVADADNCSLLQKFEACNYPLELYERVR"
@@ -824,7 +822,7 @@ else:
   print('No matches found.')
 ```
 
-```{.output}
+``` output
 PKC-gamma
 ```
 

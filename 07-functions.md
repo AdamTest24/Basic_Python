@@ -114,7 +114,7 @@ Once you start creating functions for different purposes; after a while, you wil
 So let us implement the example outline in the diagram:
 
 
-```python
+``` python
 def add(value_a, value_b):
     """
     Calculates the sum of 2 numeric values
@@ -136,13 +136,13 @@ Once implemented, we can go ahead use the function. We can do so in the same way
 </p>
 
 
-```python
+``` python
 res = add(2, 5)
 
 print(res)
 ```
 
-```{.output}
+``` output
 7
 ```
 
@@ -171,26 +171,26 @@ Alternatively, we can use the name of each *input argument* to pass values onto 
 Let us now use *keyword arguments* to pass values to our <kbd>add()</kbd> function:
 
 
-```python
+``` python
 res = add(value_a=2, value_b=5)
 
 print(res)
 ```
 
-```{.output}
+``` output
 7
 ```
 
 Now even if we changed the order of our arguments, the function would still be able to associate the values correctly:
 
 
-```python
+``` python
 res = add(value_b=2, value_a=5)
 
 print(res)
 ```
 
-```{.output}
+``` output
 7
 ```
 
@@ -206,7 +206,7 @@ Suppose we want to define a "division" function. It makes sense to assume that t
 </p>
 
 
-```python
+``` python
 def divide(a, b):
     return a / b
 ```
@@ -214,21 +214,21 @@ def divide(a, b):
 It is also much less likely for someone to use *keywords* to pass arguments to this function -- that is, to say:
 
 
-```python
+``` python
 result = divide(a=2, b=4)
 ```
 
 than it is for them to use positional arguments (without any keywords), that is:
 
 
-```python
+``` python
 result = divide(2, 4)
 ```
 
 But if we use an arbitrary order, then we risk running into problems:
 
 
-```python
+``` python
 def divide_bad(denominator, numerator):
     return numerator / denominator
 ```
@@ -238,14 +238,14 @@ In which case, our function would perform perfectly well if we use *keyword argu
 </p>
 
 
-```python
+``` python
 result_a = divide_bad(numerator=2, denominator=4)
 result_b = divide_bad(2, 4)
 
 print(result_a == result_b)
 ```
 
-```{.output}
+``` output
 False
 ```
 ::::::::::::::::::::::::::::::::::::
@@ -275,7 +275,7 @@ res = find_tata(sequence)
 
 ## DIY ANSWER
 
-```python
+``` python
 def find_tata(seq):
     tata_box = 'TATA'
     result = seq.find(tata_box)
@@ -302,7 +302,7 @@ The documentation string, also known as the *docstring*, is always written insid
 </p>
 
 
-```python
+``` python
 def add(value_a, value_b):
     """
     Calculates the sum of 2 numeric values
@@ -332,11 +332,11 @@ Writing the *docstring* on the first line is important because once a function i
 </p>
 
 
-```python
+``` python
 help(add)
 ```
 
-```{.output}
+``` output
 Help on function add in module __main__:
 
 add(value_a, value_b)
@@ -356,7 +356,7 @@ For very simple functions -- e.g.  the function <kbd>add()</kbd> that we impleme
 </p>
 
 
-```python
+``` python
 def add(value_a, value_b):
     """value_a + value_b -> number"""
     result = value_a + value_b
@@ -364,11 +364,11 @@ def add(value_a, value_b):
 ```
 
 
-```python
+``` python
 help(add)
 ```
 
-```{.output}
+``` output
 Help on function add in module __main__:
 
 add(value_a, value_b)
@@ -387,7 +387,7 @@ Re-implement the function you defined in the previous [Do it Yourself](#diy:func
 ## DIY ANSWER
 
 
-```python
+``` python
 def find_tata(seq):
     """
     Finds the location of the TATA-box,
@@ -444,7 +444,7 @@ To define functions with optional arguments, we need to assign to them a default
 </p>
 
 
-```python
+``` python
 def prepare_seq(seq, name, upper=False):
     """
     Prepares a sequence to be displayed.
@@ -472,7 +472,7 @@ def prepare_seq(seq, name, upper=False):
 Now if we don't explicitly define ```upper``` when calling <kbd>prepare_seq()</kbd>, its value is automatically considered to be ```False```:
 
 
-```python
+``` python
 sequence = 'TagCtGC'
 
 prepped = prepare_seq(sequence, 'DNA')
@@ -480,20 +480,20 @@ prepped = prepare_seq(sequence, 'DNA')
 print(prepped)
 ```
 
-```{.output}
+``` output
 The sequence of DNA is: TagCtGC
 ```
 
 If we change the default value of ```False``` for ```upper``` and set to ```True```, our sequence should be converted to upper case characters:
 
 
-```python
+``` python
 prepped = prepare_seq(sequence, 'DNA', upper=True)
 
 print(prepped)
 ```
 
-```{.output}
+``` output
 The sequence of DNA is: TAGCTGC
 ```
 
@@ -517,7 +517,7 @@ Do not forget to update the *docstring* of your function.
 ## DIY ANSWER
 
 
-```python
+``` python
 def find_tata(seq, upper=False):
     """
     Finds the location of the TATA-box,
@@ -562,7 +562,7 @@ It is possible to have more than one <kbd>return</kbd> in a function. This is us
 This means that we can simplify the process as follows:
 
 
-```python
+``` python
 def prepare_seq(seq, name, upper=False):
     """
     Prepares a sequence to be displayed.
@@ -597,7 +597,7 @@ This does not alter the functionality of our function in any way. However, in co
 Now if we call our function, it will behave in exactly the same way as it did before:
 
 
-```python
+``` python
 sequence = 'TagCtGC'
 
 prepped = prepare_seq(sequence, 'DNA')
@@ -605,19 +605,19 @@ prepped = prepare_seq(sequence, 'DNA')
 print(prepped)
 ```
 
-```{.output}
+``` output
 The sequence of DNA is: TagCtGC
 ```
 
 
 
-```python
+``` python
 prepped = prepare_seq(sequence, 'DNA', upper=True)
 
 print(prepped)
 ```
 
-```{.output}
+``` output
 The sequence of DNA is: TAGCTGC
 ```
 
@@ -640,7 +640,7 @@ So if you need to get more things done, do not write more code in one function. 
 ![](fig/mini_toolbox.png)
 
 
-```python
+``` python
 def mean(arr):
     """
     Calculates the mean of an array.
@@ -661,7 +661,7 @@ def mean(arr):
 Now that we have function to calculate the *mean*, we can go ahead and write a function to calculate the variance, which itself relies on *mean*:
 
 
-```python
+``` python
 def variance(arr):
     """
     Calculates the variance of an array.
@@ -689,29 +689,29 @@ Now we have two functions, which we can use to calculate the *variance* or the *
 Remember that testing a function a crucial part of its design. So let us go ahead and test our functions:
 
 
-```python
+``` python
 numbers = [1, 5, 0, 14.2, -23.344, 945.23, 3.5e-2]
 ```
 
 
-```python
+``` python
 numbers_mean = mean(numbers)
 
 print(numbers_mean)
 ```
 
-```{.output}
+``` output
 134.58871428571427
 ```
 
 
-```python
+``` python
 numbers_variance = variance(numbers)
 
 print(numbers_variance)
 ```
 
-```{.output}
+``` output
 109633.35462420408
 ```
 
@@ -720,7 +720,7 @@ Now that we have a function to calculate the *variance*, we could easily go on t
 The standard deviation is calculated from the square root of variance. We can easily implement this in a new function as follows:
 
 
-```python
+``` python
 def stan_dev(arr):
     """
     Calculates the standard deviation of an array.
@@ -742,13 +742,13 @@ def stan_dev(arr):
 Now let's see how it works in practice:
 
 
-```python
+``` python
 numbers_std = stan_dev(numbers)
 
 print(numbers_std)
 ```
 
-```{.output}
+``` output
 331.1092789762982
 ```
 
@@ -766,7 +766,7 @@ Write a function that given an array of any values, produces a dictionary contai
 For the following array:
 
 
-```python
+``` python
 values = [1, 1.3, 1, 1, 5, 5, 1.3, 'text', 'text', 'something']
 ```
 
@@ -779,7 +779,7 @@ the function should return the above dictionary:
 ## DIY ANSWER
 
 
-```python
+``` python
 def count_values(arr):
     """
     Converts an array into a dictionary of
@@ -829,7 +829,7 @@ Write a function with the following features:
 To test the function, combine three arrays in a tuple as follows:
 
 
-```python
+``` python
 my_arrays = (
     [1, 2, 3, 4, 5],
     [7, 7, 7, 7],
@@ -856,7 +856,7 @@ STD of array 2 :  0.14357537702854514
 ## Please check these solutions only after submitting the assignments.
 
 
-```python
+``` python
 def mean(arr):
     """
     Calculates the mean of an array.
@@ -936,7 +936,7 @@ for index, result in enumerate(my_results):
     print('STD of array', index, ': ', result[2])
 ```
 
-```{.output}
+``` output
 STD of array 0 :  1.4142135623730951
 STD of array 1 :  0.0
 STD of array 2 :  0.14357537702854514

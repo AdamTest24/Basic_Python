@@ -157,11 +157,11 @@ If you don't know how to navigate in the terminal, see the example in section [H
 Once in the correct directory, we run a script called ```script_a.py``` by typing ```python3 script_a.py``` in our terminal as follows:
 
 
-```bash
+``` bash
 python3 script_a.py
 ```
 
-```{.output}
+``` output
 Hello world!
 ```
 
@@ -194,11 +194,11 @@ We can pass more than a single value to the <kbd>print()</kbd> function, provide
 </p>
 
 
-```python
+``` python
 print('Hello', 'John')
 ```
 
-```{.output}
+``` output
 Hello John
 ```
 
@@ -209,29 +209,29 @@ Notice that there is a space between <span style="color: rgb(32, 121, 77);">'Hel
 This default behaviour may be changed:
 
 
-```python
+``` python
 print('Hello', 'John', sep='')
 ```
 
-```{.output}
+``` output
 HelloJohn
 ```
 
 
-```python
+``` python
 print('Hello', 'John', sep='--')
 ```
 
-```{.output}
+``` output
 Hello--John
 ```
 
 
-```python
+``` python
 print('Jane', 21, 'London', sep='.')
 ```
 
-```{.output}
+``` output
 Jane.21.London
 ```
 
@@ -253,11 +253,11 @@ Write code that displays the following output:
 ## DIY ANSWER
 
 
-```python
+``` python
 print('Protein Kinase C (Alpha subunit)')
 ```
 
-```{.output}
+``` output
 Protein Kinase C (Alpha subunit)
 ```
 
@@ -375,44 +375,44 @@ We should never overwrite an existing, built-in definition or identifier (e.g. `
 Once a variable is defined, its value may be altered or reset:
 
 
-```python
+``` python
 total_items = 2
 print(total_items)
 ```
 
-```{.output}
+``` output
 2
 ```
 
 Variables containing integer numbers are known as ```int```, and those containing decimal numbers are known as ```float``` in Python.
 
 
-```python
+``` python
 total_items = 3
 print(total_items)
 ```
 
-```{.output}
+``` output
 3
 ```
 
 
-```python
+``` python
 total_values = 3.2
 print(total_values)
 ```
 
-```{.output}
+``` output
 3.2
 ```
 
 
-```python
+``` python
 temperature = 16.
 print(temperature)
 ```
 
-```{.output}
+``` output
 16.0
 ```
 
@@ -421,7 +421,7 @@ Variables can contain characters as well; but to prevent Python from confusing t
 </p>
 
 
-```python
+``` python
 forename = 'John'
 surname = "Doe"
 
@@ -429,7 +429,7 @@ surname = "Doe"
 print('Hi,', forename, surname)
 ```
 
-```{.output}
+``` output
 Hi, John Doe
 ```
 
@@ -456,7 +456,7 @@ Display the values of these 4 variables in *one* line, and separate the items wi
 ## DIY ANSWER
 
 
-```python
+``` python
 name = 'Oxidised low-density lipoprotein (LDL) receptor 1'
 
 uniprot_entry = 'P78380'
@@ -468,7 +468,7 @@ length = 273
 print(name, uniprot_entry, gene_name, length, sep='   ')
 ```
 
-```{.output}
+``` output
 Oxidised low-density lipoprotein (LDL) receptor 1   P78380   OLR1   273
 ```
 
@@ -575,57 +575,57 @@ Python enjoys a powerful type system out of the box. Table [Built-in types in Py
 Sometimes we might need want to know what is the type of a variable. To do so, we use the build-in function <kbd>type()</kbd> as follows:
 
 
-```python
+``` python
 total_items = 2
 
 print(type(total_items))
 ```
 
-```{.output}
+``` output
 <class 'int'>
 ```
 
 
-```python
+``` python
 total_values = 3.2
 
 print(type(total_values))
 ```
 
-```{.output}
+``` output
 <class 'float'>
 ```
 
 
-```python
+``` python
 temperature = 16.
 
 print(type(temperature))
 ```
 
-```{.output}
+``` output
 <class 'float'>
 ```
 
 
-```python
+``` python
 phase = 12.5+1.5j
 
 print(type(phase))
 ```
 
-```{.output}
+``` output
 <class 'complex'>
 ```
 
 
-```python
+``` python
 full_name = 'John Doe'
 
 print(type(full_name))
 ```
 
-```{.output}
+``` output
 <class 'str'>
 ```
 
@@ -660,7 +660,7 @@ The result for each value should be represented in the following format:
 ## DIY ANSWER
 
 
-```python
+``` python
 value = 32
 
 value_type = type(value)
@@ -668,12 +668,12 @@ value_type = type(value)
 print('Value', value, 'is an instance of', value_type)
 ```
 
-```{.output}
+``` output
 Value 32 is an instance of <class 'int'>
 ```
 
 
-```python
+``` python
 value = 24.3454
 
 value_type = type(value)
@@ -681,12 +681,12 @@ value_type = type(value)
 print('Value', value, 'is an instance of', value_type)
 ```
 
-```{.output}
+``` output
 Value 24.3454 is an instance of <class 'float'>
 ```
 
 
-```python
+``` python
 value = 2.5 + 1.5
 
 value_type = type(value)
@@ -694,12 +694,12 @@ value_type = type(value)
 print('Value', value, 'is an instance of', value_type)
 ```
 
-```{.output}
+``` output
 Value 4.0 is an instance of <class 'float'>
 ```
 
 
-```python
+``` python
 value = "RNA Polymerase III"
 
 value_type = type(value)
@@ -707,12 +707,12 @@ value_type = type(value)
 print('Value', value, 'is an instance of', value_type)
 ```
 
-```{.output}
+``` output
 Value RNA Polymerase III is an instance of <class 'str'>
 ```
 
 
-```python
+``` python
 value = 0
 
 value_type = type(value)
@@ -720,13 +720,13 @@ value_type = type(value)
 print('Value', value, 'is an instance of', value_type)
 ```
 
-```{.output}
+``` output
 Value 0 is an instance of <class 'int'>
 ```
 
 
 
-```python
+``` python
 value = .5 - 1
 
 value_type = type(value)
@@ -734,12 +734,12 @@ value_type = type(value)
 print('Value', value, 'is an instance of', value_type)
 ```
 
-```{.output}
+``` output
 Value -0.5 is an instance of <class 'float'>
 ```
 
 
-```python
+``` python
 value = 1.3e-5
 
 value_type = type(value)
@@ -747,12 +747,12 @@ value_type = type(value)
 print('Value', value, 'is an instance of', value_type)
 ```
 
-```{.output}
+``` output
 Value 1.3e-05 is an instance of <class 'float'>
 ```
 
 
-```python
+``` python
 value = 3e5
 
 value_type = type(value)
@@ -760,7 +760,7 @@ value_type = type(value)
 print('Value', value, 'is an instance of', value_type)
 ```
 
-```{.output}
+``` output
 Value 300000.0 is an instance of <class 'float'>
 ```
 :::::::::::::::
@@ -808,47 +808,47 @@ For instance, to convert a variable to integer, we:
 Here is an example of how we convert types in Python:
 
 
-```python
+``` python
 value_a = '12'
 
 print(value_a, type(value_a))
 ```
 
-```{.output}
+``` output
 12 <class 'str'>
 ```
 
 
-```python
+``` python
 value_b = int(value_a)
 
 print(value_b, type(value_b))
 ```
 
-```{.output}
+``` output
 12 <class 'int'>
 ```
 
 If we attempt to convert a variable that contains non-numeric values, a ```ValueError``` is raised:
 
 
-```python
+``` python
 value_a = '12y'
 
 print(value_a, type(value_a))
 ```
 
-```{.output}
+``` output
 12y <class 'str'>
 ```
 
 
-```python
+``` python
 value_b = int(value_a)
 ```
 
-```{.error}
-Error: ValueError: invalid literal for int() with base 10: '12y'
+``` output
+ValueError: invalid literal for int() with base 10: '12y'
 ```
 
 ::::::::::::::::::::::::::::::: challenge
@@ -886,7 +886,7 @@ Debug the snippet so that the correct result is displayed:
 ## DIY ANSWER
 
 
-```python
+``` python
 value_a = 3
 
 value_b = '2'
@@ -896,7 +896,7 @@ result = value_a + int(value_b)
 print(value_a, '+', value_b, '=', result)
 ```
 
-```{.output}
+``` output
 3 + 2 = 5
 ```
 ::::::::::::::::::
@@ -1037,13 +1037,13 @@ To recapitulate on what we have done so far, we start off by reviewing *addition
 
 Give the variable ```total_items```:
 
-```python
+``` python
 total_items = 2
 
 print(total_items)
 ```
 
-```{.output}
+``` output
 2
 ```
 
@@ -1051,13 +1051,13 @@ print(total_items)
 We can increment the value of an *existing* variable by ```1``` as follows:
 
 
-```python
+``` python
 total_items = total_items + 1
 
 print(total_items)
 ```
 
-```{.output}
+``` output
 3
 ```
 
@@ -1066,7 +1066,7 @@ Given 2 different variables, each containing a different value; we can perform a
 </p>
 
 
-```python
+``` python
 old_items = 4
 new_items = 3
 
@@ -1075,7 +1075,7 @@ total_items = old_items + new_items
 print(total_items)
 ```
 
-```{.output}
+``` output
 7
 ```
 
@@ -1084,51 +1084,51 @@ We can change the value of an *existing* variable using the value stored in *ano
 </p>
 
 
-```python
+``` python
 new_items = 5
 total_items = total_items + new_items
 
 print(total_items)
 ```
 
-```{.output}
+``` output
 12
 ```
 
 There is also a shorthand method for applying the operation on an *existing* variable:
 
 
-```python
+``` python
 total_items = 2
 
 print(total_items)
 ```
 
-```{.output}
+``` output
 2
 ```
 
 
-```python
+``` python
 total_items += 1
 
 print(total_items)
 ```
 
-```{.output}
+``` output
 3
 ```
 
 
 
-```python
+``` python
 new_items = 5
 total_items += new_items
 
 print(total_items)
 ```
 
-```{.output}
+``` output
 8
 ```
 
@@ -1207,48 +1207,48 @@ If you feel adventurous, you can try this for $2^{10000}$ or higher; but beware 
 
 ## Q1
 
-```python
+``` python
 q1_a = 5.8 * 3.3
 print('Result:', q1_a, 'is an instance of', type(q1_a))
 ```
 
-```{.output}
+``` output
 Result: 19.139999999999997 is an instance of <class 'float'>
 ```
 
-```python
+``` python
 q1_b = 180 / 6
 print('Result:', q1_b, 'is an instance of', type(q1_b))
 ```
 
-```{.output}
+``` output
 Result: 30.0 is an instance of <class 'float'>
 ```
 
-```python
+``` python
 q1_c = 35 - 3.0
 print('Result:', q1_c, 'is an instance of', type(q1_c))
 ```
 
-```{.output}
+``` output
 Result: 32.0 is an instance of <class 'float'>
 ```
 
-```python
+``` python
 q1_d = 35 - 3
 print('Result:', q1_d, 'is an instance of', type(q1_d))
 ```
 
-```{.output}
+``` output
 Result: 32 is an instance of <class 'int'>
 ```
 
-```python
+``` python
 q1_e = 2 ** 1000
 print('Result:', q1_e, 'is an instance of', type(q1_e))
 ```
 
-```{.output}
+``` output
 Result: 10715086071862673209484250490600018105614048117055336074437503883703510511249361224931983788156958581275946729175531468251871452856923140435984577574698574803934567774824230985421074605062371141877954182153046474983581941267398767559165543946077062914571196477686542167660429831652624386837205668069376 is an instance of <class 'int'>
 ```
 
@@ -1268,7 +1268,7 @@ In the case of $35 - 3.0$ vs $35 - 3$, the former includes a floating point numb
 ## Q2-II
 
 
-```python
+``` python
 big_num = 2 ** 1000
 big_num_str = str(big_num)
 big_num_len = len(big_num_str)
@@ -1276,7 +1276,7 @@ big_num_len = len(big_num_str)
 print('Length of 2**1000:', big_num_len)
 ```
 
-```{.output}
+``` output
 Length of 2**1000: 302
 ```
 
@@ -1304,7 +1304,7 @@ Suppose we have a variable defined as ```total_residues = 52``` and want to perf
 </p>
 
 
-```python
+``` python
 total_residues = 52
 
 # Addition:
@@ -1313,88 +1313,88 @@ total_residues += 8
 print(total_residues)
 ```
 
-```{.output}
+``` output
 60
 ```
 
 
 
-```python
+``` python
 # Subtraction:
 total_residues -= 10
 
 print(total_residues)
 ```
 
-```{.output}
+``` output
 50
 ```
 
 
 
-```python
+``` python
 # Multiplication:
 total_residues *= 2
 
 print(total_residues)
 ```
 
-```{.output}
+``` output
 100
 ```
 
 
-```python
+``` python
 # Division:
 total_residues /= 4
 
 print(total_residues)
 ```
 
-```{.output}
+``` output
 25.0
 ```
 
 
-```python
+``` python
 # Floor quotient:
 total_residues //= 2
 
 print(total_residues)
 ```
 
-```{.output}
+``` output
 12.0
 ```
 
 
-```python
+``` python
 # Remainder:
 total_residues %= 5
 
 print(total_residues)
 ```
 
-```{.output}
+``` output
 2.0
 ```
 
 
-```python
+``` python
 # Power:
 total_residues **= 3
 
 print(total_residues)
 ```
 
-```{.output}
+``` output
 8.0
 ```
 
 We can also perform such operations using multiple variables:
 
 
-```python
+``` python
 total_residues = 52
 new_residues = 8
 number_of_proteins = 3
@@ -1404,18 +1404,18 @@ total_residues += new_residues
 print(total_residues)
 ```
 
-```{.output}
+``` output
 60
 ```
 
 
-```python
+``` python
 total_residues += (number_of_proteins * new_residues)
 
 print(total_residues)
 ```
 
-```{.output}
+``` output
 84
 ```
 
@@ -1459,7 +1459,7 @@ Explain the output.
 ## Q1
 
 
-```python
+``` python
 c = 18.84956
 r = 3
 d = r * 2
@@ -1469,7 +1469,7 @@ pi = c / d
 print('The value of pi calculated to 5 decimal places:', round(pi, 5))
 ```
 
-```{.output}
+``` output
 The value of pi calculated to 5 decimal places: 3.14159
 ```
 
@@ -1520,13 +1520,13 @@ The same principle applies in Python. This means that if we use Python to evalua
 </p>
 
 
-```python
+``` python
 result = 2 * (3 + (5 - 1) ** 2)
 
 print(result)
 ```
 
-```{.output}
+``` output
 38
 ```
 
@@ -1591,39 +1591,39 @@ use ```a``` and ```b``` to calculate the following expressions:
 
 ## Q1
 
-```python
+``` python
 q1_a = 3 * 2 / 4
 print('3 * 2 / 4 =', q1_a)
 ```
 
-```{.output}
+``` output
 3 * 2 / 4 = 1.5
 ```
 
-```python
+``` python
 q1_b = 5 + 3 * 2 / 4
 print('5 + 3 * 2 / 4 =', q1_b)
 ```
 
-```{.output}
+``` output
 5 + 3 * 2 / 4 = 6.5
 ```
 
-```python
+``` python
 q1_c = 3 * 2 / 4 + 5
 print('3 * 2 / 4 + 5 =', q1_c)
 ```
 
-```{.output}
+``` output
 3 * 2 / 4 + 5 = 6.5
 ```
 
-```python
+``` python
 q1_d = 2 / 4 * 3
 print('2 / 4 * 3 =', q1_d)
 ```
 
-```{.output}
+``` output
 2 / 4 * 3 = 1.5
 ```
 
@@ -1633,30 +1633,30 @@ print('2 / 4 * 3 =', q1_d)
 ## Q2
 
 
-```python
+``` python
 q2_a = 5 + (2 / 4) * 3
 print('5 + (2 / 4) * 3 =', q2_a)
 ```
 
-```{.output}
+``` output
 5 + (2 / 4) * 3 = 6.5
 ```
 
-```python
+``` python
 q2_b = 5 + (2 * 3) / 4
 print('5 + (2 * 3) / 4 =', q2_b)
 ```
 
-```{.output}
+``` output
 5 + (2 * 3) / 4 = 6.5
 ```
 
-```python
+``` python
 q2_c = 5 + 2 / (4 * 3)
 print('5 + 2 / (4 * 3) =', q2_c)
 ```
 
-```{.output}
+``` output
 5 + 2 / (4 * 3) = 5.166666666666667
 ```
 
@@ -1667,7 +1667,7 @@ print('5 + 2 / (4 * 3) =', q2_c)
 ## Q3
 
 
-```python
+``` python
 a = 2
 b = 5
 
@@ -1675,16 +1675,16 @@ q3_a = (a + b) ** 2
 print('(a + b)^2 =', q3_a)
 ```
 
-```{.output}
+``` output
 (a + b)^2 = 49
 ```
 
-```python
+``` python
 q3_b = a ** 2 + 2 * a * b + b ** 2
 print('a^2 + 2ab + b^2 =', q3_b)
 ```
 
-```{.output}
+``` output
 a^2 + 2ab + b^2 = 49
 ```
 
@@ -1706,7 +1706,7 @@ We can also add string values to each other. This is called *string concatenatio
 </p>
 
 
-```python
+``` python
 SEPARATOR = '-' * 20
 NEW_LINE = '\n'
 SPACE = ' '
@@ -1722,7 +1722,7 @@ data = full_name + NEW_LINE + SEPARATOR + NEW_LINE + 'DoB: ' + birthday
 print(data)
 ```
 
-```{.output}
+``` output
 Jane Doe
 --------------------
 DoB: 01/01/1990
@@ -1797,7 +1797,7 @@ Value: XXX - Type: <class 'XXXX'>
 ## Q1
 
 
-```python
+``` python
 glutamine_codon = 'CAG'
 
 polyq_codons = glutamine_codon * 36
@@ -1805,7 +1805,7 @@ polyq_codons = glutamine_codon * 36
 print('Polyglutamine codons with 36 repeats:', polyq_codons)
 ```
 
-```{.output}
+``` output
 Polyglutamine codons with 36 repeats: CAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAG
 ```
 
@@ -1816,13 +1816,13 @@ Polyglutamine codons with 36 repeats: CAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAG
 ## Q2
 
 
-```python
+``` python
 polyq_codons_length = len(polyq_codons)
 
 print('Number of nucleotides in a polyglutamine with 36 repeats:', polyq_codons_length)
 ```
 
-```{.output}
+``` output
 Number of nucleotides in a polyglutamine with 36 repeats: 108
 ```
 
@@ -1833,7 +1833,7 @@ Number of nucleotides in a polyglutamine with 36 repeats: 108
 ## Q3
 
 
-```python
+``` python
 amino_acids_per_codon = len(glutamine_codon)
 ```
 ::::::::::::::::::::
@@ -1843,13 +1843,13 @@ amino_acids_per_codon = len(glutamine_codon)
 ## Q4
 
 
-```python
+``` python
 polyq_peptide_length = polyq_codons_length / amino_acids_per_codon
 
 print('Number of amino acids in a polyglutamine with 36 repeats:', polyq_peptide_length)
 ```
 
-```{.output}
+``` output
 Number of amino acids in a polyglutamine with 36 repeats: 36.0
 ```
 
@@ -1860,7 +1860,7 @@ Number of amino acids in a polyglutamine with 36 repeats: 36.0
 ## Q5
 
 
-```python
+``` python
 print('Value:', amino_acids_per_codon, '- Type:', type(amino_acids_per_codon))
 
 print('Value:', polyq_codons_length, '- Type:', type(polyq_codons_length))
@@ -1868,7 +1868,7 @@ print('Value:', polyq_codons_length, '- Type:', type(polyq_codons_length))
 print('Value:', polyq_peptide_length, '- Type:', type(polyq_peptide_length))
 ```
 
-```{.output}
+``` output
 Value: 3 - Type: <class 'int'>
 Value: 108 - Type: <class 'int'>
 Value: 36.0 - Type: <class 'float'>
@@ -1889,7 +1889,7 @@ No, ```polyq_peptide_length``` is an instance of type ```float```. This is becau
 ## Q7
 
 
-```python
+``` python
 polyq_peptide_length = polyq_codons_length // amino_acids_per_codon
 
 print('Number of amino acids in a polyglutamine with 36 repeats:', polyq_peptide_length)
@@ -1901,7 +1901,7 @@ print('Value:', polyq_codons_length, '- Type:', type(polyq_codons_length))
 print('Value:', polyq_peptide_length, '- Type:', type(polyq_peptide_length))
 ```
 
-```{.output}
+``` output
 Number of amino acids in a polyglutamine with 36 repeats: 36
 Value: 3 - Type: <class 'int'>
 Value: 108 - Type: <class 'int'>
@@ -1982,7 +1982,7 @@ y1 is equal to y2: [True/False]
 ## Q1
 
 
-```python
+``` python
 a = 15
 b = 4
 
@@ -1993,7 +1993,7 @@ print('y1 =', y_1)
 print('y2 =', y_2)
 ```
 
-```{.output}
+``` output
 y1 = 361
 y2 = 361
 ```
@@ -2005,14 +2005,14 @@ y2 = 361
 ## Q2
 
 
-```python
+``` python
 equivalence = y_1 == y_2
 
 print('Where a =', a, ' and b=', b)
 print('y1 is equal to y2:', equivalence)
 ```
 
-```{.output}
+``` output
 Where a = 15  and b= 4
 y1 is equal to y2: True
 ```
@@ -2043,13 +2043,13 @@ Using the information from previous [Do it Yourself](#diy:equivalence):
 ## Q1
 
 
-```python
+``` python
 inequivalent = y_1 != y_2
 
 print(inequivalent)
 ```
 
-```{.output}
+``` output
 False
 ```
 
@@ -2060,13 +2060,13 @@ False
 ## Q2
 
 
-```python
+``` python
 inequivalent_negated = not inequivalent
 
 print(inequivalent_negated)
 ```
 
-```{.output}
+``` output
 True
 ```
 
@@ -2118,7 +2118,7 @@ Display the results in the following format:
 
 Given that:
 
-```python
+``` python
 a = True
 b = False
 c = True
@@ -2128,11 +2128,11 @@ c = True
 ## Q1
 
 
-```python
+``` python
 print('1.', a == b)
 ```
 
-```{.output}
+``` output
 1. False
 ```
 ::::::::::::::::::
@@ -2141,11 +2141,11 @@ print('1.', a == b)
 ## Q2
 
 
-```python
+``` python
 print('2.', a == c)
 ```
 
-```{.output}
+``` output
 2. True
 ```
 ::::::::::::::::::
@@ -2155,11 +2155,11 @@ print('2.', a == c)
 ## Q3
 
 
-```python
+``` python
 print('3.', a or b)
 ```
 
-```{.output}
+``` output
 3. True
 ```
 ::::::::::::::::::
@@ -2169,11 +2169,11 @@ print('3.', a or b)
 ## Q4
 
 
-```python
+``` python
 print('4.', a and b)
 ```
 
-```{.output}
+``` output
 4. False
 ```
 ::::::::::::::::::
@@ -2182,11 +2182,11 @@ print('4.', a and b)
 ## Q5
 
 
-```python
+``` python
 print('5.', a or b and c)
 ```
 
-```{.output}
+``` output
 5. True
 ```
 ::::::::::::::::::
@@ -2195,11 +2195,11 @@ print('5.', a or b and c)
 ## Q6
 
 
-```python
+``` python
 print('6.', (a or b) and c)
 ```
 
-```{.output}
+``` output
 6. True
 ```
 ::::::::::::::::::
@@ -2208,11 +2208,11 @@ print('6.', (a or b) and c)
 ## Q7
 
 
-```python
+``` python
 print('7.', not a or (b and c))
 ```
 
-```{.output}
+``` output
 7. False
 ```
 ::::::::::::::::::
@@ -2221,11 +2221,11 @@ print('7.', not a or (b and c))
 ## Q8
 
 
-```python
+``` python
 print('8.', not a or not(b and c))
 ```
 
-```{.output}
+``` output
 8. True
 ```
 ::::::::::::::::::
@@ -2235,11 +2235,11 @@ print('8.', not a or not(b and c))
 ## Q9
 
 
-```python
+``` python
 print('9.', not a and not(b and c))
 ```
 
-```{.output}
+``` output
 9. False
 ```
 ::::::::::::::::::
@@ -2248,11 +2248,11 @@ print('9.', not a and not(b and c))
 ## Q10
 
 
-```python
+``` python
 print('10.', not a and not(b or c))
 ```
 
-```{.output}
+``` output
 10. False
 ```
 ::::::::::::::::::
@@ -2300,104 +2300,104 @@ Notice that in the last example, all notations are essentially the same and only
 :::::::::::::::::::::::
 
 
-```python
+``` python
 a, b, c = 17, 5, 2  # Alternative method to define variables.
 ```
 
 
-```python
+``` python
 # Disjunction: false OR true.
 a < b or b > c
 ```
 
-```{.output}
+``` output
 True
 ```
 
 
 
-```python
+``` python
 # Disjunction: true OR true.
 a > b or b > c
 ```
 
-```{.output}
+``` output
 True
 ```
 
 
 
-```python
+``` python
 # Conjunction: true AND true.
 a > b and b > c
 ```
 
-```{.output}
+``` output
 True
 ```
 
 
 
-```python
+``` python
 # Conjunction: false and true.
 a < b and b > c
 ```
 
-```{.output}
+``` output
 False
 ```
 
 
-```python
+``` python
 # Disjunction and conjunction: true OR false AND true
 a > b or b < c and b < a
 ```
 
-```{.output}
+``` output
 True
 ```
 
 
-```python
+``` python
 # Disjunction and conjunction: false OR true AND false
 a < b or b > c and b > a
 ```
 
-```{.output}
+``` output
 False
 ```
 
 
 
-```python
+``` python
 # Disjunctions and conjunction: false OR true AND true
 a < b or b > c and b < a
 ```
 
-```{.output}
+``` output
 True
 ```
 
 
-```python
+``` python
 # Disjunction and negated conjunction and conjunction:
 # true AND NOT false AND false
 a < b or not b < c and b > a
 ```
 
-```{.output}
+``` output
 False
 ```
 
 
 
-```python
+``` python
 # Disjunction and negated conjunction - similar to the
 # previous example: true AND NOT (false AND false)
 a < b or not (b < c and b > a)
 ```
 
-```{.output}
+``` output
 True
 ```
 
@@ -2418,7 +2418,7 @@ Some logical operations may be written in different ways. However, we should alw
 To that end, you may want to use variables to split complex statements down to smaller portions:
 
 
-```python
+``` python
 age_a, age_b = 15, 35
 
 are_positive = age_a > 0 and age_b > 0
@@ -2432,25 +2432,25 @@ b_is_teenager = are_positive and 12 < age_b < 20
 a_is_teenager and b_is_older
 ```
 
-```{.output}
+``` output
 True
 ```
 
 
-```python
+``` python
 a_is_teenager and a_is_older
 ```
 
-```{.output}
+``` output
 False
 ```
 
 
-```python
+``` python
 a_is_teenager and (b_is_teenager or b_is_older)
 ```
 
-```{.output}
+``` output
 True
 ```
 
@@ -2489,15 +2489,14 @@ Display the results in the following format:
 ## Q1
 
 
-```python
-
+``` python
 #Given that:
 a = 3
 b = 13
 print('1.', a**2 < b)
 ```
 
-```{.output}
+``` output
 1. True
 ```
 ::::::::::::::::
@@ -2508,11 +2507,11 @@ print('1.', a**2 < b)
 ## Q2
 
 
-```python
+``` python
 print('2.', (3 - a**3) < b)
 ```
 
-```{.output}
+``` output
 2. True
 ```
 ::::::::::::::::
@@ -2523,11 +2522,11 @@ print('2.', (3 - a**3) < b)
 ## Q3
 
 
-```python
+``` python
 print('3.', abs(25 - a**2) > b)
 ```
 
-```{.output}
+``` output
 3. True
 ```
 ::::::::::::::::
@@ -2537,11 +2536,11 @@ print('3.', abs(25 - a**2) > b)
 ## Q4
 
 
-```python
+``` python
 print('4.', (25 % a**2) > b)
 ```
 
-```{.output}
+``` output
 4. False
 ```
 ::::::::::::::::
@@ -2552,11 +2551,11 @@ print('4.', (25 % a**2) > b)
 ## Q5
 
 
-```python
+``` python
 print('5.', (25 % a**2) > b or (25 % b) < a)
 ```
 
-```{.output}
+``` output
 5. False
 ```
 ::::::::::::::::
@@ -2566,11 +2565,11 @@ print('5.', (25 % a**2) > b or (25 % b) < a)
 ## Q6
 
 
-```python
+``` python
 print('6.', (25 % a**2) < b and (25 % b) > a)
 ```
 
-```{.output}
+``` output
 6. True
 ```
 ::::::::::::::::
@@ -2581,11 +2580,11 @@ print('6.', (25 % a**2) < b and (25 % b) > a)
 ## Q7
 
 
-```python
+``` python
 print('7.', (12 / a) and (a * 4) < b)
 ```
 
-```{.output}
+``` output
 7. True
 ```
 ::::::::::::::::
@@ -2620,7 +2619,7 @@ print('7.', (12 / a) and (a * 4) < b)
 ### Q1
 
 
-```python
+``` python
 name = 'Gerold Baier'
 
 # Displaying the author's name:
@@ -2628,7 +2627,7 @@ name = 'Gerold Baier'
 print(name)
 ```
 
-```{.output}
+``` output
 Gerold Baier
 ```
 
@@ -2645,8 +2644,7 @@ print('Welcome to my programme!')
 
 ### Q3
 
-```python
-
+``` python
 v = 50 #mol/L/s
 k_m = S = 2.5 #mol/L
 
@@ -2658,7 +2656,7 @@ v_max = (v * (k_m + S)) / S
 print('Vmax =', v_max, '[ mol / (l * sec) ]')
 ```
 
-```{.output}
+``` output
 Vmax = 100.0 [ mol / (l * sec) ]
 ```
 

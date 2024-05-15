@@ -78,7 +78,7 @@ numbers = [-3, -2, 5, 0, 12]
 Now we would like to multiply each number by 2. Based on what we have learned thus far, this is how we would approach this problem:
 
 
-```python
+``` python
 numbers = [-3, -2, 5, 0, 12]
 
 numbers[0] *= 2
@@ -90,7 +90,7 @@ numbers[4] *= 2
 print(numbers)
 ```
 
-```{.output}
+``` output
 [-6, -4, 10, 0, 24]
 ```
 
@@ -179,7 +179,7 @@ An iterable is a Python variable that contains the built--in method ```.__iter__
 We write this process in Python as:
 
 
-```python
+``` python
 numbers = [3, 5, 6.3, 9, 15, 3.4]
 
 for item in numbers:
@@ -188,7 +188,7 @@ for item in numbers:
     print(item)
 ```
 
-```{.output}
+``` output
 6
 10
 12.6
@@ -231,7 +231,7 @@ See subsection [List Members](04-arrays.Rmd#listMem) to find the length of an ar
 Given:
 
 
-```python
+``` python
 peptides = [
     'GYSAR',
     'HILNEKRILQAID',
@@ -247,7 +247,7 @@ Write a <kbd>for</kbd> loop to display each item in <span style="color: rgb(32, 
 
 ## DIY ANSWER
 
-```python
+``` python
 for sequence in peptides:
     length = len(sequence)
     index = peptides.index(sequence)
@@ -255,7 +255,7 @@ for sequence in peptides:
     print('Peptide', sequence, 'at index', index, 'contains', length, 'amino acids.')
 ```
 
-```{.output}
+``` output
 Peptide GYSAR at index 0 contains 5 amino acids.
 Peptide HILNEKRILQAID at index 1 contains 13 amino acids.
 Peptide DNSYLY at index 2 contains 6 amino acids.
@@ -271,7 +271,7 @@ Peptide DNSYLY at index 2 contains 6 amino acids.
 When using a <kbd>for</kbd> loop, we can also reference other variables that have already been defined outside of the loop block:
 
 
-```python
+``` python
 numbers = [3, 5, 6.3, 9, 15, 3.4]
 counter = 0
 
@@ -284,7 +284,7 @@ for item in numbers:
     counter += 1
 ```
 
-```{.output}
+``` output
 Iteration number 0 : 6
 Iteration number 1 : 10
 Iteration number 2 : 12.6
@@ -296,7 +296,7 @@ Iteration number 5 : 6.8
 It is also possible to define new variables inside the loop, but remember that the value of any variables defined inside a loop is reset in each iteration cycle:
 
 
-```python
+``` python
 numbers = [3, 5, 6.3, 9, 15, 3.4]
 counter = 0
 
@@ -309,7 +309,7 @@ for item in numbers:
     counter += 1
 ```
 
-```{.output}
+``` output
 Iteration number 0 : 3 * 2 = 6
 Iteration number 1 : 5 * 2 = 10
 Iteration number 2 : 6.3 * 2 = 12.6
@@ -325,7 +325,7 @@ Iteration number 5 : 3.4 * 2 = 6.8
 
 Write a ```for``` loop to display the values of a ```tuple``` defined as:
 
-```python
+``` python
 protein_kinases = ('PKA', 'PKC', 'MPAK', 'GSK3', 'CK1')
 ```
 
@@ -342,7 +342,7 @@ and so on.
 ## DIY ANSWER
 
 
-```python
+``` python
 counter = 1
 
 for protein in protein_kinases:
@@ -350,7 +350,7 @@ for protein in protein_kinases:
     counter += 1
 ```
 
-```{.output}
+``` output
 Protein Kinase 1: PKA
 Protein Kinase 2: PKC
 Protein Kinase 3: MPAK
@@ -377,7 +377,7 @@ Creating a new array to store our values is very easy. All we need to do is to c
 </p>
 
 
-```python
+``` python
 numbers = [-4, 0, 0.3, 5]
 new_numbers = list()
 
@@ -388,15 +388,15 @@ for value in numbers:
 print('numbers:', numbers)
 ```
 
-```{.output}
+``` output
 numbers: [-4, 0, 0.3, 5]
 ```
 
-```python
+``` python
 print('new_numbers:', new_numbers)
 ```
 
-```{.output}
+``` output
 new_numbers: [16, 0, 0.09, 25]
 ```
 
@@ -408,7 +408,7 @@ new_numbers: [16, 0, 0.09, 25]
 Given:
 
 
-```python
+``` python
 peptides = [
     'GYSAR',
     'HILNEKRILQAID',
@@ -426,7 +426,7 @@ write a ```for``` loop in which you determine the length of each sequence in <sp
 ## DIY ANSWER
 
 
-```python
+``` python
 peptides_with_length = list()
 
 for sequence in peptides:
@@ -456,7 +456,7 @@ To perform *item assignment*; we can implement a variable to represent the curre
 </p>
 
 
-```python
+``` python
 numbers = [-4, 0, 0.5, 5]
 
 # Variable representing the
@@ -477,7 +477,7 @@ for value in numbers:
 print(numbers)
 ```
 
-```{.output}
+``` output
 [-1024, 0, 0.03125, 3125]
 ```
 
@@ -494,7 +494,7 @@ This is a perfectly valid approach and it is used in many programming languages.
 </p>
 
 
-```python
+``` python
 numbers = [-4, 0, 0.5, 5]
 
 for index, value in enumerate(numbers):
@@ -505,7 +505,7 @@ for index, value in enumerate(numbers):
 print(numbers)
 ```
 
-```{.output}
+``` output
 [-1024, 0, 0.03125, 3125]
 ```
 
@@ -515,7 +515,7 @@ print(numbers)
 
 Given:
 
-```python
+``` python
 characters = ['1', '2', '3', '4']
 ```
 Display each item in <span style="color: rgb(32, 121, 77);">characters</span> as many times in one line as the index of that item in <span style="color: rgb(32, 121, 77);">characters</span>. The results should appear as follows:
@@ -529,12 +529,12 @@ Display each item in <span style="color: rgb(32, 121, 77);">characters</span> as
 
 ## DIY ANSWER
 
-```python
+``` python
 for index, item in enumerate(characters):
     print(item * index)
 ```
 
-```{.output}
+``` output
 
 2
 33
@@ -560,7 +560,7 @@ Given an array, we can break down the problem as follows:
 Finally, we can implement the process displayed in [figure](#flowchart5-2-2) as follows:
 
 
-```python
+``` python
 numbers = [7, 16, 0.3, 0, 15, -4, 5, 3, 15]
 
 minimum = numbers[0]
@@ -572,7 +572,7 @@ for value in numbers:
 print('The minimum value is:', minimum)
 ```
 
-```{.output}
+``` output
 The minimum value is: -4
 ```
 
@@ -581,7 +581,7 @@ The minimum value is: -4
 ## Do it Yourself
 Given:
 
-```python
+``` python
 peptides = [
   'FAEKE',
   'CDYSK',
@@ -604,7 +604,7 @@ Found S in XXXXX.
 ## DIY ANSWER
 
 
-```python
+``` python
 target = 'S'
 
 for sequence in peptides:
@@ -612,7 +612,7 @@ for sequence in peptides:
         print('Found', target, 'in', sequence)
 ```
 
-```{.output}
+``` output
 Found S in CDYSK
 Found S in YSFQW
 Found S in GMGSFGRVML
@@ -637,13 +637,13 @@ The <kbd>range()</kbd> function does not create the sequence of numbers immediat
 Displaying the output of a <kbd>range()</kbd> function is not, as one might expect, an array of numbers:
 
 
-```python
+``` python
 range_generator = range(0, 10, 2)
 
 print(range_generator)
 ```
 
-```{.output}
+``` output
 range(0, 10, 2)
 ```
 
@@ -651,13 +651,13 @@ range(0, 10, 2)
 It is, however, possible to evaluate the values outside of a <kbd>for</kbd> loop. To do so, we need to convert the output of the function to ```list``` or a ```tuple```:
 
 
-```python
+``` python
 range_sequence = list(range_generator)
 
 print(range_sequence)
 ```
 
-```{.output}
+``` output
 [0, 2, 4, 6, 8]
 ```
 
@@ -794,7 +794,7 @@ print(value)
 
 ## Q2
 
-```python
+``` python
 stop = 10
 start = 0
 step = 0.5
@@ -809,7 +809,7 @@ while number < stop:
 print(sequence)
 ```
 
-```{.output}
+``` output
 [0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0, 5.5, 6.0, 6.5, 7.0, 7.5, 8.0, 8.5, 9.0, 9.5]
 ```
 
@@ -819,7 +819,7 @@ print(sequence)
 
 ## Q2 - Smart Solution
 
-```python
+``` python
 # A smarter solution, however, would be:
 stop = 10
 start = 0
@@ -833,7 +833,7 @@ while sequence[-1] < stop - step:
 print(sequence)
 ```
 
-```{.output}
+``` output
 [0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0, 5.5, 6.0, 6.5, 7.0, 7.5, 8.0, 8.5, 9.0, 9.5]
 ```
 
@@ -942,13 +942,13 @@ Variance: XXXX
 ### Q1
 
 
-```python
+``` python
 answer = "Because the minimum of the array may be smaller than zero."
 
 print(answer)
 ```
 
-```{.output}
+``` output
 Because the minimum of the array may be smaller than zero.
 ```
 
@@ -956,7 +956,7 @@ Because the minimum of the array may be smaller than zero.
 ### Q2
 
 
-```python
+``` python
 numbers = [0, -2.1, 1.5, 3]
 
 numbers_sum = 0
@@ -967,7 +967,7 @@ for value in numbers:
 print("Sum of the numbers in the array is", numbers_sum)
 ```
 
-```{.output}
+``` output
 Sum of the numbers in the array is 2.4
 ```
 
@@ -975,7 +975,7 @@ Sum of the numbers in the array is 2.4
 ### Q3
 
 
-```python
+``` python
 numbers = [2, 1, 3]
 
 for value in numbers:
@@ -985,7 +985,7 @@ for value in numbers:
         print(number)
 ```
 
-```{.output}
+``` output
 2
 2
 1
@@ -997,7 +997,7 @@ for value in numbers:
 ### Q4
 
 
-```python
+``` python
 numbers = [7, 16, 0.3, 0, 15, -4, 5, 3, 15]
 
 numbers_length = len(numbers)
@@ -1036,7 +1036,7 @@ print("Mean:", numbers_mean)
 print("Variance:", numbers_variance)
 ```
 
-```{.output}
+``` output
 Mean: 6.366666666666666
 Variance: 48.919999999999995
 ```

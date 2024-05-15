@@ -86,24 +86,23 @@ To implement a ```list``` in Python, we place the values separated by commas ins
 ::::::::::::::::::::::::::::::::::::
 
 
-```python
+``` python
 table = [5, 21, 5, -1]
 
 print(table)
 ```
 
-```{.output}
+``` output
 [5, 21, 5, -1]
 ```
 
 
 
-```python
-
+``` python
 print(type(table))
 ```
 
-```{.output}
+``` output
 <class 'list'>
 ```
 
@@ -123,7 +122,7 @@ Implement a ```list``` array called <span style="color: rgb(32, 121, 77);">fibon
 ## DIY ANSWER
 
 
-```python
+``` python
 fibonacci = [1, 1, 2, 3, 5, 8, 13, 21]
 ```
 
@@ -167,31 +166,31 @@ As demonstrated in the diagram; to retrieve a member of an array through its ind
 </p>
 
 
-```python
+``` python
 print(table[2])
 ```
 
-```{.output}
+``` output
 5
 ```
 
 
-```python
+``` python
 print(table[0])
 ```
 
-```{.output}
+``` output
 5
 ```
 
 
-```python
+``` python
 item = table[3]
 
 print(item)
 ```
 
-```{.output}
+``` output
 -1
 ```
 
@@ -207,11 +206,11 @@ Retrieve and display the 5^th^ Fibonacci number from the ```list``` you created 
 ## DIY ANSWER
 
 
-```python
+``` python
 print(fibonacci[4])
 ```
 
-```{.output}
+``` output
 5
 ```
 :::::::::::::::::
@@ -235,29 +234,29 @@ Unlike the normal indexing system, which starts from \#0, negative indexes start
 If the index is a negative number, the indices are counted from the end of the ```list```. We can implement negative indices the same way we do positive ones:
 
 
-```python
+``` python
 print(table[-1])
 ```
 
-```{.output}
+``` output
 -1
 ```
 
 
-```python
+``` python
 print(table[-2])
 ```
 
-```{.output}
+``` output
 5
 ```
 
 
-```python
+``` python
 print(table[-3])
 ```
 
-```{.output}
+``` output
 21
 ```
 
@@ -265,13 +264,13 @@ print(table[-3])
 We know that in <span style="color: rgb(32, 121, 77);">table</span>, index \#-3 refers the same value as index \#1. So let us go ahead and test this:
 
 
-```python
+``` python
 equivalence = table[-3] == table[1]
 
 print(equivalence)
 ```
 
-```{.output}
+``` output
 True
 ```
 
@@ -279,12 +278,12 @@ True
 If the index requested is larger than the length of the ```list``` minus one, an ```IndexError``` will be raised:
 
 
-```python
+``` python
 print(table[4])
 ```
 
-```{.error}
-Error: IndexError: list index out of range
+``` output
+IndexError: list index out of range
 ```
 
 :::::::::::::::::::::::::::::::::::: callout
@@ -304,11 +303,11 @@ Retrieve and display the *last* Fibonacci number from the ```list``` you created
 
 ## DIY ANSWER
 
-```python
+``` python
 print(fibonacci[-1])
 ```
 
-```{.output}
+``` output
 21
 ```
 
@@ -339,13 +338,13 @@ table = [5, 21, 5, -1]
 we may retrieve a slice of <span style="color: rgb(32, 121, 77);">table</span> as follows:
 
 
-```python
+``` python
 my_slice = table[1:3]
 
 print(my_slice)
 ```
 
-```{.output}
+``` output
 [21, 5]
 ```
 
@@ -356,79 +355,79 @@ print(table[0:2])
 If the first index of a slice is \#0, the slice may also be written as:
 
 
-```python
+``` python
 print(table[:2])
 ```
 
-```{.output}
+``` output
 [5, 21]
 ```
 
 Negative slicing is also possible:
 
 
-```python
+``` python
 # Retrieves every item from the first member down
 # to, but excluding the last one:
 print(table[:-1])
 ```
 
-```{.output}
+``` output
 [5, 21, 5]
 ```
 
 
-```python
+``` python
 print(table[1:-2])
 ```
 
-```{.output}
+``` output
 [21]
 ```
 
 If the second index of a slice represents the last index of a ```list```, it be written as:
 
-```python
+``` python
 print(table[2:])
 ```
 
-```{.output}
+``` output
 [5, -1]
 ```
 
 
-```python
+``` python
 print(table[-3:])
 ```
 
-```{.output}
+``` output
 [21, 5, -1]
 ```
 
 We may store indices and slices in variables:
 
 
-```python
+``` python
 start, end = 1, 3
 new_table = table[start:end]
 
 print(new_table)
 ```
 
-```{.output}
+``` output
 [21, 5]
 ```
 
 
 The <kbd>slice()</kbd> function may also be used to create a slice variable:
 
-```python
+``` python
 my_slice = slice(1, 3)
 
 print(table[my_slice])
 ```
 
-```{.output}
+``` output
 [21, 5]
 ```
 
@@ -444,11 +443,11 @@ Retrieve and display a slice of Fibonacci numbers from the ```list``` you create
 ## DIY ANSWER
 
 
-```python
+``` python
 print(fibonacci[1:])
 ```
 
-```{.output}
+``` output
 [1, 2, 3, 5, 8, 13, 21]
 ```
 
@@ -470,7 +469,7 @@ print(fibonacci[1:])
 Given a ```list``` entitled <span style="color: rgb(32, 121, 77);">table</span> as:
 
 
-```python
+``` python
 table = [5, 21, 5, -1]
 ```
 
@@ -478,45 +477,45 @@ table = [5, 21, 5, -1]
 we can also find out the index of a specific value. To do so, we use the <kbd>.index()</kbd> *method*:
 
 
-```python
+``` python
 print(table.index(21))
 ```
 
-```{.output}
+``` output
 1
 ```
 
 
-```python
+``` python
 last_item = table.index(-1)
 
 print(last_item)
 ```
 
-```{.output}
+``` output
 3
 ```
 
 
 If a value is repeated more than once in the  ```list```, the index corresponding to the *first* instance of that value is returned:
 
-```python
+``` python
 print(table.index(5))
 ```
 
-```{.output}
+``` output
 0
 ```
 
 If a value does *not* exist in the ```list```, using <kbd>.index()</kbd> will raise a ```ValueError```:
 
 
-```python
+``` python
 print(table.index(9))
 ```
 
-```{.error}
-Error: ValueError: 9 is not in list
+``` output
+ValueError: 9 is not in list
 ```
 
 
@@ -536,7 +535,7 @@ Find and display the index of these values from the ```list``` of Fibonacci numb
 ## DIY ANSWER
 
 
-```python
+``` python
 print(fibonacci.index(1))
 
 print(fibonacci.index(5))
@@ -544,7 +543,7 @@ print(fibonacci.index(5))
 print(fibonacci.index(21))
 ```
 
-```{.output}
+``` output
 0
 4
 7
@@ -570,24 +569,24 @@ Given a ```list``` called <span style="color: rgb(32, 121, 77);">table</span> as
 We can add new values to <span style="color: rgb(32, 121, 77);">table</span> using <kbd>.append()</kbd>:
 
 
-```python
+``` python
 table.append(29)
 
 print(table)
 ```
 
-```{.output}
+``` output
 [5, 21, 5, -1, 29]
 ```
 
 
-```python
+``` python
 table.append('a text')
 
 print(table)
 ```
 
-```{.output}
+``` output
 [5, 21, 5, -1, 29, 'a text']
 ```
 
@@ -596,13 +595,13 @@ Sometimes, it may be necessary to insert a value at a specific index in a ```lis
 </p>
 
 
-```python
+``` python
 table.insert(3, 56)
 
 print(table)
 ```
 
-```{.output}
+``` output
 [5, 21, 5, 56, -1, 29, 'a text']
 ```
 
@@ -626,7 +625,7 @@ Given <span style="color: rgb(32, 121, 77);">fibonacci</span> the ```list``` rep
 
 ## Q1
 
-```python
+``` python
 fibonacci.append(55)
 ```
 
@@ -636,7 +635,7 @@ fibonacci.append(55)
 
 ## Q2
 
-```python
+``` python
 fibonacci.insert(8, 34)
 ```
 
@@ -649,14 +648,14 @@ fibonacci.insert(8, 34)
 Given a ```list``` as:
 
 
-```python
+``` python
 table = [5, 21, 5, 56, -1, 29, 'a text']
 ```
 
 We can also modify the exiting value or values inside a ```list```. This process is sometimes referred to as *item assignment*:
 
 
-```python
+``` python
 # Changing the value of the 2nd member.
 
 table[1] = 174
@@ -664,18 +663,18 @@ table[1] = 174
 print(table)
 ```
 
-```{.output}
+``` output
 [5, 174, 5, 56, -1, 29, 'a text']
 ```
 
 
-```python
+``` python
 table[-4] = 19
 
 print(table)
 ```
 
-```{.output}
+``` output
 [5, 174, 5, 19, -1, 29, 'a text']
 ```
 
@@ -684,7 +683,7 @@ It is also possible to perform *item assignment* over a *slice* containing any n
 </p>
 
 
-```python
+``` python
 print('Before:', table)
 
 replacement = [-38, 0]
@@ -698,7 +697,7 @@ table[2:4] = replacement
 print('After:', table)
 ```
 
-```{.output}
+``` output
 Before: [5, 174, 5, 19, -1, 29, 'a text']
 Replacement length: 2
 Replacement length: 2
@@ -706,14 +705,14 @@ After: [5, 174, -38, 0, -1, 29, 'a text']
 ```
 
 
-```python
+``` python
 # Using the existing value to determine the new value:
 table[2] = table[2] + 50
 
 print(table)
 ```
 
-```{.output}
+``` output
 [5, 174, 12, 0, -1, 29, 'a text']
 ```
 
@@ -737,7 +736,7 @@ However, values 11 and 7 have been misplaced in the sequence. Correct the order 
 ## DIY ANSWER
 
 
-```python
+``` python
 primes = [2, 3, 5, 11, 7, 13, 17, 19, 23, 29]
 
 primes[3:5] = [7, 11]
@@ -756,13 +755,13 @@ To remove a value from a ```list``` without retaining it, we use <kbd>.remove()<
 </p>
 
 
-```python
+``` python
 table.remove(174)
 
 print(table)
 ```
 
-```{.output}
+``` output
 [5, 12, 0, -1, 29, 'a text']
 ```
 
@@ -770,13 +769,13 @@ print(table)
 Alternatively, we can use <kbd>del</kbd>; a Python syntax that we can use in this context to delete a specific member using its index:
 
 
-```python
+``` python
 del table[-1]
 
 print(table)
 ```
 
-```{.output}
+``` output
 [5, 12, 0, -1, 29]
 ```
 <p style='text-align: justify;'>
@@ -787,14 +786,14 @@ Whilst that is a valid approach, Python's ```list``` provide us with <kbd>.pop()
 </p>
 
 
-```python
+``` python
 removed_value = table.pop(2)
 
 print('Removed value:', removed_value)
 print(table)
 ```
 
-```{.output}
+``` output
 Removed value: 0
 [5, 12, -1, 29]
 ```
@@ -834,7 +833,7 @@ print(strand)
 ## Q1
 
 
-```python
+``` python
 strand = ['A', 'C', 'G', 'G', 'C', 'M', 'T', 'A']
 
 outlier_index = strand.index('M')
@@ -846,14 +845,14 @@ outlier_index = strand.index('M')
 ## Q2
 
 
-```python
+``` python
 outlier_value = strand.pop(outlier_index)
 
 print('Removed from the strand:', outlier_value)
 print('New strand:', strand)
 ```
 
-```{.output}
+``` output
 Removed from the strand: M
 New strand: ['A', 'C', 'G', 'G', 'C', 'T', 'A']
 ```
@@ -884,7 +883,7 @@ With that in mind, we can divide operations performed using *methods* into two g
 1. Operations that return a result *without* changing the original array:
 
 
-```python
+``` python
 table = [1, 2, 3, 4]
 
 index = table.index(3)
@@ -893,7 +892,7 @@ print(index)
 print(table)
 ```
 
-```{.output}
+``` output
 2
 [1, 2, 3, 4]
 ```
@@ -902,7 +901,7 @@ print(table)
 2. Operations that use specific **methods** to *change* the original array, but do *not* necessarily return anything (in-place operations):
 
 
-```python
+``` python
 table = [1, 2, 3, 4]
 
 table.append(5)
@@ -910,7 +909,7 @@ table.append(5)
 print(table)
 ```
 
-```{.output}
+``` output
 [1, 2, 3, 4, 5]
 ```
 
@@ -918,14 +917,14 @@ print(table)
 If we attempt to store the output of an operation that does not a return result inside a variable, the variable will be created, but its value will be set to ```None```:
 
 
-```python
+``` python
 result = table.append(6)
 
 print(result)
 print(table)
 ```
 
-```{.output}
+``` output
 None
 [1, 2, 3, 4, 5, 6]
 ```
@@ -938,7 +937,7 @@ The *methods* that are associated with *immutable* objects always return the res
 * In-place operation on a *mutable* object of type ```list```:
 
 
-```python
+``` python
 table = [5, 6, 7]
 
 table.remove(6)
@@ -946,7 +945,7 @@ table.remove(6)
 print(table)
 ```
 
-```{.output}
+``` output
 [5, 7]
 ```
 
@@ -954,29 +953,28 @@ print(table)
 * In-place operation on an *immutable* object of type ```str```:
 
 
-```python
+``` python
 string = '567'
 
 string.remove(20)
 ```
 
-```{.error}
-Error: AttributeError: 'str' object has no attribute 'remove'
+``` output
+AttributeError: 'str' object has no attribute 'remove'
 ```
 
-```python
+``` python
 print(string)
 ```
 
-```{.output}
+``` output
 567
 ```
 
 * Normal operation on a *mutable* object of type ```list```:
 
 
-```python
-
+``` python
 table = [5, 6, 7]
 
 ind = table.index(6)
@@ -984,14 +982,14 @@ ind = table.index(6)
 print(ind)
 ```
 
-```{.output}
+``` output
 1
 ```
 
 * Normal operation on a *mutable* object of type ```list```:
 
 
-```python
+``` python
 string = '567'
 
 ind = string.index('6')
@@ -999,7 +997,7 @@ ind = string.index('6')
 print(ind)
 ```
 
-```{.output}
+``` output
 1
 ```
 
@@ -1010,7 +1008,7 @@ A ```list``` is a collection of members that are independent of each other. Each
 </p>
 
 
-```python
+``` python
 table = [1, 2.1, 'abc']
 
 print(type(table[0]))
@@ -1018,7 +1016,7 @@ print(type(table[1]))
 print(type(table[2]))
 ```
 
-```{.output}
+``` output
 <class 'int'>
 <class 'float'>
 <class 'str'>
@@ -1028,7 +1026,7 @@ For instance, mathematical operations may be considered a feature of all numeric
 </p>
 
 
-```python
+``` python
 table = [1, 2.1, 'abc']
 
 table[0] += 1
@@ -1037,7 +1035,7 @@ table[-1] += 'def'
 print(table)
 ```
 
-```{.output}
+``` output
 [2, 2.1, 'abcdef']
 ```
 <p style='text-align: justify;'>
@@ -1050,58 +1048,58 @@ Likewise, the ```list``` plays the role of a container that may incorporate any 
 We can check to see whether or not a specific value is a member of a ```list``` using the operator syntax <kbd>in</kbd>:
 
 
-```python
+``` python
 items = [1, 2.4, 'John', 5, 4]
 
 print(2.4 in items)
 ```
 
-```{.output}
+``` output
 True
 ```
 
 
-```python
+``` python
 print(3 in items)
 ```
 
-```{.output}
+``` output
 False
 ```
 
 The results may be stored in a variable:
 
-```python
+``` python
 has_five = 5 in items
 
 print(has_five)
 ```
 
-```{.output}
+``` output
 True
 ```
 
 Similar to any other [logical expression](02-input_output.Rmd#subsec:logicalOperatons), we can [negate](02-input_output.Rmd#sec:logicalStatements:Negation) membership tests by using \texttt{not in}:
 
 
-```python
+``` python
 expr = 10 not in items
 
 print(expr)
 ```
 
-```{.output}
+``` output
 True
 ```
 
 
-```python
+``` python
 expr = 5 not in items
 
 print(expr)
 ```
 
-```{.output}
+``` output
 False
 ```
 
@@ -1111,7 +1109,7 @@ False
 When testing against ```str values``` --- *i.e.* text; don't forget that in programming, operations involving texts are *always* case-sensitive.
 
 
-```python
+``` python
 items = [1, 2.4, 'John', 5, 4]
 
 john_capital = 'John'
@@ -1121,7 +1119,7 @@ print(john_capital in items)
 print(john_small in items)
 ```
 
-```{.output}
+``` output
 True
 False
 ```
@@ -1130,20 +1128,20 @@ False
 For *numeric* values, ```int``` and ```float``` may be used interchangeably:
 
 
-```python
+``` python
 print(4 in items)
 ```
 
-```{.output}
+``` output
 True
 ```
 
 
-```python
+``` python
 print(4.0 in items)
 ```
 
-```{.output}
+``` output
 True
 ```
 
@@ -1151,14 +1149,14 @@ True
 Similar to other [logical expression](02-input_output.Rmd#subsec:logicalOperatons), membership tests may be incorporated into conditional statements:
 
 
-```python
+``` python
 if 'John' in items:
     print('Hello John')
 else:
     print('Hello')
 ```
 
-```{.output}
+``` output
 Hello John
 ```
 
@@ -1169,7 +1167,7 @@ Hello John
 Given a ```list``` of randomly generated peptide sequences as:
 
 
-```python
+``` python
 peptides = [
   'FAEKE', 'DMSGG', 'CMGFT', 'HVEFW', 'DCYFH', 'RDFDM', 'RTYRA',
   'PVTEQ', 'WITFR', 'SWANQ', 'PFELC', 'KSANR', 'EQKVL', 'SYALD',
@@ -1199,7 +1197,7 @@ Sequence XXXXX was found at index XX
 ## Q1
 
 
-```python
+``` python
 sequence = "IVADH"
 if sequence in peptides:
     index = peptides.index(sequence)
@@ -1212,14 +1210,14 @@ if sequence in peptides:
 ## Q2
 
 
-```python
+``` python
 sequence = "CMGFT"
 if sequence in peptides:
     index = peptides.index(sequence)
     print('Sequence', sequence, 'was found at index',  index)
 ```
 
-```{.output}
+``` output
 Sequence CMGFT was found at index 2
 ```
 :::::::::::::::::
@@ -1228,7 +1226,7 @@ Sequence CMGFT was found at index 2
 ## Q3
 
 
-```python
+``` python
 sequence = "DKAKL"
 if sequence in peptides:
     index = peptides.index(sequence)
@@ -1240,7 +1238,7 @@ if sequence in peptides:
 ## Q4
 
 
-```python
+``` python
 sequence = "THGYP"
 if sequence in peptides:
     index = peptides.index(sequence)
@@ -1252,14 +1250,14 @@ if sequence in peptides:
 ## Q5
 
 
-```python
+``` python
 sequence = "NNVSR"
 if sequence in peptides:
     index = peptides.index(sequence)
     print('Sequence', sequence, 'was found at index',  index)
 ```
 
-```{.output}
+``` output
 Sequence NNVSR was found at index 30
 ```
 :::::::::::::::::
@@ -1274,22 +1272,22 @@ The number of members contained within a ```list``` defines its length. Similar 
 </p>
 
 
-```python
+``` python
 items = [1, 2.4, 'John', 5, 4]
 
 print(len(items))
 ```
 
-```{.output}
+``` output
 5
 ```
 
 
-```python
+``` python
 print(len([1, 5, 9]))
 ```
 
-```{.output}
+``` output
 3
 ```
 <p style='text-align: justify;'>
@@ -1297,7 +1295,7 @@ The <kbd>len()</kbd> function *always* returns an integer value (```int```) equa
 </p>
 
 
-```python
+``` python
 table = [1, 2, 3, 4]
 items_length = len(items)
 table_length = len(table)
@@ -1305,23 +1303,23 @@ table_length = len(table)
 print(items_length + table_length)
 ```
 
-```{.output}
+``` output
 9
 ```
 
 
-```python
+``` python
 print(len(table) > 2)
 ```
 
-```{.output}
+``` output
 True
 ```
 
 We can also use the length of an array in [conditional statements](03-conditional_statements.Rmd):
 
 
-```python
+``` python
 students = ['Julia', 'John', 'Jane', 'Jack']
 present = ['Julia', 'John', 'Jane', 'Jack', 'Janet']
 
@@ -1331,7 +1329,7 @@ else:
     print('One or more students are not here yet.')
 ```
 
-```{.output}
+``` output
 One or more students are not here yet.
 ```
 
@@ -1365,7 +1363,7 @@ Length of overlaps: XX
 
 ## Q1
 
-```python
+``` python
 overlaps = list()
 
 sequence = "IVADH"
@@ -1391,7 +1389,7 @@ if sequence in peptides:
 print('overlaps:', overlaps)
 ```
 
-```{.output}
+``` output
 overlaps: ['CMGFT', 'NNVSR']
 ```
 
@@ -1401,11 +1399,11 @@ overlaps: ['CMGFT', 'NNVSR']
 
 ## Q2
 
-```python
+``` python
 print('Length of peptides:', len(peptides))
 ```
 
-```{.output}
+``` output
 Length of peptides: 42
 ```
 
@@ -1416,11 +1414,11 @@ Length of peptides: 42
 ## Q3
 
 
-```python
+``` python
 print('Length of overlaps:', len(overlaps))
 ```
 
-```{.output}
+``` output
 Length of overlaps: 2
 ```
 :::::::::::::::::
@@ -1436,20 +1434,20 @@ In such cases, we create a *deep copy* of the original array before we call the 
 </p>
 Suppose we have:
 
-```python
+``` python
 table_a = [1, 2, 3, 4]
 ```
 <p style='text-align: justify;'>
 A weak reference for <span style="color: rgb(32, 121, 77);">table_a</span>, also referred to as an alias or a symbolic link, may be defined as follows:
 </p>
 
-```python
+``` python
 table_b = table_a
 
 print(table_a, table_b)
 ```
 
-```{.output}
+``` output
 [1, 2, 3, 4] [1, 2, 3, 4]
 ```
 
@@ -1457,18 +1455,18 @@ print(table_a, table_b)
 Now if we perform an in-place operation on only *one* of the two variables (the original or the alias) as follows:
 
 
-```python
+``` python
 table_a.append(5)
 ```
 
 we will in effect change *both* of them:
 
 
-```python
+``` python
 print(table_a, table_b)
 ```
 
-```{.output}
+``` output
 [1, 2, 3, 4, 5] [1, 2, 3, 4, 5]
 ```
 
@@ -1478,13 +1476,13 @@ This is useful if we need to change the name of a variable under certain conditi
 To retain a copy of the original array, however, we must perform a *deep copy* as follows:
 
 
-```python
+``` python
 table_c = table_b.copy()
 
 print(table_b, table_c)
 ```
 
-```{.output}
+``` output
 [1, 2, 3, 4, 5] [1, 2, 3, 4, 5]
 ```
 
@@ -1493,13 +1491,13 @@ where <span style="color: rgb(32, 121, 77);">table_c</span> represents a *deep c
 In this instance, performing an in-place operation on one variable would *not* have any impacts on the other one:
 
 
-```python
+``` python
 table_b.append(6)
 
 print(table_a, table_b, table_c)
 ```
 
-```{.output}
+``` output
 [1, 2, 3, 4, 5, 6] [1, 2, 3, 4, 5, 6] [1, 2, 3, 4, 5]
 ```
 
@@ -1522,7 +1520,7 @@ new_table = original_table.copy()
 Here is an example:
 
 
-```python
+``` python
 table_a = ['a', 3, 'b']
 table_b = table_a
 table_c = table_a.copy()
@@ -1533,7 +1531,7 @@ table_a[1] = 5
 print(table_a, table_b, table_c, table_d)
 ```
 
-```{.output}
+``` output
 ['a', 5, 'b'] ['a', 5, 'b'] ['a', 3, 'b'] ['a', 3, 'b']
 ```
 
@@ -1555,7 +1553,7 @@ When defining a consensus sequence, it is common to include annotations to repre
 Given a ```list``` of amino acids as:
 
 
-```python
+``` python
 amino_acids = [
     'A', 'R', 'N', 'D', 'C', 'E', 'Q', 'G', 'H', 'I',
     'L', 'K', 'M', 'F', 'P', 'S', 'T', 'W', 'Y', 'V'
@@ -1582,7 +1580,7 @@ amino_acids = [
 ## Q1
 
 
-```python
+``` python
 amino_acid_annotations = amino_acids.copy()
 ```
 
@@ -1593,7 +1591,7 @@ amino_acid_annotations = amino_acids.copy()
 ## Q2
 
 
-```python
+``` python
 ambiguous_annotations = ['X', 'B', 'Z', 'J']
 
 amino_acid_annotations.extend(ambiguous_annotations)
@@ -1605,7 +1603,7 @@ amino_acid_annotations.extend(ambiguous_annotations)
 ## Q3
 
 
-```python
+``` python
 lengths = [len(amino_acids), len(amino_acid_annotations)]
 ```
 
@@ -1616,13 +1614,13 @@ lengths = [len(amino_acids), len(amino_acid_annotations)]
 
 ## Q4
 
-```python
+``` python
 equivalence = lengths[0] == lengths[1]
 
 print(equivalence)
 ```
 
-```{.output}
+``` output
 False
 ```
 
@@ -1642,7 +1640,7 @@ To that end, we can [convert](02-input_output.Rmd#sec:conversionType) any sequen
 Suppose we have the sequence for [Protein Kinase A Gamma (catalytic) subunit for humans](https://www.ncbi.nlm.nih.gov/protein/AAC41690.1?report=fasta) as follows:
 
 
-```python
+``` python
 # Multiple lines of text may be split into
 # several lines inside parenthesis:
 
@@ -1658,7 +1656,7 @@ human_pka_gamma = (
 print(type(human_pka_gamma))
 ```
 
-```{.output}
+``` output
 <class 'str'>
 ```
 
@@ -1666,7 +1664,7 @@ print(type(human_pka_gamma))
 We can now *convert* our sequence from its original type of ```str``` to ```list``` by using <kbd>list()</kbd> as a *function*. Doing so will automatically decompose the text down to individual characters:
 
 
-```python
+``` python
 # The function "list" may be used to convert string
 # variables into a list of characters:
 pka_list = list(human_pka_gamma)
@@ -1674,7 +1672,7 @@ pka_list = list(human_pka_gamma)
 print(pka_list)
 ```
 
-```{.output}
+``` output
 ['M', 'A', 'A', 'P', 'A', 'A', 'A', 'T', 'A', 'M', 'G', 'N', 'A', 'P', 'A', 'K', 'K', 'D', 'T', 'E', 'Q', 'E', 'E', 'S', 'V', 'N', 'E', 'F', 'L', 'A', 'K', 'A', 'R', 'G', 'D', 'F', 'L', 'Y', 'R', 'W', 'G', 'N', 'P', 'A', 'Q', 'N', 'T', 'A', 'S', 'S', 'D', 'Q', 'F', 'E', 'R', 'L', 'R', 'T', 'L', 'G', 'M', 'G', 'S', 'F', 'G', 'R', 'V', 'M', 'L', 'V', 'R', 'H', 'Q', 'E', 'T', 'G', 'G', 'H', 'Y', 'A', 'M', 'K', 'I', 'L', 'N', 'K', 'Q', 'K', 'V', 'V', 'K', 'M', 'K', 'Q', 'V', 'E', 'H', 'I', 'L', 'N', 'E', 'K', 'R', 'I', 'L', 'Q', 'A', 'I', 'D', 'F', 'P', 'F', 'L', 'V', 'K', 'L', 'Q', 'F', 'S', 'F', 'K', 'D', 'N', 'S', 'Y', 'L', 'Y', 'L', 'V', 'M', 'E', 'Y', 'V', 'P', 'G', 'G', 'E', 'M', 'F', 'S', 'R', 'L', 'Q', 'R', 'V', 'G', 'R', 'F', 'S', 'E', 'P', 'H', 'A', 'C', 'F', 'Y', 'A', 'A', 'Q', 'V', 'V', 'L', 'A', 'V', 'Q', 'Y', 'L', 'H', 'S', 'L', 'D', 'L', 'I', 'H', 'R', 'D', 'L', 'K', 'P', 'E', 'N', 'L', 'L', 'I', 'D', 'Q', 'Q', 'G', 'Y', 'L', 'Q', 'V', 'T', 'D', 'F', 'G', 'F', 'A', 'K', 'R', 'V', 'K', 'G', 'R', 'T', 'W', 'T', 'L', 'C', 'G', 'T', 'P', 'E', 'Y', 'L', 'A', 'P', 'E', 'I', 'I', 'L', 'S', 'K', 'G', 'Y', 'N', 'K', 'A', 'V', 'D', 'W', 'W', 'A', 'L', 'G', 'V', 'L', 'I', 'Y', 'E', 'M', 'A', 'V', 'G', 'F', 'P', 'P', 'F', 'Y', 'A', 'D', 'Q', 'P', 'I', 'Q', 'I', 'Y', 'E', 'K', 'I', 'V', 'S', 'G', 'R', 'V', 'R', 'F', 'P', 'S', 'K', 'L', 'S', 'S', 'D', 'L', 'K', 'D', 'L', 'L', 'R', 'S', 'L', 'L', 'Q', 'V', 'D', 'L', 'T', 'K', 'R', 'F', 'G', 'N', 'L', 'R', 'N', 'G', 'V', 'G', 'D', 'I', 'K', 'N', 'H', 'K', 'W', 'F', 'A', 'T', 'T', 'S', 'W', 'I', 'A', 'I', 'Y', 'E', 'K', 'K', 'V', 'E', 'A', 'P', 'F', 'I', 'P', 'K', 'Y', 'T', 'G', 'P', 'G', 'D', 'A', 'S', 'N', 'F', 'D', 'D', 'Y', 'E', 'E', 'E', 'E', 'L', 'R', 'I', 'S', 'I', 'N', 'E', 'K', 'C', 'A', 'K', 'E', 'F', 'S', 'E', 'F']
 ```
 
@@ -1764,21 +1762,21 @@ The *methods* outline here are not individually described; however, at this poin
 Count a specific value within a ```list```:
 
 
-```python
+``` python
 table_a = [1, 2, 2, 2]
 table_b = [15, 16]
 
 print(table_a.count(2))
 ```
 
-```{.output}
+``` output
 3
 ```
 
 Extend a ```list```:
 
 
-```python
+``` python
 table_a = [1, 2, 2, 2]
 table_b = [15, 16]
 
@@ -1788,7 +1786,7 @@ table_c.extend(table_b)
 print(table_a, table_b, table_c)
 ```
 
-```{.output}
+``` output
 [1, 2, 2, 2] [15, 16] [1, 2, 2, 2, 15, 16]
 ```
 
@@ -1796,7 +1794,7 @@ print(table_a, table_b, table_c)
 Extend a ```list``` by adding two lists to each other. Note that adding two lists is *not* an in-place operation:
 
 
-```python
+``` python
 table_a = [1, 2, 2, 2]
 table_b = [15, 16]
 
@@ -1805,12 +1803,12 @@ table_c = table_a + table_b
 print(table_a, table_b, table_c)
 ```
 
-```{.output}
+``` output
 [1, 2, 2, 2] [15, 16] [1, 2, 2, 2, 15, 16]
 ```
 
 
-```python
+``` python
 table_a = [1, 2, 2, 2]
 table_b = [15, 16]
 
@@ -1820,7 +1818,7 @@ table_d = table_a + table_b
 print(table_c == table_d)
 ```
 
-```{.output}
+``` output
 False
 ```
 <p style='text-align: justify;'>
@@ -1829,14 +1827,14 @@ We can also reverse the values in a ```list```. There are two methods for doing 
 
 1. Through an in-place operation using <kbd>.reverse()</kbd>
 
-```python
+``` python
 table = [1, 2, 2, 2, 15, 16]
 table.reverse()
 
 print("Reversed:", table)
 ```
 
-```{.output}
+``` output
 Reversed: [16, 15, 2, 2, 2, 1]
 ```
 
@@ -1844,7 +1842,7 @@ Reversed: [16, 15, 2, 2, 2, 1]
 
 2. Through <kbd>reversed()</kbd>, which is a build-in generator function.
 
-```python
+``` python
 table = [1, 2, 2, 2, 15, 16]
 table_rev = reversed(table)
 
@@ -1852,35 +1850,35 @@ print("Result:", table_rev)
 print("Type:", type(table_rev))
 ```
 
-```{.output}
-Result: <list_reverseiterator object at 0x7f70b20fe740>
+``` output
+Result: <list_reverseiterator object at 0x7ff2d6a51f60>
 Type: <class 'list_reverseiterator'>
 ```
 
 We can, however, force the evaluation process by converting the generator results onto a ```list```:
 
 
-```python
+``` python
 table_rev_evaluated = list(table_rev)
 
 print('Evaluated:', table_rev_evaluated)
 ```
 
-```{.output}
+``` output
 Evaluated: [16, 15, 2, 2, 2, 1]
 ```
 
 Members of a ```list``` may be sorted in-place as follows:
 
 
-```python
+``` python
 table = [16, 2, 15, 1, 2, 2]
 table.sort()
 
 print("Sorted (ascending):", table)
 ```
 
-```{.output}
+``` output
 Sorted (ascending): [1, 2, 2, 2, 15, 16]
 ```
 
@@ -1893,50 +1891,50 @@ There is also the built-in function <kbd>sorted()</kbd> that works in a similar 
 The <kbd>.sort()</kbd> method takes an optional keyword argument entitled *reverse* (default: ```False```). If set to ```True```, the method will perform a descending sort:
 
 
-```python
+``` python
 table = [16, 2, 15, 1, 2, 2]
 table.sort(reverse=True)
 
 print("Sorted (descending):", table)
 ```
 
-```{.output}
+``` output
 Sorted (descending): [16, 15, 2, 2, 2, 1]
 ```
 
 We can also create an empty ```list```, so that we can add members to it later in our code using <kbd>.append()</kbd> or <kbd>.extend()</kbd> amongst other tools:
 
 
-```python
+``` python
 table = list()
 
 print(table)
 ```
 
-```{.output}
+``` output
 []
 ```
 
 
-```python
+``` python
 table.append(5)
 
 print(table)
 ```
 
-```{.output}
+``` output
 [5]
 ```
 
 
-```python
+``` python
 another_table = ['Jane', 'Janette']
 table.extend(another_table)
 
 print(another_table)
 ```
 
-```{.output}
+``` output
 ['Jane', 'Janette']
 ```
 
@@ -1979,7 +1977,7 @@ Arrays can contain values of any *type*. This rule applies to nested arrays too.
 The table can be written in Python as a nested array:
 
 
-```python
+``` python
 # The list has 3 members, 2 of which
 # are arrays of type list:
 table = [[1, 2, 3], 4, [7, 8]]
@@ -1987,7 +1985,7 @@ table = [[1, 2, 3], 4, [7, 8]]
 print(table)
 ```
 
-```{.output}
+``` output
 [[1, 2, 3], 4, [7, 8]]
 ```
 
@@ -2001,22 +1999,22 @@ We may visualise the process as follows:
 To retrieve an entire row, we only need to include the reference for that row:
 
 
-```python
+``` python
 print(table[0])
 ```
 
-```{.output}
+``` output
 [1, 2, 3]
 ```
 
 and to retrieve a specific member, we include the reference for both the row and column:
 
 
-```python
+``` python
 print(table[0][1])
 ```
 
-```{.output}
+``` output
 2
 ```
 
@@ -2025,40 +2023,40 @@ We may also extract slices from a nested array. The protocol is identical to nor
 </p>
 
 
-```python
+``` python
 print(table[:2])
 ```
 
-```{.output}
+``` output
 [[1, 2, 3], 4]
 ```
 
 
-```python
+``` python
 print(table[0][:2])
 ```
 
-```{.output}
+``` output
 [1, 2]
 ```
 
 Note that only 2 of the 3 members in <span style="color: rgb(32, 121, 77);">table</span> are arrays of type ```list```:
 
 
-```python
+``` python
 print(table[0], type(table[0]))
 ```
 
-```{.output}
+``` output
 [1, 2, 3] <class 'list'>
 ```
 
 
-```python
+``` python
 print(table[2], type(table[2]))
 ```
 
-```{.output}
+``` output
 [7, 8] <class 'list'>
 ```
 
@@ -2066,11 +2064,11 @@ However, there is another member that is not an array:
 
 
 
-```python
+``` python
 print(table[1], type(table[1]))
 ```
 
-```{.output}
+``` output
 4 <class 'int'>
 ```
 
@@ -2079,13 +2077,13 @@ In most circumstances, we would want all the members in an array to be *homogene
 </p>
 
 
-```python
+``` python
 table = [[1, 2, 3], [4], [7, 8]]
 
 print(table[1], type(table[1]))
 ```
 
-```{.output}
+``` output
 [4] <class 'list'>
 ```
 <p style='text-align: justify;'>
@@ -2112,7 +2110,7 @@ Give then following of pathogens and their corresponding diseases:
 ## Q1
 
 
-```python
+``` python
 disease_pathogen = [
   ["Bacterium", "Negative", "Shigella flexneri" , "Bacillary dysentery"],
   ["Prion", None, "PrP(sc)", "Transmissible spongiform encephalopathies"],
@@ -2128,7 +2126,7 @@ disease_pathogen = [
 print(disease_pathogen)
 ```
 
-```{.output}
+``` output
 [['Bacterium', 'Negative', 'Shigella flexneri', 'Bacillary dysentery'], ['Prion', None, 'PrP(sc)', 'Transmissible spongiform encephalopathies'], ['Bacterium', 'Negative', 'Vibrio cholerae', 'Cholera'], ['Bacterium', 'Negative', 'Listeria monocytogenes', 'Listeriosis'], ['Virus', None, 'Hepatitis C', 'Hepatitis'], ['Bacterium', 'Negative', 'Helicobacter pylori', 'Peptic ulcers'], ['Bacterium', 'Negative', 'Mycobacterium tuberculosis', 'Tuberculosis'], ['Bacterium', 'Negative', 'Chlamydia trachomatis', 'Chlamydial diseases'], ['Virus', None, 'Human Immunodeficiency Virus', 'Human Immunodeficiency']]
 ```
 :::::::::::::::::
@@ -2137,13 +2135,13 @@ print(disease_pathogen)
 
 ## Q2
 
-```python
+``` python
 disease_pathogen.sort(reverse=True)
 
 print(disease_pathogen)
 ```
 
-```{.output}
+``` output
 [['Virus', None, 'Human Immunodeficiency Virus', 'Human Immunodeficiency'], ['Virus', None, 'Hepatitis C', 'Hepatitis'], ['Prion', None, 'PrP(sc)', 'Transmissible spongiform encephalopathies'], ['Bacterium', 'Negative', 'Vibrio cholerae', 'Cholera'], ['Bacterium', 'Negative', 'Shigella flexneri', 'Bacillary dysentery'], ['Bacterium', 'Negative', 'Mycobacterium tuberculosis', 'Tuberculosis'], ['Bacterium', 'Negative', 'Listeria monocytogenes', 'Listeriosis'], ['Bacterium', 'Negative', 'Helicobacter pylori', 'Peptic ulcers'], ['Bacterium', 'Negative', 'Chlamydia trachomatis', 'Chlamydial diseases']]
 ```
 :::::::::::::::::
@@ -2188,7 +2186,7 @@ $$table=\begin{bmatrix}
 The implementation of these arrays is identical to the implementation of other nested arrays. We can therefore code our table in Python as:
 
 
-```python
+``` python
 table = [
   [1, 2, 3],
   [4, 5, 6],
@@ -2198,34 +2196,34 @@ table = [
 print(table)
 ```
 
-```{.output}
+``` output
 [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 ```
 
 
-```python
+``` python
 print(table[2])
 ```
 
-```{.output}
+``` output
 [7, 8, 9]
 ```
 
 
-```python
+``` python
 print(table[1][0])
 ```
 
-```{.output}
+``` output
 4
 ```
 
 
-```python
+``` python
 print(table[:2])
 ```
 
-```{.output}
+``` output
 [[1, 2, 3], [4, 5, 6]]
 ```
 
@@ -2251,7 +2249,7 @@ Display the results.
 
 ## Q1
 
-```python
+``` python
 cross = [
 		    [0, 0, 0, 0, 0, 0, 0],
 		    [0, 1, 0, 0, 0, 1, 0],
@@ -2265,7 +2263,7 @@ cross = [
 print(cross)
 ```
 
-```{.output}
+``` output
 [[0, 0, 0, 0, 0, 0, 0], [0, 1, 0, 0, 0, 1, 0], [0, 0, 1, 0, 1, 0, 0], [0, 0, 0, 1, 0, 0, 0], [0, 0, 1, 0, 1, 0, 0], [0, 1, 0, 0, 0, 1, 0], [0, 0, 0, 0, 0, 0, 0]]
 ```
 :::::::::::::::::
@@ -2274,7 +2272,7 @@ print(cross)
 
 ## Q2
 
-```python
+``` python
 cross_bool = [
   [False, False, False, False, False, False, False],
   [False, True, False, False, False, True, False],
@@ -2288,7 +2286,7 @@ cross_bool = [
 print(cross_bool)
 ```
 
-```{.output}
+``` output
 [[False, False, False, False, False, False, False], [False, True, False, False, False, True, False], [False, False, True, False, True, False, False], [False, False, False, True, False, False, False], [False, False, True, False, True, False, False], [False, True, False, False, False, True, False], [False, False, False, False, False, False, False]]
 ```
 :::::::::::::::::
@@ -2332,52 +2330,52 @@ To implement a ```tuple``` in Python, we place our values separated by commas in
 ::::::::::::::::::::::::::::::::::::
 
 
-```python
+``` python
 pathway = 'Wnt Signaling'
 coreceptors = ('Frizzled', 'LRP')
 
 print(type(coreceptors))
 ```
 
-```{.output}
+``` output
 <class 'tuple'>
 ```
 
 
-```python
+``` python
 print(coreceptors)
 ```
 
-```{.output}
+``` output
 ('Frizzled', 'LRP')
 ```
 
 
-```python
+``` python
 wnt = (pathway, coreceptors)
 
 print(type(wnt))
 ```
 
-```{.output}
+``` output
 <class 'tuple'>
 ```
 
 
-```python
+``` python
 print(wnt)
 ```
 
-```{.output}
+``` output
 ('Wnt Signaling', ('Frizzled', 'LRP'))
 ```
 
 
-```python
+``` python
 print(wnt[0])
 ```
 
-```{.output}
+``` output
 Wnt Signaling
 ```
 
@@ -2389,64 +2387,64 @@ Indexing and slicing principles for ```tuple``` is identical to ```list```, whic
 Similar to ```list```, we can convert other sequences to ```tuple```:
 
 
-```python
+``` python
 numbers_list = [1, 2, 3, 4, 5]
 
 print(type(numbers_list))
 ```
 
-```{.output}
+``` output
 <class 'list'>
 ```
 
 
-```python
+``` python
 numbers = tuple(numbers_list)
 
 print(numbers)
 ```
 
-```{.output}
+``` output
 (1, 2, 3, 4, 5)
 ```
 
 
-```python
+``` python
 print(type(numbers))
 ```
 
-```{.output}
+``` output
 <class 'tuple'>
 ```
 
 
-```python
+``` python
 text = 'This is a string.'
 
 print(type(text))
 ```
 
-```{.output}
+``` output
 <class 'str'>
 ```
 
 
-```python
+``` python
 characters = tuple(text)
 
 print(characters)
 ```
 
-```{.output}
+``` output
 ('T', 'h', 'i', 's', ' ', 'i', 's', ' ', 'a', ' ', 's', 't', 'r', 'i', 'n', 'g', '.')
 ```
 
 
-```python
+``` python
 print(type(characters))
 ```
 
-```{.output}
+``` output
 <class 'tuple'>
 ```
 
@@ -2456,45 +2454,45 @@ print(type(characters))
 In contrast with ```list```, however, if we attempt to change the contents of a ```tuple```, a ```TypeError``` is raised:
 
 
-```python
+``` python
 coreceptors[1] = 'LRP5/6'
 ```
 
-```{.error}
-Error: TypeError: 'tuple' object does not support item assignment
+``` output
+TypeError: 'tuple' object does not support item assignment
 ```
 
 Even though ```tuple``` is an immutable type, it can contain both mutable and immutable objects:
 
 
-```python
+``` python
 # (immutable, immutable, immutable, mutable)
 mixed_tuple = (1, 2.5, 'abc', (3, 4), [5, 6])
 
 print(mixed_tuple)
 ```
 
-```{.output}
+``` output
 (1, 2.5, 'abc', (3, 4), [5, 6])
 ```
 
 and mutable objects inside a ```tuple``` may still be changed:
 
-```python
+``` python
 print(mixed_tuple, type(mixed_tuple))
 ```
 
-```{.output}
+``` output
 (1, 2.5, 'abc', (3, 4), [5, 6]) <class 'tuple'>
 ```
 
 
 
-```python
+``` python
 print(mixed_tuple[4], type(mixed_tuple[4]))
 ```
 
-```{.output}
+``` output
 [5, 6] <class 'list'>
 ```
 
@@ -2507,30 +2505,30 @@ print(mixed_tuple[4], type(mixed_tuple[4]))
 ::::::::::::::::::::::::::::::::::::
 
 
-```python
+``` python
 # Lists are mutable, so we can alter their values:
 mixed_tuple[4][1] = 15
 
 print(mixed_tuple)
 ```
 
-```{.output}
+``` output
 (1, 2.5, 'abc', (3, 4), [5, 15])
 ```
 
 
-```python
+``` python
 mixed_tuple[4].append(25)
 
 print(mixed_tuple)
 ```
 
-```{.output}
+``` output
 (1, 2.5, 'abc', (3, 4), [5, 15, 25])
 ```
 
 
-```python
+``` python
 # We cannot remove the list from the tuple,
 # but we can empty it by clearing its members:
 mixed_tuple[4].clear()
@@ -2538,25 +2536,25 @@ mixed_tuple[4].clear()
 print(mixed_tuple)
 ```
 
-```{.output}
+``` output
 (1, 2.5, 'abc', (3, 4), [])
 ```
 
 Tuples may be empty or have a single value (singleton):
 
 
-```python
+``` python
 member_a = tuple()
 
 print(member_a, type(member_a), len(member_a))
 ```
 
-```{.output}
+``` output
 () <class 'tuple'> 0
 ```
 
 
-```python
+``` python
 # Empty parentheses also generate an empty tuple.
 # Remember: we cannot add values to an empty tuple later.
 member_b = ()
@@ -2564,12 +2562,12 @@ member_b = ()
 print(member_b, type(member_b), len(member_b))
 ```
 
-```{.output}
+``` output
 () <class 'tuple'> 0
 ```
 
 
-```python
+``` python
 # Singleton - Note that it is essential to include
 # a comma after the value in a single-member tuple:
 member_c = ('John Doe',)
@@ -2577,12 +2575,12 @@ member_c = ('John Doe',)
 print(member_c, type(member_c), len(member_c))
 ```
 
-```{.output}
+``` output
 ('John Doe',) <class 'tuple'> 1
 ```
 
 
-```python
+``` python
 # If the comma is not included, a singleton tuple
 # is not constructed:
 member_d = ('John Doe')
@@ -2590,7 +2588,7 @@ member_d = ('John Doe')
 print(member_d, type(member_d), len(member_d))
 ```
 
-```{.output}
+``` output
 John Doe <class 'str'> 8
 ```
 
@@ -2604,18 +2602,18 @@ Implicit processes must be used sparingly. As always, the more coherent the code
 ::::::::::::::::::::::::::::::::::::
 
 
-```python
+``` python
 numbers = 1, 2, 3, 5, 7, 11
 
 print(numbers, type(numbers), len(numbers))
 ```
 
-```{.output}
+``` output
 (1, 2, 3, 5, 7, 11) <class 'tuple'> 6
 ```
 
 
-```python
+``` python
 # Note that for a singleton, we still need to
 # include the comma.
 member = 'John Doe',
@@ -2623,14 +2621,14 @@ member = 'John Doe',
 print(member, type(member), len(member))
 ```
 
-```{.output}
+``` output
 ('John Doe',) <class 'tuple'> 1
 ```
 
 The reverse of this process is known as unpacking. Unpacking is no longer considered an implicit process because it replaces unnamed values inside an array, with named variables:
 
 
-```python
+``` python
 dimensions = 14, 17, 12
 
 x, y, z = dimensions
@@ -2638,28 +2636,28 @@ x, y, z = dimensions
 print(x)
 ```
 
-```{.output}
+``` output
 14
 ```
 
 
-```python
+``` python
 print(x, y)
 ```
 
-```{.output}
+``` output
 14 17
 ```
 
 
-```python
+``` python
 member = ('Jane Doe', 28, 'London', 'Student', 'Female')
 name, age, city, status, gender = member
 
 print('Name:', name, '- Age:', age)
 ```
 
-```{.output}
+``` output
 Name: Jane Doe - Age: 28
 ```
 
@@ -2670,7 +2668,7 @@ Name: Jane Doe - Age: 28
 
 Given:
 
-```python
+``` python
 protein_info = ('GFP', 238)
 ```
 
@@ -2682,7 +2680,7 @@ Unpack <span style="color: rgb(32, 121, 77);">protein_info</span> into two disti
 
 ## DIY ANSWER
 
-```python
+``` python
 protein_name, protein_length = protein_info
 ```
 :::::::::::::::::
@@ -2790,7 +2788,7 @@ Determine the adjacency matrix and implement it as a two-dimensional array in Py
 ### Q1
 
 
-```python
+``` python
 table = [[1, 2, 3], ['a', 'b'], [1.5, 'b', 4], [2]]
 
 table_length = len(table)
@@ -2805,7 +2803,7 @@ print('')
 print(reason)
 ```
 
-```{.output}
+``` output
 length of Table: 4
 
 The length of a `list` is a function of its distinct members, regardless of their types.
@@ -2814,7 +2812,7 @@ The length of a `list` is a function of its distinct members, regardless of thei
 ### Q2
 
 
-```python
+``` python
 human_pka_gamma = (
   'MAAPAAATAMGNAPAKKDTEQEESVNEFLAKARGDFLYRWGNPAQNTASSDQFERLRTLGMGSFGRVML'
   'VRHQETGGHYAMKILNKQKVVKMKQVEHILNEKRILQAIDFPFLVKLQFSFKDNSYLYLVMEYVPGGEM'
@@ -2837,7 +2835,7 @@ residues = [
 print(residues)
 ```
 
-```{.output}
+``` output
 Serine: 19
 Threonine: 13
 [['S', 19], ['T', 13]]
@@ -2845,7 +2843,7 @@ Threonine: 13
 
 ### Q3
 
-```python
+``` python
 answer = (
   "Members of a two-dimensional array must themselves be arrays of "
   "equal lengths containing identically typed members."
@@ -2853,14 +2851,13 @@ answer = (
 print(answer)
 ```
 
-```{.output}
+``` output
 Members of a two-dimensional array must themselves be arrays of equal lengths containing identically typed members.
 ```
 
 ### Q4
 
-```python
-
+``` python
 # Column initials:
 #    S, H, A, A, G
 adjacency_matrix = [
@@ -2874,7 +2871,7 @@ adjacency_matrix = [
 print(adjacency_matrix)
 ```
 
-```{.output}
+``` output
 [[0, 1, 0, 0, 0], [0, 0, 1, 0, 0], [0, 0, 0, 1, 0], [0, 0, 0, 0, 1], [0, 1, 1, 0, 0]]
 ```
 
