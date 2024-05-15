@@ -18,14 +18,14 @@ title: Basic Python
 created: ~
 
 # Comma-separated list of keywords for the lesson
-keywords: software, data, lesson, The Carpentries
+keywords: Python, coding, learning, L2D
 
 # Life cycle stage of the lesson
 # possible values: pre-alpha, alpha, beta, stable
 life_cycle: stable
 
-# License of the lesson -- CC-BY 4.0
-license:
+# License of the lesson
+license: CC-BY 4.0
 
 # Link to the source repository for this lesson
 source: https://github.com/LearnToDiscover/Basic_Python/
@@ -35,7 +35,7 @@ url: https://learntodiscover.github.io/Basic_Python/
 branch: main
 
 # Who to contact if there are any issues
-contact: team@carpentries.org
+contact: admin@learntodiscover.ai
 
 # Generate PDFs of episodes?
 pdf: TRUE
