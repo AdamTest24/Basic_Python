@@ -18,15 +18,7 @@
   <div class="container-fluid top-nav-container">
     <div class="col-md-6">
       <div class="large-logo">
-        <img alt="l2d" src="assets/images/l2d-logo.svg"><abbr class="badge badge-light" title="This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught." style="background-color: #FF4955; border-radius: 5px">
-          <a href="https://cdh.carpentries.org/the-lesson-life-cycle.html#early-development-pre-alpha-through-alpha" class="external-link alert-link" style="color: #000">
-            <i aria-hidden="true" class="icon" data-feather="alert-octagon" style="border-radius: 5px"></i>
-            Pre-Alpha
-          </a>
-          <span class="visually-hidden">This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught.</span>
-        </abbr>
-        
-      </div>
+        <img alt="l2d" src="assets/images/l2d-logo.svg"></div>
     </div>
     <div class="selector-container">
       
@@ -586,9 +578,9 @@ using their respective <em>keys</em> as follows:</p>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="bu">print</span>(protein_kinases[<span class="st">'GSK3'</span>])</span></code></pre>
 </div>
 <div class="codewrapper">
-<h3 class="code-label">ERROR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="error" tabindex="0"><code><span><span class="va">Error</span><span class="op">:</span> <span class="va">KeyError</span><span class="op">:</span> <span class="st">'GSK3'</span></span></code></pre>
+<pre class="output" tabindex="0"><code><span><span class="va">KeyError</span><span class="op">:</span> <span class="st">'GSK3'</span></span></code></pre>
 </div>
 <div id="diy:dict:implement:fromTable" class="callout challenge">
 <div class="callout-square">
@@ -668,9 +660,9 @@ cannot be used as a <em>key</em>:</p>
 <span id="cb21-3"><a href="#cb21-3" tabindex="-1"></a>  }</span></code></pre>
 </div>
 <div class="codewrapper">
-<h3 class="code-label">ERROR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="error" tabindex="0"><code>Error: TypeError: unhashable type: 'list'</code></pre>
+<pre class="output" tabindex="0"><code>TypeError: unhashable type: 'list'</code></pre>
 </div>
 <p>But we can use any immutable type as a <em>key</em>:</p>
 <div class="codewrapper sourceCode" id="cb23">
@@ -1451,9 +1443,9 @@ the requested <em>key</em> does not exist:</p>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb95-1"><a href="#cb95-1" tabindex="-1"></a><span class="bu">print</span>(lac_repressor[<span class="st">'gene'</span>])</span></code></pre>
 </div>
 <div class="codewrapper">
-<h3 class="code-label">ERROR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="error" tabindex="0"><code><span><span class="va">Error</span><span class="op">:</span> <span class="va">KeyError</span><span class="op">:</span> <span class="st">'gene'</span></span></code></pre>
+<pre class="output" tabindex="0"><code><span><span class="va">KeyError</span><span class="op">:</span> <span class="st">'gene'</span></span></code></pre>
 </div>
 <div class="codewrapper sourceCode" id="cb97">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1821,11 +1813,7 @@ the mRNA sequence you obtained.</p></li>
 <span id="cb112-56"><a href="#cb112-56" tabindex="-1"></a>    m_rna <span class="op">+=</span> dna2mrna[c_dna]</span>
 <span id="cb112-57"><a href="#cb112-57" tabindex="-1"></a></span>
 <span id="cb112-58"><a href="#cb112-58" tabindex="-1"></a></span>
-<span id="cb112-59"><a href="#cb112-59" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'mRNA:'</span>, m_rna)</span>
-<span id="cb112-60"><a href="#cb112-60" tabindex="-1"></a></span>
-<span id="cb112-61"><a href="#cb112-61" tabindex="-1"></a></span>
-<span id="cb112-62"><a href="#cb112-62" tabindex="-1"></a><span class="co"># Translation:</span></span>
-<span id="cb112-63"><a href="#cb112-63" tabindex="-1"></a><span class="co"># -----------------------------------------------------------------</span></span></code></pre>
+<span id="cb112-59"><a href="#cb112-59" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'mRNA:'</span>, m_rna)</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1835,26 +1823,18 @@ the mRNA sequence you obtained.</p></li>
 <div class="codewrapper sourceCode" id="cb114">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb114-1"><a href="#cb114-1" tabindex="-1"></a>mrna_len <span class="op">=</span> <span class="bu">len</span>(m_rna)</span>
-<span id="cb114-2"><a href="#cb114-2" tabindex="-1"></a>codon_len <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb114-3"><a href="#cb114-3" tabindex="-1"></a></span>
-<span id="cb114-4"><a href="#cb114-4" tabindex="-1"></a>protein <span class="op">=</span> <span class="bu">str</span>()</span>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb114-1"><a href="#cb114-1" tabindex="-1"></a><span class="co"># Translation:</span></span>
+<span id="cb114-2"><a href="#cb114-2" tabindex="-1"></a><span class="co"># -----------------------------------------------------------------</span></span>
+<span id="cb114-3"><a href="#cb114-3" tabindex="-1"></a>mrna_len <span class="op">=</span> <span class="bu">len</span>(m_rna)</span>
+<span id="cb114-4"><a href="#cb114-4" tabindex="-1"></a>codon_len <span class="op">=</span> <span class="dv">3</span></span>
 <span id="cb114-5"><a href="#cb114-5" tabindex="-1"></a></span>
-<span id="cb114-6"><a href="#cb114-6" tabindex="-1"></a><span class="cf">for</span> index <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, mrna_len, codon_len):</span>
-<span id="cb114-7"><a href="#cb114-7" tabindex="-1"></a>    codon <span class="op">=</span> m_rna[index: index <span class="op">+</span> codon_len]</span>
-<span id="cb114-8"><a href="#cb114-8" tabindex="-1"></a>    protein <span class="op">+=</span> codon2aa[codon]</span>
-<span id="cb114-9"><a href="#cb114-9" tabindex="-1"></a></span>
-<span id="cb114-10"><a href="#cb114-10" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Protein:'</span>, protein)</span>
+<span id="cb114-6"><a href="#cb114-6" tabindex="-1"></a>protein <span class="op">=</span> <span class="bu">str</span>()</span>
+<span id="cb114-7"><a href="#cb114-7" tabindex="-1"></a></span>
+<span id="cb114-8"><a href="#cb114-8" tabindex="-1"></a><span class="cf">for</span> index <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, mrna_len, codon_len):</span>
+<span id="cb114-9"><a href="#cb114-9" tabindex="-1"></a>    codon <span class="op">=</span> m_rna[index: index <span class="op">+</span> codon_len]</span>
+<span id="cb114-10"><a href="#cb114-10" tabindex="-1"></a>    protein <span class="op">+=</span> codon2aa[codon]</span>
 <span id="cb114-11"><a href="#cb114-11" tabindex="-1"></a></span>
-<span id="cb114-12"><a href="#cb114-12" tabindex="-1"></a><span class="co"># -----------------------------------------------------------------</span></span>
-<span id="cb114-13"><a href="#cb114-13" tabindex="-1"></a><span class="co"># INTERMEDIATE-LEVEL TWIST (Alternative answer):</span></span>
-<span id="cb114-14"><a href="#cb114-14" tabindex="-1"></a><span class="co"># One can also combine the two processes.</span></span>
-<span id="cb114-15"><a href="#cb114-15" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb114-16"><a href="#cb114-16" tabindex="-1"></a><span class="co"># Advantages:</span></span>
-<span id="cb114-17"><a href="#cb114-17" tabindex="-1"></a><span class="co">#   - One for-loop.</span></span>
-<span id="cb114-18"><a href="#cb114-18" tabindex="-1"></a><span class="co">#   - No use of `range()`.</span></span>
-<span id="cb114-19"><a href="#cb114-19" tabindex="-1"></a><span class="co">#   - Almost twice as fast (half as many iterations).</span></span>
-<span id="cb114-20"><a href="#cb114-20" tabindex="-1"></a><span class="co"># -----------------------------------------------------------------</span></span></code></pre>
+<span id="cb114-12"><a href="#cb114-12" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Protein:'</span>, protein)</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1864,30 +1844,39 @@ the mRNA sequence you obtained.</p></li>
 <div class="codewrapper sourceCode" id="cb116">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb116-1"><a href="#cb116-1" tabindex="-1"></a>m_rna <span class="op">=</span> <span class="bu">str</span>()</span>
-<span id="cb116-2"><a href="#cb116-2" tabindex="-1"></a>protein <span class="op">=</span> <span class="bu">str</span>()</span>
-<span id="cb116-3"><a href="#cb116-3" tabindex="-1"></a>codon <span class="op">=</span> <span class="bu">str</span>()</span>
-<span id="cb116-4"><a href="#cb116-4" tabindex="-1"></a></span>
-<span id="cb116-5"><a href="#cb116-5" tabindex="-1"></a><span class="cf">for</span> nucleotide <span class="kw">in</span> dna_sequence:</span>
-<span id="cb116-6"><a href="#cb116-6" tabindex="-1"></a>    <span class="co"># DNA to cDNA</span></span>
-<span id="cb116-7"><a href="#cb116-7" tabindex="-1"></a>    c_dna <span class="op">=</span> dna2cdna[nucleotide]</span>
-<span id="cb116-8"><a href="#cb116-8" tabindex="-1"></a></span>
-<span id="cb116-9"><a href="#cb116-9" tabindex="-1"></a>    <span class="co"># Transcription:</span></span>
-<span id="cb116-10"><a href="#cb116-10" tabindex="-1"></a>    transcribed_nucleotide <span class="op">=</span> dna2mrna[c_dna]</span>
-<span id="cb116-11"><a href="#cb116-11" tabindex="-1"></a>    m_rna <span class="op">+=</span> transcribed_nucleotide</span>
-<span id="cb116-12"><a href="#cb116-12" tabindex="-1"></a></span>
-<span id="cb116-13"><a href="#cb116-13" tabindex="-1"></a>    <span class="co"># Translation process:</span></span>
-<span id="cb116-14"><a href="#cb116-14" tabindex="-1"></a>    <span class="co"># Retaining the residue to construct triplets.</span></span>
-<span id="cb116-15"><a href="#cb116-15" tabindex="-1"></a>    codon <span class="op">+=</span> transcribed_nucleotide</span>
-<span id="cb116-16"><a href="#cb116-16" tabindex="-1"></a></span>
-<span id="cb116-17"><a href="#cb116-17" tabindex="-1"></a>    <span class="co"># Check if this is a triplet (a codon):</span></span>
-<span id="cb116-18"><a href="#cb116-18" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">len</span>(codon) <span class="op">==</span> <span class="dv">3</span>:</span>
-<span id="cb116-19"><a href="#cb116-19" tabindex="-1"></a>        <span class="co"># Convert to amino acid and store:</span></span>
-<span id="cb116-20"><a href="#cb116-20" tabindex="-1"></a>        protein <span class="op">+=</span> codon2aa[codon]</span>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb116-1"><a href="#cb116-1" tabindex="-1"></a><span class="co"># -----------------------------------------------------------------</span></span>
+<span id="cb116-2"><a href="#cb116-2" tabindex="-1"></a><span class="co"># INTERMEDIATE-LEVEL TWIST (Alternative answer):</span></span>
+<span id="cb116-3"><a href="#cb116-3" tabindex="-1"></a><span class="co"># One can also combine the two processes.</span></span>
+<span id="cb116-4"><a href="#cb116-4" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb116-5"><a href="#cb116-5" tabindex="-1"></a><span class="co"># Advantages:</span></span>
+<span id="cb116-6"><a href="#cb116-6" tabindex="-1"></a><span class="co">#   - One for-loop.</span></span>
+<span id="cb116-7"><a href="#cb116-7" tabindex="-1"></a><span class="co">#   - No use of `range()`.</span></span>
+<span id="cb116-8"><a href="#cb116-8" tabindex="-1"></a><span class="co">#   - Almost twice as fast (half as many iterations).</span></span>
+<span id="cb116-9"><a href="#cb116-9" tabindex="-1"></a><span class="co"># -----------------------------------------------------------------</span></span>
+<span id="cb116-10"><a href="#cb116-10" tabindex="-1"></a>m_rna <span class="op">=</span> <span class="bu">str</span>()</span>
+<span id="cb116-11"><a href="#cb116-11" tabindex="-1"></a>protein <span class="op">=</span> <span class="bu">str</span>()</span>
+<span id="cb116-12"><a href="#cb116-12" tabindex="-1"></a>codon <span class="op">=</span> <span class="bu">str</span>()</span>
+<span id="cb116-13"><a href="#cb116-13" tabindex="-1"></a></span>
+<span id="cb116-14"><a href="#cb116-14" tabindex="-1"></a><span class="cf">for</span> nucleotide <span class="kw">in</span> dna_sequence:</span>
+<span id="cb116-15"><a href="#cb116-15" tabindex="-1"></a>    <span class="co"># DNA to cDNA</span></span>
+<span id="cb116-16"><a href="#cb116-16" tabindex="-1"></a>    c_dna <span class="op">=</span> dna2cdna[nucleotide]</span>
+<span id="cb116-17"><a href="#cb116-17" tabindex="-1"></a></span>
+<span id="cb116-18"><a href="#cb116-18" tabindex="-1"></a>    <span class="co"># Transcription:</span></span>
+<span id="cb116-19"><a href="#cb116-19" tabindex="-1"></a>    transcribed_nucleotide <span class="op">=</span> dna2mrna[c_dna]</span>
+<span id="cb116-20"><a href="#cb116-20" tabindex="-1"></a>    m_rna <span class="op">+=</span> transcribed_nucleotide</span>
 <span id="cb116-21"><a href="#cb116-21" tabindex="-1"></a></span>
-<span id="cb116-22"><a href="#cb116-22" tabindex="-1"></a>        <span class="co"># Reset the codon to an empty string:</span></span>
-<span id="cb116-23"><a href="#cb116-23" tabindex="-1"></a>        codon <span class="op">=</span> <span class="bu">str</span>()</span>
-<span id="cb116-24"><a href="#cb116-24" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'mRNA:'</span>, m_rna)</span></code></pre>
+<span id="cb116-22"><a href="#cb116-22" tabindex="-1"></a>    <span class="co"># Translation process:</span></span>
+<span id="cb116-23"><a href="#cb116-23" tabindex="-1"></a>    <span class="co"># Retaining the residue to construct triplets.</span></span>
+<span id="cb116-24"><a href="#cb116-24" tabindex="-1"></a>    codon <span class="op">+=</span> transcribed_nucleotide</span>
+<span id="cb116-25"><a href="#cb116-25" tabindex="-1"></a></span>
+<span id="cb116-26"><a href="#cb116-26" tabindex="-1"></a>    <span class="co"># Check if this is a triplet (a codon):</span></span>
+<span id="cb116-27"><a href="#cb116-27" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">len</span>(codon) <span class="op">==</span> <span class="dv">3</span>:</span>
+<span id="cb116-28"><a href="#cb116-28" tabindex="-1"></a>        <span class="co"># Convert to amino acid and store:</span></span>
+<span id="cb116-29"><a href="#cb116-29" tabindex="-1"></a>        protein <span class="op">+=</span> codon2aa[codon]</span>
+<span id="cb116-30"><a href="#cb116-30" tabindex="-1"></a></span>
+<span id="cb116-31"><a href="#cb116-31" tabindex="-1"></a>        <span class="co"># Reset the codon to an empty string:</span></span>
+<span id="cb116-32"><a href="#cb116-32" tabindex="-1"></a>        codon <span class="op">=</span> <span class="bu">str</span>()</span>
+<span id="cb116-33"><a href="#cb116-33" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'mRNA:'</span>, m_rna)</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1971,12 +1960,12 @@ any links that you are not going to use.
   "inLanguage": "en",
   "dct:conformsTo": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
-  "keywords": "software, data, lesson, The Carpentries",
+  "keywords": "Python, coding, learning, L2D",
   "name": "Dictionaries",
   "creativeWorkStatus": "active",
   "url": "https://learntodiscover.github.io/Basic_Python/06-dictionaries.html",
   "identifier": "https://learntodiscover.github.io/Basic_Python/06-dictionaries.html",
-  "dateCreated": "2024-04-07",
+  "dateCreated": "2024-05-15",
   "dateModified": "2024-05-15",
   "datePublished": "2024-05-15"
 }

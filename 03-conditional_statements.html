@@ -18,15 +18,7 @@
   <div class="container-fluid top-nav-container">
     <div class="col-md-6">
       <div class="large-logo">
-        <img alt="l2d" src="assets/images/l2d-logo.svg"><abbr class="badge badge-light" title="This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught." style="background-color: #FF4955; border-radius: 5px">
-          <a href="https://cdh.carpentries.org/the-lesson-life-cycle.html#early-development-pre-alpha-through-alpha" class="external-link alert-link" style="color: #000">
-            <i aria-hidden="true" class="icon" data-feather="alert-octagon" style="border-radius: 5px"></i>
-            Pre-Alpha
-          </a>
-          <span class="visually-hidden">This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught.</span>
-        </abbr>
-        
-      </div>
+        <img alt="l2d" src="assets/images/l2d-logo.svg"></div>
     </div>
     <div class="selector-container">
       
@@ -509,7 +501,7 @@ the Australian Mathematics Trust.}</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <pre><code>To obtain the answer, we may write an algorithm in a pseudo-code format as follows:
 
@@ -604,24 +596,23 @@ will look like this:</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a></span>
-<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a>a_total <span class="op">=</span> <span class="dv">2</span></span>
-<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a>b_total <span class="op">=</span> <span class="dv">9</span></span>
-<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a>current_year <span class="op">=</span> <span class="dv">2002</span></span>
-<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a>current_total <span class="op">=</span> <span class="bu">abs</span>(a_total <span class="op">-</span> b_total) <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a>a_total <span class="op">=</span> b_total</span>
-<span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a>b_total <span class="op">=</span> current_total</span>
-<span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a></span>
-<span id="cb2-12"><a href="#cb2-12" tabindex="-1"></a><span class="cf">while</span> (current_total <span class="op">&gt;</span> <span class="dv">1</span>):</span>
-<span id="cb2-13"><a href="#cb2-13" tabindex="-1"></a>    current_total <span class="op">=</span> <span class="bu">abs</span>(a_total <span class="op">-</span> b_total) <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb2-14"><a href="#cb2-14" tabindex="-1"></a>    a_total <span class="op">=</span> b_total</span>
-<span id="cb2-15"><a href="#cb2-15" tabindex="-1"></a>    b_total <span class="op">=</span> current_total</span>
-<span id="cb2-16"><a href="#cb2-16" tabindex="-1"></a>    current_year <span class="op">=</span> current_year <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb2-17"><a href="#cb2-17" tabindex="-1"></a></span>
-<span id="cb2-18"><a href="#cb2-18" tabindex="-1"></a><span class="bu">print</span>(current_year)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a>a_total <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>b_total <span class="op">=</span> <span class="dv">9</span></span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a>current_year <span class="op">=</span> <span class="dv">2002</span></span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a>current_total <span class="op">=</span> <span class="bu">abs</span>(a_total <span class="op">-</span> b_total) <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a>a_total <span class="op">=</span> b_total</span>
+<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a>b_total <span class="op">=</span> current_total</span>
+<span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a><span class="cf">while</span> (current_total <span class="op">&gt;</span> <span class="dv">1</span>):</span>
+<span id="cb2-12"><a href="#cb2-12" tabindex="-1"></a>    current_total <span class="op">=</span> <span class="bu">abs</span>(a_total <span class="op">-</span> b_total) <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb2-13"><a href="#cb2-13" tabindex="-1"></a>    a_total <span class="op">=</span> b_total</span>
+<span id="cb2-14"><a href="#cb2-14" tabindex="-1"></a>    b_total <span class="op">=</span> current_total</span>
+<span id="cb2-15"><a href="#cb2-15" tabindex="-1"></a>    current_year <span class="op">=</span> current_year <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb2-16"><a href="#cb2-16" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" tabindex="-1"></a><span class="bu">print</span>(current_year)</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -750,39 +741,38 @@ it. In other words, the action(s) within a conditional statement
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a></span>
-<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a>value <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a></span>
-<span id="cb10-4"><a href="#cb10-4" tabindex="-1"></a><span class="co"># Statement A:</span></span>
-<span id="cb10-5"><a href="#cb10-5" tabindex="-1"></a><span class="cf">if</span> value <span class="op">&gt;</span> <span class="dv">0</span>:</span>
-<span id="cb10-6"><a href="#cb10-6" tabindex="-1"></a></span>
-<span id="cb10-7"><a href="#cb10-7" tabindex="-1"></a>    <span class="co"># First dedented line before the block.</span></span>
-<span id="cb10-8"><a href="#cb10-8" tabindex="-1"></a>    <span class="co"># This is a block, and it belongs to the</span></span>
-<span id="cb10-9"><a href="#cb10-9" tabindex="-1"></a>    <span class="co"># preceding "if" (Statement A):</span></span>
-<span id="cb10-10"><a href="#cb10-10" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'The value is positive.'</span>)</span>
-<span id="cb10-11"><a href="#cb10-11" tabindex="-1"></a></span>
-<span id="cb10-12"><a href="#cb10-12" tabindex="-1"></a>    <span class="co"># We can have nested blocks too.</span></span>
-<span id="cb10-13"><a href="#cb10-13" tabindex="-1"></a>    <span class="co"># Statement B:</span></span>
-<span id="cb10-14"><a href="#cb10-14" tabindex="-1"></a>    <span class="cf">if</span> value <span class="op">&gt;</span> <span class="dv">9</span>:</span>
-<span id="cb10-15"><a href="#cb10-15" tabindex="-1"></a>    <span class="co"># First dedented line before the block.</span></span>
-<span id="cb10-16"><a href="#cb10-16" tabindex="-1"></a>    <span class="co"># This is another block (nested).</span></span>
-<span id="cb10-17"><a href="#cb10-17" tabindex="-1"></a>    <span class="co"># This block belongs to the preceding "if" (Statement B).</span></span>
-<span id="cb10-18"><a href="#cb10-18" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'The value is not a single digit.'</span>)</span>
-<span id="cb10-19"><a href="#cb10-19" tabindex="-1"></a></span>
-<span id="cb10-20"><a href="#cb10-20" tabindex="-1"></a>    <span class="co"># Introducing a default behaviour for Statement B:</span></span>
-<span id="cb10-21"><a href="#cb10-21" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb10-22"><a href="#cb10-22" tabindex="-1"></a>    <span class="co"># This block belongs to the preceding "else".</span></span>
-<span id="cb10-23"><a href="#cb10-23" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'The value is a single digit.'</span>)</span>
-<span id="cb10-24"><a href="#cb10-24" tabindex="-1"></a></span>
-<span id="cb10-25"><a href="#cb10-25" tabindex="-1"></a><span class="co"># Introducing an alternative condition for Statement A:</span></span>
-<span id="cb10-26"><a href="#cb10-26" tabindex="-1"></a><span class="cf">elif</span> value <span class="op">&lt;</span> <span class="dv">0</span>:</span>
-<span id="cb10-27"><a href="#cb10-27" tabindex="-1"></a><span class="co"># This block belongs to the preceding "elif".</span></span>
-<span id="cb10-28"><a href="#cb10-28" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'The value is negative.'</span>)</span>
-<span id="cb10-29"><a href="#cb10-29" tabindex="-1"></a></span>
-<span id="cb10-30"><a href="#cb10-30" tabindex="-1"></a><span class="co"># Introducing a default behaviour for Statement A:</span></span>
-<span id="cb10-31"><a href="#cb10-31" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb10-32"><a href="#cb10-32" tabindex="-1"></a><span class="co"># This block belongs to the preceding "else".</span></span>
-<span id="cb10-33"><a href="#cb10-33" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'The value is zero.'</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a>value <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a><span class="co"># Statement A:</span></span>
+<span id="cb10-4"><a href="#cb10-4" tabindex="-1"></a><span class="cf">if</span> value <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb10-5"><a href="#cb10-5" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" tabindex="-1"></a>    <span class="co"># First dedented line before the block.</span></span>
+<span id="cb10-7"><a href="#cb10-7" tabindex="-1"></a>    <span class="co"># This is a block, and it belongs to the</span></span>
+<span id="cb10-8"><a href="#cb10-8" tabindex="-1"></a>    <span class="co"># preceding "if" (Statement A):</span></span>
+<span id="cb10-9"><a href="#cb10-9" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'The value is positive.'</span>)</span>
+<span id="cb10-10"><a href="#cb10-10" tabindex="-1"></a></span>
+<span id="cb10-11"><a href="#cb10-11" tabindex="-1"></a>    <span class="co"># We can have nested blocks too.</span></span>
+<span id="cb10-12"><a href="#cb10-12" tabindex="-1"></a>    <span class="co"># Statement B:</span></span>
+<span id="cb10-13"><a href="#cb10-13" tabindex="-1"></a>    <span class="cf">if</span> value <span class="op">&gt;</span> <span class="dv">9</span>:</span>
+<span id="cb10-14"><a href="#cb10-14" tabindex="-1"></a>    <span class="co"># First dedented line before the block.</span></span>
+<span id="cb10-15"><a href="#cb10-15" tabindex="-1"></a>    <span class="co"># This is another block (nested).</span></span>
+<span id="cb10-16"><a href="#cb10-16" tabindex="-1"></a>    <span class="co"># This block belongs to the preceding "if" (Statement B).</span></span>
+<span id="cb10-17"><a href="#cb10-17" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'The value is not a single digit.'</span>)</span>
+<span id="cb10-18"><a href="#cb10-18" tabindex="-1"></a></span>
+<span id="cb10-19"><a href="#cb10-19" tabindex="-1"></a>    <span class="co"># Introducing a default behaviour for Statement B:</span></span>
+<span id="cb10-20"><a href="#cb10-20" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb10-21"><a href="#cb10-21" tabindex="-1"></a>    <span class="co"># This block belongs to the preceding "else".</span></span>
+<span id="cb10-22"><a href="#cb10-22" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'The value is a single digit.'</span>)</span>
+<span id="cb10-23"><a href="#cb10-23" tabindex="-1"></a></span>
+<span id="cb10-24"><a href="#cb10-24" tabindex="-1"></a><span class="co"># Introducing an alternative condition for Statement A:</span></span>
+<span id="cb10-25"><a href="#cb10-25" tabindex="-1"></a><span class="cf">elif</span> value <span class="op">&lt;</span> <span class="dv">0</span>:</span>
+<span id="cb10-26"><a href="#cb10-26" tabindex="-1"></a><span class="co"># This block belongs to the preceding "elif".</span></span>
+<span id="cb10-27"><a href="#cb10-27" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'The value is negative.'</span>)</span>
+<span id="cb10-28"><a href="#cb10-28" tabindex="-1"></a></span>
+<span id="cb10-29"><a href="#cb10-29" tabindex="-1"></a><span class="co"># Introducing a default behaviour for Statement A:</span></span>
+<span id="cb10-30"><a href="#cb10-30" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb10-31"><a href="#cb10-31" tabindex="-1"></a><span class="co"># This block belongs to the preceding "else".</span></span>
+<span id="cb10-32"><a href="#cb10-32" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'The value is zero.'</span>)</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -913,7 +903,7 @@ Yourself</a> for additional information.
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2">Show me the solution</h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1296,7 +1286,7 @@ corresponding protein kinase; otherwise, it should say
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3">Please check these solutions only after submitting the assignments.</h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb36">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1386,12 +1376,12 @@ any links that you are not going to use.
   "inLanguage": "en",
   "dct:conformsTo": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
-  "keywords": "software, data, lesson, The Carpentries",
+  "keywords": "Python, coding, learning, L2D",
   "name": "Conditional Statements",
   "creativeWorkStatus": "active",
   "url": "https://learntodiscover.github.io/Basic_Python/03-conditional_statements.html",
   "identifier": "https://learntodiscover.github.io/Basic_Python/03-conditional_statements.html",
-  "dateCreated": "2024-04-07",
+  "dateCreated": "2024-05-15",
   "dateModified": "2024-05-15",
   "datePublished": "2024-05-15"
 }

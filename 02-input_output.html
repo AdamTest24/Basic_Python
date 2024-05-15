@@ -18,15 +18,7 @@
   <div class="container-fluid top-nav-container">
     <div class="col-md-6">
       <div class="large-logo">
-        <img alt="l2d" src="assets/images/l2d-logo.svg"><abbr class="badge badge-light" title="This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught." style="background-color: #FF4955; border-radius: 5px">
-          <a href="https://cdh.carpentries.org/the-lesson-life-cycle.html#early-development-pre-alpha-through-alpha" class="external-link alert-link" style="color: #000">
-            <i aria-hidden="true" class="icon" data-feather="alert-octagon" style="border-radius: 5px"></i>
-            Pre-Alpha
-          </a>
-          <span class="visually-hidden">This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught.</span>
-        </abbr>
-        
-      </div>
+        <img alt="l2d" src="assets/images/l2d-logo.svg"></div>
     </div>
     <div class="selector-container">
       
@@ -1431,9 +1423,9 @@ a <code>ValueError</code> is raised:</p>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb63-1"><a href="#cb63-1" tabindex="-1"></a>value_b <span class="op">=</span> <span class="bu">int</span>(value_a)</span></code></pre>
 </div>
 <div class="codewrapper">
-<h3 class="code-label">ERROR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="error" tabindex="0"><code>Error: ValueError: invalid literal for int() with base 10: '12y'</code></pre>
+<pre class="output" tabindex="0"><code>ValueError: invalid literal for int() with base 10: '12y'</code></pre>
 </div>
 <div id="do-it-yourself-4" class="callout challenge">
 <div class="callout-square">
@@ -3468,11 +3460,10 @@ the division of <span class="math inline">\(n\)</span> by <span class="math inli
 <div class="codewrapper sourceCode" id="cb222">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb222-1"><a href="#cb222-1" tabindex="-1"></a></span>
-<span id="cb222-2"><a href="#cb222-2" tabindex="-1"></a><span class="co">#Given that:</span></span>
-<span id="cb222-3"><a href="#cb222-3" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb222-4"><a href="#cb222-4" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">13</span></span>
-<span id="cb222-5"><a href="#cb222-5" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'1.'</span>, a<span class="op">**</span><span class="dv">2</span> <span class="op">&lt;</span> b)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb222-1"><a href="#cb222-1" tabindex="-1"></a><span class="co">#Given that:</span></span>
+<span id="cb222-2"><a href="#cb222-2" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb222-3"><a href="#cb222-3" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">13</span></span>
+<span id="cb222-4"><a href="#cb222-4" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'1.'</span>, a<span class="op">**</span><span class="dv">2</span> <span class="op">&lt;</span> b)</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3679,16 +3670,15 @@ Michaelis-Menten equation:</p>
 <div class="codewrapper sourceCode" id="cb239">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb239-1"><a href="#cb239-1" tabindex="-1"></a></span>
-<span id="cb239-2"><a href="#cb239-2" tabindex="-1"></a>v <span class="op">=</span> <span class="dv">50</span> <span class="co">#mol/L/s</span></span>
-<span id="cb239-3"><a href="#cb239-3" tabindex="-1"></a>k_m <span class="op">=</span> S <span class="op">=</span> <span class="fl">2.5</span> <span class="co">#mol/L</span></span>
-<span id="cb239-4"><a href="#cb239-4" tabindex="-1"></a></span>
-<span id="cb239-5"><a href="#cb239-5" tabindex="-1"></a><span class="co"># Rearranged the equation to</span></span>
-<span id="cb239-6"><a href="#cb239-6" tabindex="-1"></a><span class="co"># solve for v_max:</span></span>
-<span id="cb239-7"><a href="#cb239-7" tabindex="-1"></a></span>
-<span id="cb239-8"><a href="#cb239-8" tabindex="-1"></a>v_max <span class="op">=</span> (v <span class="op">*</span> (k_m <span class="op">+</span> S)) <span class="op">/</span> S</span>
-<span id="cb239-9"><a href="#cb239-9" tabindex="-1"></a><span class="co"># Unit: mol/L/s</span></span>
-<span id="cb239-10"><a href="#cb239-10" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Vmax ='</span>, v_max, <span class="st">'[ mol / (l * sec) ]'</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb239-1"><a href="#cb239-1" tabindex="-1"></a>v <span class="op">=</span> <span class="dv">50</span> <span class="co">#mol/L/s</span></span>
+<span id="cb239-2"><a href="#cb239-2" tabindex="-1"></a>k_m <span class="op">=</span> S <span class="op">=</span> <span class="fl">2.5</span> <span class="co">#mol/L</span></span>
+<span id="cb239-3"><a href="#cb239-3" tabindex="-1"></a></span>
+<span id="cb239-4"><a href="#cb239-4" tabindex="-1"></a><span class="co"># Rearranged the equation to</span></span>
+<span id="cb239-5"><a href="#cb239-5" tabindex="-1"></a><span class="co"># solve for v_max:</span></span>
+<span id="cb239-6"><a href="#cb239-6" tabindex="-1"></a></span>
+<span id="cb239-7"><a href="#cb239-7" tabindex="-1"></a>v_max <span class="op">=</span> (v <span class="op">*</span> (k_m <span class="op">+</span> S)) <span class="op">/</span> S</span>
+<span id="cb239-8"><a href="#cb239-8" tabindex="-1"></a><span class="co"># Unit: mol/L/s</span></span>
+<span id="cb239-9"><a href="#cb239-9" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Vmax ='</span>, v_max, <span class="st">'[ mol / (l * sec) ]'</span>)</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3762,12 +3752,12 @@ any links that you are not going to use.
   "inLanguage": "en",
   "dct:conformsTo": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
-  "keywords": "software, data, lesson, The Carpentries",
+  "keywords": "Python, coding, learning, L2D",
   "name": "Variables, Types, and Operations",
   "creativeWorkStatus": "active",
   "url": "https://learntodiscover.github.io/Basic_Python/02-input_output.html",
   "identifier": "https://learntodiscover.github.io/Basic_Python/02-input_output.html",
-  "dateCreated": "2024-04-07",
+  "dateCreated": "2024-05-15",
   "dateModified": "2024-05-15",
   "datePublished": "2024-05-15"
 }
