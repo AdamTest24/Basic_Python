@@ -18,11 +18,11 @@ title: Basic Python
 created: ~
 
 # Comma-separated list of keywords for the lesson
-keywords: software, data, lesson, The Carpentries
+keywords: Python, coding, learning, L2D
 
 # Life cycle stage of the lesson
 # possible values: pre-alpha, alpha, beta, stable
-life_cycle: pre-alpha
+life_cycle: stable
 
 # License of the lesson
 license: CC-BY 4.0
@@ -35,7 +35,7 @@ url: https://learntodiscover.github.io/Basic_Python/
 branch: main
 
 # Who to contact if there are any issues
-contact: team@carpentries.org
+contact: admin@learntodiscover.ai
 
 # Generate PDFs of episodes?
 pdf: TRUE
@@ -70,7 +70,7 @@ episodes:
   - 01-getting_started.Rmd
   - 02-input_output.Rmd
   - 03-conditional_statements.Rmd
-  - 04-arrays.Rmd 
+  - 04-arrays.Rmd
   - 05-iterations.Rmd
   - 06-dictionaries.Rmd
   - 07-functions.Rmd
