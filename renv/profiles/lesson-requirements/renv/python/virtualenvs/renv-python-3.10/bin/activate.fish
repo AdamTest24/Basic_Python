@@ -30,7 +30,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/Users/sabaferdous/git/L2D-July2024/Basic_Python/site/docs/renv/profiles/lesson-requirements/renv/python/virtualenvs/renv-python-3.10"
+set -gx VIRTUAL_ENV "/Users/sabaferdous/git/LearnToDiscover/Basic_Python/site/docs/renv/profiles/lesson-requirements/renv/python/virtualenvs/renv-python-3.10"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH

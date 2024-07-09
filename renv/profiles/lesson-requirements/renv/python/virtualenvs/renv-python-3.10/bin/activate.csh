@@ -8,7 +8,7 @@ alias deactivate 'test $?_OLD_VIRTUAL_PATH != 0 && setenv PATH "$_OLD_VIRTUAL_PA
 # Unset irrelevant variables.
 deactivate nondestructive
 
-setenv VIRTUAL_ENV "/Users/sabaferdous/git/L2D-July2024/Basic_Python/site/docs/renv/profiles/lesson-requirements/renv/python/virtualenvs/renv-python-3.10"
+setenv VIRTUAL_ENV "/Users/sabaferdous/git/LearnToDiscover/Basic_Python/site/docs/renv/profiles/lesson-requirements/renv/python/virtualenvs/renv-python-3.10"
 
 set _OLD_VIRTUAL_PATH="$PATH"
 setenv PATH "$VIRTUAL_ENV/bin:$PATH"
