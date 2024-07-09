@@ -252,7 +252,7 @@ False
 
 ::::::::::::::::::::::::::::::: challenge
 
-## Do it Yourself {#diy:func:tataBoxFinder}
+## Practice Exercise 1 {#diy:func:tataBoxFinder}
 
 Implement a function called <span style="color: rgb(32, 121, 77);">find_tata</span> that takes in one ```str``` argument called <span style="color: rgb(32, 121, 77);">seq</span> and looks for the <span style="color: rgb(32, 121, 77);">TATA</span>-box motif inside that sequence. Then:
 
@@ -273,7 +273,7 @@ res = find_tata(sequence)
 
 ::::::::::::::::: solution
 
-## DIY ANSWER
+## ANSWER
 
 ``` python
 def find_tata(seq):
@@ -377,14 +377,14 @@ add(value_a, value_b)
 
 ::::::::::::::::::::::::::::::: challenge
 
-## Do it Yourself {#diy:func:tataBoxFinderWithDocs}
+## Practice Exercise 2 {#diy:func:tataBoxFinderWithDocs}
 
-Re-implement the function you defined in the previous [Do it Yourself](#diy:func:tataBoxFinder) with appropriate documentations.
+Re-implement the function you defined in the previous [Practice Exercise 1](#diy:func:tataBoxFinder) with appropriate documentations.
 
 
 ::::::::::::::::: solution
 
-## DIY ANSWER
+## ANSWER
 
 
 ``` python
@@ -500,12 +500,12 @@ The sequence of DNA is: TAGCTGC
 
 ::::::::::::::::::::::::::::::: challenge
 
-## Do it Yourself
+## Practice Exercise 3
 
-Modify the function from previous [Do it Yourself](#diy:func:tataBoxFinderWithDocs) to accept an *optional argument* called ```upper```, with default value of ```False```; thereafter:
+Modify the function from previous [Practice Exercise 2](#diy:func:tataBoxFinderWithDocs) to accept an *optional argument* called ```upper```, with default value of ```False```; thereafter:
 
 
-- if ```upper``` is ```False```, then the function should perform as it already does (similar to previous [Do it Yourself](#diy:func:tataBoxFinderWithDocs));
+- if ```upper``` is ```False```, then the function should perform as it already does (similar to previous [Practice Exercise 2](#diy:func:tataBoxFinderWithDocs));
 
 - if ```upper``` is ```True```, then the function should convert the sequence onto uppercase characters before it looks for the <span style="color: rgb(32, 121, 77);">TATA</span>-box.
 
@@ -514,7 +514,7 @@ Do not forget to update the *docstring* of your function.
 
 ::::::::::::::::: solution
 
-## DIY ANSWER
+## ANSWER
 
 
 ``` python
@@ -757,7 +757,7 @@ print(numbers_std)
 
 ::::::::::::::::::::::::::::::: challenge
 
-## Do it Yourself
+## Practice Exercise 4
 
 Write a function that given an array of any values, produces a dictionary containing the value of that array as *keys*, and the count of the values in the original array (their frequencies) as *values*.
 
@@ -776,7 +776,7 @@ the function should return the above dictionary:
 
 ::::::::::::::::: solution
 
-## DIY ANSWER
+## ANSWER
 
 
 ``` python
@@ -853,95 +853,7 @@ STD of array 2 :  0.14357537702854514
 
 ::::::::::::::::::::: solution
 
-## Please check these solutions only after submitting the assignments.
-
-
-``` python
-def mean(arr):
-    """
-    Calculates the mean of an array.
-    :param arr: Array of numbers.
-    :type arr: list, tuple, set
-    :return: Mean of the values in the array. :rtype: float
-    """
-
-    summation = sum(arr)
-
-    length = len(arr)
-
-    result = summation / length
-
-    return result
-
-
-def variance(arr):
-    """
-    Calculates the variance of an array.
-    :param arr: Array of numbers.
-    :type arr: list, tuple, set
-    :return: Variance of the values in the array.
-    :rtype: float
-    """
-
-    arr_mean = mean(arr)
-
-    denominator = len(arr)
-
-    numerator = 0
-
-    for num in arr:
-
-        numerator += (num - arr_mean) ** 2
-
-        result = numerator / denominator
-
-    return result
-
-
-def get_basic_stats(arrays):
-    """
-    Calculates the mean, variance and standard deviation for
-    a set of arrays.
-    :param arrays: An array contain any number of arrays of numbers.
-    :type arrays: list, tuple
-    :return: A list of arrays containing the mean, variance and
-    standard deviation for each item in arrays
-    :rtype: list
-    """
-
-    from math import sqrt
-
-    results = list()
-
-    for array in arrays:
-
-        arr_mean = mean(array)
-        arr_var  = variance(array)
-        arr_std  = sqrt(arr_var)
-
-        results.append((arr_mean, arr_var, arr_std))
-
-    return results
-
-my_arrays = ([1, 2, 3, 4, 5],
-    [7, 7, 7, 7],
-    [1.0, 0.9, 1.2, 1.12, 0.95, 0.76],
-)
-
-
-my_results = get_basic_stats(my_arrays)
-
-for index, result in enumerate(my_results):
-
-    print('STD of array', index, ': ', result[2])
-```
-
-``` output
-STD of array 0 :  1.4142135623730951
-STD of array 1 :  0.0
-STD of array 2 :  0.14357537702854514
-```
-
+## Solutions will be provided once the submitted assignments are marked and returned.
 
 :::::::::::::::::::::
 

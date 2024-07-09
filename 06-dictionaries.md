@@ -107,7 +107,7 @@ print(type(protein_kinases))
 
 :::::::::::::::::::::::::::::: challenge
 
-## Do it Yourself
+## Practice Exercise 1
 Use [Universal Protein Resource](https://uniprot.org/) (UniProt) to find the following proteins for humans:
   - Axin-1
 	- Rhodopsin
@@ -116,7 +116,7 @@ Construct a dictionary for these proteins and the number amino acids for each of
 
 ::::::::::::::::: solution
 
-## DIY ANSWER {#diy:firstDictExample}
+## ANSWER {#diy:firstDictExample}
 
 
 ``` python
@@ -162,14 +162,14 @@ False
 
 :::::::::::::::::::::::::::::: challenge
 
-## Do it Yourself
+## Practice Exercise 2
 
-Using the dictionary you created in [Do it Yourself](#diy:firstDictExample), test to see whether or not a protein called **ERK** exists as a *key* in your dictionary? Display the result as a Boolean value.
+Using the dictionary you created in [Practice Exercise 1](#diy:firstDictExample), test to see whether or not a protein called **ERK** exists as a *key* in your dictionary? Display the result as a Boolean value.
 
 
 ::::::::::::::::: solution
 
-## DIY ANSWER
+## ANSWER
 
 ``` python
 print('ERK' in proteins)
@@ -220,7 +220,7 @@ KeyError: 'GSK3'
 
 :::::::::::::::::::::::::::::: challenge
 
-## Do it Yourself {#diy:dict:implement:fromTable}
+## Practice Exercise 3 {#diy:dict:implement:fromTable}
 
 Implement a ```dict``` to represent the following set of information:
 
@@ -234,7 +234,7 @@ Using the dictionary you implemented, retrieve and display the *gene* associated
 
 ::::::::::::::::: solution
 
-## DIY ANSWER
+## ANSWER
 
 ``` python
 cystic_fibrosis = {
@@ -380,7 +380,7 @@ print(protein)
 
 :::::::::::::::::::::::::::::: challenge
 
-## Do it Yourself
+## Practice Exercise 4
 
 Implement the following dictionary:
 
@@ -398,7 +398,7 @@ Display the altered dictionary as the final result.
 
 ::::::::::::::::: solution
 
-## DIY ANSWER
+## ANSWER
 
 ``` python
 signal = {'name': 'Wnt', 'pathway': 'Non-Canonical'}
@@ -465,7 +465,7 @@ print(protein)
 
 ::::::::::::::::::::::::::::::: challenge
 
-## Do it Yourself
+## Practice Exercise 5
 
 Implement a dictionary as:
 
@@ -493,7 +493,7 @@ Failed to alter the dictionary.
 
 ::::::::::::::::: solution
 
-## DIY ANSWER
+## ANSWER
 
 ``` python
 signal = {
@@ -602,7 +602,7 @@ beta-1
 
 ::::::::::::::::::::::::::::::: challenge
 
-## Do it Yourself
+## Practice Exercise 6
 
 Implement the following table of genetic disorders as a nested dictionary:
 
@@ -616,7 +616,7 @@ Using the dictionary, display the *gene* for *Haemophilia A*.
 
 ::::::::::::::::: solution
 
-## DIY ANSWER
+## ANSWER
 
 
 ``` python
@@ -872,7 +872,7 @@ dict_items([('pdb id', '1LBI'), ('deposit data', '1996-02-17'), ('organism', 'Es
 ```
 
 
-Similar to the <kbd>enumerate()</kbd> function (discussed in [subsection DIY](#diy:loops:for:enumerate) ), the <kbd>.items()</kbd> method also returns an array of ```tuple``` members. Each ```tuple``` itself consists of 2 members, and is structured as (<span style="color: rgb(32, 121, 77);">'key'</span>: <span style="color: rgb(32, 121, 77);">'value'</span>). On that account, we can use its output in the context of a ```for```--loop as follows:
+Similar to the <kbd>enumerate()</kbd> function, the <kbd>.items()</kbd> method also returns an array of ```tuple``` members. Each ```tuple``` itself consists of 2 members, and is structured as (<span style="color: rgb(32, 121, 77);">'key'</span>: <span style="color: rgb(32, 121, 77);">'value'</span>). On that account, we can use its output in the context of a ```for```--loop as follows:
 
 
 ``` python
@@ -891,14 +891,14 @@ resolution: 2.7
 
 ::::::::::::::::::::::::::::::: challenge
 
-## Do it Yourself
+## Practice Exercise 7
 
 Try <kbd>.items()</kbd> on a nested ```dict``` and see how it works.
 
 
 ::::::::::::::::: solution
 
-## DIY ANSWER
+## ANSWER
 
 
 ``` python
@@ -955,7 +955,7 @@ Not found...
 
 ::::::::::::::::::::::::::::::: challenge
 
-## Do it Yourself
+## Practice Exercise 8
 
 Implement the <span style="color: rgb(32, 121, 77);">lac_repressor</span> dictionary and try to extract the *values* associated with the following *keys*:
 
@@ -974,7 +974,7 @@ authors: XXX
 
 ::::::::::::::::: solution
 
-## DIY ANSWER
+## ANSWER
 
 ``` python
 lac_repressor = {
@@ -1030,7 +1030,7 @@ RNA: GGGUAGAAUUCUGAAGUGUUCUGAACACUUUAGUCUGGUGACGAGUUACGCCUUGCGGGC
 
 ::::::::::::::::::::::::::::::: challenge
 
-## Do it Yourself
+## Practice Exercise 9
 
 We know that in reverse transcription, RNA nucleotides are converted to their complementary DNA as shown:
 
@@ -1176,142 +1176,7 @@ codon2aa = {
 
 ::::::::::::::::::::: solution
 
-## Please check these solutions only after submitting the assignments.
-
-### Q1
-
-``` python
-dna_sequence = (
-    'ATGTCTAAAGGTGAAGAATTATTCACTGGTGTTGTCCCAATTTTGGTTGAATTAGATGGTGATGTTAATGGT'
-    'CACAAATTTTCTGTCTCCGGTGAAGGTGAAGGTGATGCTACTTACGGTAAATTGACCTTAAAATTTATTTGT'
-    'ACTACTGGTAAATTGCCAGTTCCATGGCCAACCTTAGTCACTACTTTCGGTTATGGTGTTCAATGTTTTGCT'
-    'AGATACCCAGATCATATGAAACAACATGACTTTTTCAAGTCTGCCATGCCAGAAGGTTATGTTCAAGAAAGA'
-    'ACTATTTTTTTCAAAGATGACGGTAACTACAAGACCAGAGCTGAAGTCAAGTTTGAAGGTGATACCTTAGTT'
-    'AATAGAATCGAATTAAAAGGTATTGATTTTAAAGAAGATGGTAACATTTTAGGTCACAAATTGGAATACAAC'
-    'TATAACTCTCACAATGTTTACATCATGGCTGACAAACAAAAGAATGGTATCAAAGTTAACTTCAAAATTAGA'
-    'CACAACATTGAAGATGGTTCTGTTCAATTAGCTGACCATTATCAACAAAATACTCCAATTGGTGATGGTCCA'
-    'GTCTTGTTACCAGACAACCATTACTTATCCACTCAATCTGCCTTATCCAAAGATCCAAACGAAAAGAGAGAC'
-    'CACATGGTCTTGTTAGAATTTGTTACTGCTGCTGGTATTACCCATGGTATGGATGAATTGTACAAATAA'
-)
-
-
-codon2aa = {
-    "UUU": "F", "UUC": "F", "UUA": "L", "UUG": "L", "CUU": "L",
-    "CUC": "L", "CUA": "L", "CUG": "L", "AUU": "I", "AUC": "I",
-    "AUA": "I", "GUU": "V", "GUC": "V", "GUA": "V", "GUG": "V",
-    "UCU": "S", "UCC": "S", "UCA": "S", "UCG": "S", "AGU": "S",
-    "AGC": "S", "CCU": "P", "CCC": "P", "CCA": "P", "CCG": "P",
-    "ACU": "T", "ACC": "T", "ACA": "T", "ACG": "T", "GCU": "A",
-    "GCC": "A", "GCA": "A", "GCG": "A", "UAU": "Y", "UAC": "Y",
-    "CAU": "H", "CAC": "H", "CAA": "Q", "CAG": "Q", "AAU": "N",
-    "AAC": "N", "AAA": "K", "AAG": "K", "GAU": "D", "GAC": "D",
-    "GAA": "E", "GAG": "E", "UGU": "C", "UGC": "C", "UGG": "W",
-    "CGU": "R", "CGC": "R", "CGA": "R", "CGG": "R", "AGA": "R",
-    "AGG": "R", "GGU": "G", "GGC": "G", "GGA": "G", "GGG": "G",
-    "AUG": "<Met>", "UAA": "<STOP>", "UAG": "<STOP>", "UGA": "<STOP>"
-}
-
-dna2cdna = {
-    'A': 'T',
-    'C': 'G',
-    'G': 'C',
-    'T': 'A'
-}
-
-
-dna2mrna = {
-    'A': 'U',
-    'T': 'A',
-    'G': 'C',
-    'C': 'G'
-}
-
-
-# Transcription
-# -----------------------------------------------------------------
-m_rna = str()
-
-for nucleotide in dna_sequence:
-    # DNA to cDNA
-    c_dna = dna2cdna[nucleotide]
-
-    # cDNA to mRNA
-    m_rna += dna2mrna[c_dna]
-
-
-print('mRNA:', m_rna)
-```
-
-``` output
-mRNA: AUGUCUAAAGGUGAAGAAUUAUUCACUGGUGUUGUCCCAAUUUUGGUUGAAUUAGAUGGUGAUGUUAAUGGUCACAAAUUUUCUGUCUCCGGUGAAGGUGAAGGUGAUGCUACUUACGGUAAAUUGACCUUAAAAUUUAUUUGUACUACUGGUAAAUUGCCAGUUCCAUGGCCAACCUUAGUCACUACUUUCGGUUAUGGUGUUCAAUGUUUUGCUAGAUACCCAGAUCAUAUGAAACAACAUGACUUUUUCAAGUCUGCCAUGCCAGAAGGUUAUGUUCAAGAAAGAACUAUUUUUUUCAAAGAUGACGGUAACUACAAGACCAGAGCUGAAGUCAAGUUUGAAGGUGAUACCUUAGUUAAUAGAAUCGAAUUAAAAGGUAUUGAUUUUAAAGAAGAUGGUAACAUUUUAGGUCACAAAUUGGAAUACAACUAUAACUCUCACAAUGUUUACAUCAUGGCUGACAAACAAAAGAAUGGUAUCAAAGUUAACUUCAAAAUUAGACACAACAUUGAAGAUGGUUCUGUUCAAUUAGCUGACCAUUAUCAACAAAAUACUCCAAUUGGUGAUGGUCCAGUCUUGUUACCAGACAACCAUUACUUAUCCACUCAAUCUGCCUUAUCCAAAGAUCCAAACGAAAAGAGAGACCACAUGGUCUUGUUAGAAUUUGUUACUGCUGCUGGUAUUACCCAUGGUAUGGAUGAAUUGUACAAAUAA
-```
-
-``` python
-# Translation:
-# -----------------------------------------------------------------
-mrna_len = len(m_rna)
-codon_len = 3
-
-protein = str()
-
-for index in range(0, mrna_len, codon_len):
-    codon = m_rna[index: index + codon_len]
-    protein += codon2aa[codon]
-
-print('Protein:', protein)
-```
-
-``` output
-Protein: <Met>SKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFICTTGKLPVPWPTLVTTFGYGVQCFARYPDH<Met>KQHDFFKSA<Met>PEGYVQERTIFFKDDGNYKTRAEVKFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYI<Met>ADKQKNGIKVNFKIRHNIEDGSVQLADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDH<Met>VLLEFVTAAGITHG<Met>DELYK<STOP>
-```
-
-``` python
-# -----------------------------------------------------------------
-# INTERMEDIATE-LEVEL TWIST (Alternative answer):
-# One can also combine the two processes.
-#
-# Advantages:
-#   - One for-loop.
-#   - No use of `range()`.
-#   - Almost twice as fast (half as many iterations).
-# -----------------------------------------------------------------
-m_rna = str()
-protein = str()
-codon = str()
-
-for nucleotide in dna_sequence:
-    # DNA to cDNA
-    c_dna = dna2cdna[nucleotide]
-
-    # Transcription:
-    transcribed_nucleotide = dna2mrna[c_dna]
-    m_rna += transcribed_nucleotide
-
-    # Translation process:
-    # Retaining the residue to construct triplets.
-    codon += transcribed_nucleotide
-
-    # Check if this is a triplet (a codon):
-    if len(codon) == 3:
-        # Convert to amino acid and store:
-        protein += codon2aa[codon]
-
-        # Reset the codon to an empty string:
-        codon = str()
-print('mRNA:', m_rna)
-```
-
-``` output
-mRNA: AUGUCUAAAGGUGAAGAAUUAUUCACUGGUGUUGUCCCAAUUUUGGUUGAAUUAGAUGGUGAUGUUAAUGGUCACAAAUUUUCUGUCUCCGGUGAAGGUGAAGGUGAUGCUACUUACGGUAAAUUGACCUUAAAAUUUAUUUGUACUACUGGUAAAUUGCCAGUUCCAUGGCCAACCUUAGUCACUACUUUCGGUUAUGGUGUUCAAUGUUUUGCUAGAUACCCAGAUCAUAUGAAACAACAUGACUUUUUCAAGUCUGCCAUGCCAGAAGGUUAUGUUCAAGAAAGAACUAUUUUUUUCAAAGAUGACGGUAACUACAAGACCAGAGCUGAAGUCAAGUUUGAAGGUGAUACCUUAGUUAAUAGAAUCGAAUUAAAAGGUAUUGAUUUUAAAGAAGAUGGUAACAUUUUAGGUCACAAAUUGGAAUACAACUAUAACUCUCACAAUGUUUACAUCAUGGCUGACAAACAAAAGAAUGGUAUCAAAGUUAACUUCAAAAUUAGACACAACAUUGAAGAUGGUUCUGUUCAAUUAGCUGACCAUUAUCAACAAAAUACUCCAAUUGGUGAUGGUCCAGUCUUGUUACCAGACAACCAUUACUUAUCCACUCAAUCUGCCUUAUCCAAAGAUCCAAACGAAAAGAGAGACCACAUGGUCUUGUUAGAAUUUGUUACUGCUGCUGGUAUUACCCAUGGUAUGGAUGAAUUGUACAAAUAA
-```
-
-``` python
-print('Protein:', protein)
-```
-
-``` output
-Protein: <Met>SKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFICTTGKLPVPWPTLVTTFGYGVQCFARYPDH<Met>KQHDFFKSA<Met>PEGYVQERTIFFKDDGNYKTRAEVKFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYI<Met>ADKQKNGIKVNFKIRHNIEDGSVQLADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDH<Met>VLLEFVTAAGITHG<Met>DELYK<STOP>
-```
+## Solutions will be provided once the submitted assignments are marked and returned.
 
 :::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::

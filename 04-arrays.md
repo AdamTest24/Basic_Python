@@ -108,7 +108,7 @@ print(type(table))
 
 ::::::::::::::::::::::::::::::: challenge
 
-## Do it Yourself {#diy:array:list:fibonacci}
+## Practice Exercise 1 {#diy:array:list:fibonacci}
 
 Implement a ```list``` array called <span style="color: rgb(32, 121, 77);">fibonacci</span>, whose members represent the first 8 numbers of the [Fibonacci sequence](https://en.wikipedia.org/wiki/Fibonacci_number) as follows:
 
@@ -119,7 +119,7 @@ Implement a ```list``` array called <span style="color: rgb(32, 121, 77);">fibon
 
 ::::::::::::::::: solution
 
-## DIY ANSWER
+## ANSWER
 
 
 ``` python
@@ -196,14 +196,14 @@ print(item)
 
 ::::::::::::::::::::::::::::::: challenge
 
-## Do it Yourself
+## Practice Exercise 2
 
-Retrieve and display the 5^th^ Fibonacci number from the ```list``` you created in previous [DIY](#diy:array:list:fibonacci).
+Retrieve and display the 5^th^ Fibonacci number from the ```list``` you created in previous [Practice Exercise 1](#diy:array:list:fibonacci).
 
 
 ::::::::::::::::: solution
 
-## DIY ANSWER
+## ANSWER
 
 
 ``` python
@@ -294,14 +294,14 @@ The values stored in a ```list``` may be referred to as the **members** of that 
 
 ::::::::::::::::::::::::::::::: challenge
 
-## Do it Yourself
+## Practice Exercise 3
 
-Retrieve and display the *last* Fibonacci number from the ```list``` you created in [DIY](#diy:array:list:fibonacci).
+Retrieve and display the *last* Fibonacci number from the ```list``` you created in [Practice Exercise 1](#diy:array:list:fibonacci).
 
 
 ::::::::::::::::: solution
 
-## DIY ANSWER
+## ANSWER
 
 ``` python
 print(fibonacci[-1])
@@ -433,14 +433,14 @@ print(table[my_slice])
 
 ::::::::::::::::::::::::::::::: challenge
 
-## Do it Yourself
+## Practice Exercise 4
 <p style='text-align: justify;'>
-Retrieve and display a slice of Fibonacci numbers from the ```list``` you created in [DIY](#diy:array:list:fibonacci) that includes all the members from the 2nd number onwards --- *i.e*.  the slice must not include the first value in the ```list```.
+Retrieve and display a slice of Fibonacci numbers from the ```list``` you created in [Practice Exercise 1](#diy:array:list:fibonacci) that includes all the members from the 2nd number onwards --- *i.e*.  the slice must not include the first value in the ```list```.
 </p>
 
 ::::::::::::::::: solution
 
-## DIY ANSWER
+## ANSWER
 
 
 ``` python
@@ -521,9 +521,9 @@ ValueError: 9 is not in list
 
 ::::::::::::::::::::::::::::::: challenge
 
-## Do it Yourself
+## Practice Exercise 5
 
-Find and display the index of these values from the ```list``` of Fibonacci numbers that you created in [DIY](#diy:array:list:fibonacci):
+Find and display the index of these values from the ```list``` of Fibonacci numbers that you created in [Practice Exercise 1](#diy:array:list:fibonacci):
 
 * 1
 * 5
@@ -532,7 +532,7 @@ Find and display the index of these values from the ```list``` of Fibonacci numb
 
 ::::::::::::::::: solution
 
-## DIY ANSWER
+## ANSWER
 
 
 ``` python
@@ -607,9 +607,9 @@ print(table)
 
 ::::::::::::::::::::::::::::::: challenge
 
-## Do it Yourself
+## Practice Exercise 6
 
-Given <span style="color: rgb(32, 121, 77);">fibonacci</span> the ```list``` representing the first 8 numbers in the Fibonacci sequence that you created in [DIY](#diy:array:list:fibonacci):
+Given <span style="color: rgb(32, 121, 77);">fibonacci</span> the ```list``` representing the first 8 numbers in the Fibonacci sequence that you created in [Practice Exercise 1](#diy:array:list:fibonacci):
 
 1. The 10^th^ number in the Fibonacci sequence is 55. Add this value to <span style="color: rgb(32, 121, 77);">fibonacci</span>.
 
@@ -719,7 +719,7 @@ print(table)
 
 ::::::::::::::::::::::::::::::: challenge
 
-## Do it Yourself
+## Practice Exercise 7
 
 Given a ```list``` containing the first 10 [prime numbers](https://en.wikipedia.org/wiki/Prime_number) as:
 
@@ -733,7 +733,7 @@ However, values 11 and 7 have been misplaced in the sequence. Correct the order 
 
 ::::::::::::::::: solution
 
-## DIY ANSWER
+## ANSWER
 
 
 ``` python
@@ -800,7 +800,7 @@ Removed value: 0
 
 ::::::::::::::::::::::::::::::: challenge
 
-## Do it Yourself
+## Practice Exercise 8
 
 We know that the nucleotides of DNA include <span style="color: rgb(32, 121, 77);">A</span>, <span style="color: rgb(32, 121, 77);">C</span>, <span style="color: rgb(32, 121, 77);">T</span>, and <span style="color: rgb(32, 121, 77);">G</span>.
 
@@ -1162,7 +1162,7 @@ Hello John
 
 ::::::::::::::::::::::::::::::: challenge
 
-## Do it Yourself {#diy:arrays:list:randomPeptides}
+## Practice Exercise 9 {#diy:arrays:list:randomPeptides}
 
 Given a ```list``` of randomly generated peptide sequences as:
 
@@ -1268,7 +1268,7 @@ Sequence NNVSR was found at index 30
 
 [**Built-in functions: len**](https://docs.python.org/3.6/library/functions.html\#len)
 <p style='text-align: justify;'>
-The number of members contained within a ```list``` defines its length. Similar to the length of ```str``` values as discussed in [mathematical operations](02-input_output.Rmd#math_ops) [DIY-I](02-input_output.Rmd#diy:mathsI) and [DIY-IV](02-input_output.Rmd#diy:mathOpts:Huntington), we use the built-in function <kbd>len()</kbd> also to determine the length of a ```list```:
+The number of members contained within a ```list``` defines its length. Similar to the length of ```str``` values as discussed in [mathematical operations](02-input_output.Rmd#math_ops) [Practice Exercise 8](02-input_output.Rmd#diy:mathsI) and [Practice Exercise 11](02-input_output.Rmd#diy:mathOpts:Huntington), we use the built-in function <kbd>len()</kbd> also to determine the length of a ```list```:
 </p>
 
 
@@ -1344,11 +1344,11 @@ See [Table](02-input_output.Rmd#fig:nativeTypes) to find out which built-in type
 
 ::::::::::::::::::::::::::::::: challenge
 
-## Do it Yourself
+## Practice Exercise 10
 
-Given the ```list``` of random peptides defined in [DIY](#diy:arrays:list:randomPeptides):
+Given the ```list``` of random peptides defined in [Practice Exercise 9](#diy:arrays:list:randomPeptides):
 
-1. Define a ```list``` called <span style="color: rgb(32, 121, 77);">overlaps</span> containing the sequences whose presence in <span style="color: rgb(32, 121, 77);">peptides</span> you confirmed in [DIY](#diy:arrays:list:randomPeptides).
+1. Define a ```list``` called <span style="color: rgb(32, 121, 77);">overlaps</span> containing the sequences whose presence in <span style="color: rgb(32, 121, 77);">peptides</span> you confirmed in [Practice Exercise 9](#diy:arrays:list:randomPeptides).
 2. Determine the length of <span style="color: rgb(32, 121, 77);">peptides</span>.
 3. Determine the length of <span style="color: rgb(32, 121, 77);">overlaps</span>.
 
@@ -1541,7 +1541,7 @@ Whilst both the original array and its weak reference (<span style="color: rgb(3
 
 ::::::::::::::::::::::::::::::: challenge
 
-## Do it Yourself {#diy:arrays:list:consensus:one}
+## Practice Exercise 11 {#diy:arrays:list:consensus:one}
 <p style='text-align: justify;'>
 When defining a consensus sequence, it is common to include annotations to represent ambiguous amino acids. Four such annotations are as follows:
 </p>
@@ -1678,7 +1678,7 @@ print(pka_list)
 
 ::::::::::::::::::::::::::::::: challenge
 
-## Do it Yourself
+## Practice Exercise 12
 
 Ask the user to enter a sequence of single-letter amino acids in *lower case*. Convert the sequence to ```list``` and:
 
@@ -1851,7 +1851,7 @@ print("Type:", type(table_rev))
 ```
 
 ``` output
-Result: <list_reverseiterator object at 0x7f245c86c6a0>
+Result: <list_reverseiterator object at 0x7fd6818c4d60>
 Type: <class 'list_reverseiterator'>
 ```
 
@@ -1940,16 +1940,16 @@ print(another_table)
 
 ::::::::::::::::::::::::::::::: challenge
 
-## Do it Yourself
+## Practice Exercise 13
 <p style='text-align: justify;'>
 Create a ```list```, and experiment with each of the methods provided in the above example. Try including members of different *types* in your ```list``` and see how each of these methods behave.
 </p>
 
 ::::::::::::::::: solution
 
-## DIY ANSWER
+## ANSWER
 
-This DIY was intended to encourage you to experiment with the methods outlined.
+This practice exercise was intended to encourage you to experiment with the methods outlined.
 :::::::::::::::::
 
 :::::::::::::::::::::::::::::::
@@ -2092,7 +2092,7 @@ An array with only one member --- *e.g.* <span style="color: rgb(32, 121, 77);">
 
 ::::::::::::::::::::::::::::::: challenge
 
-## Do it Yourself
+## Practice Exercise 14
 
 Give then following of pathogens and their corresponding diseases:
 
@@ -2229,7 +2229,7 @@ print(table[:2])
 
 ::::::::::::::::::::::::::::::: challenge
 
-## Do it Yourself
+## Practice Exercise 15
 <p style='text-align: justify;'>
 Computers see images as multidimensional arrays (matrices). In its simplest form, an image is a two-dimensional array containing only 2 colours.
 </p>
@@ -2664,7 +2664,7 @@ Name: Jane Doe - Age: 28
 
 ::::::::::::::::::::::::::::::: challenge
 
-## Do it Yourself
+## Practice Exercise 16
 
 Given:
 
@@ -2678,7 +2678,7 @@ Unpack <span style="color: rgb(32, 121, 77);">protein_info</span> into two disti
 
 ::::::::::::::::: solution
 
-## DIY ANSWER
+## ANSWER
 
 ``` python
 protein_name, protein_length = protein_info
@@ -2783,97 +2783,7 @@ Determine the adjacency matrix and implement it as a two-dimensional array in Py
 
 ::::::::::::::::::::: solution
 
-## Please check these solutions only after submitting the assignments.
-
-### Q1
-
-
-``` python
-table = [[1, 2, 3], ['a', 'b'], [1.5, 'b', 4], [2]]
-
-table_length = len(table)
-print('length of Table:', table_length)
-
-reason = (
-    "The length of a `list` is a function of its "
-    "distinct members, regardless of their types."
-)
-
-print('')
-print(reason)
-```
-
-``` output
-length of Table: 4
-
-The length of a `list` is a function of its distinct members, regardless of their types.
-```
-
-### Q2
-
-
-``` python
-human_pka_gamma = (
-  'MAAPAAATAMGNAPAKKDTEQEESVNEFLAKARGDFLYRWGNPAQNTASSDQFERLRTLGMGSFGRVML'
-  'VRHQETGGHYAMKILNKQKVVKMKQVEHILNEKRILQAIDFPFLVKLQFSFKDNSYLYLVMEYVPGGEM'
-  'FSRLQRVGRFSEPHACFYAAQVVLAVQYLHSLDLIHRDLKPENLLIDQQGYLQVTDFGFAKRVKGRTWT'
-  'LCGTPEYLAPEIILSKGYNKAVDWWALGVLIYEMAVGFPPFYADQPIQIYEKIVSGRVRFPSKLSSDLK'
-  'DLLRSLLQVDLTKRFGNLRNGVGDIKNHKWFATTSWIAIYEKKVEAPFIPKYTGPGDASNFDDYEEEEL'
-  'RISINEKCAKEFSEF'
-  )
-
-total_serine = human_pka_gamma.count("S")
-total_threonine = human_pka_gamma.count("T")
-
-print('Serine:', total_serine)
-print('Threonine:', total_threonine)
-
-residues = [
-    ['S', total_serine],
-    ['T', total_threonine]
-    ]
-print(residues)
-```
-
-``` output
-Serine: 19
-Threonine: 13
-[['S', 19], ['T', 13]]
-```
-
-### Q3
-
-``` python
-answer = (
-  "Members of a two-dimensional array must themselves be arrays of "
-  "equal lengths containing identically typed members."
-)
-print(answer)
-```
-
-``` output
-Members of a two-dimensional array must themselves be arrays of equal lengths containing identically typed members.
-```
-
-### Q4
-
-``` python
-# Column initials:
-#    S, H, A, A, G
-adjacency_matrix = [
-    [0, 1, 0, 0, 0],  # Stress
-    [0, 0, 1, 0, 0],  # Hypothalamus
-    [0, 0, 0, 1, 0],  # Anterior Pituitary Gland
-    [0, 0, 0, 0, 1],  # Adrenal Cortex
-    [0, 1, 1, 0, 0],  # Glucocorticoids
-]
-
-print(adjacency_matrix)
-```
-
-``` output
-[[0, 1, 0, 0, 0], [0, 0, 1, 0, 0], [0, 0, 0, 1, 0], [0, 0, 0, 0, 1], [0, 1, 1, 0, 0]]
-```
+## Solutions will be provided once the submitted assignments are marked and returned.
 
 :::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::

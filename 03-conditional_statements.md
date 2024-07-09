@@ -4,9 +4,6 @@ teaching: 10
 exercises: 2
 ---
 
-
-
-
 [**Download Chapter notebook (ipynb)**](03-conditional_statements.ipynb)
 
 
@@ -111,7 +108,7 @@ If you are keen to learn more about algorithms and algorithmic thinking, or just
 
 ::::::::::::::::::::::::::::::::::::::: challenge
 
-## Do it Yourself {#exe:algorithmicPuzzle}
+## Practice Exercise 1 {#exe:algorithmicPuzzle}
 <p style='text-align: justify;'>
 On a distant planet, the dominant carnivore, the zab, is nearing extinction. The number of zabs born in any year is one more than the (positive) difference between the number born in the previous year and the number born in the year before that.
 </p>
@@ -452,10 +449,10 @@ IndentationError: unindent does not match any outer indentation level
 
 
 :::::::::::::::::::::::::::::::::::::::::::: challenge
-## Do it yourself
+## Practice Exercise 2
 
 <p style='text-align: justify;'>
-In previous chapter, [Do it Yourself](02-input_output.Rmd#diy:mathOpts:Huntington), we explored the implication of ```CAG``` repeats in Huntington's disease. We also created a polynucleotide chain containing 36 repetition of the ```CAG``` codons.
+In previous chapter, [Practice Exercise 11](02-input_output.Rmd#diy:mathOpts:Huntington), we explored the implication of ```CAG``` repeats in Huntington's disease. We also created a polynucleotide chain containing 36 repetition of the ```CAG``` codons.
 </p>
 
 <p style='text-align: justify;'>
@@ -464,7 +461,7 @@ Write a conditional statement that tests the length of a polyQ tract to determin
 
 ![](fig/diy_CAG.png)
 <p style='text-align: justify;'>
-Using the technique you used in [Do it Yourself](02-input_output.Rmd#diy:mathOpts:Huntington), create 5 polyQ tracts containing 26, 15, 39, 32, 36, and 54 codons. Use these polynucleotide chains to test your conditional statement.
+Using the technique you used in [Practice Exercise 11](02-input_output.Rmd#diy:mathOpts:Huntington), create 5 polyQ tracts containing 26, 15, 39, 32, 36, and 54 codons. Use these polynucleotide chains to test your conditional statement.
 </p>
 
 Display the result for each chain in the following format:
@@ -475,7 +472,7 @@ Status: XXX
 Classification: XXX
 ```
 <p style='text-align: justify;'>
-**Hint:** The length of a polyQ tract represents the number of nucleotides, not the number of ```CAG``` codons. See task 4 of [Do it Yourself](02-input_output.Rmd#diy:mathOpts:Huntington) for additional information.
+**Hint:** The length of a polyQ tract represents the number of nucleotides, not the number of ```CAG``` codons. See task 4 of [Practice Exercise 11](02-input_output.Rmd#diy:mathOpts:Huntington) for additional information.
 </p>
 
 :::::::::::::::::: solution
@@ -798,36 +795,9 @@ If there is a match, our programme should display the name of the corresponding 
 
 ::::::::::::::::::::: solution
 
-## Please check these solutions only after submitting the assignments.
-
-
-``` python
-peptide = (
- 	"PVWNETFVFNLKPGDVERRLSVEVWDWDRTSRNDFMGAMSFGVSELLK"
- 	"APVDGWYKLLNQEEGEYYNVPVADADNCSLLQKFEACNYPLELYERVR"
- 	"MGPSSSPIPSPSPSPTDPKRCFFGASPGRLHISDFSFLMRRRKGSFGK"
- 	"VMLAERRGSDELYAIKILKKDVIVQDDDVDCTLVEKRVLALGGRGPGG"
- 	"RPHFLTQLHSTFQTPDRLYFVMEYVTGGDLMYHIQQLGKFKEPHAAFY"
- 	"AAEIAIGLFFLHNQGIIYRDLKLDNVMLDAEGHIKITDFGMCKENVF"
- )
-
-if "RKGSFRR" in peptide or "RRRSFRR" in peptide:
-  print('PKC-eta')
-elif "RRRKGSF" in peptide or "RRRKKSF" in peptide:
-  print('PKC-gamma')
-elif ("KKRRRSL" in peptide or "RKRRRSL" in peptide or
-  "KKRRRSV" in peptide or "RKRRRSV" in peptide):
-  print('DMPK-E')
-else:
-  print('No matches found.')
-```
-
-``` output
-PKC-gamma
-```
+## Solutions will be provided once the submitted assignments are marked and returned.
 
 :::::::::::::::::::::
-
 ::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: keypoints

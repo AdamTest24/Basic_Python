@@ -241,7 +241,7 @@ Jane.21.London
 
 ::::::::::::::::::::::::::::::: challenge
 
-## Do it Yourself
+## Practice Exercise 1
 
 Write code that displays the following output:
 
@@ -250,7 +250,7 @@ Write code that displays the following output:
 
 ::::::::::::::::: solution
 
-## DIY ANSWER
+## ANSWER
 
 
 ``` python
@@ -332,12 +332,12 @@ Python is an interpreted language; that is, the code we write is executed by the
 :::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::: challenge
-## Do it Yourself
+## Practice Exercise 2
 
 Write a script that asks the user to enter the name of a protein in the terminal.
 
 ::::::::::::::::::: solution
-## DIY ANSWER
+## ANSWER
 
 ```
 input('Please enter the name of a protein: ')
@@ -436,7 +436,7 @@ Hi, John Doe
 
 ::::::::::::::::::::::::::::::: challenge
 
-## Do it Yourself {#diy:enzyme}
+## Practice Exercise 3 {#diy:enzyme}
 <p style='text-align: justify;'>
 Oxidised low-density lipoprotein (LDL) receptor 1 mediates the recognition, internalisation and degradation of oxidatively modified low density lipoprotein by vascular endothelial cells. Using the [Universal Protein Resource](https://beta.uniprot.org) (UniProt) website, find this protein for humans, and identify:
 </p>
@@ -453,7 +453,7 @@ Display the values of these 4 variables in *one* line, and separate the items wi
 
 ::::::::::::::: solution
 
-## DIY ANSWER
+## ANSWER
 
 
 ``` python
@@ -478,7 +478,7 @@ Oxidised low-density lipoprotein (LDL) receptor 1   P78380   OLR1   273
 
 ::::::::::::::::::::::::::::::: challenge
 
-## Do it Yourself
+## Practice Exercise 4
 1. Write a script that upon execution, asks the user to enter the name of an enzyme and then retains the response in an appropriately named variable.
 
 2. Use the variable to display an output similar to the following:
@@ -497,7 +497,7 @@ where ```AMINO_ACIDS``` is the number of amino acids.
 
 ::::::::::::::: solution
 
-## DIY ANSWER
+## ANSWER
 
 ```
 enzyme = input('Please enter the name of an enzyme: ')
@@ -639,7 +639,7 @@ In Python, a variable / value of a certain type may be referred to as an *instan
 
 ::::::::::::::::::::::::::::::: challenge
 
-## Do it Yourself
+## Practice Exercise 5
 Determine and display the type for each of these values:
 
 * 32
@@ -657,7 +657,7 @@ The result for each value should be represented in the following format:
 
 ::::::::::::::: solution
 
-## DIY ANSWER
+## ANSWER
 
 
 ``` python
@@ -853,7 +853,7 @@ ValueError: invalid literal for int() with base 10: '12y'
 
 ::::::::::::::::::::::::::::::: challenge
 
-## Do it Yourself
+## Practice Exercise 6
 <p style='text-align: justify;'>
 In programming, we routinely face errors resulting from different mistakes. The process of finding and correcting such mistakes in the code is referred to as *debugging*.
 </p>
@@ -883,7 +883,7 @@ Debug the snippet so that the correct result is displayed:
 
 :::::::::::::::::: solution
 
-## DIY ANSWER
+## ANSWER
 
 
 ``` python
@@ -940,13 +940,13 @@ The output shows the results when we enter numeric values as directed.
 
 
 ::::::::::::::::::::::::::::::::::: challenge
-## Do it Yourself
+## Practice Exercise 7
 <p style='text-align: justify;'>
 We know that each amino acid in a protein is encoded by a triplet of mRNA nucleotides.
 </p>
 
 <p style='text-align: justify;'>
-With that in mind, alter the script you wrote for [Do it Yourself](#diy:enzyme) and use the number of amino acids entered by the user to calculate the number of mRNA nucleotides.
+With that in mind, alter the script you wrote for [Practice Exercise 3](#diy:enzyme) and use the number of amino acids entered by the user to calculate the number of mRNA nucleotides.
 </p>
 
 Display the results in the following format:
@@ -959,7 +959,7 @@ where ```NUCLEOTIDES``` is the total number of mRNA nucleotides that you calcula
 
 ::::::::::::: solution
 
-## DIY ANSWER
+## ANSWER
 
 ```
 enzyme = input('Please enter the name of an enzyme: ')
@@ -1171,7 +1171,7 @@ Values of type ```int``` have been chosen in our examples to facilitate the unde
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Do it Yourself {#diy:mathsI}
+## Practice Exercise 8 {#diy:mathsI}
 
 1. Calculate the following and store the results in appropriately named variables:
 
@@ -1423,7 +1423,7 @@ print(total_residues)
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Do it Yourself {#diy:mathsII}
+## Practice Exercise 9 {#diy:mathsII}
 
 1. Given:
 	* Circumference: $C = 18.84956$
@@ -1545,7 +1545,7 @@ If there are any parenthesis ```( )``` in the expression, the expression is eval
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Do it Yourself
+## Practice Exercise 10
 Display the result of each item in the following format:
 
 ```
@@ -1739,7 +1739,7 @@ New line character or ```'\n'``` is a universal directive to induce a line-break
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Do it Yourself {#diy:mathOpts:Huntington}
+## Practice Exercise 11 {#diy:mathOpts:Huntington}
 <p style='text-align: justify;'>
 The risk of Huntington's disease appears to increase proportional to the continuous repetition of ```CAG``` nucleotides (glutamine codon) once they exceed 35 near the beginning of the Huntingtin (```IT15```) gene. The ```CAG``` repeats are also referred to as a polyglutamine or polyQ tract.
 </p>
@@ -1944,7 +1944,7 @@ Boolean operations may be defined as outlined in Table [Routine logical operatio
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Do it Yourself {#diy:equivalence}
+## Practice Exercise 12 {#diy:equivalence}
 
 We know that in algebra, the first identity (square of a binomial) is:
 
@@ -2028,9 +2028,9 @@ We can also use negation in logical operations. Negation in Python is implemente
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Do it Yourself
+## Practice Exercise 13
 
-Using the information from previous [Do it Yourself](#diy:equivalence):
+Using the information from previous [Practice Exercise 12](#diy:equivalence):
 
 <p style='text-align: justify;'>
 1. Without using <kbd>not</kbd>, determine whether or not ```y_1``` is *not equal* to ```y_2```. Display the result of your test and store it in another variable called ```inequivalent```.
@@ -2084,7 +2084,7 @@ Logical operations may be combined using conjunction with <kbd>and</kbd> and dis
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Do it Yourself
+## Practice Exercise 14
 
 Given
 
@@ -2456,7 +2456,7 @@ True
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Do it Yourself
+## Practice Exercise 15
 
 Given
 ```
@@ -2614,52 +2614,7 @@ print('7.', (12 / a) and (a * 4) < b)
 
 ::::::::::::::::::::: solution
 
-## Please check these solutions only after submitting the assignments.
-
-### Q1
-
-
-``` python
-name = 'Gerold Baier'
-
-# Displaying the author's name:
-
-print(name)
-```
-
-``` output
-Gerold Baier
-```
-
-### Q2
-
-```
-# Blocking the execution until the user
-# presses enter:
-
-input('Please press enter to continue...')
-
-print('Welcome to my programme!')
-```
-
-### Q3
-
-``` python
-v = 50 #mol/L/s
-k_m = S = 2.5 #mol/L
-
-# Rearranged the equation to
-# solve for v_max:
-
-v_max = (v * (k_m + S)) / S
-# Unit: mol/L/s
-print('Vmax =', v_max, '[ mol / (l * sec) ]')
-```
-
-``` output
-Vmax = 100.0 [ mol / (l * sec) ]
-```
-
+## Solutions will be provided once the submitted assignments are marked and returned.
 
 :::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::
