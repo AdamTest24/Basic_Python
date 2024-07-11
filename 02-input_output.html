@@ -168,9 +168,9 @@
 <ul><li><a href="#subsec:variableNames"><strong>Variable names</strong></a></li>
 <li><a href="#sec:varTyp"><strong>Variable Types</strong></a></li>
 <li><a href="#sec:conversionType"><strong>Conversion of types</strong></a></li>
-<li><a href="#handling-input-variables"><strong>Handling input variables</strong></a></li>
+<li><a href="#handling-input-variables"><strong>Handling Input Variables</strong></a></li>
 <li><a href="#variable-scopes"><strong>Variable scopes</strong></a></li>
-<li><a href="#terminal"><strong>Optional: How to use terminal environment?</strong></a></li></ul></li>
+<li><a href="#terminal"><strong>Optional: How to use Terminal environment?</strong></a></li></ul></li>
 <li><a href="#sec:operations">Operations</a>
 <ul><li><a href="#math_ops"><strong>Mathematical Operations</strong></a></li>
 <li><a href="#subsec:logicalOperatons"><strong>Logical Operations</strong></a></li></ul></li>
@@ -286,7 +286,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Variables, Types, and Operations</h1>
-        <p>Last updated on 2024-07-09 |
+        <p>Last updated on 2024-07-10 |
 
         <a href="https://github.com/LearnToDiscover/Basic_Python/edit/main/episodes/02-input_output.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -380,24 +380,23 @@ as anything that falls outside of the coding environment.
 <p style="text-align: justify;">
 Only what we define within the environment and what we store in the
 memory is directly controlled by our application. We may access or take
-control over other environments through certain mediums; however, such
-interactions are classified as I/O operations. An example of this is
-interacting with a file on our computer, which we discuss in the topic
-of <a href="07-strings.html">Strings</a>. Whilst we have complete
-control over a file while working on it (e.g. reading from it or writing
-to it), the access to the file and the transmission of data is in fact
-controlled and managed not by the programming environment but by the
-operating system of the computer.
+control over other environments, however, these interactions are
+classified as I/O operations. An example of this is interacting with a
+file on our computer. While we have complete control over a file while
+working on it (e.g. reading from it or writing to it), the access to the
+file and the transmission of data is in fact controlled and managed not
+by the programming environment but by the operating system of the
+computer.
 </p>
 </div>
 </div>
 </div>
 <p>In programming, I/O operations include, but are not limited to:</p>
-<ul><li><p>displaying the results of a calculation</p></li>
-<li><p>require the user to enter a value</p></li>
-<li><p>writing or reading data to and from a file or a database</p></li>
-<li><p>downloading data from the Internet</p></li>
-<li><p>operating a hardware (e.g. a robot)</p></li>
+<ul><li><p>Displaying the results of a calculation</p></li>
+<li><p>Requiring the user to enter a value</p></li>
+<li><p>Writing or reading data to and from a file or a database</p></li>
+<li><p>Downloading data from the Internet</p></li>
+<li><p>Operating a hardware (such as a robot, for example)</p></li>
 </ul><div id="advanced-topic" class="callout prereq">
 <div class="callout-square">
 <i class="callout-icon" data-feather="check"></i>
@@ -441,19 +440,19 @@ refers to data that has either been generated or manipulated by that
 application.
 </p>
 <p style="text-align: justify;">
-For example; we have two number and we would like to calculate their
-sum. The action of calculating the sum is itself a <a href="#math_ops"><em>mathematical operation</em></a> (discussed in the
-coming section). The result of our calculation is called an
+For example; calculating the sum of two numbers. The action of
+calculating the sum is itself a <a href="#math_ops"><em>mathematical
+operation</em></a>. The result of our calculation is called its
 <code>output</code>. Once we obtain the result, we might want to save it
 in a file or display it on the screen, in which case we will be
-performing an <em>I/O operation</em>.
+performing an I/O operation. <em>I/O operation</em>.
 </p>
 <p style="text-align: justify;">
-The simplest and most frequently used method for generating an output in
+The simplest and most frequently used method for generating output in
 almost every modern programming language is to display something on the
-screen. We recommend using JupyterLab notebooks to run our scripts and
-the typical method to produce an output is to display it in cell below
-the code.To do this, we will call a dedicated built-in function named
+screen. We recommend using Jupyter Notebooks to run our Python scripts,
+which defaults to displaying the output of a code cell beneath the code
+itself. We will start by calling a dedicated built-in function named
 <kbd>print()</kbd>.
 </p>
 <div id="remember-1" class="callout">
@@ -466,12 +465,15 @@ the code.To do this, we will call a dedicated built-in function named
 <div class="callout-content">
 <p style="text-align: justify;">
 In programming, a <code>function</code> is essentially an isolated piece
-of code. It usually to takes some inputs, <em>does </em>something to or
-with them, and produces an <code>output</code>. The pair of (typically
-round) parenthesis that follow a function are there to provide the
-function with the <em>input arguments</em> it needs when we
-<em>call</em> it, so that it can do what it is supposed to do using our
-data. We will explore functions in more details in Lesson 4 <a href="06-functions.html">Functions</a>.
+of code. It usually accepts input, <em>does</em> something to or with
+this, and produces <code>output</code>. A function can process input,
+often using several operations in a particular sequence or
+configuration, and process the input to give a final output. In Python
+programming syntax, a pair of (typically round) parentheses follows a
+function, and these provide the function with the <em>input
+arguments</em> it needs when we <em>call</em> it, so that it can do what
+we intend, to our data. We will explore functions in more details in
+Basic Python 4: <a href="06-functions.html">Functions</a>.
 </p>
 </div>
 </div>
@@ -481,24 +483,25 @@ The <kbd>print()</kbd> function can take several inputs and performs
 different tasks. Its primary objective, however, is to take some values
 as input and display them on the screen. Here is how it works:
 </p>
-<p>Suppose we want to display some text in the terminal. To do so, we
-write:</p>
-<pre><code><span><span class="fu">print</span><span class="op">(</span><span class="st">'Hello world!'</span><span class="op">)</span></span></code></pre>
+<p>Suppose we want to display some text in the Terminal. To do so, we
+write the following into a cell of our Jupyter Notebook (or on the
+Terminal, a code editor or dedicated Integrated Development Environment
+(IDE)):</p>
+<pre><code><span><span class="fu">print</span><span class="op">(</span><span class="st">'Welcome to L2D!!!'</span><span class="op">)</span></span></code></pre>
 <p style="text-align: justify;">
-in a cell of our notebook (or, if not using a notebook, an editor or
-IDE) and save the notebook in a file. This is now a fully functioning
-Python programme that we can run using the Python interpreter.
+This is now a fully functioning Python program that we can run using the
+Python interpreter.
 </p>
 <p style="text-align: justify;">
-If you are using an Integrated Development Environment (IDE) —
-e.g. Visual Studio Code, you have to save the code in a file with
-extension <code>.py</code> and may then execute your code using the
-internal tools provided by that IDE. The specifics of how you do so
-depend on the IDE that you are using.
+If you are using an IDE (such as Mircosoft Visual Studio Code, for
+example) you must save the code in a file with the extension
+<code>.py</code>, in order to execute your code using the internal tools
+provided by that IDE. The specifics of how you do so depend on the IDE
+that you are using.
 </p>
 <p style="text-align: justify;">
 <code>.py</code> Python scripts can also be executed manually. To do so,
-we open the terminal in MacOS or Linux or the command prompt (CMD) in
+we open the Terminal in MacOS or Linux or the command prompt (CMD) in
 Windows and navigate to the directory where we saved the script.
 </p>
 <div id="note" class="callout prereq">
@@ -510,7 +513,7 @@ Windows and navigate to the directory where we saved the script.
 </h3>
 <div class="callout-content">
 <p style="text-align: justify;">
-If you don’t know how to navigate in the terminal, see the example in
+If you don’t know how to navigate in the Terminal, see the example in
 section <a href="#terminal">How to use terminal environment?</a> at the
 end of this chapter.
 </p>
@@ -519,7 +522,7 @@ end of this chapter.
 </div>
 <p>Once in the correct directory, we run a script called
 <code>script_a.py</code> by typing <code>python3 script_a.py</code> in
-our terminal as follows:</p>
+our Terminal as follows:</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -532,17 +535,17 @@ our terminal as follows:</p>
 </div>
 <p style="text-align: justify;">
 This will call the Python 3 interpreter to execute the code we wrote in
-<code>script_a.py</code>. Once executed, which in this case should be
-instantaneously, we should see the output.
+<code>script_a.py</code>. Once executed, we will see the output
+displayed in the Terminal window.
 </p>
 <p style="text-align: justify;">
-In a JupyterLab notebook we can press the keyboard shortcut
-‘shift-enter’ to execute the code in a cell. The output will be
-displayed below the code cell.
+In a Jupyter Notebook we can press the keyboard shortcut ‘shift+enter’
+to execute the code in a cell. The output will be displayed below the
+code cell.
 </p>
 <p style="text-align: justify;">
-<strong>Congratulations</strong> you have now successfully written and
-executed your first programme in Python.
+You have now successfully written and executed your first program in
+Python.
 </p>
 </div>
 </div>
@@ -556,21 +559,22 @@ executed your first programme in Python.
 </h3>
 <div class="callout-content">
 <p style="text-align: justify;">
-We know <kbd>print()</kbd> is a <em>function</em> because it ends with a
-pair of parenthesis, and it is written entirely in lowercase characters
-<a href="https://www.python.org/dev/peps/pep-0008/#function-names" class="external-link">PEP-8:
+We know that <kbd>print()</kbd> is a <em>function</em> because it ends
+with a pair of parentheses, and it is written entirely in lowercase
+characters <a href="https://www.python.org/dev/peps/pep-0008/#function-names" class="external-link">PEP-8:
 Function Names</a>. Some IDEs change color when they encounter built-in
-functions in the code so that we won’t accidentally overwrite them. We
-shall discuss <em>functions</em> in more details in Lesson 4 <a href="06-functions.html">Functions</a>.
+functions, in order to signal to the user that the function is
+recognised, and available to use, and so that we don’t accidentally
+overwrite them.
 </p>
 </div>
 </div>
 </div>
 <p style="text-align: justify;">
 We can pass more than a single value to the <kbd>print()</kbd> function,
-provided that they are separated with a comma. For instance, if we write
-the code below and run the script, the results would be as shown in
-<em>output</em>.
+provided that each value is separated from another, using a comma. For
+instance, if we write the code below and run the script, the results
+would be as shown in <em>output</em>.
 </p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -588,7 +592,8 @@ include a space in our text. This is the default behaviour of the
 <kbd>print()</kbd> function when it receives more than a single value
 (argument).
 </p>
-<p>This default behaviour may be changed:</p>
+<p>This default behaviour may be changed using a keyword argument called
+sep:</p>
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -642,7 +647,7 @@ include a space in our text. This is the default behaviour of the
   ANSWER
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -672,12 +677,12 @@ include a space in our text. This is the default behaviour of the
 <p style="text-align: justify;">
 Inputs are I/O operations that involve receiving some data from the
 outside world. This might include reading the contents of a file,
-downloading something from the Internet, or asking the user to enter a
+downloading something from the internet, or asking the user to enter a
 value.
 </p>
 <p style="text-align: justify;">
 The simplest way to acquire an input is to ask the user to enter a value
-in the terminal. To do so, we use a dedicated built-in function called
+in the Terminal. To do so, we use a dedicated built-in function called
 <kbd>input()</kbd>.
 </p>
 <div id="note-1" class="callout">
@@ -688,20 +693,20 @@ in the terminal. To do so, we use a dedicated built-in function called
 <h3 class="callout-title">Note<a class="anchor" aria-label="anchor" href="#note-1"></a>
 </h3>
 <div class="callout-content">
-<p>In a Unix system (Mac OS or Linux), a tilde (~) is an alias for a
-user’s home directory.</p>
+<p>In a Unix system (Mac OS or Linux), a tilde (~) is an alias that is
+used to refer to a user’s home directory.</p>
 </div>
 </div>
 </div>
 <p style="text-align: justify;">
-The function takes a single <em>argument</em> called
-<code>prompt</code>. Prompt is the text displayed in the terminal to ask
+This function takes a single <em>argument</em> called
+<code>prompt</code>. Prompt is the text displayed in the Terminal to ask
 the user for an input. Figure <a href="#fig:terLinux">Terminal window on
 a Linux computer</a> and <a href="#fig:terMac">Terminal window on a
-Mac</a>, illustrates a screen shot of my personal computer’s prompt,
-where it displays my user name (i.e. <code>pouria</code>) followed by a
-tilde (~). A terminal prompt may be different in each computer and
-operating system.
+Mac</a>, illustrates a screen shot of an example PC’s prompt, where it
+displays a user name (i.e. <code>pouria</code>) followed by a tilde (~).
+A Terminal prompt may be different in each computer and operating
+system.
 </p>
 <p>Here is how we implement the <kbd>input()</kbd> function:</p>
 <pre><code><span><span class="fu">input</span><span class="op">(</span><span class="st">'Please enter your name: '</span><span class="op">)</span></span></code></pre>
@@ -713,16 +718,16 @@ see:</p>
 
 Please enter your name: _</code></pre>
 <p style="text-align: justify;">
-The terminal cursor, displayed as an underscore in our example, will be
+The Terminal cursor, displayed as an underscore in our example, will be
 in front of the prompt (i.e. <code>'Please enter your name: '</code>)
 waiting for a response. Once it receives a response, it will proceed to
 run the rest of the code (if any), or terminate the execution.
 </p>
 <p style="text-align: justify;">
 We may store the user’s response in a variable. Variables are the topic
-of the next section, where we shall also review more examples on
-<kbd>input()</kbd> and how we can use it to produce results based on the
-responses we receive from the user.
+of the next episode in this learning material, where we shall also
+review more examples on <kbd>input()</kbd> and how we can use it to
+produce results based on the responses we receive from the user.
 </p>
 </div>
 </div>
@@ -736,7 +741,7 @@ responses we receive from the user.
 </h3>
 <div class="callout-content">
 <p style="text-align: justify;">
-Python is an interpreted language; that is, the code we write is
+Python is an interpreted language; this means that the code we write is
 executed by the Python interpreter one line at a time. The
 <kbd>input()</kbd> function performs a <em>blocking</em> process. This
 means that the execution of the code by the Python interpreter is halted
@@ -756,7 +761,7 @@ the next line.
 </h3>
 <div class="callout-content">
 <p>Write a script that asks the user to enter the name of a protein in
-the terminal.</p>
+the Terminal.</p>
 </div>
 </div>
 </div>
@@ -767,7 +772,7 @@ the terminal.</p>
   ANSWER
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <pre><code><span><span class="fu">input</span><span class="op">(</span><span class="st">'Please enter the name of a protein: '</span><span class="op">)</span></span></code></pre>
 </div>
@@ -778,22 +783,23 @@ the terminal.</p>
 </section><section><h2 class="section-heading" id="varTypes">Variables And Types<a class="anchor" aria-label="anchor" href="#varTypes"></a>
 <a class="anchor" aria-label="anchor" href="#varTypes"></a></h2>
 <hr class="half-width"><p style="text-align: justify;">
-We use variables to store data in the memory. Each variable has 3
-characteristics: <em>scope</em>, <em>name</em>, and <em>type</em>.
-<em>Scope</em> and <em>name</em> must be mutually unique. Starting with
-<em>name</em>, we will discuss each of these characteristics in more
-details throughout this chapter.
+Variables are a type of data container, that we can use to store data to
+memory. Each variable has three main types of attribute: <em>scope</em>,
+<em>name</em>, and <em>type</em>. <em>Scope</em> and <em>name</em> must
+be mutually unique. Starting with <em>name</em>, we will discuss each of
+these attributes in more details throughout this chapter.
 </p>
 <div class="section level3">
 <h3 id="subsec:variableNames"><strong>Variable names</strong><a class="anchor" aria-label="anchor" href="#subsec:variableNames"></a></h3>
 <p><a href="https://www.python.org/dev/peps/pep-0008/#naming-conventions" class="external-link"><strong>PEP–8
 Naming Conventions</strong></a></p>
 <p style="text-align: justify;">
-Name of a variable is in fact an alias for a location in the memory. You
-can think of it as a postbox, which is used as a substitute for an
-address. Similarly, we use variable names so we wouldn’t have to use the
-actual address to the location we want in the memory because it would
-look something like <code>0x106fb8348</code>.
+The name that we give to a variable is, in fact, an alias for a location
+in the memory. You can think of it as a postbox, which is used as a
+substitute for an actual address. Similarly, we use variable names so we
+don’t have to use the actual address to the location we want in the
+memory; because it would look something like this
+<code>0x106fb8348</code>.
 </p>
 <p>There are some relatively simple rules to follow when defining
 variable names, which ultimately boil down to:</p>
@@ -809,10 +815,10 @@ variable names, which ultimately boil down to:</p>
 We should never overwrite an existing, built-in definition or identifier
 (e.g. <code>int</code> or <code>print</code>). We will be learning many
 such definitions and identifiers as we progress through this course.
-Nonetheless, the Jupyterlab notebook as well as any good IDE highlights
-syntaxes and built-in identifiers in different colours. In JupyterLab
-the default for built-in definitions is green. The exact colouring
-scheme depends on the IDE and the theme.
+Nonetheless, the Jupyter Notebook as well as any good IDE highlights
+syntaxes and built-in identifiers in different colours. In Jupyter, the
+default for built-in definitions is green. The exact colouring scheme
+depends on the IDE being used, and the selected theme.
 </p>
 </div>
 </div>
@@ -829,9 +835,9 @@ scheme depends on the IDE and the theme.
 </h3>
 <pre class="output" tabindex="0"><code><span><span class="fl">2</span></span></code></pre>
 </div>
-<p>Variables containing integer numbers are known as <code>int</code>,
-and those containing decimal numbers are known as <code>float</code> in
-Python.</p>
+<p>In Python, variables containing integer numbers are referred to as
+<code>int</code>, and those containing decimal numbers are referred to
+as <code>float</code>.</p>
 <div class="codewrapper sourceCode" id="cb20">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -866,11 +872,11 @@ Python.</p>
 <pre class="output" tabindex="0"><code><span><span class="fl">16.0</span></span></code></pre>
 </div>
 <p style="text-align: justify;">
-Variables can contain characters as well; but to prevent Python from
-confusing them with meaningful commands, we use quotation marks. So long
-as we remain consistent, it doesn’t matter whether we use single or
-double quotations. These variables are known as <code>string</code> or
-<code>str</code>:
+Variables can contain data as characters as well; but to prevent Python
+from confusing them with meaningful commands, we use quotation marks. So
+long as we remain consistent, <em>it doesn’t matter whether we use
+single or double quotations</em>. These data are known as
+<code>string</code> or <code>str</code>:
 </p>
 <div class="codewrapper sourceCode" id="cb26">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -896,17 +902,17 @@ double quotations. These variables are known as <code>string</code> or
 <div class="callout-content">
 <p style="text-align: justify;">
 Oxidised low-density lipoprotein (LDL) receptor 1 mediates the
-recognition, internalisation and degradation of oxidatively modified low
-density lipoprotein by vascular endothelial cells. Using the <a href="https://beta.uniprot.org" class="external-link">Universal Protein Resource</a> (UniProt)
+recognition, internalisation and degradation of oxidatively modified
+low-density lipoprotein by vascular endothelial cells. Using the <a href="https://beta.uniprot.org" class="external-link">Universal Protein Resource</a> (UniProt)
 website, find this protein for humans, and identify:
 </p>
 <ul><li>UniProt entry number.</li>
 <li>Length of the protein (right at the top).</li>
 <li>Gene name (right at the top).</li>
-</ul><p>Store the information you retrieved, including the protein name, in 4
-separate variables.</p>
-<p>Display the values of these 4 variables in <em>one</em> line, and
-separate the items with 3 spaces, as follows:</p>
+</ul><p>Store the information you retrieved, including the protein name, in
+within four separate variables.</p>
+<p>Display the values of these four variables in <em>one</em> line, and
+separate the items with three spaces, as follows:</p>
 <blockquote>
 <p><code>Name   EntryNo   GeneName   Length</code></p>
 </blockquote>
@@ -920,7 +926,7 @@ separate the items with 3 spaces, as follows:</p>
   ANSWER
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb28">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -952,16 +958,16 @@ separate the items with 3 spaces, as follows:</p>
 <h3 class="callout-title">Practice Exercise 4<a class="anchor" aria-label="anchor" href="#practice-exercise-4"></a>
 </h3>
 <div class="callout-content">
-<ol style="list-style-type: decimal"><li><p>Write a script that upon execution, asks the user to enter the
-name of an enzyme and then retains the response in an appropriately
+<ol style="list-style-type: decimal"><li><p>Write a Python code that upon execution, asks the user to enter
+the name of an enzyme and then stores the response in an appropriately
 named variable.</p></li>
 <li><p>Use the variable to display an output similar to the
 following:</p></li>
 </ol><p><code>ENZYME_NAME is an enzyme.</code></p>
 <p>where <code>ENZYME_NAME</code> is the name of the enzyme entered in
 the prompt.</p>
-<ol start="3" style="list-style-type: decimal"><li><p>Now alter your script to ask the user to enter the number of
-amino acids in that enzyme. Retain the value in another appropriately
+<ol start="3" style="list-style-type: decimal"><li><p>Now modify your script to prompt the user to enter the number of
+amino acids in that enzyme. Store the value in another appropriately
 named variable.</p></li>
 <li><p>Alter the output of your script to display a report in the
 following format:</p></li>
@@ -977,7 +983,7 @@ following format:</p></li>
   ANSWER
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <pre><code><span><span class="va">enzyme</span> <span class="op">=</span> <span class="fu">input</span><span class="op">(</span><span class="st">'Please enter the name of an enzyme: '</span><span class="op">)</span></span>
 <span></span>
@@ -1006,16 +1012,22 @@ distinct categories:</p>
 </h3>
 <div class="callout-content">
 <ul class="task-list"><li><p><label><input type="checkbox" checked><strong>Statically
-typed</strong> language that require the programmer to define the type
-for every variable (statically typed).</label></p></li>
+typed</strong> languages: these require the programmer to explicitly
+declare the type of each variable, and this type is checked at compile
+time.</label></p></li>
 <li><p><label><input type="checkbox" checked><strong>Dynamically
-typed</strong> languages that define and maintain the types on the
-fly.</label></p></li>
+typed</strong> languages: the type of the variable is determined at run
+time, and variables can change types on the fly. The programmer is not
+required to explicitly define the type of a variable: the language
+infers the type of the variable, once it is assigned
+data.</label></p></li>
 </ul><p style="text-align: justify;">
-Python is a dynamically typed language. This means that, unlike
-statically typed languages, we rarely need to worry about the
-<em>type</em> definitions because in the majority of cases, Python takes
-care of them for us.
+Python is a dynamically typed language, and falls into this second
+category. This means that, unlike statically typed languages, we rarely
+need to worry about the <em>type</em> definitions because in the
+majority of cases, Python takes care of them for us, and automatically
+decodes the type of data being stored in a variable, once it is defined
+by the user.
 </p>
 </div>
 </div>
@@ -1047,8 +1059,12 @@ and values.
 <div class="callout-content">
 <p style="text-align: justify;">
 In computer programming, type systems are syntactic methods to enforce
-and / or identify levels of abstraction. An entire field in computer
-science has been dedicated to the study of programming languages from a
+and/or identify levels of abstraction. This means that type systems take
+advantage of the syntax of a particular programming language, in order
+to enforce rules and identify types. This is important, as it can manage
+abstraction in data, by ensuring that differing data types interact
+meaningfully with one another. An entire field in computer science has
+been dedicated to the study of programming languages from a
 type–theoretic approach. This is primarily due to the implication of
 types and their underlying principles in such areas in software
 engineering as optimisation and security. To learn more about the study
@@ -1068,10 +1084,8 @@ Cambridge, Mass.: MIT Press; 2002.
 <div class="callout-content">
 <p style="text-align: justify;">
 The values determine the type of a variable in dynamically typed
-languages. This is in contrast with statically typed languages where a
-variable must be initialised using a specific type before a value —
-whose type is consistent with the initialised variable, can be assigned
-to it.
+languages. This is in contrast to statically typed languages, where a
+variable must be initialised using a specific type before a value.
 </p>
 </div>
 </div>
@@ -1082,27 +1096,31 @@ programming language?</strong><a class="anchor" aria-label="anchor" href="#why-l
 <p style="text-align: justify;">
 </p>
 <p style="text-align: justify;">
-Python enjoys a powerful type system out of the box. Table <a href="#tb:types:nativeTypes">Built-in types in Python</a> provides a
-comprehensive reference for the built-in types in Python. Built-in types
-are the types that exist in the language and do not require any third
-party libraries to implement or use.
+Python enjoys a powerful type system out of the box. The following table
+- <a href="#tb:types:nativeTypes">Built-in types in Python</a> -
+provides a comprehensive reference for the built-in types in Python.
+Built-in types already exist in the language, and do not require the use
+or implementation of any third-party libraries.
 </p>
-<figure id="tb:types:nativeTypes"><img src="fig/python_built-in_types.png" alt="A comprehensive (but non-exhaustive) reference of built-in (native) types in Python 3.  * Not discussed in this course — included for reference only.   $ dict is not an iterable by default, however, it is possible to iterate through its keys.    Mutability is an important concept in programming. A mutable object is an object whose value(s) may be altered. This will become clearer once we study list and tuple. Find out more about mutability in Python from the documentations}.     Complex numbers refer to a set of numbers that have a real part, and an imaginary part; where the imaginary part is defined as \sqrt{-1}. These numbers are very useful in the study of oscillatory behaviours and flow (e.g. heat, fluid, electricity). To learn more about complex numbers, watch this Khan Academy video tutorial." class="figure mx-auto d-block"><div class="figcaption">A comprehensive (but non-exhaustive) reference
-of built-in (native) types in Python 3.<br><sup>*</sup> Not discussed
-in this course — included for reference only. <br><sup>$</sup><code>dict</code> is not an iterable by default, however, it is possible
-to iterate through its keys. <br><br><strong>Mutability</strong> is an
-important <a href="https://en.wikipedia.org/wiki/Immutable_object" class="external-link">concept in
+<p>![A comprehensive (but non-exhaustive) reference of built-in (native)
+types in Python 3.<br><sup>*</sup> Not discussed in this course —
+included for reference only. <br><sup>$</sup><code>dict</code> is not
+an iterable by default, however, it is possible to iterate through its
+keys.</p>
+<p><br><br><strong>Mutability</strong> is an important <a href="https://en.wikipedia.org/wiki/Immutable_object" class="external-link">concept in
 programming</a>. A mutable object is an object whose value(s) may be
 altered. This will become clearer once we study <code>list</code> and
-<code>tuple</code>. Find out more about mutability in Python from the <a href="https://docs.python.org/3.9/reference/datamodel.html" class="external-link">documentations}</a>.
+<code>tuple</code>. Find out more about mutability in Python from the <a href="https://docs.python.org/3.9/reference/datamodel.html" class="external-link">documentation</a>.
 <br><br><strong>Complex numbers</strong> refer to a <a href="http://thinkzone.wlonk.com/Numbers/NumberSets.htm" class="external-link">set of
-numbers</a> that have a real part, and an imaginary part; where the
-imaginary part is defined as <span class="math inline">\(\sqrt{-1}\)</span>. These numbers are very useful
+numbers</a> that have both a real component, and an imaginary component;
+where the imaginary part is defined as <span class="math inline">\(\sqrt{-1}\)</span>. These numbers are very useful
 in the study of oscillatory behaviours and flow (e.g. heat, fluid,
 electricity). To learn more about complex numbers, watch this <a href="https://www.khanacademy.org/math/algebra2/introduction-to-complex-numbers-algebra-2/the-complex-numbers-algebra-2/v/complex-number-intro" class="external-link">Khan
-Academy video tutorial</a>.</div>
-</figure><p>Sometimes we might need want to know what is the type of a variable.
-To do so, we use the build-in function <kbd>type()</kbd> as follows:</p>
+Academy video tutorial</a>.
+](fig/python_built-in_types.png){#tb:types:nativeTypes}</p>
+<p>Sometimes we might need want to explicitly know what the type of a
+variable is. To do this, we can use the build-in function
+<kbd>type()</kbd> as follows:</p>
 <div class="codewrapper sourceCode" id="cb31">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1172,7 +1190,7 @@ To do so, we use the build-in function <kbd>type()</kbd> as follows:</p>
 </h3>
 <div class="callout-content">
 <p style="text-align: justify;">
-In Python, a variable / value of a certain type may be referred to as an
+In Python, a variable/value of a certain type may be referred to as an
 <em>instance</em> of that type. For instance, an integer value whose
 type in Python is defined as <em>int</em> is said to be an
 <strong>instance of type</strong> <code>int</code>.
@@ -1210,7 +1228,7 @@ format:</p>
   ANSWER
   </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb41">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1450,15 +1468,15 @@ a <code>ValueError</code> is raised:</p>
 <p style="text-align: justify;">
 In programming, we routinely face errors resulting from different
 mistakes. The process of finding and correcting such mistakes in the
-code is referred to as <em>debugging</em>.
+code is referred to as <strong>debugging</strong>.
 </p>
-<p>We have been given the following snippet written in Python 3:</p>
+<p>We have been given the following piece of code written in Python:</p>
 <pre><code><span><span class="va">value_a</span> <span class="op">=</span> <span class="fl">3</span></span>
 <span><span class="va">value_b</span> <span class="op">=</span> <span class="st">'2'</span></span>
 <span></span>
 <span><span class="va">result</span> <span class="op">=</span> <span class="va">value_a</span> <span class="op">+</span> <span class="va">value_b</span></span>
 <span><span class="fu">print</span><span class="op">(</span><span class="va">value_a</span>, <span class="st">'+'</span>, <span class="va">value_b</span>, <span class="st">'='</span>, <span class="va">result</span><span class="op">)</span></span></code></pre>
-<p>but when the code is executed, we encounter an error message as
+<p>But when the code is executed, we encounter an error message as
 follows:</p>
 <pre><code>Traceback (most recent call last):
 File "&lt;stdin&gt;", line 1, in &lt;module&gt;
@@ -1477,7 +1495,7 @@ TypeError: unsupported operand type(s) for +: 'int' and 'str'</code></pre>
   ANSWER
   </h4>
 </button>
-<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
+<div id="collapseSolution6" class="accordion-collapse collapse" data-bs-parent="#accordionSolution6" aria-labelledby="headingSolution6">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb67">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1501,7 +1519,7 @@ TypeError: unsupported operand type(s) for +: 'int' and 'str'</code></pre>
 </div>
 </div>
 <div class="section level3">
-<h3 id="handling-input-variables"><strong>Handling input variables</strong><a class="anchor" aria-label="anchor" href="#handling-input-variables"></a></h3>
+<h3 id="handling-input-variables"><strong>Handling Input Variables</strong><a class="anchor" aria-label="anchor" href="#handling-input-variables"></a></h3>
 <div id="discussion4" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
@@ -1584,7 +1602,7 @@ asterisk (<code>*</code>) sign.</p>
   ANSWER
   </h4>
 </button>
-<div id="collapseSolution7" class="accordion-collapse collapse" aria-labelledby="headingSolution7" data-bs-parent="#accordionSolution7">
+<div id="collapseSolution7" class="accordion-collapse collapse" data-bs-parent="#accordionSolution7" aria-labelledby="headingSolution7">
 <div class="accordion-body">
 <pre><code><span><span class="va">enzyme</span> <span class="op">=</span> <span class="fu">input</span><span class="op">(</span><span class="st">'Please enter the name of an enzyme: '</span><span class="op">)</span></span>
 <span></span>
@@ -1603,24 +1621,24 @@ asterisk (<code>*</code>) sign.</p>
 <a href="https://docs.python.org/3.6/reference/executionmodel.html#resolution-of-names" class="external-link"><strong>Resolution
 of names</strong></a>
 <p style="text-align: justify;">
-When defining a variable, we should always consider where in our
-programme we intent to use it. The more localised our variables, the
-better. This is because local variables are easier to distinguish, and
-thus reduce the chance of making mistakes — e.g. unintentionally
-redefine or alter the value of an existing variable.
+When defining a variable, we should always consider where in our program
+we intend to use it. The more localised our variables, the better. This
+is because local variables are easier to distinguish, and thus reduce
+the chance of making mistakes — e.g. unintentionally redefining or
+altering the value of an existing variable.
 </p>
 <p style="text-align: justify;">
-To that end, the scope of a variable defines the ability to reference a
-variable from different <em>points</em> in our programmes. The concept
-of local variables becomes clearer once we explore functions in
-programming in chapter <a href="06-functions.html">Functions</a>.
+Therefore, the scope of a variable defines the ability to reference a
+variable from different <em>points</em> in our programs. The concept of
+local variables becomes clearer once we explore functions in programming
+in chapter <a href="06-functions.html">Functions</a>.
 </p>
 <p style="text-align: justify;">
 As displayed in Figure <a href="#fig:opts:scopes">Variable scopes</a>,
 the point <em>at</em> or <em>from</em> which a variable can be
 referenced depends on the location where the variable is defined.
 </p>
-<p>In essence, there are three general rules to remember in relation
+<p>In essence, there are three general rules to remember in relation to
 variable scopes in Python:</p>
 <p style="text-align: justify;">
 I. A variable that is defined in the outer scope, can be
@@ -1636,7 +1654,7 @@ boundaries of the scope it is defined in.</li>
 </ol><p style="text-align: justify;">
 </p>
 <ol start="3" style="list-style-type: upper-roman"><li>The inner scopes <em>from</em> which a variable is referenced must
-themselves have be contained within the defining scope — e.g. in
+themselves be contained within the defining scope — e.g. in
 <code>FuncB</code> of Figure <a href="#fig:opts:scopes">Variable
 scopes</a>, we can reference <code>a</code>, <code>b</code>, and
 <code>x</code>; but not <code>f1</code>. This is because the scope of
@@ -1648,6 +1666,7 @@ so it can only be referenced from <code>Script</code> <kbd>→</kbd>
 </ol><figure id="fig:opts:scopes"><img src="fig/variable_scopes.png" alt="Variable scopes in Python with respect to scripts and functions." class="figure mx-auto d-block"><div class="figcaption">Variable scopes in Python with respect to
 scripts and functions.</div>
 </figure><p style="text-align: justify;">
+As we discussed earlier in this lesson, it is paramount to remember that
 Python is an interpreted language. This means that the Python
 interpreter goes through the codes that we write line by line,
 interpreting it to machine language. It is only then that the commands
@@ -1656,7 +1675,7 @@ are processed and executed by the computer. On that account, a variable
 definition. That is why, for instance, in <code>Script (part 2)</code>
 of Figure <a href="#fig:opts:scopes">Variable scopes</a>, we can
 reference every variable and function except for <code>FuncC</code>,
-which is declared further down the code hierarchy.
+which is declared further down in the code hierarchy.
 </p>
 <p style="text-align: justify;">
 Although scope and hierarchy appear at first glance as theoretical
@@ -1668,28 +1687,28 @@ to learn.
 </p>
 </div>
 <div class="section level3">
-<h3 id="terminal"><strong>Optional: How to use terminal environment?</strong><a class="anchor" aria-label="anchor" href="#terminal"></a></h3>
+<h3 id="terminal"><strong>Optional: How to use Terminal environment?</strong><a class="anchor" aria-label="anchor" href="#terminal"></a></h3>
 <p><img src="fig/commandprompt_1.png" class="figure"><img src="fig/commandprompt_2.png" class="figure"><img src="fig/commandprompt_3.png" class="figure"></p>
 </div>
 </section><section><h2 class="section-heading" id="sec:operations">Operations<a class="anchor" aria-label="anchor" href="#sec:operations"></a>
 <a class="anchor" aria-label="anchor" href="#sec:operations"></a></h2>
 <hr class="half-width"><p style="text-align: justify;">
-Through our experimentations with <a href="#sec:varTyp">variable
-types</a>, we already know that variables may be subject to different
+Through our experimentation with <a href="#sec:varTyp">variable
+types</a>, we already know that variables may be subjected to different
 operations.
 </p>
 <p style="text-align: justify;">
-When assessing <a href="#sec:conversionType">type conversions</a> we
+When assessing <a href="#sec:conversionType">type conversions</a>, we
 also established that the operations we can apply to each variable
 depend on the <em>type</em> of that variable. To that end, we learned
 that although it is sometimes possible to mix variables from different
-types to perform an operation — e.g. multiplying a floating point number
-with an integer, there are some logical restrictions in place.
+types to perform an operation (for example multiplying a floating point
+number with an integer), there are some logical restrictions in place.
 </p>
 <p style="text-align: justify;">
 Throughout this section, we will take a closer look into different types
-of operations in Python. This will allow us to gain a deeper insight
-into the concept and familiarise ourselves with the underlying logic.
+of operations in Python. This will allow us to gain a deeper insight,
+and to familiarise ourselves with the underlying logic.
 </p>
 <p style="text-align: justify;">
 To recapitulate on what we have done so far, we start off by reviewing
@@ -1723,7 +1742,7 @@ To recapitulate on what we have done so far, we start off by reviewing
 <pre class="output" tabindex="0"><code><span><span class="fl">3</span></span></code></pre>
 </div>
 <p style="text-align: justify;">
-Given 2 different variables, each containing a different value; we can
+Given two different variables, each containing a different value; we can
 perform an operation on these values and store the result in
 <em>another</em> variable without altering the original variables in any
 way:
@@ -1744,7 +1763,7 @@ way:
 <pre class="output" tabindex="0"><code><span><span class="fl">7</span></span></code></pre>
 </div>
 <p style="text-align: justify;">
-We can change the value of an <em>existing</em> variable using the value
+We can change the value of an <em>existing</em> variable using a value
 stored in <em>another</em> variable:
 </p>
 <div class="codewrapper sourceCode" id="cb77">
@@ -1760,7 +1779,7 @@ stored in <em>another</em> variable:
 </h3>
 <pre class="output" tabindex="0"><code><span><span class="fl">12</span></span></code></pre>
 </div>
-<p>There is also a shorthand method for applying the operation on an
+<p>There is also a shorthand method for applying this operation on an
 <em>existing</em> variable:</p>
 <div class="codewrapper sourceCode" id="cb79">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1801,10 +1820,9 @@ stored in <em>another</em> variable:
 </div>
 <p style="text-align: justify;">
 As highlighted in the <a href="#sec:operations">introduction</a>,
-different operations may be applied to any variable or value. Throughout
-the rest of this section, we will explore the most fundamental
-operations in programming, and learn about their implementation in
-Python.
+different operations may be applied to any variable or value. We can now
+explore the most fundamental operations in programming, and learn about
+their implementation in Python.
 </p>
 <div id="remember-9" class="callout">
 <div class="callout-square">
@@ -1825,8 +1843,8 @@ to perform tests.
 </div>
 <div class="section level3">
 <h3 id="math_ops"><strong>Mathematical Operations</strong><a class="anchor" aria-label="anchor" href="#math_ops"></a></h3>
-<p>Suppose <code>a</code> and <code>b</code> are 2 variables
-representing integer numbers as follows:</p>
+<p>Suppose <code>a</code> and <code>b</code> are two variables
+representing integers, as follows:</p>
 <pre><code><span><span class="va">a</span> <span class="op">=</span> <span class="fl">17</span></span>
 <span><span class="va">b</span> <span class="op">=</span> <span class="fl">5</span></span></code></pre>
 <p>Using <code>a</code> and <code>b</code> we can itemise built-in
@@ -1874,7 +1892,7 @@ following format:</p>
 </blockquote>
 <ol start="2" style="list-style-type: decimal"><li>Now using the results you obtained:
 <p style="text-align: justify;">
-<strong>I.</strong> Can you explain why is the result of <span class="math inline">\(35 - 3.0\)</span> is an instance of type
+<strong>I.</strong> Can you explain why the result of <span class="math inline">\(35 - 3.0\)</span> is an instance of type
 <code>float</code>, whilst that of <span class="math inline">\(35 -
 3\)</span> is of type <code>int</code>?
 </p>
@@ -1891,13 +1909,18 @@ it made of?
 If you feel adventurous, you can try this for <span class="math inline">\(2^{10000}\)</span> or higher; but beware that you
 might overwhelm your computer and need a restart it if you go too far
 (i.e. above <span class="math inline">\(2^{1000000}\)</span>). Just make
-sure you save everything beforehand, so you don’t accidentally step on
-your own foot.}
+sure you save everything beforehand, so you don’t accidentally lose your
+work.
 </p>
 <p style="text-align: justify;">
-<strong>Hint:</strong> We discuss <kbd>len()</kbd> in <a href="04-arrays.html">subsection of arrays</a>. However, at this point,
-you should be able to use the official documentations and StackOverflow
-to work out how it works.
+<strong>Hint:</strong> We discuss <kbd>len()</kbd> in our <a href="04-arrays.html">subsection of arrays</a> arrays lesson. However,
+at this point, you should be able to use the official function
+documentation to figure out how it works. To access a function’s
+documentation or docstring within Jupyter Notebook, for example you can
+use <code>help(function_name)</code> to reveal it’s documentation.
+Clicking within the function (for example, placing your cursor inside
+the function <code>len</code>) and using <code>shift+tab</code> can also
+be an easy shortcut for viewing a function’s docstring.
 </p>
 </div>
 </div>
@@ -1909,7 +1932,7 @@ to work out how it works.
   Q1
   </h4>
 </button>
-<div id="collapseSolution8" class="accordion-collapse collapse" aria-labelledby="headingSolution8" data-bs-parent="#accordionSolution8">
+<div id="collapseSolution8" class="accordion-collapse collapse" data-bs-parent="#accordionSolution8" aria-labelledby="headingSolution8">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb86">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1977,7 +2000,7 @@ to work out how it works.
   Q2-I
   </h4>
 </button>
-<div id="collapseSolution9" class="accordion-collapse collapse" aria-labelledby="headingSolution9" data-bs-parent="#accordionSolution9">
+<div id="collapseSolution9" class="accordion-collapse collapse" data-bs-parent="#accordionSolution9" aria-labelledby="headingSolution9">
 <div class="accordion-body">
 <p style="text-align: justify;">
 In the case of <span class="math inline">\(35 - 3.0\)</span> vs <span class="math inline">\(35 - 3\)</span>, the former includes a floating
@@ -1996,7 +2019,7 @@ i.e. <code>float</code> covers <code>int</code>, but not vice-versa.
   Q2-II
   </h4>
 </button>
-<div id="collapseSolution10" class="accordion-collapse collapse" aria-labelledby="headingSolution10" data-bs-parent="#accordionSolution10">
+<div id="collapseSolution10" class="accordion-collapse collapse" data-bs-parent="#accordionSolution10" aria-labelledby="headingSolution10">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb96">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2034,7 +2057,7 @@ write <code>x = 1_000_000</code>.
 </div>
 </div>
 <div class="section level4">
-<h4 id="shorthands"><strong>Shorthands</strong><a class="anchor" aria-label="anchor" href="#shorthands"></a></h4>
+<h4 id="shorthand"><strong>Shorthand:</strong><a class="anchor" aria-label="anchor" href="#shorthand"></a></h4>
 <p style="text-align: justify;">
 When it comes to mathematical operations in Python, there is a
 frequently used shorthand method that every Python programmer should be
@@ -2044,8 +2067,8 @@ familiar with.
 Suppose we have a variable defined as <code>total_residues = 52</code>
 and want to perform a mathematical operation on it. However, we would
 like to store the result of that operation in
-<code>total_residues</code> instead of a new variable. In such cases, we
-can do as follows:
+<code>total_residues</code> instead of a new variable. We can do this as
+follows:
 </p>
 <div class="codewrapper sourceCode" id="cb98">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2196,11 +2219,11 @@ the following format:</p>
 </blockquote>
 <p style="text-align: justify;">
 <strong>Note: </strong>To round floating point numbers in Python, we use
-<kbd>round()</kbd>. This is a built-in function that takes 2 input
-arguments: the first is the variable/value to be rounded, and the second
-is the number decimal places. Read more about <kbd>round()</kbd> in the
-<a href="https://docs.python.org/3/library/functions.html#round" class="external-link">official
-documentations</a>.
+the function <kbd>round()</kbd>. This is a built-in function that takes
+two input arguments: the first is the variable/value to be rounded, and
+the second is the number of decimal places we wish to round to. Read
+more about the <kbd>round()</kbd> function in its <a href="https://docs.python.org/3/library/functions.html#round" class="external-link">official
+documentation</a>.
 </p>
 <ol start="2" style="list-style-type: decimal"><li>
 <p>Now without creating a new variable, perform the following
@@ -2221,7 +2244,7 @@ operation:</p>
   Q1
   </h4>
 </button>
-<div id="collapseSolution11" class="accordion-collapse collapse" aria-labelledby="headingSolution11" data-bs-parent="#accordionSolution11">
+<div id="collapseSolution11" class="accordion-collapse collapse" data-bs-parent="#accordionSolution11" aria-labelledby="headingSolution11">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb116">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2250,7 +2273,7 @@ operation:</p>
   Q2
   </h4>
 </button>
-<div id="collapseSolution12" class="accordion-collapse collapse" aria-labelledby="headingSolution12" data-bs-parent="#accordionSolution12">
+<div id="collapseSolution12" class="accordion-collapse collapse" data-bs-parent="#accordionSolution12" aria-labelledby="headingSolution12">
 <div class="accordion-body">
 <pre><code>	pi /= (3 % 2) - 1
 </code></pre>
@@ -2262,9 +2285,9 @@ because division by zero is mathematically impossible.</p>
 </div>
 </div>
 <div class="section level4">
-<h4 id="precedence"><strong>Precedence</strong><a class="anchor" aria-label="anchor" href="#precedence"></a></h4>
+<h4 id="precedence"><strong>Precedence:</strong><a class="anchor" aria-label="anchor" href="#precedence"></a></h4>
 <p style="text-align: justify;">
-In mathematics and computer programming, there is a collection of
+In mathematics and computer programming, there are a series of
 conventional rules on the precedence of procedures to evaluate a
 mathematical expression. This collection of rules is referred to as the
 <em>order of operation</em> or <em>operator precedence</em>.
@@ -2311,8 +2334,8 @@ follows:</p>
 <ol style="list-style-type: decimal"><li>Exponents and roots</li>
 <li>Multiplication and division</li>
 <li>Addition and subtraction</li>
-</ol><p>If there are any parenthesis <code>( )</code> in the expression, the
-expression is evaluated from the innermost parenthesis outwards.</p>
+</ol><p>If there are any parentheses <code>( )</code> in the expression, the
+expression is evaluated from the innermost parenthesis, outwards.</p>
 </div>
 </div>
 </div>
@@ -2354,7 +2377,7 @@ expressions:</p>
   Q1
   </h4>
 </button>
-<div id="collapseSolution13" class="accordion-collapse collapse" aria-labelledby="headingSolution13" data-bs-parent="#accordionSolution13">
+<div id="collapseSolution13" class="accordion-collapse collapse" data-bs-parent="#accordionSolution13" aria-labelledby="headingSolution13">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb124">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2411,7 +2434,7 @@ expressions:</p>
   Q2
   </h4>
 </button>
-<div id="collapseSolution14" class="accordion-collapse collapse" aria-labelledby="headingSolution14" data-bs-parent="#accordionSolution14">
+<div id="collapseSolution14" class="accordion-collapse collapse" data-bs-parent="#accordionSolution14" aria-labelledby="headingSolution14">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb132">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2457,7 +2480,7 @@ expressions:</p>
   Q3
   </h4>
 </button>
-<div id="collapseSolution15" class="accordion-collapse collapse" aria-labelledby="headingSolution15" data-bs-parent="#accordionSolution15">
+<div id="collapseSolution15" class="accordion-collapse collapse" data-bs-parent="#accordionSolution15" aria-labelledby="headingSolution15">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb138">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2493,18 +2516,19 @@ expressions:</p>
 <h4 id="subsubsec:mathematicalOperations:nonNumerics"><strong>Non-numeric values</strong><a class="anchor" aria-label="anchor" href="#subsubsec:mathematicalOperations:nonNumerics"></a></h4>
 <p style="text-align: justify;">
 It sometimes makes sense to apply <em>some</em> mathematical operations
-to non-numeric variables too.
+to non-numeric variables, too.
 </p>
 <p style="text-align: justify;">
-We can multiply strings to repeat them. There is no specific advantage
-to the use of multiplication instead of manually repeating characters or
-words, but it makes our code look cleaner, and that’s always a good
-thing!
+We can multiply strings in order to repeat them. There is no specific
+advantage to using multiplication instead of manually repeating
+characters or words, but it does make our code look cleaner, which is
+ideal.
 </p>
 <p style="text-align: justify;">
 We can also add string values to each other. This is called <em>string
-concatenation</em>. It is a useful method for concatenating a few
-strings and / or string variables.
+concatenation</em>. It is a useful method for concatenating, and
+provides a useful method for combining multiple strings and/or string
+variables.
 </p>
 <div class="codewrapper sourceCode" id="cb142">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2540,11 +2564,9 @@ DoB: 01/01/1990</code></pre>
 <div class="callout-content">
 <p style="text-align: justify;">
 New line character or <code>'\n'</code> is a universal directive to
-induce a line-break in Unix based operating systems (MACOS) and Linux).
+induce a line-break in Unix-based operating systems (Mac OS) and Linux).
 In WINDOWS, we usually us <code>'\r'</code> or <code>'\r\n'</code>
-instead. These are known as <a href="07-strings.html#subsubsec:escapeSequences">escape sequences</a>,
-which we explore in additional details under <a href="07-strings.html#subsec:stringOperations">string operations</a> in
-chapter <a href="07-strings.html">Strings</a>
+instead. These are known as escape sequences.
 </p>
 </div>
 </div>
@@ -2558,11 +2580,12 @@ chapter <a href="07-strings.html">Strings</a>
 </h3>
 <div class="callout-content">
 <p style="text-align: justify;">
-The risk of Huntington’s disease appears to increase proportional to the
-continuous repetition of <code>CAG</code> nucleotides (glutamine codon)
-once they exceed 35 near the beginning of the Huntingtin
-(<code>IT15</code>) gene. The <code>CAG</code> repeats are also referred
-to as a polyglutamine or polyQ tract.
+Symptomatic Huntington’s disease appears to increase in proportion to
+the number of <code>CAG</code> trinucleotide repeats (the codon for
+glutamine); once these exceed 35 repeats near the beginning of the
+Huntingtin (<code>IT15</code>) gene, the individual is phenotypic for
+the disease. These <code>CAG</code> repeats are also referred to as a
+polyglutamine or polyQ tract.
 </p>
 <pre><code><span><span class="va">glutamine_codon</span> <span class="op">=</span> <span class="st">'CAG'</span></span></code></pre>
 <ol style="list-style-type: decimal"><li>Create a polynucleotide chain representing 36 glutamine codons.
@@ -2575,12 +2598,12 @@ Store the result in a variable called <code>polyq_codons</code>.</li>
 </ol><p>Display the result in the following format:</p>
 <pre><code>Number of nucleotides in a polyglutamine with 36 repeats: XXX</code></pre>
 <ol start="3" style="list-style-type: decimal"><li><p>Use <kbd>len()</kbd> to work out the length of
-<code>glutamin_codon</code>, and store the result in variable
+<code>glutamine_codon</code>, and store the result in variable
 <code>amino_acids_per_codon</code>.</p></li>
 <li><p>Divide <code>polyq_codons_length</code> by
-<code>amino_acids_per_codon</code> to prove that the chain contains the
-codon for exactly 36 amino acids. Store the result in variable
-<code>polyq_peptide_length</code>.</p></li>
+<code>amino_acids_per_codon</code> to verify that the chain contains the
+total codons to encode exactly 36 amino acids. Store the result in a
+variable titled <code>polyq_peptide_length</code>.</p></li>
 </ol><p>Display the result in the following format:</p>
 <pre><code>Number of amino acids in a polyglutamine with 36 repeats: XXX</code></pre>
 <ol start="5" style="list-style-type: decimal"><li>Determine the types for the following variable:</li>
@@ -2606,7 +2629,7 @@ mathematical operations in Python</a>.</p></li>
   Q1
   </h4>
 </button>
-<div id="collapseSolution16" class="accordion-collapse collapse" aria-labelledby="headingSolution16" data-bs-parent="#accordionSolution16">
+<div id="collapseSolution16" class="accordion-collapse collapse" data-bs-parent="#accordionSolution16" aria-labelledby="headingSolution16">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb149">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2633,7 +2656,7 @@ mathematical operations in Python</a>.</p></li>
   Q2
   </h4>
 </button>
-<div id="collapseSolution17" class="accordion-collapse collapse" aria-labelledby="headingSolution17" data-bs-parent="#accordionSolution17">
+<div id="collapseSolution17" class="accordion-collapse collapse" data-bs-parent="#accordionSolution17" aria-labelledby="headingSolution17">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb151">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2658,7 +2681,7 @@ mathematical operations in Python</a>.</p></li>
   Q3
   </h4>
 </button>
-<div id="collapseSolution18" class="accordion-collapse collapse" aria-labelledby="headingSolution18" data-bs-parent="#accordionSolution18">
+<div id="collapseSolution18" class="accordion-collapse collapse" data-bs-parent="#accordionSolution18" aria-labelledby="headingSolution18">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb153">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2676,7 +2699,7 @@ mathematical operations in Python</a>.</p></li>
   Q4
   </h4>
 </button>
-<div id="collapseSolution19" class="accordion-collapse collapse" aria-labelledby="headingSolution19" data-bs-parent="#accordionSolution19">
+<div id="collapseSolution19" class="accordion-collapse collapse" data-bs-parent="#accordionSolution19" aria-labelledby="headingSolution19">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb154">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2701,7 +2724,7 @@ mathematical operations in Python</a>.</p></li>
   Q5
   </h4>
 </button>
-<div id="collapseSolution20" class="accordion-collapse collapse" aria-labelledby="headingSolution20" data-bs-parent="#accordionSolution20">
+<div id="collapseSolution20" class="accordion-collapse collapse" data-bs-parent="#accordionSolution20" aria-labelledby="headingSolution20">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb156">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2730,7 +2753,7 @@ Value: 36.0 - Type: &lt;class 'float'&gt;</code></pre>
   Q6
   </h4>
 </button>
-<div id="collapseSolution21" class="accordion-collapse collapse" aria-labelledby="headingSolution21" data-bs-parent="#accordionSolution21">
+<div id="collapseSolution21" class="accordion-collapse collapse" data-bs-parent="#accordionSolution21" aria-labelledby="headingSolution21">
 <div class="accordion-body">
 <p style="text-align: justify;">
 No, <code>polyq_peptide_length</code> is an instance of type
@@ -2750,7 +2773,7 @@ floating point number.
   Q7
   </h4>
 </button>
-<div id="collapseSolution22" class="accordion-collapse collapse" aria-labelledby="headingSolution22" data-bs-parent="#accordionSolution22">
+<div id="collapseSolution22" class="accordion-collapse collapse" data-bs-parent="#accordionSolution22" aria-labelledby="headingSolution22">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb158">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2797,22 +2820,22 @@ logician George Boole (1815–1864).
 <div class="section level3">
 <h3 id="subsec:logicalOperatons"><strong>Logical Operations</strong><a class="anchor" aria-label="anchor" href="#subsec:logicalOperatons"></a></h3>
 <p style="text-align: justify;">
-An operation may involve a comparison. The result of such operations is
-either <code>True</code> or <code>False</code>. This is known as the
-<em>Boolean</em> or <code>bool</code> data type. In reality, however,
-computers record <code>True</code> and <code>False</code> as
-<code>1</code> and <code>0</code> respectively.
+An operation may sometimes involve a comparison. The result of these
+operations may be either <code>True</code> or <code>False</code>. This
+is known as the <em>Boolean</em> or <code>bool</code> data type. In
+reality, however, computers record <code>True</code> and
+<code>False</code> as <code>1</code> and <code>0</code>, respectively.
 </p>
 <p style="text-align: justify;">
 Operations with Boolean results are referred to as <em>logical
-operations</em>. Testing the results of such operations is known as
-<em>truth value testing</em>.
+operations</em>. Testing the results of such operations is referred to
+as <em>truth value testing</em>.
 </p>
 <p>Given the two variables <code>a</code> and <code>b</code> as
 follows:</p>
 <pre><code><span><span class="va">a</span> <span class="op">=</span> <span class="fl">17</span></span>
 <span><span class="va">b</span> <span class="op">=</span> <span class="fl">5</span></span></code></pre>
-<p>Boolean operations may be defined as outlined in Table <a href="#tab:routineOperations">Routine logical operations in
+<p>Boolean operations may be defined as outlined in this Table <a href="#tab:routineOperations">Routine logical operations in
 Python.</a>.</p>
 <figure id="tab:routineOperations"><img src="fig/routine_logical_operations.png" alt="Routine logical operations in Python." class="figure mx-auto d-block"><div class="figcaption">Routine logical operations in Python.</div>
 </figure><div id="diy:equivalence" class="callout challenge">
@@ -2852,7 +2875,7 @@ y1 is equal to y2: [True/False]</code></pre>
   Q1
   </h4>
 </button>
-<div id="collapseSolution23" class="accordion-collapse collapse" aria-labelledby="headingSolution23" data-bs-parent="#accordionSolution23">
+<div id="collapseSolution23" class="accordion-collapse collapse" data-bs-parent="#accordionSolution23" aria-labelledby="headingSolution23">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb164">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2883,7 +2906,7 @@ y1 is equal to y2: [True/False]</code></pre>
   Q2
   </h4>
 </button>
-<div id="collapseSolution24" class="accordion-collapse collapse" aria-labelledby="headingSolution24" data-bs-parent="#accordionSolution24">
+<div id="collapseSolution24" class="accordion-collapse collapse" data-bs-parent="#accordionSolution24" aria-labelledby="headingSolution24">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb166">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2934,7 +2957,7 @@ result of your test and store it in another variable called
   Q1
   </h4>
 </button>
-<div id="collapseSolution25" class="accordion-collapse collapse" aria-labelledby="headingSolution25" data-bs-parent="#accordionSolution25">
+<div id="collapseSolution25" class="accordion-collapse collapse" data-bs-parent="#accordionSolution25" aria-labelledby="headingSolution25">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb168">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2959,7 +2982,7 @@ result of your test and store it in another variable called
   Q2
   </h4>
 </button>
-<div id="collapseSolution26" class="accordion-collapse collapse" aria-labelledby="headingSolution26" data-bs-parent="#accordionSolution26">
+<div id="collapseSolution26" class="accordion-collapse collapse" data-bs-parent="#accordionSolution26" aria-labelledby="headingSolution26">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb170">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2979,7 +3002,7 @@ result of your test and store it in another variable called
 </div>
 </div>
 <div class="section level4">
-<h4 id="disjun"><strong>Disjunctions and Conjunctions</strong><a class="anchor" aria-label="anchor" href="#disjun"></a></h4>
+<h4 id="disjun"><strong>Disjunctions and Conjunctions:</strong><a class="anchor" aria-label="anchor" href="#disjun"></a></h4>
 <p style="text-align: justify;">
 Logical operations may be combined using conjunction with <kbd>and</kbd>
 and disjunction with <kbd>or</kbd> to create more complex logics:
@@ -3037,7 +3060,7 @@ and disjunction with <kbd>or</kbd> to create more complex logics:
   Q1
   </h4>
 </button>
-<div id="collapseSolution27" class="accordion-collapse collapse" aria-labelledby="headingSolution27" data-bs-parent="#accordionSolution27">
+<div id="collapseSolution27" class="accordion-collapse collapse" data-bs-parent="#accordionSolution27" aria-labelledby="headingSolution27">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb175">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3060,7 +3083,7 @@ and disjunction with <kbd>or</kbd> to create more complex logics:
   Q2
   </h4>
 </button>
-<div id="collapseSolution28" class="accordion-collapse collapse" aria-labelledby="headingSolution28" data-bs-parent="#accordionSolution28">
+<div id="collapseSolution28" class="accordion-collapse collapse" data-bs-parent="#accordionSolution28" aria-labelledby="headingSolution28">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb177">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3083,7 +3106,7 @@ and disjunction with <kbd>or</kbd> to create more complex logics:
   Q3
   </h4>
 </button>
-<div id="collapseSolution29" class="accordion-collapse collapse" aria-labelledby="headingSolution29" data-bs-parent="#accordionSolution29">
+<div id="collapseSolution29" class="accordion-collapse collapse" data-bs-parent="#accordionSolution29" aria-labelledby="headingSolution29">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb179">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3106,7 +3129,7 @@ and disjunction with <kbd>or</kbd> to create more complex logics:
   Q4
   </h4>
 </button>
-<div id="collapseSolution30" class="accordion-collapse collapse" aria-labelledby="headingSolution30" data-bs-parent="#accordionSolution30">
+<div id="collapseSolution30" class="accordion-collapse collapse" data-bs-parent="#accordionSolution30" aria-labelledby="headingSolution30">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb181">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3129,7 +3152,7 @@ and disjunction with <kbd>or</kbd> to create more complex logics:
   Q5
   </h4>
 </button>
-<div id="collapseSolution31" class="accordion-collapse collapse" aria-labelledby="headingSolution31" data-bs-parent="#accordionSolution31">
+<div id="collapseSolution31" class="accordion-collapse collapse" data-bs-parent="#accordionSolution31" aria-labelledby="headingSolution31">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb183">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3152,7 +3175,7 @@ and disjunction with <kbd>or</kbd> to create more complex logics:
   Q6
   </h4>
 </button>
-<div id="collapseSolution32" class="accordion-collapse collapse" aria-labelledby="headingSolution32" data-bs-parent="#accordionSolution32">
+<div id="collapseSolution32" class="accordion-collapse collapse" data-bs-parent="#accordionSolution32" aria-labelledby="headingSolution32">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb185">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3175,7 +3198,7 @@ and disjunction with <kbd>or</kbd> to create more complex logics:
   Q7
   </h4>
 </button>
-<div id="collapseSolution33" class="accordion-collapse collapse" aria-labelledby="headingSolution33" data-bs-parent="#accordionSolution33">
+<div id="collapseSolution33" class="accordion-collapse collapse" data-bs-parent="#accordionSolution33" aria-labelledby="headingSolution33">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb187">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3198,7 +3221,7 @@ and disjunction with <kbd>or</kbd> to create more complex logics:
   Q8
   </h4>
 </button>
-<div id="collapseSolution34" class="accordion-collapse collapse" aria-labelledby="headingSolution34" data-bs-parent="#accordionSolution34">
+<div id="collapseSolution34" class="accordion-collapse collapse" data-bs-parent="#accordionSolution34" aria-labelledby="headingSolution34">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb189">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3221,7 +3244,7 @@ and disjunction with <kbd>or</kbd> to create more complex logics:
   Q9
   </h4>
 </button>
-<div id="collapseSolution35" class="accordion-collapse collapse" aria-labelledby="headingSolution35" data-bs-parent="#accordionSolution35">
+<div id="collapseSolution35" class="accordion-collapse collapse" data-bs-parent="#accordionSolution35" aria-labelledby="headingSolution35">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb191">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3244,7 +3267,7 @@ and disjunction with <kbd>or</kbd> to create more complex logics:
   Q10
   </h4>
 </button>
-<div id="collapseSolution36" class="accordion-collapse collapse" aria-labelledby="headingSolution36" data-bs-parent="#accordionSolution36">
+<div id="collapseSolution36" class="accordion-collapse collapse" data-bs-parent="#accordionSolution36" aria-labelledby="headingSolution36">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb193">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3262,16 +3285,16 @@ and disjunction with <kbd>or</kbd> to create more complex logics:
 </div>
 </div>
 <div class="section level4">
-<h4 id="complex-logical-operations"><strong>Complex logical operations</strong><a class="anchor" aria-label="anchor" href="#complex-logical-operations"></a></h4>
+<h4 id="complex-logical-operations"><strong>Complex logical operations:</strong><a class="anchor" aria-label="anchor" href="#complex-logical-operations"></a></h4>
 <p style="text-align: justify;">
-It may help to break down more complex operations, or use parenthesis to
-make them easier to both read and write:
+It may help to break down more complex operations, or use parentheses to
+make them easier to read and write:
 </p>
-<figure><img src="fig/Complex_Logical_Operations.png" alt="Complex Logical Operations in Python." class="figure mx-auto d-block"><div class="figcaption">Complex Logical Operations in Python.</div>
+<figure><img src="fig/Complex_Logical_Operations.png" alt="Complex Logical Operations in Python:" class="figure mx-auto d-block"><div class="figcaption">Complex Logical Operations in Python:</div>
 </figure><p style="text-align: justify;">
-Notice that in the last example, all notations are essentially the same
-and only vary in terms of their collective results as defined using
-parenthesis. Always remember that in a logical statement:
+Notice that in the last example, all notations is essentially the same,
+and only varies in terms of the collective results as defined using
+parentheses. Always remember that in a logical statement:
 </p>
 <div id="logical-statement" class="callout checklist">
 <div class="callout-square">
@@ -3284,35 +3307,34 @@ parenthesis. Always remember that in a logical statement:
 <p style="text-align: justify;">
 </p>
 <ul class="task-list"><li><label><input type="checkbox" checked>The statement in
-parenthesis does <strong>not</strong> have precedence over the rest of
+parentheses does <strong>not</strong> have precedence over the rest of
 the state (unlike mathematical statements). It merely defines an
 independent part of the operation whose response is evaluated
 separately.</label></li>
 </ul><p style="text-align: justify;">
 </p>
 <ul class="task-list"><li><label><input type="checkbox" checked>The precedence is
-established on a first come, first serve basis (from left to
+established on a first-come-first-serve basis (from left to
 right).</label></li>
 </ul><p style="text-align: justify;">
 </p>
-<ul class="task-list"><li><label><input type="checkbox" checked>Always use parenthesis in
+<ul class="task-list"><li><label><input type="checkbox" checked>Always use parentheses in
 longer statements for clarification.</label></li>
 </ul><p style="text-align: justify;">
 </p>
 <ul class="task-list"><li><label><input type="checkbox" checked>In disjunctive statements
-—i.e. a &gt; 5 <code>or</code> b &gt; 5, if the first part is
+(such as a &gt; 5 <code>or</code> b &gt; 5) if the first part is
 <code>True</code>, the second part is <em>not</em> checked. In other
 words, if a is greater than 5, the computer does not proceed to check
 whether or not b is greater than 5.</label></li>
 </ul><p style="text-align: justify;">
 </p>
 <ul class="task-list"><li><label><input type="checkbox" checked>In conjunctive statements
-—i.e. a &gt; 5 <code>and</code> b &gt; 5, the statement proceeds to the
-seconds part if and only if the first part is <code>True</code>. In
-other words, the result of a conjunctive statement is only
-<code>True</code> if and only if both a and b are greater than 5. If a
-is <code>False</code>, the entire statement will inevitably be
-<code>False</code>.</label></li>
+(such as a &gt; 5 <code>and</code> b &gt; 5) the statement proceeds to
+the seconds part if the first part is <code>True</code>. In other words,
+the result of a conjunctive statement is only <code>True</code> if both
+a and b are greater than 5. If a is <code>False</code>, the entire
+statement will inevitably be <code>False</code>.</label></li>
 </ul><p style="text-align: justify;">
 </p>
 <ul class="task-list"><li><label><input type="checkbox" checked>The longer the statement,
@@ -3442,13 +3464,13 @@ yourself and see how they work.
 <p style="text-align: justify;">
 Some logical operations may be written in different ways. However, we
 should always use the notation that is most coherent in the context of
-our code. If in doubt, use the simplest / shortest notation.
+our code. If in doubt, use the simplest or shortest notation.
 </p>
 </div>
 </div>
 </div>
-<p>To that end, you may want to use variables to split complex
-statements down to smaller portions:</p>
+<p>To that end, you may want to use variables to break complex
+statements down into smaller fragments:</p>
 <div class="codewrapper sourceCode" id="cb214">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -3530,7 +3552,7 @@ the division of <span class="math inline">\(n\)</span> by <span class="math inli
   Q1
   </h4>
 </button>
-<div id="collapseSolution37" class="accordion-collapse collapse" aria-labelledby="headingSolution37" data-bs-parent="#accordionSolution37">
+<div id="collapseSolution37" class="accordion-collapse collapse" data-bs-parent="#accordionSolution37" aria-labelledby="headingSolution37">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb222">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3556,7 +3578,7 @@ the division of <span class="math inline">\(n\)</span> by <span class="math inli
   Q2
   </h4>
 </button>
-<div id="collapseSolution38" class="accordion-collapse collapse" aria-labelledby="headingSolution38" data-bs-parent="#accordionSolution38">
+<div id="collapseSolution38" class="accordion-collapse collapse" data-bs-parent="#accordionSolution38" aria-labelledby="headingSolution38">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb224">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3579,7 +3601,7 @@ the division of <span class="math inline">\(n\)</span> by <span class="math inli
   Q3
   </h4>
 </button>
-<div id="collapseSolution39" class="accordion-collapse collapse" aria-labelledby="headingSolution39" data-bs-parent="#accordionSolution39">
+<div id="collapseSolution39" class="accordion-collapse collapse" data-bs-parent="#accordionSolution39" aria-labelledby="headingSolution39">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb226">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3602,7 +3624,7 @@ the division of <span class="math inline">\(n\)</span> by <span class="math inli
   Q4
   </h4>
 </button>
-<div id="collapseSolution40" class="accordion-collapse collapse" aria-labelledby="headingSolution40" data-bs-parent="#accordionSolution40">
+<div id="collapseSolution40" class="accordion-collapse collapse" data-bs-parent="#accordionSolution40" aria-labelledby="headingSolution40">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb228">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3625,7 +3647,7 @@ the division of <span class="math inline">\(n\)</span> by <span class="math inli
   Q5
   </h4>
 </button>
-<div id="collapseSolution41" class="accordion-collapse collapse" aria-labelledby="headingSolution41" data-bs-parent="#accordionSolution41">
+<div id="collapseSolution41" class="accordion-collapse collapse" data-bs-parent="#accordionSolution41" aria-labelledby="headingSolution41">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb230">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3648,7 +3670,7 @@ the division of <span class="math inline">\(n\)</span> by <span class="math inli
   Q6
   </h4>
 </button>
-<div id="collapseSolution42" class="accordion-collapse collapse" aria-labelledby="headingSolution42" data-bs-parent="#accordionSolution42">
+<div id="collapseSolution42" class="accordion-collapse collapse" data-bs-parent="#accordionSolution42" aria-labelledby="headingSolution42">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb232">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3671,7 +3693,7 @@ the division of <span class="math inline">\(n\)</span> by <span class="math inli
   Q7
   </h4>
 </button>
-<div id="collapseSolution43" class="accordion-collapse collapse" aria-labelledby="headingSolution43" data-bs-parent="#accordionSolution43">
+<div id="collapseSolution43" class="accordion-collapse collapse" data-bs-parent="#accordionSolution43" aria-labelledby="headingSolution43">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb234">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3700,13 +3722,13 @@ the division of <span class="math inline">\(n\)</span> by <span class="math inli
 <h3 class="callout-title">End of chapter Exercises<a class="anchor" aria-label="anchor" href="#end-of-chapter-exercises"></a>
 </h3>
 <div class="callout-content">
-<ol style="list-style-type: decimal"><li><p>Write and execute a Python script to display your own name as an
-output in the terminal.</p></li>
-<li><p>Write and execute a Python script that:</p></li>
-</ol><ul><li>Displays the text <code>Please press enter to continue...</code>,
+<ol style="list-style-type: decimal"><li><p>Write and execute a Python code to display your own name as an
+output in the Terminal.</p></li>
+<li><p>Write and execute a Python code that:</p></li>
+</ol><ul><li>Displays the text: <code>Please press enter to continue...</code>,
 and waits for the user to press enter.</li>
-<li>Once the user pressed enter, the program should display
-<code>Welcome to my programme!</code> before it terminates.</li>
+<li>Once the user presses enter, the program should display
+<code>Welcome to my programme!</code> before terminating.</li>
 </ul><ol start="3" style="list-style-type: decimal"><li>
 <p>We have an enzyme whose reaction velocity is <span class="math inline">\(v=50~mol \cdot L^{-1} \cdot s^{-1}\)</span> at the
 substrate concentration of <span class="math inline">\([S] = K_{m} =
@@ -3726,7 +3748,7 @@ Michaelis-Menten equation:</p>
   Solutions will be provided once the submitted assignments are marked and returned.
   </h4>
 </button>
-<div id="collapseSolution44" class="accordion-collapse collapse" aria-labelledby="headingSolution44" data-bs-parent="#accordionSolution44">
+<div id="collapseSolution44" class="accordion-collapse collapse" data-bs-parent="#accordionSolution44" aria-labelledby="headingSolution44">
 <div class="accordion-body">
 
 </div>
@@ -3801,8 +3823,8 @@ any links that you are not going to use.
   "url": "https://learntodiscover.github.io/Basic_Python/02-input_output.html",
   "identifier": "https://learntodiscover.github.io/Basic_Python/02-input_output.html",
   "dateCreated": "2022-04-04",
-  "dateModified": "2024-07-09",
-  "datePublished": "2024-07-09"
+  "dateModified": "2024-07-10",
+  "datePublished": "2024-07-10"
 }
 
   </script><script>
