@@ -14,16 +14,16 @@ output:
 
 ::::::::::::::::::::::::::::::::::::: questions
 
-- What are I/O operations?
+- What are input and output (I/O) operations?
 - What do variables do?
-- Why types and scopes of variables are important?
+- Why are types and scopes of variables important?
 - What types of operations are used?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Understanding the output and input operations
+- Understanding I/O operations
 - Build concepts of different types of variables
 - Learning about type conversions and scope
 - Understanding mathematical and logical operations
@@ -45,24 +45,24 @@ output:
 <br>
 
 <p style='text-align: justify;'>
-In programming, we process data and produce outputs. When data is being processed, it is stored in a memory, so that it is readily available, and can therefore be subject to the processes we want to apply.
+In programming, we process data and produce outputs. When data is being processed, it is stored in memory so that it is readily available, and can therefore be subject to the processes we want to apply.
 </p>
 
 
 <p style='text-align: justify;'>
-Throughout this section, we will discuss how to handle data in Python. We start by displaying data on the screen, and see how to receive input from a user. We then use these techniques to perform different mathematical and logical operations. This chapter introduces the fundamental principles that we employ every time we code in Python. On that account, make sure you understand everything before moving on.
+In this lesson, we will discuss how to handle data in Python. We will start by displaying data on the screen, and understand how to receive input from a user. We can then use these techniques to perform different mathematical and logical operations. We will also cover the fundamental principles employed every time we code in Python. It is imperative that you understand everything before moving on.
 </p>
 
 
 ## I/O Operations {#operations}
 <p style='text-align: justify;'>
-In computer science, input or output operations refer to the communication between an information processing system such as a computer, and the outside world, which may be a user or another computer. Such communications are more commonly known as *I/O operations*. In general, the outside world --- especially in the context of this course, may be loosely defined as anything that falls outside of the coding environment.
+In computer science, input or output operations refer to the communication between an information processing system such as a computer, and the outside world, which may be a user or even another computer. Such communications are more commonly known as *I/O operations*. In general, this 'outside world' may be loosely defined as anything that falls outside of the coding environment.
 </p>
 
 ::::::::::::::::::::::::::::::::::::: callout
 ## REMEMBER
 <p style='text-align: justify;'>
-Only what we define within the environment and what we store in the memory is directly controlled by our application. We may access or take control over other environments through certain mediums; however, such interactions are classified as I/O operations. An example of this is interacting with a file on our computer, which we discuss in the topic of [Strings](07-strings.Rmd). Whilst we have complete control over a file while working on it (e.g. reading from it or writing to it), the access to the file and the transmission of data is in fact controlled and managed not by the programming environment but by the operating system of the computer.
+Only what we define within the environment and what we store in the memory is directly controlled by our application. We may access or take control over other environments, however, these interactions are classified as I/O operations. An example of this is interacting with a file on our computer. While we have complete control over a file while working on it (e.g. reading from it or writing to it), the access to the file and the transmission of data is in fact controlled and managed not by the programming environment but by the operating system of the computer.
 </p>
 
 :::::::::::::::::::::::::::::::::::::
@@ -70,15 +70,15 @@ Only what we define within the environment and what we store in the memory is di
 
 In programming, I/O operations include, but are not limited to:
 
-* displaying the results of a calculation
+* Displaying the results of a calculation
 
-* require the user to enter a value
+* Requiring the user to enter a value
 
-* writing or reading data to and from a file or a database
+* Writing or reading data to and from a file or a database
 
-* downloading data from the Internet
+* Downloading data from the Internet
 
-* operating a hardware (e.g. a robot)
+* Operating a hardware (such as a robot, for example)
 
 
 :::::: prereq
@@ -107,11 +107,11 @@ The term ```output``` in reference to an application typically refers to data th
 </p>
 
 <p style='text-align: justify;'>
-For example; we have two number and we would like to calculate their sum. The action of calculating the sum is itself a [*mathematical operation*](#math_ops) (discussed in the coming section). The result of our calculation is called an ```output```. Once we obtain the result, we might want to save it in a file or display it on the screen, in which case we will be performing an *I/O operation*.
+For example; calculating the sum of two numbers. The action of calculating the sum is itself a [*mathematical operation*](#math_ops). The result of our calculation is called its ```output```. Once we obtain the result, we might want to save it in a file or display it on the screen, in which case we will be performing an I/O operation. *I/O operation*.
 </p>
 
 <p style='text-align: justify;'>
-The simplest and most frequently used method for generating an output in almost every modern programming language is to display something on the screen. We recommend using JupyterLab notebooks to run our scripts and the typical method to produce an output is to display it in cell below the code.To do this, we will call a dedicated built-in function named <kbd>print()</kbd>.
+The simplest and most frequently used method for generating output in almost every modern programming language is to display something on the screen. We recommend using Jupyter Notebooks to run our Python scripts, which defaults to displaying the output of a code cell beneath the code itself. We will start by calling a dedicated built-in function named <kbd>print()</kbd>.
 </p>
 
 ::::::::::::::::::::::::::::::::::::: callout
@@ -119,7 +119,7 @@ The simplest and most frequently used method for generating an output in almost 
 ## REMEMBER
 
 <p style='text-align: justify;'>
-In programming, a ```function``` is essentially an isolated piece of code. It usually to takes some inputs, *does *something to or with them, and produces an ```output```. The pair of (typically round) parenthesis that follow a function are there to provide the function with the *input arguments* it needs when we *call* it, so that it can do what it is supposed to do using our data. We will explore functions in more details in Lesson 4 [Functions](06-functions.Rmd).
+In programming, a ```function``` is essentially an isolated piece of code. It usually accepts input, *does* something to or with this, and produces ```output```. A function can process input, often using several operations in a particular sequence or configuration, and process the input to give a final output. In Python programming syntax, a pair of (typically round) parentheses follows a function, and these provide the function with the *input arguments* it needs when we *call* it, so that it can do what we intend, to our data. We will explore functions in more details in Basic Python 4: [Functions](06-functions.Rmd).
 </p>
 
 :::::::::::::::::::::::::::::::::::::
@@ -128,33 +128,34 @@ In programming, a ```function``` is essentially an isolated piece of code. It us
 The <kbd>print()</kbd> function can take several inputs and performs different tasks. Its primary objective, however, is to take some values as input and display them on the screen. Here is how it works:
 </p>
 
-Suppose we want to display some text in the terminal. To do so, we write:
+Suppose we want to display some text in the Terminal. To do so, we write the following into a cell of our Jupyter Notebook (or on the Terminal, a code editor or dedicated Integrated Development Environment (IDE)):
 
 ```
-print('Hello world!')
+print('Welcome to L2D!!!')
 ```
 <p style='text-align: justify;'>
-in a cell of our notebook (or, if not using a notebook, an editor or IDE) and save the notebook in a file. This is now a fully functioning Python programme that we can run using the Python interpreter.
+
+This is now a fully functioning Python program that we can run using the Python interpreter.
 </p>
 
 <p style='text-align: justify;'>
-If you are using an Integrated Development Environment (IDE) --- e.g.\ Visual Studio Code, you have to save the code in a file with extension ```.py``` and may then execute your code using the internal tools provided by that IDE. The specifics of how you do so depend on the IDE that you are using.
+If you are using an IDE (such as Mircosoft Visual Studio Code, for example) you must save the code in a file with the extension ```.py```, in order to execute your code using the internal tools provided by that IDE. The specifics of how you do so depend on the IDE that you are using.
 </p>
 
 <p style='text-align: justify;'>
-```.py``` Python scripts can also be executed manually. To do so, we open the terminal in MacOS or Linux or the command prompt (CMD) in Windows and navigate to the directory where we saved the script.
+```.py``` Python scripts can also be executed manually. To do so, we open the Terminal in MacOS or Linux or the command prompt (CMD) in Windows and navigate to the directory where we saved the script.
 </p>
 
 :::::: prereq
 
 ## NOTE
 <p style='text-align: justify;'>
-If you don't know how to navigate in the terminal, see the example in section [How to use terminal environment?](#terminal) at the end of this chapter.
+If you don't know how to navigate in the Terminal, see the example in section [How to use terminal environment?](#terminal) at the end of this chapter.
 </p>
 
 ::::::
 
-Once in the correct directory, we run a script called ```script_a.py``` by typing ```python3 script_a.py``` in our terminal as follows:
+Once in the correct directory, we run a script called ```script_a.py``` by typing ```python3 script_a.py``` in our Terminal as follows:
 
 
 ``` bash
@@ -166,15 +167,15 @@ Hello world!
 ```
 
 <p style='text-align: justify;'>
-This will call the Python 3 interpreter to execute the code we wrote in ```script_a.py```. Once executed, which in this case should be instantaneously, we should see the output.
+This will call the Python 3 interpreter to execute the code we wrote in ```script_a.py```. Once executed, we will see the output displayed in the Terminal window.
 </p>
 
 <p style='text-align: justify;'>
-In a JupyterLab notebook we can press the keyboard shortcut 'shift-enter' to execute the code in a cell. The output will be displayed below the code cell.
+In a Jupyter Notebook we can press the keyboard shortcut 'shift+enter' to execute the code in a cell. The output will be displayed below the code cell.
 </p>
 
 <p style='text-align: justify;'>
-**Congratulations** you have now successfully written and executed your first programme in Python.
+You have now successfully written and executed your first program in Python.
 </p>
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -183,14 +184,14 @@ In a JupyterLab notebook we can press the keyboard shortcut 'shift-enter' to exe
 ## REMEMBER
 
 <p style='text-align: justify;'>
-We know <kbd>print()</kbd> is a *function* because it ends with a pair of parenthesis, and it is written entirely in lowercase characters [PEP-8: Function Names](https://www.python.org/dev/peps/pep-0008/#function-names). Some IDEs change color when they encounter built-in functions in the code so that we won't accidentally overwrite them. We shall discuss *functions* in more details in Lesson 4 [Functions](06-functions.Rmd).
+We know that <kbd>print()</kbd> is a *function* because it ends with a pair of parentheses, and it is written entirely in lowercase characters [PEP-8: Function Names](https://www.python.org/dev/peps/pep-0008/#function-names). Some IDEs change color when they encounter built-in functions, in order to signal to the user that the function is recognised, and available to use, and so that we don’t accidentally overwrite them. 
 </p>
 
 :::::::::::::::::::::::::::::::::::::
 
 
 <p style='text-align: justify;'>
-We can pass more than a single value to the <kbd>print()</kbd> function, provided that they are separated with a comma. For instance, if we write the code below and run the script, the results would be as shown in *output*.
+We can pass more than a single value to the <kbd>print()</kbd> function, provided that each value is separated from another, using a comma. For instance, if we write the code below and run the script, the results would be as shown in *output*.
 </p>
 
 
@@ -206,7 +207,7 @@ Hello John
 Notice that there is a space between <span style="color: rgb(32, 121, 77);">'Hello'</span> and <span style="color: rgb(32, 121, 77);">'John'</span> even though we did not include a space in our text. This is the default behaviour of the <kbd>print()</kbd> function when it receives more than a single value (argument).
 </p>
 
-This default behaviour may be changed:
+This default behaviour may be changed using a keyword argument called sep:
 
 
 ``` python
@@ -274,20 +275,20 @@ Protein Kinase C (Alpha subunit)
 [**Input**](https://docs.python.org/3/library/functions.html\#input)
 
 <p style='text-align: justify;'>
-Inputs are I/O operations that involve receiving some data from the outside world. This might include reading the contents of a file, downloading something from the Internet, or asking the user to enter a value.
+Inputs are I/O operations that involve receiving some data from the outside world. This might include reading the contents of a file, downloading something from the internet, or asking the user to enter a value.
 </p>
 
 <p style='text-align: justify;'>
-The simplest way to acquire an input is to ask the user to enter a value in the terminal. To do so, we use a dedicated built-in function called <kbd>input()</kbd>.
+The simplest way to acquire an input is to ask the user to enter a value in the Terminal. To do so, we use a dedicated built-in function called <kbd>input()</kbd>.
 </p>
 
 ::::::::::::::::::::::: callout
 ## Note
-In a Unix system (Mac OS or Linux), a tilde (~) is an alias for a user's home directory.
+In a Unix system (Mac OS or Linux), a tilde (~) is an alias that is used to refer to a user's home directory.
 :::::::::::::::::::::::
 
 <p style='text-align: justify;'>
-The function takes a single *argument* called ```prompt```. Prompt is the text displayed in the terminal to ask the user for an input. Figure [Terminal window on a Linux computer](#fig:terLinux) and [Terminal window on a Mac](#fig:terMac), illustrates a screen shot of my personal computer's prompt, where it displays my user name (i.e. ```pouria```) followed by a tilde (~). A terminal prompt may be different in each computer and operating system.
+This function takes a single *argument* called ```prompt```. Prompt is the text displayed in the Terminal to ask the user for an input. Figure [Terminal window on a Linux computer](#fig:terLinux) and [Terminal window on a Mac](#fig:terMac), illustrates a screen shot of an example PC's prompt, where it displays a user name (i.e. ```pouria```) followed by a tilde (~). A Terminal prompt may be different in each computer and operating system.
 </p>
 
 Here is how we implement the <kbd>input()</kbd> function:
@@ -312,11 +313,11 @@ Please enter your name: _
 ```
 
 <p style='text-align: justify;'>
-The terminal cursor, displayed as an underscore in our example, will be in front of the prompt (i.e. ```'Please enter your name: '```) waiting for a response. Once it receives a response, it will proceed to run the rest of the code (if any), or terminate the execution.
+The Terminal cursor, displayed as an underscore in our example, will be in front of the prompt (i.e. ```'Please enter your name: '```) waiting for a response. Once it receives a response, it will proceed to run the rest of the code (if any), or terminate the execution.
 </p>
 
 <p style='text-align: justify;'>
-We may store the user's response in a variable. Variables are the topic of the next section, where we shall also review more examples on <kbd>input()</kbd> and how we can use it to produce results based on the responses we receive from the user.
+We may store the user's response in a variable. Variables are the topic of the next episode in this learning material, where we shall also review more examples on <kbd>input()</kbd> and how we can use it to produce results based on the responses we receive from the user.
 </p>
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -326,7 +327,7 @@ We may store the user's response in a variable. Variables are the topic of the n
 
 ## Remember
 <p style='text-align: justify;'>
-Python is an interpreted language; that is, the code we write is executed by the Python interpreter one line at a time. The <kbd>input()</kbd> function performs a *blocking* process. This means that the execution of the code by the Python interpreter is halted upon encountering an <kbd>input()</kbd> function until the user enters a value. Once a value is entered, the interpreter then proceeds to execute the next line.
+Python is an interpreted language; this means that the code we write is executed by the Python interpreter one line at a time. The <kbd>input()</kbd> function performs a *blocking* process. This means that the execution of the code by the Python interpreter is halted upon encountering an <kbd>input()</kbd> function until the user enters a value. Once a value is entered, the interpreter then proceeds to execute the next line.
 </p>
 
 :::::::::::::::::::::::::::::::
@@ -334,7 +335,7 @@ Python is an interpreted language; that is, the code we write is executed by the
 ::::::::::::::::::::::::::::::: challenge
 ## Practice Exercise 2
 
-Write a script that asks the user to enter the name of a protein in the terminal.
+Write a script that asks the user to enter the name of a protein in the Terminal.
 
 ::::::::::::::::::: solution
 ## ANSWER
@@ -349,14 +350,15 @@ input('Please enter the name of a protein: ')
 ## Variables And Types {#varTypes}
 
 <p style='text-align: justify;'>
-We use variables to store data in the memory. Each variable has 3 characteristics: *scope*, *name*, and *type*. *Scope* and *name* must be mutually unique. Starting with *name*, we will discuss each of these characteristics in more details throughout this chapter.
+
+Variables are a type of data container, that we can use to store data to memory. Each variable has three main types of attribute: *scope*, *name*, and *type*. *Scope* and *name* must be mutually unique. Starting with *name*, we will discuss each of these attributes in more details throughout this chapter.
 </p>
 
 ### **Variable names** {#subsec:variableNames}
 [**PEP--8 Naming Conventions**](https://www.python.org/dev/peps/pep-0008/\#naming-conventions)
 
 <p style='text-align: justify;'>
-Name of a variable is in fact an alias for a location in the memory. You can think of it as a postbox, which is used as a substitute for an address. Similarly, we use variable names so we wouldn't have to use the actual address to the location we want in the memory because it would look something like ```0x106fb8348```.
+The name that we give to a variable is, in fact, an alias for a location in the memory. You can think of it as a postbox, which is used as a substitute for an actual address. Similarly, we use variable names so we don't have to use the actual address to the location we want in the memory; because it would look something like this ```0x106fb8348```.
 </p>
 
 There are some relatively simple rules to follow when defining variable names, which ultimately boil down to:
@@ -367,7 +369,7 @@ There are some relatively simple rules to follow when defining variable names, w
 
 ## Remember
 <p style='text-align: justify;'>
-We should never overwrite an existing, built-in definition or identifier (e.g. ```int``` or  ```print```). We will be learning many such definitions and identifiers as we progress through this course. Nonetheless, the Jupyterlab notebook as well as any good IDE highlights syntaxes and built-in identifiers in different colours. In JupyterLab the default for built-in definitions is green. The exact colouring scheme depends on the IDE and the theme.
+We should never overwrite an existing, built-in definition or identifier (e.g. ```int``` or  ```print```). We will be learning many such definitions and identifiers as we progress through this course. Nonetheless, the Jupyter Notebook as well as any good IDE highlights syntaxes and built-in identifiers in different colours. In Jupyter, the default for built-in definitions is green. The exact colouring scheme depends on the IDE being used, and the selected theme.
 </p>
 
 :::::::::::::::::::::::
@@ -384,7 +386,7 @@ print(total_items)
 2
 ```
 
-Variables containing integer numbers are known as ```int```, and those containing decimal numbers are known as ```float``` in Python.
+In Python, variables containing integer numbers are referred to as ```int```, and those containing decimal numbers are referred to as ```float```.
 
 
 ``` python
@@ -417,7 +419,7 @@ print(temperature)
 ```
 
 <p style='text-align: justify;'>
-Variables can contain characters as well; but to prevent Python from confusing them with meaningful commands, we use  quotation marks. So long as we remain consistent, it doesn't matter whether we use single or double quotations. These variables are known as ```string``` or  ```str```:
+Variables can contain data as characters as well; but to prevent Python from confusing them with meaningful commands, we use  quotation marks. So long as we remain consistent, _it doesn't matter whether we use single or double quotations_. These data are known as ```string``` or  ```str```:
 </p>
 
 
@@ -438,16 +440,16 @@ Hi, John Doe
 
 ## Practice Exercise 3 {#diy:enzyme}
 <p style='text-align: justify;'>
-Oxidised low-density lipoprotein (LDL) receptor 1 mediates the recognition, internalisation and degradation of oxidatively modified low density lipoprotein by vascular endothelial cells. Using the [Universal Protein Resource](https://beta.uniprot.org) (UniProt) website, find this protein for humans, and identify:
+Oxidised low-density lipoprotein (LDL) receptor 1 mediates the recognition, internalisation and degradation of oxidatively modified low-density lipoprotein by vascular endothelial cells. Using the [Universal Protein Resource](https://beta.uniprot.org) (UniProt) website, find this protein for humans, and identify:
 </p>
 
 * UniProt entry number.
 * Length of the protein (right at the top).
 * Gene name (right at the top).
 
-Store the information you retrieved, including the protein name, in 4 separate variables.
+Store the information you retrieved, including the protein name, in within four separate variables.
 
-Display the values of these 4 variables in *one* line, and separate the items with 3 spaces, as follows:
+Display the values of these four variables in *one* line, and separate the items with three spaces, as follows:
 
 > ```Name   EntryNo   GeneName   Length```
 
@@ -479,7 +481,7 @@ Oxidised low-density lipoprotein (LDL) receptor 1   P78380   OLR1   273
 ::::::::::::::::::::::::::::::: challenge
 
 ## Practice Exercise 4
-1. Write a script that upon execution, asks the user to enter the name of an enzyme and then retains the response in an appropriately named variable.
+1. Write a Python code that upon execution, asks the user to enter the name of an enzyme and then stores the response in an appropriately named variable.
 
 2. Use the variable to display an output similar to the following:
 
@@ -487,7 +489,7 @@ Oxidised low-density lipoprotein (LDL) receptor 1   P78380   OLR1   273
 
 where ```ENZYME_NAME``` is the name of the enzyme entered in the prompt.
 
-3. Now alter your script to ask the user to enter the number of amino acids in that enzyme. Retain the value in another appropriately named variable.
+3. Now modify your script to prompt the user to enter the number of amino acids in that enzyme. Store the value in another appropriately named variable.
 
 4. Alter the output of your script to display a report in the following format:
 
@@ -523,12 +525,12 @@ When it comes to types, programming languages may be divided into two distinct c
 :::::::::::::::::::: checklist
 ## Types
 
-- [x] **Statically typed**        language that require the programmer to define the type for every variable (statically typed).
+- [x] **Statically typed** languages: these require the programmer to explicitly declare the type of each variable, and this type is checked at compile time.
 
-- [x] **Dynamically typed**       languages that define and maintain the types on the fly.
+- [x] **Dynamically typed** languages: the type of the variable is determined at run time, and variables can change types on the fly. The programmer is not required to explicitly define the type of a variable: the language infers the type of the variable, once it is assigned data.
 
 <p style='text-align: justify;'>
-Python is a dynamically typed language. This means that, unlike statically typed languages, we rarely need to worry about the *type* definitions because in the majority of cases, Python takes care of them for us.
+Python is a dynamically typed language, and falls into this second category. This means that, unlike statically typed languages, we rarely need to worry about the *type* definitions because in the majority of cases, Python takes care of them for us, and automatically decodes the type of data being stored in a variable, once it is defined by the user.
 </p>
 
 ::::::::::::::::::::
@@ -545,7 +547,7 @@ In a dynamically typed language, it is the value of a variable that determines t
 ::::::::::::::::::::::: prereq
 ## Advanced Topic
 <p style='text-align: justify;'>
-In computer programming, type systems are syntactic methods to enforce and / or identify levels of abstraction. An entire field in computer science has been dedicated to the study of programming languages from a type--theoretic approach. This is primarily due to the implication of types and their underlying principles in such areas in software engineering as optimisation and security. To learn more about the study of type systems, refer to: Pierce B. Types and programming languages. Cambridge, Mass.: MIT Press; 2002.
+In computer programming, type systems are syntactic methods to enforce and/or identify levels of abstraction. This means that type systems take advantage of the syntax of a particular programming language, in order to enforce rules and identify types. This is important, as it can manage abstraction in data, by ensuring that differing data types interact meaningfully with one another. An entire field in computer science has been dedicated to the study of programming languages from a type--theoretic approach. This is primarily due to the implication of types and their underlying principles in such areas in software engineering as optimisation and security. To learn more about the study of type systems, refer to: Pierce B. Types and programming languages. Cambridge, Mass.: MIT Press; 2002.
 </p>
 
 :::::::::::::::::::::::
@@ -553,7 +555,7 @@ In computer programming, type systems are syntactic methods to enforce and / or 
 ::::::::::::::::::::::: callout
 ## Note
 <p style='text-align: justify;'>
-The values determine the type of a variable in dynamically typed languages. This is in contrast with statically typed languages where a variable must be initialised using a specific type before a value --- whose type is consistent with the initialised variable, can be assigned to it.
+The values determine the type of a variable in dynamically typed languages. This is in contrast to statically typed languages, where a variable must be initialised using a specific type before a value. 
 </p>
 
 :::::::::::::::::::::::
@@ -565,14 +567,16 @@ The values determine the type of a variable in dynamically typed languages. This
 </p>
 
 <p style='text-align: justify;'>
-Python enjoys a powerful type system out of the box. Table [Built-in types in Python](#tb:types:nativeTypes) provides a comprehensive reference for the built-in types in Python. Built-in types are the types that exist in the language and do not require any third party libraries to implement or use.
+Python enjoys a powerful type system out of the box. The following table - [Built-in types in Python](#tb:types:nativeTypes) - provides a comprehensive reference for the built-in types in Python. Built-in types already exist in the language, and do not require the use or implementation of any third-party libraries.
 </p>
 
-![A comprehensive (but non-exhaustive) reference of built-in (native) types in Python 3.<br> ^\*^ Not discussed in this course --- included for reference only. <br> ^$^ ```dict``` is not an iterable by default, however, it is possible to iterate through its keys. <br> <br>**Mutability** is an important [concept in programming](https://en.wikipedia.org/wiki/Immutable_object). A mutable object is an object whose value(s) may be altered. This will become clearer once we study ```list``` and ```tuple```. Find out more about mutability in Python from the [documentations}](https://docs.python.org/3.9/reference/datamodel.html). <br> <br>
-**Complex numbers** refer to a [set of numbers](http://thinkzone.wlonk.com/Numbers/NumberSets.htm) that have a real part, and an imaginary part; where the imaginary part is defined as $\sqrt{-1}$. These numbers are very useful in the study of oscillatory behaviours and flow (e.g. heat, fluid, electricity). To learn more about complex numbers, watch this [Khan Academy video tutorial](https://www.khanacademy.org/math/algebra2/introduction-to-complex-numbers-algebra-2/the-complex-numbers-algebra-2/v/complex-number-intro). ](fig/python_built-in_types.png){#tb:types:nativeTypes}
+![A comprehensive (but non-exhaustive) reference of built-in (native) types in Python 3.<br> ^\*^ Not discussed in this course --- included for reference only. <br> ^$^ ```dict``` is not an iterable by default, however, it is possible to iterate through its keys. 
+
+<br> <br>**Mutability** is an important [concept in programming](https://en.wikipedia.org/wiki/Immutable_object). A mutable object is an object whose value(s) may be altered. This will become clearer once we study ```list``` and ```tuple```. Find out more about mutability in Python from the [documentation](https://docs.python.org/3.9/reference/datamodel.html). <br> <br>
+**Complex numbers** refer to a [set of numbers](http://thinkzone.wlonk.com/Numbers/NumberSets.htm) that have both a real component, and an imaginary component; where the imaginary part is defined as $\sqrt{-1}$. These numbers are very useful in the study of oscillatory behaviours and flow (e.g. heat, fluid, electricity). To learn more about complex numbers, watch this [Khan Academy video tutorial](https://www.khanacademy.org/math/algebra2/introduction-to-complex-numbers-algebra-2/the-complex-numbers-algebra-2/v/complex-number-intro). ](fig/python_built-in_types.png){#tb:types:nativeTypes}
 
 
-Sometimes we might need want to know what is the type of a variable. To do so, we use the build-in function <kbd>type()</kbd> as follows:
+Sometimes we might need want to explicitly know what the type of a variable is. To do this, we can use the build-in function <kbd>type()</kbd> as follows:
 
 
 ``` python
@@ -632,7 +636,7 @@ print(type(full_name))
 :::::::::::::::::: callout
 ## Remember
 <p style='text-align: justify;'>
-In Python, a variable / value of a certain type may be referred to as an *instance* of that type. For instance, an integer value whose type in Python is defined as *int* is said to be an **instance of type** ```int```.
+In Python, a variable/value of a certain type may be referred to as an *instance* of that type. For instance, an integer value whose type in Python is defined as *int* is said to be an **instance of type** ```int```.
 </p>
 
 ::::::::::::::::::
@@ -855,10 +859,10 @@ ValueError: invalid literal for int() with base 10: '12y'
 
 ## Practice Exercise 6
 <p style='text-align: justify;'>
-In programming, we routinely face errors resulting from different mistakes. The process of finding and correcting such mistakes in the code is referred to as *debugging*.
+In programming, we routinely face errors resulting from different mistakes. The process of finding and correcting such mistakes in the code is referred to as **debugging**.
 </p>
 
-We have been given the following snippet written in Python 3:
+We have been given the following piece of code written in Python:
 ```
 value_a = 3
 value_b = '2'
@@ -866,7 +870,7 @@ value_b = '2'
 result = value_a + value_b
 print(value_a, '+', value_b, '=', result)
 ```
-but when the code is executed, we encounter an error message as follows:
+But when the code is executed, we encounter an error message as follows:
 
 ```
 Traceback (most recent call last):
@@ -903,7 +907,7 @@ print(value_a, '+', value_b, '=', result)
 
 :::::::::::::::::::::::::::::::
 
-### **Handling input variables**
+### **Handling Input Variables**
 
 ::::::::::::::::::::::::::::::: discussion
 <p style='text-align: justify;'>
@@ -979,18 +983,18 @@ print(enzyme, 'is an enzyme with', length, 'amino acids and',  nucleotides, 'nuc
 ### **Variable scopes**
 [**Resolution of names**](https://docs.python.org/3.6/reference/executionmodel.html\#resolution-of-names)
 <p style='text-align: justify;'>
-When defining a variable, we should always consider where in our programme we intent to use it. The more localised our variables, the better. This is because local variables are easier to distinguish, and thus reduce the chance of making mistakes --- e.g. unintentionally redefine or alter the value of an existing variable.
+When defining a variable, we should always consider where in our program we intend to use it. The more localised our variables, the better. This is because local variables are easier to distinguish, and thus reduce the chance of making mistakes --- e.g. unintentionally redefining or altering the value of an existing variable.
 </p>
 
 <p style='text-align: justify;'>
-To that end, the scope of a variable defines the ability to reference a variable from different *points* in our programmes. The concept of local variables becomes clearer once we explore functions in programming in chapter [Functions](06-functions.Rmd).
+Therefore, the scope of a variable defines the ability to reference a variable from different *points* in our programs. The concept of local variables becomes clearer once we explore functions in programming in chapter [Functions](06-functions.Rmd).
 </p>
 
 <p style='text-align: justify;'>
 As displayed in Figure [Variable scopes](#fig:opts:scopes), the point *at* or *from* which a variable can be referenced depends on the location where the variable is defined.
 </p>
 
-In essence, there are three general rules to remember in relation variable scopes in Python:
+In essence, there are three general rules to remember in relation to variable scopes in Python:
 
 <p style='text-align: justify;'>
 I. A variable that is defined in the outer scope, can be *accessed* or *called* in the inner scopes, but it cannot be *altered* implicitly. Not that such variables may still be altered using special techniques (not discussed).
@@ -1001,34 +1005,34 @@ II. A variable that is defined in the innermost scopes (local), can only be *acc
 </p>
 
 <p style='text-align: justify;'>
-III. The inner scopes *from* which a variable is referenced must themselves have be contained within the defining scope --- e.g. in ```FuncB``` of Figure [Variable scopes](#fig:opts:scopes), we can reference ```a```, ```b```, and ```x```; but not ```f1```. This is because the scope of ```f1``` is ```Script``` <kbd>→</kbd> ```FuncA```, so it can only be referenced from ```Script```  <kbd>→</kbd> ```FuncA``` <kbd>→ ...</kbd>, but not  ````Script```<kbd>→  ...</kbd> or ```Script``` <kbd>→</kbd>  ```FuncB``` <kbd>→ ...</kbd>.
+III. The inner scopes *from* which a variable is referenced must themselves be contained within the defining scope --- e.g. in ```FuncB``` of Figure [Variable scopes](#fig:opts:scopes), we can reference ```a```, ```b```, and ```x```; but not ```f1```. This is because the scope of ```f1``` is ```Script``` <kbd>→</kbd> ```FuncA```, so it can only be referenced from ```Script```  <kbd>→</kbd> ```FuncA``` <kbd>→ ...</kbd>, but not  ````Script```<kbd>→  ...</kbd> or ```Script``` <kbd>→</kbd>  ```FuncB``` <kbd>→ ...</kbd>.
 </p>
 
 ![Variable scopes in Python with respect to scripts and functions.](fig/variable_scopes.png){#fig:opts:scopes}
 <p style='text-align: justify;'>
-Python is an interpreted language. This means that the Python interpreter goes through the codes that we write line by line, interpreting it to machine language. It is only then that the commands are processed and executed by the computer. On that account, a variable (or a function) can be referenced only *after* its initial definition. That is why, for instance, in ```Script (part 2)``` of Figure [Variable scopes](#fig:opts:scopes), we can reference every variable and function except for ```FuncC```, which is declared further down the code hierarchy.
+As we discussed earlier in this lesson, it is paramount to remember that Python is an interpreted language. This means that the Python interpreter goes through the codes that we write line by line, interpreting it to machine language. It is only then that the commands are processed and executed by the computer. On that account, a variable (or a function) can be referenced only *after* its initial definition. That is why, for instance, in ```Script (part 2)``` of Figure [Variable scopes](#fig:opts:scopes), we can reference every variable and function except for ```FuncC```, which is declared further down in the code hierarchy.
 </p>
 
 <p style='text-align: justify;'>
 Although scope and hierarchy appear at first glance as theoretical concepts in programming, their implications are entirely practical. The definition of these principles vary from one programming language to another. As such, it is essential to understand these principles and their implications in relation to any programming language we are trying to learn.
 </p>
 
-### **Optional: How to use terminal environment?** {#terminal}
+### **Optional: How to use Terminal environment?** {#terminal}
 ![](fig/commandprompt_1.png)
 ![](fig/commandprompt_2.png)
 ![](fig/commandprompt_3.png)
 
 ## Operations {#sec:operations}
 <p style='text-align: justify;'>
-Through our experimentations with [variable types](#sec:varTyp), we already know that variables may be subject to different operations.
+Through our experimentation with [variable types](#sec:varTyp), we already know that variables may be subjected to different operations.
 </p>
 
 <p style='text-align: justify;'>
-When assessing [type conversions](#sec:conversionType)  we also established that the operations we can apply to each variable depend on the *type* of that variable. To that end, we learned that although it is sometimes possible to mix variables from different types to perform an operation --- e.g. multiplying a floating point number with an integer, there are some logical restrictions in place.
+When assessing [type conversions](#sec:conversionType), we also established that the operations we can apply to each variable depend on the *type* of that variable. To that end, we learned that although it is sometimes possible to mix variables from different types to perform an operation (for example multiplying a floating point number with an integer), there are some logical restrictions in place.
 </p>
 
 <p style='text-align: justify;'>
-Throughout this section, we will take a closer look into different types of operations in Python. This will allow us to gain a deeper insight into the concept and familiarise ourselves with the underlying logic.
+Throughout this section, we will take a closer look into different types of operations in Python. This will allow us to gain a deeper insight, and to familiarise ourselves with the underlying logic.
 </p>
 
 <p style='text-align: justify;'>
@@ -1062,7 +1066,7 @@ print(total_items)
 ```
 
 <p style='text-align: justify;'>
-Given 2 different variables, each containing a different value; we can perform an operation on these values and store the result in *another* variable without altering the original variables in any way:
+Given two different variables, each containing a different value; we can perform an operation on these values and store the result in *another* variable without altering the original variables in any way:
 </p>
 
 
@@ -1080,7 +1084,7 @@ print(total_items)
 ```
 
 <p style='text-align: justify;'>
-We can change the value of an *existing* variable using the value stored in *another* variable:
+We can change the value of an *existing* variable using a value stored in *another* variable:
 </p>
 
 
@@ -1095,7 +1099,7 @@ print(total_items)
 12
 ```
 
-There is also a shorthand method for applying the operation on an *existing* variable:
+There is also a shorthand method for applying this operation on an *existing* variable:
 
 
 ``` python
@@ -1133,7 +1137,7 @@ print(total_items)
 ```
 
 <p style='text-align: justify;'>
-As highlighted in the [introduction](#sec:operations), different operations may be applied to any variable or value. Throughout the rest of this section, we will explore the most fundamental operations in programming, and learn about their implementation in Python.
+As highlighted in the [introduction](#sec:operations), different operations may be applied to any variable or value. We can now explore the most fundamental operations in programming, and learn about their implementation in Python.
 </p>
 
 ::::::::::::::::::: callout
@@ -1146,7 +1150,7 @@ There are 2 very general categories of operations in programming: *mathematical*
 
 ### **Mathematical Operations** {#math_ops}
 
-Suppose ```a``` and ```b``` are 2 variables representing integer numbers as follows:
+Suppose ```a``` and ```b``` are two variables representing integers, as follows:
 
 ```
 a = 17
@@ -1188,7 +1192,7 @@ Display the result of each calculation -- including the type, in the following f
 
 2. Now using the results you obtained:
 <p style='text-align: justify;'>
-  **I.** Can you explain why is the result of $35 - 3.0$ is an instance of type ```float```, whilst that of $35 - 3$ is of type ```int```?
+  **I.** Can you explain why the result of $35 - 3.0$ is an instance of type ```float```, whilst that of $35 - 3$ is of type ```int```?
 </p>
 
 <p style='text-align: justify;'>
@@ -1196,11 +1200,11 @@ Display the result of each calculation -- including the type, in the following f
 </p>
 
 <p style='text-align: justify;'>
-If you feel adventurous, you can try this for $2^{10000}$ or higher; but beware that you might overwhelm your computer and need a restart it if you go too far (i.e. above $2^{1000000}$). Just make sure you save everything beforehand, so you don't accidentally step on your own foot.}
+If you feel adventurous, you can try this for $2^{10000}$ or higher; but beware that you might overwhelm your computer and need a restart it if you go too far (i.e. above $2^{1000000}$). Just make sure you save everything beforehand, so you don't accidentally lose your work.
 </p>
 
 <p style='text-align: justify;'>
-**Hint:** We discuss <kbd>len()</kbd> in [subsection of arrays](04-arrays.Rmd). However, at this point, you should be able to use the official documentations and StackOverflow to work out how it works.
+**Hint:** We discuss <kbd>len()</kbd> in our [subsection of arrays](04-arrays.Rmd) arrays lesson. However, at this point, you should be able to use the official function documentation to figure out how it works. To access a function’s documentation or docstring within Jupyter Notebook, for example you can use `help(function_name)`  to reveal it’s documentation. Clicking within the function (for example, placing your cursor inside the function `len`) and using `shift+tab` can also be an easy shortcut for viewing a function’s docstring.
 </p>
 
 ::::::::::::::::::::: solution
@@ -1294,13 +1298,13 @@ As of Python 3.6, you can use an underscores (``` _ ```) *within* large numbers 
 ::::::::::::::::::::::::
 
 
-#### **Shorthands**
+#### **Shorthand:**
 <p style='text-align: justify;'>
 When it comes to mathematical operations in Python, there is a frequently used shorthand method that every Python programmer should be familiar with.
 </p>
 
 <p style='text-align: justify;'>
-Suppose we have a variable defined as ```total_residues = 52``` and want to perform a mathematical operation on it. However, we would like to store the result of that operation in ```total_residues``` instead of a new variable. In such cases, we can do as follows:
+Suppose we have a variable defined as ```total_residues = 52``` and want to perform a mathematical operation on it. However, we would like to store the result of that operation in ```total_residues``` instead of a new variable. We can do this as follows:
 </p>
 
 
@@ -1443,7 +1447,7 @@ Then round the results to 5 decimal places and display the result in the followi
 >```The value of pi calculated to 5 decimal places: X.XXXXX```
 
 <p style='text-align: justify;'>
-**Note: **To round floating point numbers in Python, we use <kbd>round()</kbd>. This is a built-in function that takes 2 input arguments: the first is the variable/value to be rounded, and the second is the number decimal places. Read more about <kbd>round()</kbd> in the [official documentations](https://docs.python.org/3/library/functions.html#round).
+**Note: **To round floating point numbers in Python, we use the function <kbd>round()</kbd>. This is a built-in function that takes two input arguments: the first is the variable/value to be rounded, and the second is the number of decimal places we wish to round to. Read more about the <kbd>round()</kbd> function in its [official documentation](https://docs.python.org/3/library/functions.html#round).
 </p>
 
 2. Now without creating a new variable, perform the following operation:
@@ -1487,9 +1491,9 @@ The calculation raises a ```ZeroDivisionError```. This is because division by ze
 
 :::::::::::::::::::::::::::::::::::::
 
-#### **Precedence**
+#### **Precedence:**
 <p style='text-align: justify;'>
-In mathematics and computer programming, there is a collection of conventional rules on the precedence of procedures to evaluate a mathematical expression. This collection of rules is referred to as the *order of operation* or *operator precedence*.
+In mathematics and computer programming, there are a series of conventional rules on the precedence of procedures to evaluate a mathematical expression. This collection of rules is referred to as the *order of operation* or *operator precedence*.
 </p>
 
 Suppose we have a mathematical expression as follows:
@@ -1539,7 +1543,7 @@ Operator precedence in mathematical operations may be described as follows:
 2. Multiplication and division
 3. Addition and subtraction
 
-If there are any parenthesis ```( )``` in the expression, the expression is evaluated from the innermost parenthesis outwards.
+If there are any parentheses ```( )``` in the expression, the expression is evaluated from the innermost parenthesis, outwards.
 
 :::::::::::::::::::::
 
@@ -1694,15 +1698,15 @@ a^2 + 2ab + b^2 = 49
 
 #### **Non-numeric values** {#subsubsec:mathematicalOperations:nonNumerics}
 <p style='text-align: justify;'>
-It sometimes makes sense to apply *some* mathematical operations to non-numeric variables too.
+It sometimes makes sense to apply *some* mathematical operations to non-numeric variables, too.
 </p>
 
 <p style='text-align: justify;'>
-We can multiply strings to repeat them. There is no specific advantage to the use of multiplication instead of manually repeating characters or words, but it makes our code look cleaner, and that's always a good thing!
+We can multiply strings in order to repeat them. There is no specific advantage to using multiplication instead of manually repeating characters or words, but it does make our code look cleaner, which is ideal.
 </p>
 
 <p style='text-align: justify;'>
-We can also add string values to each other. This is called *string concatenation*. It is a useful method for concatenating a few strings and / or string variables.
+We can also add string values to each other. This is called *string concatenation*. It is a useful method for concatenating, and provides a useful method for combining multiple strings and/or string variables.
 </p>
 
 
@@ -1732,7 +1736,7 @@ DoB: 01/01/1990
 
 ## Remember
 <p style='text-align: justify;'>
-New line character or ```'\n'``` is a universal directive to induce a line-break in Unix based operating systems (MACOS) and Linux). In WINDOWS, we usually us ```'\r'``` or ```'\r\n'``` instead. These are known as [escape sequences](07-strings.Rmd#subsubsec:escapeSequences), which we explore in additional details under [string operations](07-strings.Rmd#subsec:stringOperations) in chapter [Strings](07-strings.Rmd)
+New line character or ```'\n'``` is a universal directive to induce a line-break in Unix-based operating systems (Mac OS) and Linux). In WINDOWS, we usually us ```'\r'``` or ```'\r\n'``` instead. These are known as escape sequences.
 </p>
 
 ::::::::::::::::
@@ -1741,7 +1745,7 @@ New line character or ```'\n'``` is a universal directive to induce a line-break
 
 ## Practice Exercise 11 {#diy:mathOpts:Huntington}
 <p style='text-align: justify;'>
-The risk of Huntington's disease appears to increase proportional to the continuous repetition of ```CAG``` nucleotides (glutamine codon) once they exceed 35 near the beginning of the Huntingtin (```IT15```) gene. The ```CAG``` repeats are also referred to as a polyglutamine or polyQ tract.
+Symptomatic Huntington's disease appears to increase in proportion to the number of ```CAG``` trinucleotide repeats (the codon for glutamine); once these exceed 35 repeats near the beginning of the Huntingtin (```IT15```) gene, the individual is phenotypic for the disease. These ```CAG``` repeats are also referred to as a polyglutamine or polyQ tract.
 </p>
 
 ```
@@ -1766,9 +1770,9 @@ Number of nucleotides in a polyglutamine with 36 repeats: XXX
 ```
 
 
-3. Use <kbd>len()</kbd> to work out the length of ```glutamin_codon```, and store the result in variable ```amino_acids_per_codon```.
+3. Use <kbd>len()</kbd> to work out the length of ```glutamine_codon```, and store the result in variable ```amino_acids_per_codon```.
 
-4. Divide ```polyq_codons_length``` by ```amino_acids_per_codon``` to prove that the chain contains the codon for exactly 36 amino acids. Store the result in variable ```polyq_peptide_length```.
+4. Divide ```polyq_codons_length``` by ```amino_acids_per_codon``` to verify that the chain contains the total codons to encode exactly 36 amino acids. Store the result in a variable titled ```polyq_peptide_length```.
 
 Display the result in the following format:
 
@@ -1923,11 +1927,11 @@ The Boolean data type is named after the English mathematician and logician Geor
 
 ### **Logical Operations** {#subsec:logicalOperatons}
 <p style='text-align: justify;'>
-An operation may involve a comparison. The result of such operations is either ```True``` or ```False```. This is known as the *Boolean* or ```bool``` data type. In reality, however, computers record ```True``` and ```False``` as ```1``` and ```0``` respectively.
+An operation may sometimes involve a comparison. The result of these operations may be either ```True``` or ```False```. This is known as the *Boolean* or ```bool``` data type. In reality, however, computers record ```True``` and ```False``` as ```1``` and ```0```, respectively.
 </p>
 
 <p style='text-align: justify;'>
-Operations with Boolean results are referred to as *logical operations*. Testing the results of such operations is known as *truth value testing*.
+Operations with Boolean results are referred to as *logical operations*. Testing the results of such operations is referred to as *truth value testing*.
 </p>
 
 Given the two variables ```a``` and ```b``` as follows:
@@ -1937,7 +1941,7 @@ a = 17
 b = 5
 ```
 
-Boolean operations may be defined as outlined in Table [Routine logical operations in Python.](#tab:routineOperations).
+Boolean operations may be defined as outlined in this Table [Routine logical operations in Python.](#tab:routineOperations).
 
 ![Routine logical operations in Python.](fig/routine_logical_operations.png){#tab:routineOperations}
 
@@ -2074,7 +2078,7 @@ True
 
 :::::::::::::::::::::::::::::::::::::
 
-#### **Disjunctions and Conjunctions** {#disjun}
+#### **Disjunctions and Conjunctions:** {#disjun}
 <p style='text-align: justify;'>
 Logical operations may be combined using conjunction with <kbd>and</kbd> and disjunction with <kbd>or</kbd> to create more complex logics:
 </p>
@@ -2259,38 +2263,38 @@ print('10.', not a and not(b or c))
 
 :::::::::::::::::::::::::::::::::::::
 
-#### **Complex logical operations**
+#### **Complex logical operations:**
 <p style='text-align: justify;'>
-It may help to break down more complex operations, or use parenthesis to make them easier to both read and write:
+It may help to break down more complex operations, or use parentheses to make them easier to read and write:
 </p>
 
-![Complex Logical Operations in Python.](fig/Complex_Logical_Operations.png)
+![Complex Logical Operations in Python:](fig/Complex_Logical_Operations.png)
 
 <p style='text-align: justify;'>
-Notice that in the last example, all notations are essentially the same and only vary in terms of their collective results as defined using parenthesis. Always remember that in a logical statement:
+Notice that in the last example, all notations is essentially the same, and only varies in terms of the collective results as defined using parentheses. Always remember that in a logical statement:
 </p>
 
 ::::::::::::::::::::::: checklist
 
 ## Logical statement
 <p style='text-align: justify;'>
-- [x] The statement in parenthesis does **not** have precedence over the rest of the state (unlike mathematical statements). It merely defines an independent part of the operation whose response is evaluated separately.
+- [x] The statement in parentheses does **not** have precedence over the rest of the state (unlike mathematical statements). It merely defines an independent part of the operation whose response is evaluated separately.
 </p>
 
 <p style='text-align: justify;'>
-- [x] The precedence is established on a first come, first serve basis (from left to right).
+- [x] The precedence is established on a first-come-first-serve basis (from left to right).
 </p>
 
 <p style='text-align: justify;'>
-- [x] Always use parenthesis in longer statements for clarification.
+- [x] Always use parentheses in longer statements for clarification.
 </p>
 
 <p style='text-align: justify;'>
-- [x] In disjunctive statements ---i.e. a > 5 ```or``` b > 5, if the first part is ```True```, the second part is *not* checked. In other words, if a is greater than 5, the computer does not proceed to check whether or not b is greater than 5.
+- [x] In disjunctive statements (such as a > 5 ```or``` b > 5) if the first part is ```True```, the second part is *not* checked. In other words, if a is greater than 5, the computer does not proceed to check whether or not b is greater than 5.
 </p>
 
 <p style='text-align: justify;'>
-- [x] In conjunctive statements ---i.e. a > 5 ```and``` b > 5, the statement proceeds to the seconds part if and only if the first part is ```True```. In other words, the result of a conjunctive statement is only ```True``` if and only if both a and b are greater than 5. If a is ```False```, the entire statement will inevitably be ```False```.
+- [x] In conjunctive statements (such as a > 5 ```and``` b > 5) the statement proceeds to the seconds part if the first part is ```True```. In other words, the result of a conjunctive statement is only ```True``` if both a and b are greater than 5. If a is ```False```, the entire statement will inevitably be ```False```.
 </p>
 
 <p style='text-align: justify;'>
@@ -2409,13 +2413,13 @@ These are only a few examples. There are endless possibilities, try them yoursel
 
 ## Remember
 <p style='text-align: justify;'>
-Some logical operations may be written in different ways. However, we should always use the notation that is most coherent in the context of our code. If in doubt, use the simplest / shortest notation.
+Some logical operations may be written in different ways. However, we should always use the notation that is most coherent in the context of our code. If in doubt, use the simplest or shortest notation.
 </p>
 
 :::::::::::::
 
 
-To that end, you may want to use variables to split complex statements down to smaller portions:
+To that end, you may want to use variables to break complex statements down into smaller fragments:
 
 
 ``` python
@@ -2599,12 +2603,12 @@ print('7.', (12 / a) and (a * 4) < b)
 
 ## End of chapter Exercises
 
-1. Write and execute a Python script to display your own name as an output in the terminal.
+1. Write and execute a Python code to display your own name as an output in the Terminal.
 
-2. Write and execute a Python script that:
+2. Write and execute a Python code that:
 
-  * Displays the text ```Please press enter to continue...```, and waits for the user to press enter.
-  * Once the user pressed enter, the program should display ```Welcome to my programme!``` before it terminates.
+  * Displays the text: ```Please press enter to continue...```, and waits for the user to press enter.
+  * Once the user presses enter, the program should display ```Welcome to my programme!``` before terminating.
 
 3. We have an enzyme whose reaction velocity is $v=50~mol \cdot L^{-1} \cdot s^{-1}$ at the substrate concentration of $[S] = K_{m} = 2.5~mol \cdot L^{-1}$. Work out the maximum reaction velocity or $V_{\max}$ for this enzyme using the Michaelis-Menten equation:
 
