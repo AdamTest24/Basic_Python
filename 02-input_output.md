@@ -570,10 +570,11 @@ The values determine the type of a variable in dynamically typed languages. This
 Python enjoys a powerful type system out of the box. The following table - [Built-in types in Python](#tb:types:nativeTypes) - provides a comprehensive reference for the built-in types in Python. Built-in types already exist in the language, and do not require the use or implementation of any third-party libraries.
 </p>
 
-![A comprehensive (but non-exhaustive) reference of built-in (native) types in Python 3.<br> ^\*^ Not discussed in this course --- included for reference only. <br> ^$^ ```dict``` is not an iterable by default, however, it is possible to iterate through its keys. 
+![](fig/python_built-in_types.png){#tb:types:nativeTypes}
+A comprehensive (but non-exhaustive) reference of built-in (native) types in Python 3.<br> ^\*^ Not discussed in this course --- included for reference only. <br> ^$^ ```dict``` is not an iterable by default, however, it is possible to iterate through its keys. 
 
 <br> <br>**Mutability** is an important [concept in programming](https://en.wikipedia.org/wiki/Immutable_object). A mutable object is an object whose value(s) may be altered. This will become clearer once we study ```list``` and ```tuple```. Find out more about mutability in Python from the [documentation](https://docs.python.org/3.9/reference/datamodel.html). <br> <br>
-**Complex numbers** refer to a [set of numbers](http://thinkzone.wlonk.com/Numbers/NumberSets.htm) that have both a real component, and an imaginary component; where the imaginary part is defined as $\sqrt{-1}$. These numbers are very useful in the study of oscillatory behaviours and flow (e.g. heat, fluid, electricity). To learn more about complex numbers, watch this [Khan Academy video tutorial](https://www.khanacademy.org/math/algebra2/introduction-to-complex-numbers-algebra-2/the-complex-numbers-algebra-2/v/complex-number-intro). ](fig/python_built-in_types.png){#tb:types:nativeTypes}
+**Complex numbers** refer to a [set of numbers](http://thinkzone.wlonk.com/Numbers/NumberSets.htm) that have both a real component, and an imaginary component; where the imaginary part is defined as $\sqrt{-1}$. These numbers are very useful in the study of oscillatory behaviours and flow (e.g. heat, fluid, electricity). To learn more about complex numbers, watch this [Khan Academy video tutorial](https://www.khanacademy.org/math/algebra2/introduction-to-complex-numbers-algebra-2/the-complex-numbers-algebra-2/v/complex-number-intro). 
 
 
 Sometimes we might need want to explicitly know what the type of a variable is. To do this, we can use the build-in function <kbd>type()</kbd> as follows:

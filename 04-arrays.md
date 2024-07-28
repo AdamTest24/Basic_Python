@@ -11,18 +11,18 @@ exercises: 2
 
 :::::::::::::::::::::::::::::::::::::: questions
 
-- What are different types of arrays?
-- How is data stored and retrieved from an array
-- Why nested arrays?
+- What are the different types of arrays?
+- How is data stored and retrieved from an array?
+- What are nested arrays?
 - What are tuples?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 - Understanding difference between lists and tuples.
-- Building concepts of operations on arrays.
-- knowing storing multidimensional data.
-- Understanding mutability and immutability.
+- Understanding operations on arrays.
+- Storing multidimensional data.
+- Understanding the concepts of mutability and immutability.
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 <br>
@@ -48,16 +48,16 @@ exercises: 2
 ::::::::::::::::::
 
 <p style='text-align: justify;'>
-So far, we have been using variables to store individual values. In some circumstances, we may need to access multiple values to perform operations. In such occasions, defining a variable for every single value can become very tedious. To address this, we use arrays.
+So far, we have been using variables to store individual values. In some circumstances, we may need to access multiple values in order to perform operations. On such occasions, defining a variable for every single value can become very tedious. To address this, we use **arrays**.
 </p>
 
 <p style='text-align: justify;'>
-Arrays are variables that hold any number of values. Python provides 3 types of built-in arrays: ```list```, ```tuple```, and ```set```. There are a several common features amongst all arrays in Python; however, each type of array enjoys its own range of unique features that facilitate specific operations.
+Arrays are variables that hold any number of values. Python provides three types of built-in arrays. These are: ```list```, ```tuple```, and ```set```. There are a several common features among all arrays in Python; however, each type of array enjoys its own range of unique features that facilitates specific operations.
 </p>
 
 :::::::::::::::::::::::::::::::::::: callout
 ## Remember
-Each item inside an array may be referred to as a *member* or *item* of that array.
+Each item inside an array may be referred to as an *item* or a *member* of that array.
 
 ::::::::::::::::::::::::::::::::::::
 
@@ -65,23 +65,23 @@ Each item inside an array may be referred to as a *member* or *item* of that arr
 [**Resource for Lists**](https://docs.python.org/3/tutorial/datastructures.html\#more-on-lists)
 
 <p style='text-align: justify;'>
-Lists are the most frequently used type of arrays in Python. It is therefore important to understand how they work, and that how can we use them and features they offer to our advantage.
+Lists are the most frequently-used type of arrays in Python. It is therefore important to understand how they work, and how can we use them, and the features they offer, to our advantage.
 </p>
 
 <p style='text-align: justify;'>
-The easiest way to imagine how a ```list``` works is to think of it as a table that can have any number of rows. This is akin to a spreadsheet with one column. For instance, suppose we have a table with 4 rows in a spreadsheet application as follows:
+The easiest way to imagine how a ```list``` works, is to think of it as a table that can have any number of rows. This is akin to a spreadsheet with one column. For instance, suppose we have a table with four rows in a spreadsheet application, as follows:
 </p>
 
 ![](fig/spreadsheet.png)
 
-The number of rows in an array determine the *length.* The above table has 4 rows; therefore it is said to have a *length* of 4.
+The number of rows in an array determines its *length.* The above table has four rows; therefore it is said to have a *length* of 4.
 
 
 ### **Implementation**
 
 :::::::::::::::::::::::::::::::::::: callout
 ## Remember
-To implement a ```list``` in Python, we place the values separated by commas inside square brackets <span style="color: rgb(32, 121, 77);">[1, 2, 3, ...]</span>.
+In order to implement a ```list``` in Python, we place values into this list and separate them from one another using commas inside **square brackets**:  <span style="color: rgb(32, 121, 77);">list = [1,2,3]</span>.
 
 ::::::::::::::::::::::::::::::::::::
 
@@ -133,27 +133,27 @@ fibonacci = [1, 1, 2, 3, 5, 8, 13, 21]
 
 ### **Indexing** {#sec:list:indexing}
 
-In arrays, an index is an integer number that corresponds to a specific item.
+In an array, an index is an integer (whole number) that corresponds to a specific item in that array.
 
 <p style='text-align: justify;'>
-You can think of an index as a *unique reference* or a *key* that corresponds to a specific row in a table. We don't always write the row number when we create a table. However, we always know that the 3^rd^ row of a table means that we start from the first row (row \#1), count 3 rows down and there we find the 3^rd^ row.
+You can think of an index as a *unique reference* or *key* that corresponds to a specific row in a table. We don't always write the row number when we create a table. However, we always know that the third row of a table refers to us starting from the first row (row \#1), counting three rows down and there we find the third row.
 </p>
 
 <p style='text-align: justify;'>
-The only difference in Python is that we don't take the first row as row \#1; instead, we consider it to be row \#0. As a consequence of starting from \#0, we count rows in our table down to row \#2 instead of \#3 to find the 3^rd^ row. So our table may in essence be visualised as follows:
+Python, however, uses what we term **zero-based** indexing. We don't count the first row as row \#1; instead, we consider it to be row \#0. As a consequence of starting from \#0, we count rows in our table down to row \#2 instead of \#3 to find the third row. So our table may,essentially, be visualised as follows:
 </p>
 
 ![](fig/indexing_diagram.png)
 
 ::::::::::::::::::::::::::::::::::: callout
 ## Remember
-Python uses a zero-based indexing system. This means that the first row of an array, regardless of its type, is always \#0.
+Python uses **zero-based** indexing system. This means that the first row of an array, regardless of its type, is always referred to with index \#0.
 
 :::::::::::::::::::::::::::::::::::
 
-With that in mind, we can use the index for each value to retrieve it from a ```list```.
+With that in mind, we can use the index for each item in the list, in order to retrieve it from a ```list```.
 
-Given a ```list``` of 4 members stored in a variable called <span style="color: rgb(32, 121, 77);">table</span>:
+Given the following ```list``` of four members stored in a variable called <span style="color: rgb(32, 121, 77);">table</span>:
 
 ```
 table = [5, 21, 5, -1]
@@ -162,7 +162,7 @@ table = [5, 21, 5, -1]
 we can visualise the referencing protocol in Python as follows:
 ![](fig/indexing_diagram2.png)
 <p style='text-align: justify;'>
-As demonstrated in the diagram; to retrieve a member of an array through its index, we write the name of the variable immediately followed by the index value inside a pair of square brackets --- *e.g.* <span style="color: rgb(32, 121, 77);">table[2]</span>.
+As illustrated in this figure; in order to retrieve a member of an array through its index, we write the name of the variable immediately followed by the index value inside a pair of square brackets --- *e.g.* <span style="color: rgb(32, 121, 77);">table[2]</span>. Note, you may have noticed our interchangeable use of the terms ‘list’ and ‘array’. That is because a list, in Python, can be considered as a type of dynamic array (they can increase or decrease in size, as required).
 </p>
 
 
@@ -198,7 +198,7 @@ print(item)
 
 ## Practice Exercise 2
 
-Retrieve and display the 5^th^ Fibonacci number from the ```list``` you created in previous [Practice Exercise 1](#diy:array:list:fibonacci).
+Retrieve and display the 5^th^ Fibonacci number from the ```list``` you created in the previous [Practice Exercise 1](#diy:array:list:fibonacci).
 
 
 ::::::::::::::::: solution
@@ -218,20 +218,20 @@ print(fibonacci[4])
 :::::::::::::::::::::::::::::::
 
 <p style='text-align: justify;'>
-It is sometimes more convenient to index an array backwards --- that is, to reference the members from the bottom of the array. This is called *negative indexing* and is particularly useful when we are dealing with very lengthy arrays. The indexing system in Python support both positive and negative indexing systems.
+It is sometimes more convenient to index an array, backwards --- that is, to reference the members from the bottom of the array, first. This is termed **negative indexing**, and is particularly useful when we are dealing with lengthy arrays. The indexing system in Python support both positive and negative indexing systems.
 </p>
 
-The table above therefore may also be represented as follows:
+The table above therefore may also be represented, as follows:
 
 ![](fig/indexing_diagram3.png)
 
 :::::::::::::::::::::::::::::::::::: callout
 ## Remember
-Unlike the normal indexing system, which starts from \#0, negative indexes start from \#-1 so that it will always be clear which indexing system is being used.
+Unlike the normal indexing system, which starts from \#0, negative indexes start from \#-1. This serves to definitely highlight which indexing system is being used.
 
 ::::::::::::::::::::::::::::::::::::
 
-If the index is a negative number, the indices are counted from the end of the ```list```. We can implement negative indices the same way we do positive ones:
+If the index is a negative number, the indices are counted from the end of the ```list```. We can implement negative indices in the same way as positive indices:
 
 
 ``` python
@@ -319,7 +319,7 @@ print(fibonacci[-1])
 
 ### **Slicing** {#sec:list:slicing}
 
-We may retrieve more than one value from a ```list``` at a time, as long as the values are in *consecutive* rows. This process is known as \emph{slicing}, and may be visualised as follows:
+It is also possible that you may wish to retrieve more than one value from a ```list``` at a time, as long as the values are in *consecutive* rows. This process is is termed \emph{slicing}, and may be visualised, as follows:
 
 ![](fig/slicing_diagram.png)
 
@@ -335,7 +335,7 @@ Given a ```list``` representing the above table:
 table = [5, 21, 5, -1]
 ```
 
-we may retrieve a slice of <span style="color: rgb(32, 121, 77);">table</span> as follows:
+we may retrieve a slice of <span style="color: rgb(32, 121, 77);">table</span>, as follows:
 
 
 ``` python
@@ -385,7 +385,7 @@ print(table[1:-2])
 [21]
 ```
 
-If the second index of a slice represents the last index of a ```list```, it be written as:
+If the second index of a slice represents the last index of a ```list```, it would be written as:
 
 ``` python
 print(table[2:])
@@ -404,7 +404,7 @@ print(table[-3:])
 [21, 5, -1]
 ```
 
-We may store indices and slices in variables:
+We may also store indices and slices in variables:
 
 
 ``` python
@@ -435,7 +435,7 @@ print(table[my_slice])
 
 ## Practice Exercise 4
 <p style='text-align: justify;'>
-Retrieve and display a slice of Fibonacci numbers from the ```list``` you created in [Practice Exercise 1](#diy:array:list:fibonacci) that includes all the members from the 2nd number onwards --- *i.e*.  the slice must not include the first value in the ```list```.
+Retrieve and display a slice of Fibonacci numbers from the ```list``` you created in [Practice Exercise 1](#diy:array:list:fibonacci) that includes all the members from the second number onwards --- *i.e*.  the slice must not include the first value in the ```list```.
 </p>
 
 ::::::::::::::::: solution
@@ -458,7 +458,7 @@ print(fibonacci[1:])
 :::::::::::::::::::::::::::::::::::: callout
 ## Note
 <p style='text-align: justify;'>
-**Methods** are features of [Object-Oriented Programming (OOP)](https://en.wikipedia.org/wiki/Object-oriented_programming), a programming paradigm that we do not discuss in the context of this course. You can think of a *method* as a *function* that is associated with a specific *type*. The job of a *method* is to provide a certain functionality unique to the *type* it is associated with. In this case, ```.index()``` is a *method* of type ```list``` that given a value, finds and produces its index from the ```list```.
+**Methods** are features of [Object-Oriented Programming (OOP)](https://en.wikipedia.org/wiki/Object-oriented_programming) - a programming paradigm that we do not discuss in the context of this course. You can think of a *method* as a *function* that is associated with a specific *type*. The job of a *method* is to provide a certain functionality unique to the *type* it is associated with. In this case, ```.index()``` is a *method* of type ```list``` that, given a value, finds and produces its index from the ```list```.
 </p>
 
 ::::::::::::::::::::::::::::::::::::
@@ -474,7 +474,7 @@ table = [5, 21, 5, -1]
 ```
 
 
-we can also find out the index of a specific value. To do so, we use the <kbd>.index()</kbd> *method*:
+we can also determine the index of a specific value. To do so, we use the <kbd>.index()</kbd> *method*:
 
 
 ``` python
@@ -555,18 +555,17 @@ print(fibonacci.index(21))
 
 ### **Mutability** {#subsubsec:list:mutability}
 <p style='text-align: justify;'>
-Arrays of type ```list``` are modifiable. That is, we can add new values, change the existing ones, or remove them from the array all together. Variable types that allow their contents to be modified are referred to as *mutable types* in programming.
+Mutability is a term that we use to refer to a structure’s capability of being change, once it is created. Arrays of type ```list``` are _modifiable_. That is, we can add new values, change the existing ones or remove them from the array, altogether. Variable types that allow their contents to be modified are referred to as *mutable types* in programming.
 </p>
 
 #### **Addition of new members**
 
-Given a ```list``` called <span style="color: rgb(32, 121, 77);">table</span> as:
+Given a ```list``` called <span style="color: rgb(32, 121, 77);">table</span>, we can add new values to it using <kbd>.append()</kbd>:
 
 \begin{lstlisting}
 	table = [5, 21, 5, -1]
 \end{lstlisting}
 
-We can add new values to <span style="color: rgb(32, 121, 77);">table</span> using <kbd>.append()</kbd>:
 
 
 ``` python
@@ -591,7 +590,7 @@ print(table)
 ```
 
 <p style='text-align: justify;'>
-Sometimes, it may be necessary to insert a value at a specific index in a ```list```. To do so, we may use <kbd>.insert()</kbd>, which takes two input arguments; the first representing the index, and the second the value to be inserted:
+Sometimes, it may be necessary to insert a value at a specific position or index in a ```list```. To do so, we may use <kbd>.insert()</kbd>, which takes two input arguments; the first representing the index, and the second the value to be inserted:
 </p>
 
 
@@ -609,11 +608,11 @@ print(table)
 
 ## Practice Exercise 6
 
-Given <span style="color: rgb(32, 121, 77);">fibonacci</span> the ```list``` representing the first 8 numbers in the Fibonacci sequence that you created in [Practice Exercise 1](#diy:array:list:fibonacci):
+Given <span style="color: rgb(32, 121, 77);">fibonacci</span> - the ```list``` representing the first 8 numbers in the Fibonacci sequence that you created in [Practice Exercise 1](#diy:array:list:fibonacci):
 
 1. The 10^th^ number in the Fibonacci sequence is 55. Add this value to <span style="color: rgb(32, 121, 77);">fibonacci</span>.
 
-2. Now that you have added 55 to the ```list```, it no longer provides a correct representation of the Fibonacci sequence. Alter <span style="color: rgb(32, 121, 77);">fibonacci</span> and insert the missing number such that your it correctly represents the first 10 numbers in the Fibonacci sequence, as follows:
+2. Now that you have added 55 to the ```list```, it no longer provides a correct representation of the Fibonacci sequence. Alter <span style="color: rgb(32, 121, 77);">fibonacci</span> and insert the missing number such that the list correctly represents the first 10 numbers in the Fibonacci sequence, as follows:
 
 
 
@@ -652,7 +651,7 @@ Given a ```list``` as:
 table = [5, 21, 5, 56, -1, 29, 'a text']
 ```
 
-We can also modify the exiting value or values inside a ```list```. This process is sometimes referred to as *item assignment*:
+we can also modify the exiting value or values inside a ```list```. This process is sometimes referred to as *item assignment*:
 
 
 ``` python
@@ -679,7 +678,7 @@ print(table)
 ```
 
 <p style='text-align: justify;'>
-It is also possible to perform *item assignment* over a *slice* containing any number of values. Note that when modifying a slice, the replacement values must be the same length as the slice we are trying to replace:
+It is also possible to perform *item assignment* over a *slice* containing any number of values. Note that when modifying a slice, the replacement values must be _the same length_ as the slice we are trying to replace:
 </p>
 
 
@@ -721,14 +720,14 @@ print(table)
 
 ## Practice Exercise 7
 
-Given a ```list``` containing the first 10 [prime numbers](https://en.wikipedia.org/wiki/Prime_number) as:
+Create a ```list``` containing the first 10 [prime numbers](https://en.wikipedia.org/wiki/Prime_number) as:
 
 ```
 primes = [2, 3, 5, 11, 7, 13, 17, 19, 23, 29]
 
 ```
 <p style='text-align: justify;'>
-However, values 11 and 7 have been misplaced in the sequence. Correct the order by replacing the slice of <span style="color: rgb(32, 121, 77);">primes</span> that represents <span style="color: rgb(32, 121, 77);">[11, 7]</span> with <span style="color: rgb(32, 121, 77);">[7, 11]</span>.
+Values 11 and 7, however, have been misplaced in the sequence. Correct the order by replacing the slice of <span style="color: rgb(32, 121, 77);">primes</span> that represents <span style="color: rgb(32, 121, 77);">[11, 7]</span> with <span style="color: rgb(32, 121, 77);">[7, 11]</span>.
 </p>
 
 ::::::::::::::::: solution
@@ -747,7 +746,7 @@ primes[3:5] = [7, 11]
 
 #### **Removal of members**
 <p style='text-align: justify;'>
-When removing a value from a ```list``` array, we have two options depending on our needs: we either remove the member and retain the value in another variable, or we remove it and dispose of the value.
+When removing a value from a ```list```, we have two options depending on our needs: we either remove the member and retain the value in another variable, or we remove it and dispose of the value, completely.
 </p>
 
 <p style='text-align: justify;'>
@@ -766,7 +765,7 @@ print(table)
 ```
 
 
-Alternatively, we can use <kbd>del</kbd>; a Python syntax that we can use in this context to delete a specific member using its index:
+Alternatively, we can use <kbd>del</kbd>; a Python syntax that we can use, in this context, to delete a specific member using its index:
 
 
 ``` python
@@ -782,7 +781,7 @@ print(table)
 As established above, we can also delete a member and retain its value. Of course we can do so by holding the value inside another variable before deleting it.
 </p>
 <p style='text-align: justify;'>
-Whilst that is a valid approach, Python's ```list``` provide us with <kbd>.pop()</kbd> to simplify the process even further. The method takes one input argument for the index of the member to be removed. It removes the member from the ```list``` and returns its value, so that we can retain it in a variable:
+Whilst this is a valid approach, Python's ```list``` provide us with <kbd>.pop()</kbd> to simplify the process even further. The method takes one input argument for the index of the member to be removed. It removes the member from the ```list``` and returns its value, so that we can retain it in a variable:
 </p>
 
 
@@ -802,9 +801,9 @@ Removed value: 0
 
 ## Practice Exercise 8
 
-We know that the nucleotides of DNA include <span style="color: rgb(32, 121, 77);">A</span>, <span style="color: rgb(32, 121, 77);">C</span>, <span style="color: rgb(32, 121, 77);">T</span>, and <span style="color: rgb(32, 121, 77);">G</span>.
+We know that the nucleotides of DNA include Adenosine, Cytosine, Threonine and Glutamine: <span style="color: rgb(32, 121, 77);">A</span>, <span style="color: rgb(32, 121, 77);">C</span>, <span style="color: rgb(32, 121, 77);">T</span>, and <span style="color: rgb(32, 121, 77);">G</span>.
 
-Given a ```list``` representing the nucleotides of a DNA strand as:
+Given a ```list``` representing a nucleotide sequence:
 
 ```
 strand = ['A', 'C', 'G', 'G', 'C', 'M', 'T', 'A']
@@ -872,11 +871,11 @@ One of the two <span style="color: rgb(32, 121, 77);">G</span> nucleotides, the 
 
 #### **Method--mediated operations**
 <p style='text-align: justify;'>
-We already know that *methods* are akin to functions that are associated with a specific type. In this subsection, we will be looking into how operations are performed using *methods*. To that end, we will not be introducing anything new, but recapitulate what we already know from different perspectives.
+We already know that *methods* are akin to functions that are associated with a specific type. In this subsection, we will be looking at how operations are performed using *methods*. We will not be introducing anything new, but will recapitulate what we already know from, but from different perspectives.
 </p>
 
 <p style='text-align: justify;'>
-So far in this chapter, we have learned how to perform different operations on ```list``` arrays in Python. You may have noticed that some operations return a result that we can store in a variable, whilst others change the original value.
+So far in this chapter, we have learned how to perform different operations on ```list``` arrays in Python. You may have noticed that some operations return a result that we can store in a variable, while others change the original value.
 </p>
 With that in mind, we can divide operations performed using *methods* into two general categories:
 
@@ -914,7 +913,7 @@ print(table)
 ```
 
 
-If we attempt to store the output of an operation that does not a return result inside a variable, the variable will be created, but its value will be set to ```None```:
+If we attempt to store the output of an operation that does not a return result,  and store this into a variable, the variable will be created, but its value will be set to ```None```, by default:
 
 
 ``` python
@@ -930,7 +929,7 @@ None
 ```
 
 
-It is important to know the difference between these types of operations. So as a rule of thumb, when we use *methods* to perform an operation, we can only change the original value if it is an instance of a *mutable* type. See [Table](02-input_output.Rmd#fig:nativeTypes) to find out which built-in types are mutable in Python.
+It is important to know the difference between these types of operations. So as a rule of thumb, when we use *methods* to perform an operation, we can only change the original value if it is an instance of a *mutable* type. See [Table](02-input_output.Rmd#fig:nativeTypes) to find out which of Python’s built-in types are mutable.
 
 The *methods* that are associated with *immutable* objects always return the results and do not provide the ability to alter the original value:
 
@@ -1004,7 +1003,7 @@ print(ind)
 
 ### **List members**{#listMem}
 <p style='text-align: justify;'>
-A ```list``` is a collection of members that are independent of each other. Each member has its own [type](02-input_output.Rmd#varTypes), and is therefore subject to the properties and limitation of that type:
+A ```list``` is a collection of members that are independent of each other. Each member has its own [type](02-input_output.Rmd#varTypes), and is therefore subject to the properties and limitations of that type:
 </p>
 
 
@@ -1039,7 +1038,7 @@ print(table)
 [2, 2.1, 'abcdef']
 ```
 <p style='text-align: justify;'>
-Likewise, the ```list``` plays the role of a container that may incorporate any number of values. Thus far, we have learned how to handle individual members of a ```list```. In this subsection, we will be looking at several techniques that help us address different circumstances where we look at a ```list``` from a 'wholist' perspective; that is, a container whose members are unknown to us.
+A ```list``` in Python plays the role of a container that may incorporate _any number_ of values. Thus far, we have learned how to handle individual members of a ```list```. In this subsection, we will be looking at several techniques that help us address different circumstances where we look at a ```list``` from a 'wholist' perspective; that is, a container whose members are unknown to us.
 </p>
 
 #### **Membership test**
@@ -1291,7 +1290,7 @@ print(len([1, 5, 9]))
 3
 ```
 <p style='text-align: justify;'>
-The <kbd>len()</kbd> function *always* returns an integer value (```int```) equal to or greater than zero. We can store the length in a variable and use it in different [mathematical](02-input_output.Rmd#math_ops) or [logical](02-input_output.Rmd#subsec:logicalOperatons) operations:
+The <kbd>len()</kbd> function *always* returns an integer value (```int```) equal to, or greater than, zero. We can store the length in a variable and use it in different [mathematical](02-input_output.Rmd#math_ops) or [logical](02-input_output.Rmd#subsec:logicalOperatons) operations:
 </p>
 
 
@@ -1337,7 +1336,7 @@ One or more students are not here yet.
 ## Remember
 Both <kbd>in</kbd> and <kbd>len()</kbd> may be used in reference to any *type* of array or sequence in Python.
 
-See [Table](02-input_output.Rmd#fig:nativeTypes) to find out which built-in types in Python are regarded as a sequence.
+See [Table](02-input_output.Rmd#fig:nativeTypes) to find out which of Python's built-in types are regarded as a sequence.
 
 ::::::::::::::::::::::::::::::::::::
 
@@ -1348,7 +1347,7 @@ See [Table](02-input_output.Rmd#fig:nativeTypes) to find out which built-in type
 
 Given the ```list``` of random peptides defined in [Practice Exercise 9](#diy:arrays:list:randomPeptides):
 
-1. Define a ```list``` called <span style="color: rgb(32, 121, 77);">overlaps</span> containing the sequences whose presence in <span style="color: rgb(32, 121, 77);">peptides</span> you confirmed in [Practice Exercise 9](#diy:arrays:list:randomPeptides).
+1. Define a ```list``` called <span style="color: rgb(32, 121, 77);">overlaps</span>, containing the sequences whose presence in <span style="color: rgb(32, 121, 77);">peptides</span> you previously confirmed in [Practice Exercise 9](#diy:arrays:list:randomPeptides).
 2. Determine the length of <span style="color: rgb(32, 121, 77);">peptides</span>.
 3. Determine the length of <span style="color: rgb(32, 121, 77);">overlaps</span>.
 
@@ -1426,7 +1425,7 @@ Length of overlaps: 2
 
 ### **Weak References and Copies**
 <p style='text-align: justify;'>
-In our discussion on [mutability](#subsubsec:list:mutability), we also discussed some of the in-place operations such as <kbd>.remove()</kbd> and <kbd>.append()</kbd> that we use to modify an existing ```list```. The use of these operations gives rise the following question: What if we need to perform an in-place operation, but also want to preserve the original array?
+In our discussion on [mutability](#subsubsec:list:mutability), we also explored some of the in-place operations such as <kbd>.remove()</kbd> and <kbd>.append()</kbd>, that we can use to modify an existing ```list```. The use of these operations gives rise the following question: What if we need to perform an in-place operation, but also want to preserve the original array?
 </p>
 
 <p style='text-align: justify;'>
@@ -1459,7 +1458,7 @@ Now if we perform an in-place operation on only *one* of the two variables (the 
 table_a.append(5)
 ```
 
-we will in effect change *both* of them:
+we will effectively change *both* of them:
 
 
 ``` python
@@ -1471,7 +1470,7 @@ print(table_a, table_b)
 ```
 
 <p style='text-align: justify;'>
-This is useful if we need to change the name of a variable under certain conditions to make our code more explicit and readable; however, it does *nothing* to preserve an actual copy of the original data.
+This is useful if we need to change the name of a variable under certain conditions to make our code more explicit and legible; however, it does *nothing* to preserve an actual copy of the original data.
 </p>
 To retain a copy of the original array, however, we must perform a *deep copy* as follows:
 
@@ -1488,7 +1487,7 @@ print(table_b, table_c)
 
 where <span style="color: rgb(32, 121, 77);">table_c</span> represents a *deep copy* of <span style="color: rgb(32, 121, 77);">table_b</span>.
 
-In this instance, performing an in-place operation on one variable would *not* have any impacts on the other one:
+In this instance, performing an in-place operation on one variable would *not* have any impacts on the other:
 
 
 ``` python
@@ -1564,7 +1563,7 @@ amino_acids = [
 </p>
 
 <p style='text-align: justify;'>
-2. Add to <span style="color: rgb(32, 121, 77);">amino_acids_annotations</span> the **1-letter** annotations for the ambiguous amino acids as outlined in the table.
+2. Add to <span style="color: rgb(32, 121, 77);">amino_acids_annotations</span> the **1-letter** annotations for the ambiguous amino acids, as outlined in the table.
 </p>
 
 <p style='text-align: justify;'>
@@ -1572,7 +1571,7 @@ amino_acids = [
 </p>
 
 <p style='text-align: justify;'>
-4. Using [logical operations](02-input_output.Rmd#subsec:logicalOperatons), test the two values stored in <span style="color: rgb(32, 121, 77);">lengths</span> for equivalence and display the result as a boolean (**i.e.**  ```True``` or ```False```) output.
+4. Using [logical operations](02-input_output.Rmd#subsec:logicalOperatons), test the two values stored in <span style="color: rgb(32, 121, 77);">lengths</span> for equivalence and display the result as a boolean (```True``` or ```False```) output.
 </p>
 
 ::::::::::::::::: solution
@@ -1630,7 +1629,7 @@ False
 
 ### **Conversion to list** {#arrays:list:conversion}
 <p style='text-align: justify;'>
-As highlighted earlier in the section, arrays in Python can contain any value regardless of type. We can exploit this feature to extract some interesting information about the data we store in an array.
+As highlighted earlier in this section, arrays in Python can contain any value - regardless of type. We can exploit this feature to extract some interesting information about the data we store in an array.
 </p>
 
 <p style='text-align: justify;'>
@@ -1642,7 +1641,7 @@ Suppose we have the sequence for [Protein Kinase A Gamma (catalytic) subunit for
 
 ``` python
 # Multiple lines of text may be split into
-# several lines inside parenthesis:
+# several lines inside parentheses:
 
 human_pka_gamma = (
   'MAAPAAATAMGNAPAKKDTEQEESVNEFLAKARGDFLYRWGNPAQNTASSDQFERLRTLGMGSFGRVMLV'
@@ -1661,7 +1660,7 @@ print(type(human_pka_gamma))
 ```
 
 
-We can now *convert* our sequence from its original type of ```str``` to ```list``` by using <kbd>list()</kbd> as a *function*. Doing so will automatically decompose the text down to individual characters:
+We can now *convert* our sequence from its original type of ```str``` to ```list``` by using <kbd>list()</kbd> as a *function*. Doing so will automatically decompose the text down into individual characters:
 
 
 ``` python
@@ -1693,7 +1692,7 @@ Total number of threonine residues: XX
 
 * If it does, display:
 ```
-The sequence does contain both serine and threonine residues.
+The sequence contains both serine and threonine residues.
 ```
 
 * if it does not, display:
@@ -1742,7 +1741,10 @@ print(
 :::::::::::::::::::::::::::::::::::: callout
 ## Advanced Topic
 <p style='text-align: justify;'>
-[Generators](https://en.wikipedia.org/wiki/Generator_(computer_programming)) represent a specific [type](02-input_output.Rmd#varTypes) in Python whose results are *not* immediately evaluated. This is a technique referred to as *lazy evaluation* in [functional programming](https://en.wikipedia.org/wiki/Functional_programming), and is often used in the context of a [for-loop](). This is because they postpone the evaluation of their results for as long as possible. We do not discuss generators in the course, but you can find out more about them in the [official documentations](https://docs.python.org/3.6/howto/functional.html\#generators).
+[Generators](https://en.wikipedia.org/wiki/Generator_(computer_programming)) represent a specific [type](02-input_output.Rmd#varTypes) in Python whose results are *not* immediately evaluated. A generator is a specific type of iterable (an object capable of returning elements, one at a time), that can return its items, lazily. This means that it generates values on the fly, and only as and when required in your program. Generators can be particularly useful when working with large datasets, where loading all the data into memory can be computationally expensive. Using genarators with such data, can help to process it in more manageable units. 
+</p>
+<p style='text-align: justify;'>
+Generators’ lazy evaluation in [functional programming](https://en.wikipedia.org/wiki/Functional_programming) is often used in the context of a `for-loop`: which we will explore in a later L2D lesson on iterations. We do not further explore generators on this course, but if you are interested to learn more, you can find plenty of information in the [following official documentation](https://docs.python.org/3.6/howto/functional.html\#generators).
 </p>
 
 ::::::::::::::::::::::::::::::::::::
@@ -1752,12 +1754,12 @@ print(
 [**Data Structures: More on Lists**](https://docs.python.org/3.6/tutorial/datastructures.html\#more-on-lists)
 
 <p style='text-align: justify;'>
-In this subsection, we will be reviewing some of the useful and important *methods* that are associated with object of type ```list```. To that end, we shall use snippets of code that exemplify such *methods* in practice. A [cheatsheet](#cheatsheat) of the *methods* associated with the built-in arrays in Python can be helpful.
+In this subsection, we will be reviewing some of the useful and important *methods* that are associated with object of type ```list```. We will make use of snippets of code that exemplify such *methods*, in practice. The linked [cheatsheet](#cheatsheat) of the *methods* associated with the built-in arrays in Python can be helpful.
 </p>
 
-![Commons operations for list, tuple, and set arrays in Python.](fig/arrays-cheatsheet.png){#cheatsheat}
+![Common operations for list, tuple and set arrays in Python.](fig/arrays-cheatsheet.png){#cheatsheat}
 <p style='text-align: justify;'>
-The *methods* outline here are not individually described; however, at this point, you should be able to work out what they do by looking at their names and respective examples.
+The *methods* outlined here are not individually described; however, at this point, you should be able to work out what they do by looking at their names and respective examples.
 </p>
 Count a specific value within a ```list```:
 
@@ -1791,7 +1793,7 @@ print(table_a, table_b, table_c)
 ```
 
 
-Extend a ```list``` by adding two lists to each other. Note that adding two lists is *not* an in-place operation:
+Extend a ```list``` by adding two lists to each other. Note: adding two lists to each other is *not* considered an in-place operation:
 
 
 ``` python
@@ -1822,7 +1824,7 @@ print(table_c == table_d)
 False
 ```
 <p style='text-align: justify;'>
-We can also reverse the values in a ```list```. There are two methods for doing so:Being a generator means that the output of the function is not evaluated immediately; and instead, we get a generic output:
+We can also reverse the values in a ```list```. There are two methods for doing so. Being a generator means that the output of the function is not evaluated immediately; and instead, we get a generic output. The first of these two methods is:
 </p>
 
 1. Through an in-place operation using <kbd>.reverse()</kbd>
@@ -1840,7 +1842,7 @@ Reversed: [16, 15, 2, 2, 2, 1]
 
 
 
-2. Through <kbd>reversed()</kbd>, which is a build-in generator function.
+2. And secondly, using <kbd>reversed()</kbd> - which is a built-in generator function.
 
 ``` python
 table = [1, 2, 2, 2, 15, 16]
@@ -1851,11 +1853,11 @@ print("Type:", type(table_rev))
 ```
 
 ``` output
-Result: <list_reverseiterator object at 0x7fd6818c4d60>
+Result: <list_reverseiterator object at 0x7f7839a39240>
 Type: <class 'list_reverseiterator'>
 ```
 
-We can, however, force the evaluation process by converting the generator results onto a ```list```:
+We can, however, force the evaluation process by converting the generator results into a ```list```:
 
 
 ``` python
@@ -1868,7 +1870,7 @@ print('Evaluated:', table_rev_evaluated)
 Evaluated: [16, 15, 2, 2, 2, 1]
 ```
 
-Members of a ```list``` may be sorted in-place as follows:
+Members of a ```list``` may also be sorted in-place, as follows:
 
 
 ``` python
@@ -1885,7 +1887,7 @@ Sorted (ascending): [1, 2, 2, 2, 15, 16]
 :::::::::::::::::::::::::::::::::::: callout
 ## Advanced Topic
 
-There is also the built-in function <kbd>sorted()</kbd> that works in a similar way to <kbd>reversed()</kbd>. Also a generator function, it offers more advanced features that are beyond the scope of this course. You can find out more about it from the [official documentations](https://docs.python.org/3/library/functions.html\#sorted) and [examples](https://docs.python.org/3/howto/sorting.html\#sortinghowto).
+There is also a further function built into Python: <kbd>sorted()</kbd>. This works in a similar manner to <kbd>reversed()</kbd>. Also a generator function, it offers more advanced features that are beyond the scope of this course. You can find out more about it from the [official documentation](https://docs.python.org/3/library/functions.html\#sorted) and [examples](https://docs.python.org/3/howto/sorting.html\#sortinghowto).
 ::::::::::::::::::::::::::::::::::::
 
 The <kbd>.sort()</kbd> method takes an optional keyword argument entitled *reverse* (default: ```False```). If set to ```True```, the method will perform a descending sort:
@@ -1902,7 +1904,7 @@ print("Sorted (descending):", table)
 Sorted (descending): [16, 15, 2, 2, 2, 1]
 ```
 
-We can also create an empty ```list```, so that we can add members to it later in our code using <kbd>.append()</kbd> or <kbd>.extend()</kbd> amongst other tools:
+We can also create an empty ```list```, so that we can add members to it later in our code using <kbd>.append()</kbd>, or <kbd>.extend()</kbd> or other tools:
 
 
 ``` python
@@ -1942,7 +1944,7 @@ print(another_table)
 
 ## Practice Exercise 13
 <p style='text-align: justify;'>
-Create a ```list```, and experiment with each of the methods provided in the above example. Try including members of different *types* in your ```list``` and see how each of these methods behave.
+Create a ```list```, and experiment with each of the methods provided in the above example. Try including members of different *types* in your ```list```, and see how each of these methods behave.
 </p>
 
 ::::::::::::::::: solution
@@ -1954,13 +1956,13 @@ This practice exercise was intended to encourage you to experiment with the meth
 
 :::::::::::::::::::::::::::::::
 
-### **Nested arrays** {#arrays:list:nestedArrays}
+### **Nested Arrays** {#arrays:list:nestedArrays}
 <p style='text-align: justify;'>
-At this point, you should be comfortable with creating, handling, and manipulating arrays of type ```list``` in Python. It is important to have a relatively good understanding of the principles outlined in this section so far before you start learning about *nested arrays*.
+At this point, you should be comfortable with creating, handling and manipulating arrays of type ```list```, in Python. It is important to have a foundational understanding of the principles outlined in this section so far, before starting to learn about *nested arrays*.
 </p>
 
 <p style='text-align: justify;'>
-We have already established that arrays can contain any value regardless of type. This means that they also contain other arrays. An array that includes at least one member that is itself an array is referred to as a *nested arrays*. This can be thought of as a table with more than one column:
+We have already established that arrays can contain any value - regardless of type. This means that they can also contain other arrays. An array that includes at least one member that is, itself, an array is referred to as a **nested array**. This can be thought of as a table with more than one column:
 </p>
 
 ![](fig/nested_arrays.png)
@@ -1968,7 +1970,8 @@ We have already established that arrays can contain any value regardless of type
 :::::::::::::::::::::::::::::::::::: callout
 ## Remember
 <p style='text-align: justify;'>
-Arrays can contain values of any *type*. This rule applies to nested arrays too. We have exclusively included ```int``` numbers in our table to trivialise that example.
+Arrays can contain values of any *type*. This rule applies to nested arrays too. We have exclusively included ```int``` numbers in our table in order to simplify the above example.
+
 </p>
 
 ::::::::::::::::::::::::::::::::::::
@@ -1990,13 +1993,13 @@ print(table)
 ```
 
 #### **Indexing**
-The indexing principles for nested arrays is slightly different. To retrieve an individual member in a nested ```list```, we always reference the *row index*, followed by the *column index*.
+The indexing principles for nested arrays are slightly different to those we have familiarised with, up to this point. To retrieve an individual member in a nested ```list```, we always reference the *row index*, followed by the *column index*.
 
 We may visualise the process as follows:
 
 ![](fig/nested_arrays2.png)
 
-To retrieve an entire row, we only need to include the reference for that row:
+To retrieve an entire row, we only need to include the reference for that row. All the values within the row are referenced, implicitly:
 
 
 ``` python
@@ -2019,7 +2022,7 @@ print(table[0][1])
 ```
 
 <p style='text-align: justify;'>
-We may also extract slices from a nested array. The protocol is identical to normal arrays described in subsection [slicing](#sec:list:slicing). In nested arrays, however, we may take slices from the columns as well as the rows:
+We may also extract slices from a nested array. The protocol is identical to normal arrays, described in the previous section of this lesson on [slicing](#sec:list:slicing). In nested arrays, however, we may take slices from the columns as well as the rows:
 </p>
 
 
@@ -2094,15 +2097,15 @@ An array with only one member --- *e.g.* <span style="color: rgb(32, 121, 77);">
 
 ## Practice Exercise 14
 
-Give then following of pathogens and their corresponding diseases:
+Given the following Table of pathogens and their corresponding diseases:
 
 ![](fig/pathogens.png)
 <p style='text-align: justify;'>
-1. Substituting <span style="color: rgb(32, 121, 77);">N/A</span> for ```None```, create an array to represent the table in the original order. Retain the array in a variable and display the result.
+1. Substitute <span style="color: rgb(32, 121, 77);">N/A</span> for ```None```, and create an array to represent the table in its presented order. Retain the array in a variable, and display the result.
 </p>
 
 <p style='text-align: justify;'>
-2. Modify the array you created so that the members are sorted *descendingly* and display the result.
+2. Modify the array you created so that its members are sorted *descendingly*, and display the result.
 </p>
 
 ::::::::::::::::: solution
@@ -2149,15 +2152,15 @@ print(disease_pathogen)
 
 ### **Dimensions** {#arrays:list:dimensions}
 
-A nested array is considered *two dimensional* or *2D* when:
+A nested array is considered *two-dimensional* or *2D* when:
 
-*	*all* of the members in a nested array are arrays themselves;
-
-
-* *all* of the sub-arrays have the same length --- *i.e.*  all the columns in the table are filled and have the same number of rows; and,
+*	*All* of its members in a nested array are arrays, themselves;
 
 
-* *all* of the members of the sub-arrays are *homogeneous* in type --- *i.e.*  they all have the same type (*e.g.* ```int```).
+* *All* sub-arrays are of **equal length** --- *i.e.*  all the columns in the table are filled and have the same number of rows; and,
+
+
+* *All* members of the sub-arrays are *homogeneous* in type --- *i.e.*  they all have the same type (*e.g.* ```int```).
 
 
 A two dimensional arrays may be visualised as follows:
@@ -2166,7 +2169,7 @@ A two dimensional arrays may be visualised as follows:
 :::::::::::::::::::::::::::::::::::: callout
 ## Advanced Topic
 <p style='text-align: justify;'>
-Nested arrays may themselves be nested. This means that, if needed, we can have 3, 4 or *n* dimensional arrays, too. Analysis and organisation of such arrays is an important part of a field known as [optimisation](https://en.wikipedia.org/wiki/Mathematical_optimization) in computer science and mathematics. Optimisation is itself the cornerstone of machine learning, and addresses the problem known as [curse of dimensionality](https://en.wikipedia.org/wiki/Curse_of_dimensionality).
+Nested arrays may, themselves, be nested. This means that, if needed, we can have 3, 4 or *n* dimensional arrays, too. Analysis and organisation of such arrays is an important part of a field known as [optimisation](https://en.wikipedia.org/wiki/Mathematical_optimization) in computer science and mathematics. Optimisation is the cornerstone of machine learning, and addresses the problem known as [curse of dimensionality](https://en.wikipedia.org/wiki/Curse_of_dimensionality).
 </p>
 
 ::::::::::::::::::::::::::::::::::::
@@ -2231,13 +2234,13 @@ print(table[:2])
 
 ## Practice Exercise 15
 <p style='text-align: justify;'>
-Computers see images as multidimensional arrays (matrices). In its simplest form, an image is a two-dimensional array containing only 2 colours.
+Computers see images as multidimensional arrays (matrices). In its simplest form, an image is a two-dimensional array containing only two colours.
 </p>
 Given the following black and white image:
 
 ![](fig/image.png)
 <p style='text-align: justify;'>
-1. Considering that black and white squares represent zeros and ones respectively, create a two-dimensional array to represent the above image. Display the results.
+1. Considering that black and white squares represent zeros and ones respectively, create a two-dimensional array to represent the image. Display the results.
 </p>
 
 <p style='text-align: justify;'>
@@ -2293,21 +2296,21 @@ print(cross_bool)
 :::::::::::::::::::::::::::::::
 ### **Summary**
 
-At this point, you should be familiar with arrays and how they work in general. Throughout this section, we talked about ```list```,  which is one the most popular types of *built-in* arrays in Python. To that end, we learned:
+At this point, you should be familiar with arrays and how they work, in general. Throughout this section, we extensively covered the Python ```list```,  which is one of the language’s most popular types of *built-in* arrays. We also learned:
 
-* how to \emph{create} ```list``` from the scratch;
+* How to \emph{create} ```list``` from the scratch;
 
-* how to *manipulate* ```list``` using different *methods*;
+* How to *manipulate* a ```list``` using different *methods*;
 
-* how to use *indexing* and *slicing* techniques to our advantage;
+* How to use *indexing* and *slicing* techniques to our advantage;
 
-* *mutability* --- a concept we revisit in the forthcoming lessons;
+* *Mutability* --- a concept we revisit in the forthcoming lessons;
 
-*  *in-place operations*, and the difference between *weak references* and *deep copies*;
+*  *In-place operations*, and the difference between *weak references* and *deep copies*;
 
-* *nested* and *multi-dimensional* arrays; and,
+* *Nested* and *multi-dimensional* arrays; and,
 
-* how to *convert* other sequences (*e.g.* ```str```) to ```list```.
+* How to *convert* other sequences (*e.g.* ```str```) to ```list```.
 
 ## Tuple {#subsec:tuples}
 
@@ -2315,19 +2318,27 @@ At this point, you should be familiar with arrays and how they work in general. 
 
 
 <p style='text-align: justify;'>
-Another type of built-in arrays, ```tuple``` is an immutable alternative to ```list```. That is, once created, the contents may not be modified in any way. One reason we use tuples is to ensure that the contents of our array does not change accidentally.
+Another of Python’s built-in array types is called a ```tuple```. A tuple is an immutable alternative to ```list```. That is, once a tuple has been created, its contents cannot be modified in any way. Tuples are often used in applications where it is imperative that the contents of an array cannot be changed.
 </p>
 <p style='text-align: justify;'>
-For instance, we know that in the [Wnt signaling pathway](http://www.cell.com/cell/fulltext/S0092-8674(12)00586-7), there are two co-receptors. This is final, and would not change at any point in our programme.
+For instance, we know that in the [Wnt signaling pathway](http://www.cell.com/cell/fulltext/S0092-8674(12)00586-7), there are two co-receptors. This is final, and would not change at any point in our program.
 </p>
 
 :::::::::::::::::::::::::::::::::::: callout
 ## Remember
 <p style='text-align: justify;'>
-To implement a ```tuple``` in Python, we place our values separated by commas inside parenthesis or <span style="color: rgb(32, 121, 77);">(1, 2, 3, ...)</span>.
+The most common way to implement a ```tuple``` in Python, is to place our comma-separated values inside round parentheses: <span style="color: rgb(32, 121, 77);">(1, 2, 3, ...)</span>. While there is no specific theoretical term for a tuple instantiated with round parentheses, we can refer to this type of tuple as an **explicit tuple**.
+
+
+You can also instantiate a tuple without parentheses, as well: <span style="color: rgb(32, 121, 77);">(1, 2, 3, ...)</span>. In this case, Python acknowledges that a tuple is implied, and is therefore assumed. Thus, we often refer to this type of tuple as an **implicit tuple**, and these are created using an operation called *packing*.
+
 </p>
 
 ::::::::::::::::::::::::::::::::::::
+
+For the time being, we will be making use of explicit tuples, as they are the clearest and most explicit in annotation, and therefore easiest to program with and recognise. 
+
+Similarly, we can briefly demonstrate that removing round parentheses, or instantiating a implicit tuple, is categorised in the same way, in Python:
 
 
 ``` python
@@ -2380,7 +2391,7 @@ Wnt Signaling
 ```
 
 <p style='text-align: justify;'>
-Indexing and slicing principles for ```tuple``` is identical to ```list```, which we discussed in subsection [indexing](#sec:list:indexing) and [slicing](#sec:list:slicing) respectively.
+Indexing and slicing principles for a ```tuple``` are identical to those of a ```list```, aforementioned in this lesson’s subsections on [indexing](#sec:list:indexing) and [slicing](#sec:list:slicing).
 </p>
 
 ### **Conversion to tuple**
@@ -2499,7 +2510,11 @@ print(mixed_tuple[4], type(mixed_tuple[4]))
 :::::::::::::::::::::::::::::::::::: callout
 ## Advanced Topic
 <p style='text-align: justify;'>
-**Why / how can we change mutable objects inside a ```tuple``` when it is immutable?** Members of a ```tuple``` or not directly stored in the memory. An immutable value (*e.g.*  an ```int```) has an existing, predefined reference in the memory. When used in a ```tuple```, it is that reference that is *associated* with the ```tuple```, and not the value itself. On the other hand, a mutable object does not have a predefined reference in the memory and is instead created on request somewhere in the memory (wherever there is enough free space). Whilst we can never change or redefine predefined references, we can always manipulate something we have defined ourselves. When we make such an alteration, the location of our mutable object in the memory may well change, but its reference --- which is what is stored in a ```tuple```, remains identical. You can find out what is the reference an object in Python using the function ```id()```. If you experiment with it, you will notice that the reference to an immutable object (*e.g.*  an ```int``` value) would never change, no matter how many time you define it in a different context or variable. In contrast, the reference number to a mutable object (*e.g.*  a ```list```) changes every time it is defined, even if it contains exactly the same values.
+**Why and how can we change mutable objects inside a tuple, when a ```tuple``` is considered to be an immutable data structure: ** 
+
+Members of a ```tuple``` are not directly stored in memory. An immutable value (*e.g.* an integer: ```int```) has an existing, predefined reference, in memory. When used in a ```tuple```, it is this reference that is *associated* with the ```tuple```, and not the value itself. On the other hand, a mutable object does not have a predefined reference in memory, and is instead created on request somewhere in your computer’s memory (wherever there is enough free space). 
+
+While we can never change or redefine a predefined reference, we can always manipulate something we have defined ourselves. When we make such an alteration, the location of our mutable object in memory may well change, but its reference — which is what is stored in a ```tuple```, remains identical. In Python, it is possible to discover the reference an object is using, with the function ```id()```. Upon experimenting with this function, you will notice that the reference to an immutable object (*e.g.* an ```int``` value) will never change, no matter how many times you define it in a different context or variable. In contrast, the reference number to a mutable object (*e.g.* a ```list```) is changed every time it is defined, even if it contains exactly the same values.
 </p>
 
 ::::::::::::::::::::::::::::::::::::
@@ -2556,7 +2571,7 @@ print(member_a, type(member_a), len(member_a))
 
 ``` python
 # Empty parentheses also generate an empty tuple.
-# Remember: we cannot add values to an empty tuple later.
+# Remember: we cannot add values to an empty tuple, later.
 member_b = ()
 
 print(member_b, type(member_b), len(member_b))
@@ -2593,7 +2608,7 @@ John Doe <class 'str'> 8
 ```
 
 ### **Packing and unpacking**
-A ```tuple``` may be constructed without parenthesis. This is an implicit operation and is known as *packing*.
+As previously discussed, a ```tuple``` may also be constructed without parentheses. This is an implicit operation and is known as *packing*.
 
 :::::::::::::::::::::::::::::::::::: callout
 ## Remember
@@ -2672,7 +2687,7 @@ Given:
 protein_info = ('GFP', 238)
 ```
 
-Unpack <span style="color: rgb(32, 121, 77);">protein_info</span> into two distinct variables <span style="color: rgb(32, 121, 77);">protein_name</span> and <span style="color: rgb(32, 121, 77);">protein_length</span>.
+Unpack <span style="color: rgb(32, 121, 77);">protein_info</span> into two distinct variables: <span style="color: rgb(32, 121, 77);">protein_name</span> and <span style="color: rgb(32, 121, 77);">protein_length</span>.
 
 
 
@@ -2692,25 +2707,25 @@ protein_name, protein_length = protein_info
 :::::::::::::::::::::::::::::::::::: callout
 ## Note
 <p style='text-align: justify;'>
-There is another type of ```tuple``` in Python entitled ```namedtuple```. It allows for the members of a ```tuple``` to be named independently (*e.g.*  ```member.name``` or ```member.age```), and thereby eliminates the need for unpacking. It was originally implemented by [Raymond Hettinger](https://twitter.com/raymondh), one of Python's core developers, for Python 2.4 (in 2004) but was much neglected at the time. It has since gained popularity as a very useful tool. ```namedtuple``` is not a built-in tool, so it is not discussed here. However, it is included in the default library and is installed as a part of Python.
-If you are particularly adventurous, or want to learn more, feel free to have a look at the [official documentations](https://docs.python.org/3.6/library/collections.html\#collections.namedtuple) and examples. Raymond is also a regular speaker at PyCon (International Python Conferences), recordings of which are available on YouTube. He also uses his Twitter to talk about small, but important features in Python (yes, tweets!).
+There is another type of ```tuple``` in Python referred to as a ```namedtuple```. This allows for the members of a ```tuple``` to be named independently (*e.g.*  ```member.name``` or ```member.age```), and thereby eliminates the need for unpacking. It was originally implemented by [Raymond Hettinger](https://twitter.com/raymondh), one of Python's core developers, for Python 2.4 (in 2004) but was neglected at the time. It has since gained popularity as a very useful tool. ```namedtuple``` is not a built-in tool, so it is not discussed here. However, it is included in the default library and is installed as a part of Python.
+If you are feeling ambitious and would like to learn more, please take a look at the [official documentations](https://docs.python.org/3.6/library/collections.html\#collections.namedtuple) and examples. Raymond is also a regular speaker at PyCon (International Python Conferences), recordings of which are available online. He also often uses his Twitter/X account to talk about small, but important features in Python; which could be worth throwing him a follow.
 </p>
 
 ::::::::::::::::::::::::::::::::::::
 
 ### **Summary**
 <p style='text-align: justify;'>
-In this section, we learned about ```tuple```, another type of built-in arrays in Python that is *immutable*. This means that once created, the array can no longer be altered. We saw that trying to change the value of a ```tuple``` raises a ```TypeError```. We also established that ```list``` and ```tuple``` follow an identical indexing protocol, and that they have 2 methods in common: <kbd>.index()()</kbd> and <kbd>.count()</kbd>. Finally, we talked about *packing* and *unpacking* techniques, and how they improve the quality and readability of our code.
+In this section of our  Basic Python 2 lesson, we learned about ```tuple``` - another type of built-in array within Python, and one which is *immutable*. This means that once it is created, the array can no longer be altered. We saw that trying to change the value of a ```tuple``` raises a ```TypeError```. We also established that ```list``` and ```tuple``` follow an identical indexing protocol, and that they have 2 methods in common: <kbd>.index()()</kbd> and <kbd>.count()</kbd>. Finally, we talked about *packing* and *unpacking* techniques, and how they improve the quality and legibility of our code.
 </p>
 
 <p style='text-align: justify;'>
-If you are interested in learning about ```list``` and ```tuple``` in more depth, have a look at the [official documentations of Sequence Types -- list, tuple, range](https://docs.python.org/3/library/stdtypes.html#sequence-types-list-tuple-range).
+If you are interested in learning about ```list``` and ```tuple``` in more depth, have a look at the [official documentation of Sequence Types -- list, tuple, range](https://docs.python.org/3/library/stdtypes.html#sequence-types-list-tuple-range).
 </p>
 
 :::::::::::::::::::::::::::::::::::: callout
 ## Interesting Fact
 <p style='text-align: justify;'>
-Graph theory was initially developed by the renowned Swiss mathematician and logician Leonhard Euler (1707 -- 1783). However, graphs in the sense discussed here were introduced by the English mathematician James Joseph Sylvester (1814 -- 1897).
+Graph theory was initially developed by the renowned Swiss mathematician and logician Leonhard Euler (1707 -- 1783). Howeve graphs, in the sense discussed here, were introduced by the English mathematician James Joseph Sylvester (1814 -- 1897).
 </p>
 
 ::::::::::::::::::::::::::::::::::::
@@ -2729,7 +2744,7 @@ Graph theory was initially developed by the renowned Swiss mathematician and log
 table = [[1, 2, 3], ['a', 'b'], [1.5, 'b', 4], [2]]
 ```
 
-what is the length of <span style="color: rgb(32, 121, 77);">table</span> and why?
+What is the length of <span style="color: rgb(32, 121, 77);">table</span> and why?
 
 Store your answer in a variable and display it using <kbd>print()</kbd>.
 
@@ -2748,25 +2763,25 @@ human_pka_gamma = (
 
 Using the sequence;
 
-* work out and display the number of Serine (<span style="color: rgb(32, 121, 77);">S</span>) residues.
+* Work out and display the number of Serine (<span style="color: rgb(32, 121, 77);">S</span>) residues.
 
-* work out and display the number of Threonine (<span style="color: rgb(32, 121, 77);">T</span>) residues.
+* Work out and display the number of Threonine (<span style="color: rgb(32, 121, 77);">T</span>) residues.
 
-* calculate and display the total number of Serine and Threonine residues in the following format:
+* Calculate and display the total number of Serine and Threonine residues in the following format:
 
 ```
 Serine: X
 Threonine: X
 ```
 
-* create a nested array to represent the following table, and call it \texttt{residues}:
+* Create a nested array to represent the following table, and call it \texttt{residues}:
 
 ![](fig/nested_index.png)
 
 
 3. Explain why in the previous question, we used the term *nested* instead of *two-dimensional* in reference to the array? Store your answer in a variable and display it using <kbd>print()</kbd>.
 
-4. [Graph theory](https://en.wikipedia.org/wiki/Graph_theory) is a prime object of discrete mathematics and is utilised for the non-linear analyses of data. The theory is extensively used in systems biology, and is gaining momentum in bioinformatics too. In essence, a [graph](https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)) is a structure that represents a set of object (nodes) and the connections between them (edges).
+4. [Graph theory](https://en.wikipedia.org/wiki/Graph_theory) is a prime object of discrete mathematics utilised for the non-linear analyses of data. The theory is extensively used in systems biology, and is gaining momentum in bioinformatics too. In essence, a [graph](https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)) is a structure that represents a set of object (nodes) and the connections between them (edges).
 
 The aforementioned connections are described using a special binary (zero and one) matrix known as the [adjacency matrix](https://en.wikipedia.org/wiki/Adjacency_matrix). The elements of this matrix indicate whether or not a pair of nodes in the graph are adjacent to one another.
 
@@ -2774,7 +2789,7 @@ The aforementioned connections are described using a special binary (zero and on
 where each row in the matrix represents a node of origin in the graph, and each column a node of destination:
 
 ![](fig/adjacency_matrix2.png)
-If the graph maintains a connection (edge) between 2 nodes (*e.g.* between nodes <span style="color: rgb(32, 121, 77);">A</span> and <span style="color: rgb(32, 121, 77);">B</span> in the graph above), the corresponding value between those nodes would be \#1 in the matrix, and if there are no connections, the corresponding value would \#0.
+If the graph maintains a connection (edge) between two nodes (*e.g.* between nodes <span style="color: rgb(32, 121, 77);">A</span> and <span style="color: rgb(32, 121, 77);">B</span> in the graph above), the corresponding value between those nodes would be \#1 in the matrix, and if there are no connections, the corresponding value would \#0.
 
 Given the following graph:
 ![](fig/adjacency_matrix3.png)
@@ -2793,9 +2808,9 @@ Determine the adjacency matrix and implement it as a two-dimensional array in Py
 
 - ```lists``` and ```tuples``` are 2 types of arrays.
 - An index is a unique reference to a specific value and Python uses a zero-based indexing system.
-- ```lists``` are mutable because their contents to be modified.
-- <kbd>slice()</kbd>, <kbd>.pop()</kbd>, <kbd>.index()</kbd>, <kbd>.remove()</kbd> and <kbd>.insert()</kbd> are some of the key functions used on mutable arrays.
-- ```tuples``` are immutable which means its contents cannot be modified.
+- ```lists``` are mutable because their contents can be modified.
+- <kbd>slice()</kbd>, <kbd>.pop()</kbd>, <kbd>.index()</kbd>, <kbd>.remove()</kbd> and <kbd>.insert()</kbd> are some of the key functions used in mutable arrays.
+- ```tuples``` are immutable, which means that their contents cannot be modified.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
