@@ -325,32 +325,40 @@
 <h3 id="02-input_output-figure-4">Figure 4</h3>
 <figure><img src="../fig/variable_table.png" class="figure mx-auto d-block"></figure><hr>
 <h3 id="02-input_output-figure-5">Figure 5</h3>
+<p><img src="../fig/python_built-in_types.png" id="tb:types:nativeTypes" class="figure">
+A comprehensive (but non-exhaustive) reference of built-in (native)
+types in Python 3.<br><sup>*</sup> Not discussed in this course —
+included for reference only. <br><sup>$</sup><code>dict</code> is not
+an iterable by default, however, it is possible to iterate through its
+keys.</p>
+<hr>
+<h3 id="02-input_output-figure-6">Figure 6</h3>
 <p aria-hidden="true">Image 1 of 1: ‘Variable scopes in Python with respect to scripts and functions.’</p>
 <figure id="fig:opts:scopes"><img src="../fig/variable_scopes.png" alt="Variable scopes in Python with respect to scripts and functions." class="figure mx-auto d-block"><div class="figcaption">Variable scopes in Python with respect to
 scripts and functions.</div>
 </figure><hr>
-<h3 id="02-input_output-figure-6">Figure 6</h3>
+<h3 id="02-input_output-figure-7">Figure 7</h3>
 <p><img src="../fig/commandprompt_1.png" class="figure"><img src="../fig/commandprompt_2.png" class="figure"><img src="../fig/commandprompt_3.png" class="figure"></p>
 <hr>
-<h3 id="02-input_output-figure-7">Figure 7</h3>
+<h3 id="02-input_output-figure-8">Figure 8</h3>
 <p aria-hidden="true">Image 1 of 1: ‘Routine mathematical operations in Python’</p>
 <figure id="fig:nativeTypes"><img src="../fig/routine_operations.png" alt="Routine mathematical operations in Python" class="figure mx-auto d-block"><div class="figcaption">Routine mathematical operations in Python</div>
 </figure><hr>
-<h3 id="02-input_output-figure-8">Figure 8</h3>
-<figure><img src="../fig/circle.png" class="figure mx-auto d-block"></figure><hr>
 <h3 id="02-input_output-figure-9">Figure 9</h3>
+<figure><img src="../fig/circle.png" class="figure mx-auto d-block"></figure><hr>
+<h3 id="02-input_output-figure-10">Figure 10</h3>
 <p aria-hidden="true">Image 1 of 1: ‘Routine logical operations in Python.’</p>
 <figure id="tab:routineOperations"><img src="../fig/routine_logical_operations.png" alt="Routine logical operations in Python." class="figure mx-auto d-block"><div class="figcaption">Routine logical operations in Python.</div>
 </figure><hr>
-<h3 id="02-input_output-figure-10">Figure 10</h3>
+<h3 id="02-input_output-figure-11">Figure 11</h3>
 <p aria-hidden="true">Image 1 of 1: ‘Negations in Python.’</p>
 <figure><img src="../fig/Negation.png" alt="Negations in Python." class="figure mx-auto d-block"><div class="figcaption">Negations in Python.</div>
 </figure><hr>
-<h3 id="02-input_output-figure-11">Figure 11</h3>
+<h3 id="02-input_output-figure-12">Figure 12</h3>
 <p aria-hidden="true">Image 1 of 1: ‘Disjunctions and Conjunctions in Python.’</p>
 <figure><img src="../fig/Disjunction.png" alt="Disjunctions and Conjunctions in Python." class="figure mx-auto d-block"><div class="figcaption">Disjunctions and Conjunctions in Python.</div>
 </figure><hr>
-<h3 id="02-input_output-figure-12">Figure 12</h3>
+<h3 id="02-input_output-figure-13">Figure 13</h3>
 <p aria-hidden="true">Image 1 of 1: ‘Complex Logical Operations in Python:’</p>
 <figure><img src="../fig/Complex_Logical_Operations.png" alt="Complex Logical Operations in Python:" class="figure mx-auto d-block"><div class="figcaption">Complex Logical Operations in Python:</div>
 </figure><hr></section><section id="03-conditional_statements"><h2 class="section-heading"><a href="03-conditional_statements.html">Conditional Statements</a></h2>
@@ -398,22 +406,21 @@ of nucleotides, not the number of <code>CAG</code> codons. See task 4 of
 <h3 id="sec:list:indexing">
 <strong>Indexing</strong><a class="anchor" aria-label="anchor" href="#sec:list:indexing"></a>
 </h3>
-<p>In arrays, an index is an integer number that corresponds to a
-specific item.</p>
+<p>In an array, an index is an integer (whole number) that corresponds
+to a specific item in that array.</p>
 <p style="text-align: justify;">
-You can think of an index as a <em>unique reference</em> or a
-<em>key</em> that corresponds to a specific row in a table. We don’t
-always write the row number when we create a table. However, we always
-know that the 3<sup>rd</sup> row of a table means that we start from the
-first row (row #1), count 3 rows down and there we find the
-3<sup>rd</sup> row.
+You can think of an index as a <em>unique reference</em> or <em>key</em>
+that corresponds to a specific row in a table. We don’t always write the
+row number when we create a table. However, we always know that the
+third row of a table refers to us starting from the first row (row #1),
+counting three rows down and there we find the third row.
 </p>
 <p style="text-align: justify;">
-The only difference in Python is that we don’t take the first row as row
-#1; instead, we consider it to be row #0. As a consequence of starting
-from #0, we count rows in our table down to row #2 instead of #3 to find
-the 3<sup>rd</sup> row. So our table may in essence be visualised as
-follows:
+Python, however, uses what we term <strong>zero-based</strong> indexing.
+We don’t count the first row as row #1; instead, we consider it to be
+row #0. As a consequence of starting from #0, we count rows in our table
+down to row #2 instead of #3 to find the third row. So our table
+may,essentially, be visualised as follows:
 </p>
 <figure><img src="../fig/indexing_diagram.png" class="figure mx-auto d-block"></figure><div id="remember-2" class="callout">
 <div class="callout-square">
@@ -423,20 +430,26 @@ follows:
 <h3 class="callout-title">Remember<a class="anchor" aria-label="anchor" href="#remember-2"></a>
 </h3>
 <div class="callout-content">
-<p>Python uses a zero-based indexing system. This means that the first
-row of an array, regardless of its type, is always #0.</p>
+<p>Python uses <strong>zero-based</strong> indexing system. This means
+that the first row of an array, regardless of its type, is always
+referred to with index #0.</p>
 </div>
 </div>
 </div>
-<p>With that in mind, we can use the index for each value to retrieve it
-from a <code>list</code>.</p>
-<p>Given a <code>list</code> of 4 members stored in a variable called
-<span style="color: rgb(32, 121, 77);">table</span>:</p>
+<p>With that in mind, we can use the index for each item in the list, in
+order to retrieve it from a <code>list</code>.</p>
+<p>Given the following <code>list</code> of four members stored in a
+variable called <span style="color: rgb(32, 121, 77);">table</span>:</p>
 <pre><code>table = [5, 21, 5, -1]</code></pre>
 we can visualise the referencing protocol in Python as follows: <img src="../fig/indexing_diagram2.png" class="figure"><p style="text-align: justify;">
-As demonstrated in the diagram; to retrieve a member of an array through
-its index, we write the name of the variable immediately followed by the
-index value inside a pair of square brackets — <em>e.g.</em> <span style="color: rgb(32, 121, 77);">table[2]</span>.
+As illustrated in this figure; in order to retrieve a member of an array
+through its index, we write the name of the variable immediately
+followed by the index value inside a pair of square brackets —
+<em>e.g.</em> <span style="color: rgb(32, 121, 77);">table[2]</span>.
+Note, you may have noticed our interchangeable use of the terms ‘list’
+and ‘array’. That is because a list, in Python, can be considered as a
+type of dynamic array (they can increase or decrease in size, as
+required).
 </p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -479,7 +492,7 @@ index value inside a pair of square brackets — <em>e.g.</em> <span style="colo
 </h3>
 <div class="callout-content">
 <p>Retrieve and display the 5<sup>th</sup> Fibonacci number from the
-<code>list</code> you created in previous <a href="#diy:array:list:fibonacci">Practice Exercise 1</a>.</p>
+<code>list</code> you created in the previous <a href="#diy:array:list:fibonacci">Practice Exercise 1</a>.</p>
 </div>
 </div>
 </div>
@@ -507,13 +520,13 @@ index value inside a pair of square brackets — <em>e.g.</em> <span style="colo
 </div>
 </div>
 <p style="text-align: justify;">
-It is sometimes more convenient to index an array backwards — that is,
-to reference the members from the bottom of the array. This is called
-<em>negative indexing</em> and is particularly useful when we are
-dealing with very lengthy arrays. The indexing system in Python support
-both positive and negative indexing systems.
+It is sometimes more convenient to index an array, backwards — that is,
+to reference the members from the bottom of the array, first. This is
+termed <strong>negative indexing</strong>, and is particularly useful
+when we are dealing with lengthy arrays. The indexing system in Python
+support both positive and negative indexing systems.
 </p>
-<p>The table above therefore may also be represented as follows:</p>
+<p>The table above therefore may also be represented, as follows:</p>
 <figure><img src="../fig/indexing_diagram3.png" class="figure mx-auto d-block"></figure><div id="remember-3" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -523,14 +536,14 @@ both positive and negative indexing systems.
 </h3>
 <div class="callout-content">
 <p>Unlike the normal indexing system, which starts from #0, negative
-indexes start from #-1 so that it will always be clear which indexing
-system is being used.</p>
+indexes start from #-1. This serves to definitely highlight which
+indexing system is being used.</p>
 </div>
 </div>
 </div>
 <p>If the index is a negative number, the indices are counted from the
-end of the <code>list</code>. We can implement negative indices the same
-way we do positive ones:</p>
+end of the <code>list</code>. We can implement negative indices in the
+same way as positive indices:</p>
 <div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -651,9 +664,9 @@ raised:</p>
 <img src="../fig/residues_annotation.png" class="figure"></p>
 <hr>
 <h3 id="04-arrays-figure-7">Figure 7</h3>
-<p aria-hidden="true">Image 1 of 1: ‘Commons operations for list, tuple, and set arrays in Python.’</p>
-<figure id="cheatsheat"><img src="../fig/arrays-cheatsheet.png" alt="Commons operations for list, tuple, and set arrays in Python." class="figure mx-auto d-block"><div class="figcaption">Commons operations for list, tuple, and set
-arrays in Python.</div>
+<p aria-hidden="true">Image 1 of 1: ‘Common operations for list, tuple and set arrays in Python.’</p>
+<figure id="cheatsheat"><img src="../fig/arrays-cheatsheet.png" alt="Common operations for list, tuple and set arrays in Python." class="figure mx-auto d-block"><div class="figcaption">Common operations for list, tuple and set arrays
+in Python.</div>
 </figure><hr>
 <h3 id="04-arrays-figure-8">Figure 8</h3>
 <figure><img src="../fig/nested_arrays.png" class="figure mx-auto d-block"></figure><hr>
@@ -661,21 +674,21 @@ arrays in Python.</div>
 <figure><img src="../fig/nested_arrays2.png" class="figure mx-auto d-block"></figure><hr>
 <h3 id="04-arrays-figure-10">Figure 10</h3>
 <div class="callout-content">
-<p>Give then following of pathogens and their corresponding
+<p>Given the following Table of pathogens and their corresponding
 diseases:</p>
 <img src="../fig/pathogens.png" class="figure"><p style="text-align: justify;">
 </p>
 <ol style="list-style-type: decimal">
-<li>Substituting <span style="color: rgb(32, 121, 77);">N/A</span> for
-<code>None</code>, create an array to represent the table in the
-original order. Retain the array in a variable and display the
+<li>Substitute <span style="color: rgb(32, 121, 77);">N/A</span> for
+<code>None</code>, and create an array to represent the table in its
+presented order. Retain the array in a variable, and display the
 result.</li>
 </ol>
 <p style="text-align: justify;">
 </p>
 <ol start="2" style="list-style-type: decimal">
-<li>Modify the array you created so that the members are sorted
-<em>descendingly</em> and display the result.</li>
+<li>Modify the array you created so that its members are sorted
+<em>descendingly</em>, and display the result.</li>
 </ol>
 </div>
 <hr>
@@ -686,7 +699,7 @@ result.</li>
 <div class="callout-content">
 <p style="text-align: justify;">
 Computers see images as multidimensional arrays (matrices). In its
-simplest form, an image is a two-dimensional array containing only 2
+simplest form, an image is a two-dimensional array containing only two
 colours.
 </p>
 <p>Given the following black and white image:</p>
@@ -694,8 +707,8 @@ colours.
 </p>
 <ol style="list-style-type: decimal">
 <li>Considering that black and white squares represent zeros and ones
-respectively, create a two-dimensional array to represent the above
-image. Display the results.</li>
+respectively, create a two-dimensional array to represent the image.
+Display the results.</li>
 </ol>
 <p style="text-align: justify;">
 </p>
@@ -715,7 +728,7 @@ destination:</p>
 <hr>
 <h3 id="04-arrays-figure-15">Figure 15</h3>
 <p><img src="../fig/adjacency_matrix2.png" class="figure"> If the graph maintains a
-connection (edge) between 2 nodes (<em>e.g.</em> between nodes <span style="color: rgb(32, 121, 77);">A</span> and <span style="color: rgb(32, 121, 77);">B</span> in the graph above), the
+connection (edge) between two nodes (<em>e.g.</em> between nodes <span style="color: rgb(32, 121, 77);">A</span> and <span style="color: rgb(32, 121, 77);">B</span> in the graph above), the
 corresponding value between those nodes would be #1 in the matrix, and
 if there are no connections, the corresponding value would #0.</p>
 <hr>
@@ -788,8 +801,8 @@ need to know the index at which a given protein is stored.</p>
   "url": "https://learntodiscover.github.io/Basic_Python/instructor/images.html",
   "identifier": "https://learntodiscover.github.io/Basic_Python/instructor/images.html",
   "dateCreated": "2022-04-04",
-  "dateModified": "2024-07-10",
-  "datePublished": "2024-07-10"
+  "dateModified": "2024-07-28",
+  "datePublished": "2024-07-28"
 }
 
   </script><script>
