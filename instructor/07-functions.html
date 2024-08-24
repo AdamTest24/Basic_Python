@@ -234,7 +234,7 @@
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#sec:functions">Functions</a>
-<ul><li><a href="#documentations"><strong>Documentations</strong></a></li>
+<ul><li><a href="#documentation"><strong>Documentation</strong></a></li>
 <li><a href="#optional-arguments">Optional arguments</a></li>
 <li><a href="#interconnectivity-of-functions"><strong>Interconnectivity of functions</strong></a></li></ul></li>
 <li><a href="#exercises">Exercises</a></li>
@@ -305,7 +305,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Functions</h1>
-        <p>Last updated on 2024-08-05 |
+        <p>Last updated on 2024-08-24 |
 
         <a href="https://github.com/LearnToDiscover/Basic_Python/edit/main/episodes/07-functions.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -333,7 +333,7 @@
 <ul><li>What are functions?</li>
 <li>How are functions created?</li>
 <li>What are optional arguments?</li>
-<li>What makes functions powerful?</li>
+<li>What makes functions so powerful?</li>
 </ul></div>
 </div>
 </div>
@@ -341,10 +341,10 @@
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul><li>Develop concepts of using functions.</li>
+<ul><li>Understand how to develop and utilise functions.</li>
 <li>Understanding different ways of creating functions.</li>
 <li>Explaining input arguments.</li>
-<li>Understanding the inter-connectivity of functions.</li>
+<li>Understanding the interconnectivity of functions.</li>
 </ul></div>
 </div>
 </div>
@@ -364,7 +364,7 @@
 </p>
 <p><br></p>
 <p>This chapter assumes that you are familiar with the following
-concepts in Python 3:</p>
+concepts in Python:</p>
 <div id="prereq1" class="callout prereq">
 <div class="callout-square">
 <i class="callout-icon" data-feather="check"></i>
@@ -389,19 +389,19 @@ Statements</a></li>
 <hr class="half-width"><p><a href="https://docs.python.org/3/tutorial/controlflow.html#defining-functions" class="external-link"><strong>Defining
 Functions</strong></a></p>
 <p style="text-align: justify;">
-In programming, functions are containers that incorporate some code and
-perform very specific tasks. As we learned in the first chapter (on <a href="02-input_output.html#sub:ProducingAnOutput">outputs</a>), a
+In programming, functions are individual units or blocks of code that
+incorporate and perform specific tasks in a sequence defined and written
+by the programmer. As we learned in the first chapter (on <a href="02-input_output.html#sub:ProducingAnOutput">outputs</a>), a
 function usually takes in one or several variables or values, processes
 them, and produces a specific result. The variable(s) given to a
 function and those produced by it are referred to as <em>input
 arguments</em>, and <em>outputs</em> respectively.
 </p>
 <p style="text-align: justify;">
-There are different ways to create functions in Python. In this course,
-we will be using <kbd>def</kbd> to implement our functions. This is the
-easiest and by far the most common method for declaring functions. The
-structure of a typical function defined using <kbd>def</kbd> is as
-follows:
+There are different ways to create functions in Python. In the L2D, we
+will be using <kbd>def</kbd> to implement our functions. This is the
+simplest and most common method for declaring a function. The structure
+of a typical function defined using <kbd>def</kbd> is as follows:
 </p>
 <figure><img src="../fig/typical_function.png" class="figure mx-auto d-block"></figure><div id="remember" class="callout">
 <div class="callout-square">
@@ -411,7 +411,7 @@ follows:
 <h3 class="callout-title">Remember<a class="anchor" aria-label="anchor" href="#remember"></a>
 </h3>
 <div class="callout-content">
-<p>There are several points to remember in relation to functions:</p>
+<p>There are several points to remember relative to functions:</p>
 <p style="text-align: justify;">
 </p>
 <ul><li>The name of a function follows same principles as that of any other
@@ -425,9 +425,9 @@ they are <em>only</em> accessible <em>within</em> the function itself,
 and not from anywhere else in the code.</li>
 </ul><p style="text-align: justify;">
 </p>
-<ul><li>Variables defined inside of a function, should <em>never</em> use
-the same name as variables defined outside of it; or they may override
-each other.</li>
+<ul><li>Variables defined within a function, should <em>never</em> use the
+same name as variables defined outside of it; or they may override each
+other.</li>
 </ul><p style="text-align: justify;">
 </p>
 <ul><li>A function declared using <kbd>def</kbd> should <em>always</em> be
@@ -444,10 +444,10 @@ generally regarded as a bad practice and should be avoided.</li>
 </div>
 </div>
 <p style="text-align: justify;">
-We implement functions to prevent repetition in our code. It is
-therefore important for a function to <em>only</em> perform a very
-specific task, so that it can be context-independent. You should
-therefore avoid incorporating separable tasks inside a single function.
+We implement functions to avoid repetition in our code. It is important
+that a function is <em>only</em> performing a very specific task, so
+that it can be context-independent. You should therefore avoid
+incorporating separable tasks inside a single function.
 </p>
 <div id="interesting-fact" class="callout">
 <div class="callout-square">
@@ -460,19 +460,20 @@ therefore avoid incorporating separable tasks inside a single function.
 <p style="text-align: justify;">
 Functions are designed to perform specific tasks. That is why in the
 majority of cases, they are named using <em>verbs</em> —
-e.g. <kbd>add()</kbd> or <kbd>print()</kbd>. We use verbs to describe an
-action, a state, or an occurrence in everyday language. Likewise, this
-type of nomenclature describes the action performed by a specific
-function. Name your functions wisely!
+e.g. <kbd>add()</kbd> or <kbd>print()</kbd>. Verbs describe an action, a
+state, or an occurrence in the English language. Likewise, this type of
+nomenclature describes the action performed by a specific function. As
+we encourage with variable naming: sensible, short and descriptive names
+are best to consider, when naming a function.
 </p>
 </div>
 </div>
 </div>
 <p style="text-align: justify;">
-Once you start creating functions for different purposes; after a while,
-you will have a library of ready-to-use functions to address different
-needs. This is the primary principle of a popular programming paradigm
-known as <a href="https://en.wikipedia.org/wiki/Functional_programming" class="external-link">functional
+Once you start creating functions for different purposes, you will
+eventually amass a library of ready-to-use functions which can
+individually address different needs. This is the primary principle of a
+popular programming paradigm known as <a href="https://en.wikipedia.org/wiki/Functional_programming" class="external-link">functional
 programming</a>.
 </p>
 <p>So let us implement the example outline in the diagram:</p>
@@ -481,7 +482,7 @@ programming</a>.
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="kw">def</span> add(value_a, value_b):</span>
 <span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="co">    Calculates the sum of 2 numeric values</span></span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="co">    Calculates the sum of two numeric values</span></span>
 <span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="co">    given as inputs.</span></span>
 <span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a></span>
 <span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a><span class="co">    :param value_a: First value.</span></span>
@@ -495,8 +496,8 @@ programming</a>.
 <span id="cb1-14"><a href="#cb1-14" tabindex="-1"></a>    <span class="cf">return</span> result</span></code></pre>
 </div>
 <p style="text-align: justify;">
-Once implemented, we can go ahead use the function. We can do so in the
-same way as we do with the <em>built-in</em> functions such as
+Once implemented, we can call and use the function we created. We can do
+so in the same way as we do with the <em>built-in</em> functions such as
 <kbd>max()</kbd> or <kbd>print()</kbd>:
 </p>
 <div class="codewrapper sourceCode" id="cb2">
@@ -521,7 +522,7 @@ same way as we do with the <em>built-in</em> functions such as
 <div class="callout-content">
 <p>When calling a function, we should always pass our <em>positional
 input arguments</em> in the order they are defined in the function
-definition, from left to right.</p>
+definition: i.e. from left to right.</p>
 <p style="text-align: justify;">
 This is because in the case of <em>positional arguments</em>, as the
 name suggests, the Python interpreter relies on the <em>position</em> of
@@ -535,8 +536,8 @@ So in the above example where we say <span style="color: rgb(32, 121, 77);">add(
 argument</em> for <span style="color: rgb(32, 121, 77);">value_a</span>,
 and not <span style="color: rgb(32, 121, 77);">value_b</span>. This
 happens automatically because in our function call, the value <span style="color: rgb(32, 121, 77);">2</span> is written in the first
-position, where <span style="color: rgb(32, 121, 77);">value_a</span> is
-defined in our function declaration (signature).
+position: the position at which <span style="color: rgb(32, 121, 77);">value_a</span> is defined in our
+function declaration (signature).
 </p>
 </div>
 </div>
@@ -562,8 +563,9 @@ where there are several <em>input arguments</em>.
 </h3>
 <pre class="output" tabindex="0"><code><span><span class="fl">7</span></span></code></pre>
 </div>
-<p>Now even if we changed the order of our arguments, the function would
-still be able to associate the values correctly:</p>
+<p>Now, even if we change the order of our arguments, the function would
+still be able to associate the values to the correct keyword
+argument:</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -586,10 +588,11 @@ still be able to associate the values correctly:</p>
 <div class="callout-content">
 <p style="text-align: justify;">
 Choose the order of your <em>input argument</em> wisely. This is
-important when your function accepts multiple <em>input argument</em>.
+important when your function can accept multiple <em>input
+arguments</em>.
 </p>
 <p style="text-align: justify;">
-Suppose we want to define a “division” function. It makes sense to
+Suppose we want to define a ‘division’ function. It makes sense to
 assume that the first number passed to the function will be divided by
 the second number:
 </p>
@@ -654,11 +657,11 @@ incorrectly.
 <p>Implement a function called <span style="color: rgb(32, 121, 77);">find_tata</span> that takes in one
 <code>str</code> argument called <span style="color: rgb(32, 121, 77);">seq</span> and looks for the <span style="color: rgb(32, 121, 77);">TATA</span>-box motif inside that
 sequence. Then:</p>
-<ul><li><p>if found, the function should return the index for the <span style="color: rgb(32, 121, 77);">TATA</span>-box as output;</p></li>
+<ul><li><p>if found, the function should return the index for the <span style="color: rgb(32, 121, 77);">TATA</span>-box as output.</p></li>
 <li><p>if not found, the function should <em>explicitly</em> return
 <code>None</code>.</p></li>
 </ul><p><strong>Example:</strong></p>
-<p>The function should behave as follows:</p>
+<p>The function should behave, as follows:</p>
 <pre><code><span><span class="va">sequence</span> <span class="op">=</span> <span class="st">'GCAGTGTATAGTC'</span></span>
 <span></span>
 <span><span class="va">res</span> <span class="op">=</span> <span class="fu">find_tata</span><span class="op">(</span><span class="va">sequence</span><span class="op">)</span></span></code></pre>
@@ -688,28 +691,30 @@ sequence. Then:</p>
 </div>
 </div>
 <div class="section level3">
-<h3 id="documentations"><strong>Documentations</strong><a class="anchor" aria-label="anchor" href="#documentations"></a></h3>
+<h3 id="documentation"><strong>Documentation</strong><a class="anchor" aria-label="anchor" href="#documentation"></a></h3>
 <p style="text-align: justify;">
-It is <em>essential</em> to write short, but proper documentation for
-our functions. There is no <em>correct</em> way document a code.
-However, a general rule, a good documentation should tell us:
+It is <em>essential</em> to write short, informative documentation for a
+functions that you are defining. There is no single <em>correct</em> way
+to document a code. However, as a general rule, a sufficiently
+informative documentation should tell us:
 </p>
 <ul><li><p>what a function does;</p></li>
 <li><p>the names of the input arguments, and what type each argument
 should be;</p></li>
 <li><p>the output, and its type.</p></li>
 </ul><p style="text-align: justify;">
-The documentation string, also known as the <em>docstring</em>, is
-always written inside triple quotation marks. The <em>docstring</em>
-must be the implemented on the <em>very first line</em> following the
-declaration of the function to be recognised as the documentation:
+This documentation string is referred to as the <em>docstring</em>. It
+is always written inside triple quotation marks. The <em>docstring</em>
+must be implemented on the <em>very first line</em>, immediately
+following the declaration of the function, in order for it to be
+recognised as documentation:
 </p>
 <div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="kw">def</span> add(value_a, value_b):</span>
 <span id="cb17-2"><a href="#cb17-2" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb17-3"><a href="#cb17-3" tabindex="-1"></a><span class="co">    Calculates the sum of 2 numeric values</span></span>
+<span id="cb17-3"><a href="#cb17-3" tabindex="-1"></a><span class="co">    Calculates the sum of two numeric values</span></span>
 <span id="cb17-4"><a href="#cb17-4" tabindex="-1"></a><span class="co">    given as inputs.</span></span>
 <span id="cb17-5"><a href="#cb17-5" tabindex="-1"></a></span>
 <span id="cb17-6"><a href="#cb17-6" tabindex="-1"></a><span class="co">    :param value_a: First value.</span></span>
@@ -732,25 +737,27 @@ declaration of the function to be recognised as the documentation:
 <div class="callout-content">
 <p style="text-align: justify;">
 You might feel as though you would remember what your own functions do.
-That, however, is scarcely the case. Functions that we implement tend to
-perform specialist, and at times, very complex and interconnected
-processes. Whilst you might remember what a specific function does for a
-few days after writing it, you would almost certainly have trouble
-remembering the details in a matter of months. And that is not even
-considering details regarding the type of the input argument(s) and
-those of the output. In addition, programmers often share their works
-with other fellow programmers; be it with their team, or in the context
-of a publication, or in public repositories as a contribution to the
-community. Whatever the reason, there is one golden rule: a
-functionality does not exist unless it is documented.
+Assuming this is often naive, however, as it is easy to forget the
+specifics of a function that you have written; particularly if it is
+complex and accepts multiple arguments. Functions that we implement tend
+to perform specialist, and often complex, interconnected processes.
+Whilst you might remember what a specific function does for a few days
+after writing it, you will likely have trouble remembering the details
+in a matter of months. And that is not even considering details
+regarding the type of the input argument(s) and those of the output. In
+addition, programmers often share their work with other fellow
+programmers; be it within their team or in the wider context of a
+publication, or even for distribution <em>via</em> public repositories,
+as a community contribution. Whatever the reason, there is one golden
+rule: a function should not exist unless it is documented.
 </p>
 </div>
 </div>
 </div>
 <p style="text-align: justify;">
-Writing the <em>docstring</em> on the first line is important because
-once a function is documented; we can use <kbd>help()</kbd>, which is a
-built-in function, to access the documentations as follows:
+Writing the <em>docstring</em> on the first line is important. Once a
+function is documented, we can use <kbd>help()</kbd>, which is a
+built-in function in Python, to access the documentations as follows:
 </p>
 <div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -763,7 +770,7 @@ built-in function, to access the documentations as follows:
 <pre class="output" tabindex="0"><code>Help on function add in module __main__:
 
 add(value_a, value_b)
-    Calculates the sum of 2 numeric values
+    Calculates the sum of two numeric values
     given as inputs.
 
     :param value_a: First value.
@@ -774,10 +781,11 @@ add(value_a, value_b)
     :rtype: int, float</code></pre>
 </div>
 <p style="text-align: justify;">
-For very simple functions – e.g. the function <kbd>add()</kbd> that we
-implemented above, where it is fairly obvious what are the input and
-output arguments and their respective types; it is okay to simplify the
-<em>docstring</em> to something explicit and concise, such as follows:
+For very simple functions – like the <kbd>add()</kbd> function that we
+implemented above, it is sufficient to simplify the docstring into
+something straightforward, and concise. This is because it is fairly
+obvious what are the input and output arguments are, and what their
+respective types are/should be. For example:
 </p>
 <div class="codewrapper sourceCode" id="cb20">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -809,7 +817,7 @@ add(value_a, value_b)
 </h3>
 <div class="callout-content">
 <p>Re-implement the function you defined in the previous <a href="#diy:func:tataBoxFinder">Practice Exercise 1</a> with appropriate
-documentations.</p>
+documentation.</p>
 </div>
 </div>
 </div>
@@ -849,19 +857,18 @@ documentations.</p>
 <div class="section level3">
 <h3 id="optional-arguments">Optional arguments<a class="anchor" aria-label="anchor" href="#optional-arguments"></a></h3>
 <p style="text-align: justify;">
-We already know that most functions take in one or more input arguments.
-Sometime a function does not need all of the arguments to perform a
-specific task.
+We already know that most functions accept one or more input arguments.
+Sometimes a function does not need all of the arguments in order to
+perform a specific task.
 </p>
 <p style="text-align: justify;">
-An example we have already worked with is <kbd>print()</kbd>. We already
-know that this function may be utilised to display text on the screen.
-However, we also know that if we use the <code>file</code> argument, it
-will behave differently in that it will write the text inside a file
-instead of displaying it on the screen. Additionally, <kbd>print()</kbd>
-has other arguments such as <code>sep</code> or <code>end</code>, which
-have specific default values of <span style="color: rgb(32, 121, 77);">’
-’</span> (a single space) and <span style="color: rgb(32, 121, 77);">\n</span> (a linebreak) respectively.
+Such an example that we have already worked with is <kbd>print()</kbd>.
+We already know that this function may be utilised to display text on
+the screen. However, we also know that if we use the <code>file</code>
+argument, it will behave differently in that it will write the text
+inside a file instead of displaying it on the screen. Additionally,
+<kbd>print()</kbd> has other arguments such as <code>sep</code> or
+<code>end</code>, which have specific default values of <span style="color: rgb(32, 121, 77);">’ ’</span> (a single space) and <span style="color: rgb(32, 121, 77);">\n</span> (a linebreak) respectively.
 </p>
 <div id="remember-4" class="callout">
 <div class="callout-square">
@@ -894,19 +901,20 @@ non-default arguments (if any). If this order is not respected, a
 </h3>
 <div class="callout-content">
 <p style="text-align: justify;">
-The default value defined for <em>optional arguments</em> can in theory
-be an instance of any type in Python. However, it is better and safer to
-only use <em>immutable</em> types as demonstrated in <a href="02-input_output.html#tb:types:nativeTypes">Table</a> for default
-values. The rationale behind this principle is beyond the scope of this
-course, but you can read more about it in the <a href="https://docs.python.org/3/tutorial/controlflow.html#default-argument-values" class="external-link">official
-documentations</a>.
+The default value defined for <em>optional arguments</em> can
+theoretically be an instance of any type in Python. However, it is
+better and safer to only use <em>immutable</em> types (as demonstrated
+in <a href="02-input_output.html#tb:types:nativeTypes">Table</a>) for
+default values. The rationale behind this principle is beyond the scope
+of this course, but you can read more about it in the <a href="https://docs.python.org/3/tutorial/controlflow.html#default-argument-values" class="external-link">official
+documentation</a>.
 </p>
 </div>
 </div>
 </div>
 <p style="text-align: justify;">
-To define functions with optional arguments, we need to assign to them a
-default value. Remember that input arguments are variables with a
+In order to define functions with optional arguments, we need to assign
+a default value to them. Remember: input arguments are variables with a
 specific scope. As a result, we can treat our input argument as
 variables and assign them a value:
 </p>
@@ -923,7 +931,7 @@ variables and assign them a value:
 <span id="cb24-8"><a href="#cb24-8" tabindex="-1"></a><span class="co">    :type name: str</span></span>
 <span id="cb24-9"><a href="#cb24-9" tabindex="-1"></a><span class="co">    :param upper: Convert sequence to uppercase characters (default: False)</span></span>
 <span id="cb24-10"><a href="#cb24-10" tabindex="-1"></a><span class="co">    :type upper: bool</span></span>
-<span id="cb24-11"><a href="#cb24-11" tabindex="-1"></a><span class="co">    :return: Formated string containing the sequence.</span></span>
+<span id="cb24-11"><a href="#cb24-11" tabindex="-1"></a><span class="co">    :return: Formatted string containing the sequence.</span></span>
 <span id="cb24-12"><a href="#cb24-12" tabindex="-1"></a><span class="co">    :rtype: str</span></span>
 <span id="cb24-13"><a href="#cb24-13" tabindex="-1"></a><span class="co">    """</span></span>
 <span id="cb24-14"><a href="#cb24-14" tabindex="-1"></a>    template <span class="op">=</span> <span class="st">'The sequence of </span><span class="sc">{}</span><span class="st"> is: </span><span class="sc">{}</span><span class="st">'</span></span>
@@ -976,15 +984,15 @@ converted to upper case characters:</p>
 <h3 class="callout-title">Practice Exercise 3<a class="anchor" aria-label="anchor" href="#practice-exercise-3"></a>
 </h3>
 <div class="callout-content">
-<p>Modify the function from previous <a href="#diy:func:tataBoxFinderWithDocs">Practice Exercise 2</a> to accept
-an <em>optional argument</em> called <code>upper</code>, with default
-value of <code>False</code>; thereafter:</p>
+<p>Modify the function from the previous <a href="#diy:func:tataBoxFinderWithDocs">Practice Exercise 2</a> to accept
+an <em>optional argument</em> called <code>upper</code>, with a default
+value of <code>False</code>. Thereafter:</p>
 <ul><li><p>if <code>upper</code> is <code>False</code>, then the function
-should perform as it already does (similar to previous <a href="#diy:func:tataBoxFinderWithDocs">Practice Exercise
+should perform as it already does (similar to the previous <a href="#diy:func:tataBoxFinderWithDocs">Practice Exercise
 2</a>);</p></li>
 <li><p>if <code>upper</code> is <code>True</code>, then the function
-should convert the sequence onto uppercase characters before it looks
-for the <span style="color: rgb(32, 121, 77);">TATA</span>-box.</p></li>
+should convert the sequence to contain only uppercase characters, before
+it looks for the <span style="color: rgb(32, 121, 77);">TATA</span>-box.</p></li>
 </ul><p>Do not forget to update the <em>docstring</em> of your function.</p>
 </div>
 </div>
@@ -1040,17 +1048,18 @@ for the <span style="color: rgb(32, 121, 77);">TATA</span>-box.</p></li>
 <div class="callout-content">
 <p style="text-align: justify;">
 It is not necessary to implement your functions in this way. It is,
-however, a very common practice amongst programmers of any language. For
-that reason, you should be at least familiar with the technique as you
-are bound to encounter it sooner rather later.
+however, a common practice among programmers in any programming
+language. For this reason, you should be at least be familiar with the
+technique, as you will likely encounter it at some point.
 </p>
 </div>
 </div>
 </div>
 <p style="text-align: justify;">
-It is possible to have more than one <kbd>return</kbd> in a function.
-This is useful when we need to account for different outcomes; such as
-the one we saw in the previous example with <kbd>prepare_seq()</kbd>.
+It is important to note that it is also possible to have more than one
+<kbd>return</kbd> in a function. This is useful when we need to account
+for different outcomes; such as the one we saw in the previous example
+with <kbd>prepare_seq()</kbd>.
 </p>
 <p>This means that we can simplify the process as follows:</p>
 <div class="codewrapper sourceCode" id="cb30">
@@ -1078,19 +1087,19 @@ the one we saw in the previous example with <kbd>prepare_seq()</kbd>.
 <span id="cb30-20"><a href="#cb30-20" tabindex="-1"></a>    <span class="cf">return</span> template.<span class="bu">format</span>(name, seq_upper)</span></code></pre>
 </div>
 <p>Notice that we got rid of <span style="color: rgb(32, 121, 77);">response</span>. Here is a description
-of what happens:</p>
+of what is happening:</p>
 <ul><li><p>In this context, if the conditional statement holds — i.e. when
-<code>upper</code> is <code>False</code>, we enter the <kbd>if</kbd>
-block. In that case, we reach the first <code>return</code> statement.
-At this point, the function returns the corresponding results and
-terminates immediately.</p></li>
-<li><p>On the other hand, if the condition does not hold — i.e. where
-<code>upper</code> is <code>True</code>, we skip the <kbd>if</kbd> block
-altogether and proceed. It is only then that we arrive at the second
-<code>return</code> statement where the alternative set of results are
-prepared.</p></li>
-</ul><p>This does not alter the functionality of our function in any way.
-However, in complex functions that may be called repetitively
+<code>upper</code> is <code>False</code>— we enter the <kbd>if</kbd>
+block. In this case, we reach the first <code>return</code> statement.
+It is at this point, that function returns the corresponding results,
+and immediately terminates.</p></li>
+<li><p>Conversely, if the conditional statement does not hold —
+i.e. where <code>upper</code> is <code>True</code> — we skip the
+<kbd>if</kbd> block altogether and proceed. It is only then that we
+arrive at the second <code>return</code> statement where the alternative
+set of results are prepared.</p></li>
+</ul><p>This does not alter the functionality of the function, in any way.
+However, in complex functions which can be called repetitively
 (<em>e.g.</em> inside <kbd>for</kbd> loop), this technique may improve
 the performance of the function.</p>
 <p>Now if we call our function, it will behave in exactly the same way
@@ -1124,12 +1133,13 @@ as it did before:</p>
 </div>
 <div class="section level3">
 <h3 id="interconnectivity-of-functions"><strong>Interconnectivity of functions</strong><a class="anchor" aria-label="anchor" href="#interconnectivity-of-functions"></a></h3>
-<p>Functions can call other functions. This is what makes them extremely
-powerful tools that may be utilised to address an unlimited number of
-problems.</p>
-<p>This allows us to devise a network of functions that call each other
-to perform different tasks at different times, and collectively
-contribute to the production of one final answer.</p>
+<p>Functions can also call other functions. This is what makes them
+extremely powerful tools that may be utilised to address an unlimited
+number of problems.</p>
+<p>This allows us to devise a network of functions that can all call
+each other to perform different tasks at different times. This network
+of functions can then collectively contribute to the production of a
+single, final answer.</p>
 <div id="remember-6" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -1138,12 +1148,13 @@ contribute to the production of one final answer.</p>
 <h3 class="callout-title">Remember<a class="anchor" aria-label="anchor" href="#remember-6"></a>
 </h3>
 <div class="callout-content">
-<p>Functions must have specialist functionalities. They should, as much
-as possible, be implemented to perform one task, and one task only.</p>
-<p>So if you need to get more things done, do not write more code in one
-function. This would defy the purpose of functional programming.
-Instead, consider writing more functions that contain less code and
-perform more specialist functionalities.</p>
+<p>Functions should have specialist functionalities.They should ideally
+be written to perform one task, and one task only.</p>
+<p>So in instances where more operations are required, it is advised not
+to write more code to execute these, into one function. This would defy
+the ethos of functional programming. Instead, consider writing more
+functions that contain less code, and perform more specialist
+functionalities.</p>
 </div>
 </div>
 </div>
@@ -1175,7 +1186,7 @@ perform more specialist functionalities.</p>
 <span id="cb35-15"><a href="#cb35-15" tabindex="-1"></a>    <span class="cf">return</span> result</span></code></pre>
 </div>
 <p>Now that we have function to calculate the <em>mean</em>, we can go
-ahead and write a function to calculate the variance, which itself
+ahead and write a function to calculate the variance; which itself
 relies on <em>mean</em>:</p>
 <div class="codewrapper sourceCode" id="cb36">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1201,10 +1212,10 @@ relies on <em>mean</em>:</p>
 <span id="cb36-19"><a href="#cb36-19" tabindex="-1"></a></span>
 <span id="cb36-20"><a href="#cb36-20" tabindex="-1"></a>    <span class="cf">return</span> result</span></code></pre>
 </div>
-<p>Now we have two functions, which we can use to calculate the
-<em>variance</em> or the <em>mean</em> for any array of numbers.</p>
-<p>Remember that testing a function a crucial part of its design. So let
-us go ahead and test our functions:</p>
+<p>Now we have two functions, which can be used to calculate the
+<em>variance</em>, or the <em>mean</em>, for any array of numbers.</p>
+<p>Remember that testing a function is inherent to successful design. So
+let’s test our functions</p>
 <div class="codewrapper sourceCode" id="cb37">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1235,8 +1246,8 @@ us go ahead and test our functions:</p>
 <pre class="output" tabindex="0"><code><span><span class="fl">109633.35462420408</span></span></code></pre>
 </div>
 <p>Now that we have a function to calculate the <em>variance</em>, we
-could easily go on to calculate the <em>standard deviation</em>,
-too.</p>
+can easily proceed to calculate the <em>standard deviation</em>, as
+well.</p>
 <p>The standard deviation is calculated from the square root of
 variance. We can easily implement this in a new function as follows:</p>
 <div class="codewrapper sourceCode" id="cb42">
@@ -1259,7 +1270,7 @@ variance. We can easily implement this in a new function as follows:</p>
 <span id="cb42-15"><a href="#cb42-15" tabindex="-1"></a></span>
 <span id="cb42-16"><a href="#cb42-16" tabindex="-1"></a>    <span class="cf">return</span> result</span></code></pre>
 </div>
-<p>Now let’s see how it works in practice:</p>
+<p>Now let’s see how it works, in practice:</p>
 <div class="codewrapper sourceCode" id="cb43">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1283,9 +1294,9 @@ variance. We can easily implement this in a new function as follows:</p>
 <h3 class="callout-title">Practice Exercise 4<a class="anchor" aria-label="anchor" href="#practice-exercise-4"></a>
 </h3>
 <div class="callout-content">
-<p>Write a function that given an array of any values, produces a
-dictionary containing the value of that array as <em>keys</em>, and the
-count of the values in the original array (their frequencies) as
+<p>Write a function that — given an array of any values — produces a
+dictionary containing the values within the array as <em>keys</em>, and
+the count of those values in the original array (their frequencies), as
 <em>values</em>.</p>
 <p><strong>Example:</strong></p>
 <p>For the following array:</p>
@@ -1352,17 +1363,17 @@ statistics mini toolbox.</p>
 <div class="callout-content">
 <p>Write a function with the following features:</p>
 <ul><li><p>Call the function <kbd>get_basic_stats()</kbd> and let it take
-one input argument which, however, may contain any number of input
-arrays, <em>e.g.</em> a tuple of arrays.</p></li>
+one input argument which may contain any number of input arrays,
+<em>e.g.</em> a tuple of arrays.</p></li>
 <li><p>Using a for loop, for each of the arrays calculate the mean and
-the variance using the functions ‘mean’ and ‘variance’ given above,
-<em>i.e.</em> call those functions from within the function
-<kbd>get_basic_stats()</kbd>.</p></li>
+the variance for each of the arrays using the functions ‘mean’ and
+‘variance’, given above, <em>i.e.</em> call these functions from within
+the function <kbd>get_basic_stats()</kbd>.</p></li>
 <li><p>Calculate the standard deviation for each array as the square
 root of the variance. You will have to import the function
 <code>sqrt</code> from module <code>math</code>.</p></li>
 <li><p>Return a single array containing (in that order) the mean, the
-variance, and the standard deviation for each array.</p></li>
+variance and the standard deviation for each array.</p></li>
 </ul><p>To test the function, combine three arrays in a tuple as follows:</p>
 <div class="codewrapper sourceCode" id="cb47">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1373,8 +1384,8 @@ variance, and the standard deviation for each array.</p></li>
 <span id="cb47-4"><a href="#cb47-4" tabindex="-1"></a>    [<span class="fl">1.0</span>, <span class="fl">0.9</span>, <span class="fl">1.2</span>, <span class="fl">1.12</span>, <span class="fl">0.95</span>, <span class="fl">0.76</span>],</span>
 <span id="cb47-5"><a href="#cb47-5" tabindex="-1"></a>)</span></code></pre>
 </div>
-<p>Call the function <kbd>get_basic_stats()</kbd> with this tuple as
-argument and write the output to a variable. Display the results in the
+<p>Call the function <kbd>get_basic_stats()</kbd> with this tuple as an
+argument, and write the output to a variable. Display the results in the
 following form:</p>
 <pre><code>STD of array' index, ':' STD</code></pre>
 <p>The result for the above arrays should be:</p>
@@ -1388,7 +1399,7 @@ STD of array 2 :  0.14357537702854514</code></pre>
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution5" aria-expanded="false" aria-controls="collapseSolution5">
   <h4 class="accordion-header" id="headingSolution5">
-  Solutions will be provided once the submitted assignments are marked and returned.
+  Solutions will be provided once the submitted assignments are marked and returned to either grade pass or distinction.
   </h4>
 </button>
 <div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
@@ -1406,10 +1417,13 @@ STD of array 2 :  0.14357537702854514</code></pre>
 <h3 class="callout-title">Key Points<a class="anchor" aria-label="anchor" href="#keypoints1"></a>
 </h3>
 <div class="callout-content">
-<ul><li>Functions make repetitive tasks efficient.</li>
-<li>Keyword <kbd>def</kbd> is used to create a function.</li>
-<li>Optional arguments does not require prior definition.</li>
-<li>Inter-connectivity of functions make them very powerful.</li>
+<ul><li>Functions can help to make repetitive tasks efficient, allowing the
+passing of values into whole blocks of code, with a simple function
+call.</li>
+<li>Keyword <kbd>def</kbd> is used to write a function.</li>
+<li>Optional arguments do not require prior definition.</li>
+<li>The potential interconnectivity of functions can make them very
+powerful.</li>
 </ul></div>
 </div>
 </div>
@@ -1460,9 +1474,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://learntodiscover.github.io/Basic_Python/instructor/07-functions.html",
   "identifier": "https://learntodiscover.github.io/Basic_Python/instructor/07-functions.html",
-  "dateCreated": "2024-08-09",
-  "dateModified": "2024-08-05",
-  "datePublished": "2024-08-20"
+  "dateCreated": "2024-08-24",
+  "dateModified": "2024-08-24",
+  "datePublished": "2024-08-24"
 }
 
   </script><script>
