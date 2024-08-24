@@ -10,7 +10,7 @@ date: '2022-05-11'
 
 :::::::::::::::::::::::::::::::::::::: questions
 
-- How is a dictionary defined in Python?
+- What is a dictionary, in Python?
 - What are the ways to interact with a dictionary?
 - Can a dictionary be nested?
 
@@ -22,11 +22,11 @@ date: '2022-05-11'
 
 - Understanding the structure of a dictionary.
 - Accessing data from a dictionary.
-- Practising nested dictionaries to deal with complex data.
+- Applying nested dictionaries to deal with complex data.
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 
-This chapter assumes that you are familiar with the following concepts in Python 3:
+This chapter assumes that you are familiar with the following concepts in Python:
 
 :::::::::::::::::: prereq
 - [Indentation Rule](03-conditional_statements.Rmd#subsubsec:indentationRule)
@@ -47,9 +47,9 @@ This chapter assumes that you are familiar with the following concepts in Python
 [**YouTube Tutorial Dictionaries**](https://www.youtube.com/results?search_query=Python+3+Programming+Tutorial+-+Dictionaries)
 
 
-One of the most useful built-in tools in Python, dictionaries associate a set of *values* with a number of *keys*.
+Dictionaries are one of the most valuable in-build tools in Python, and are characterised by being able to associate a set of *values* with a number of *keys*.
 
-Think of an old fashion, paperback dictionary where we have a range of words with their definitions. The words are the *keys*, and the definitions are the *values* that are associated with the keys. A Python dictionary works in the same way.
+Think of a paperback dictionary, where we have a range of words together with their definitions. The words are the *keys*, and the definitions are the *values* that are associated with those keys. A Python dictionary works in the same way.
 
 
 Consider the following scenario:
@@ -61,20 +61,20 @@ Consider the following scenario:
 This is an example of association in arrays. We may visualise this problem as displayed in [Figure](#assArr).
 
 ![Illustrative diagram of associative arrays, showing the sets of *keys* and their association with some of the values.](fig/associative_arrays.png){#assArr}
-One way to associate the proteins with their definitions would be to use nested arrays. However, it would make it difficult to retrieve the values at a later time. This is because to retrieve the values, we would need to know the index at which a given protein is stored.
+One way to associate the proteins with their definitions would be to make use of nested arrays, as covered in Basic Python 2. However, this would make it difficult to retrieve the values at a later point in time. This is because in order to retrieve these values, we would need to know the numerical index at which a given protein is stored, and the level it’s stored at.
 
-Instead of using normal arrays, in such circumstances, we use *associative arrays*. The most popular method to create construct an associative array in Python is to create dictionaries or ```dict```.
+As an alternative to using normal arrays in such cases, we can make use of *associative arrays*. The most common method for constructing an associative array in Python is to create dictionaries or ```dict```.
 
 :::::::::::::::::::::::::::::::::::: callout
 ## Remember
 
-To implement a ```dict``` in Python, we place our entries in curly bracket, separated using a comma. We separate *keys* and *values* using a colon --- e.g.  {<span style="color: rgb(32, 121, 77);">'key'</span>: <span style="color: rgb(32, 121, 77);">'value'</span>}. The combination of dictionary *key* and its associating *value* is known as a dictionary *item*.
+To implement a ```dict``` in Python, we place our entries within **curly brackets**, separated using a comma. We separate *keys* and *values* using a colon --- e.g.  {<span style="color: rgb(32, 121, 77);">'key'</span>: <span style="color: rgb(32, 121, 77);">'value'</span>}. The combination of dictionary *key* and its associated *value* is referred to as a dictionary *item*.
 
 ::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::: callout
 ## Note
-When constructing a long ```dict``` with several *items* that span over several lines, it is not necessary to write one *item* per line or use indentations for each *item* or line. All we must is to write the \emph{items} as {<span style="color: rgb(32, 121, 77);">'key'</span>: <span style="color: rgb(32, 121, 77);">'value'</span>} in curly brackets and separate each pair with a comma. However, it is good practice to write one *item* per line and use indentations as it makes it considerably easier to read the code and understand the hierarchy.
+When constructing a long ```dict``` with several *items* that span over several lines, it is not necessary to write one *item* per line, nor to use indentations for each *item* or line. All we need to do is to write key-value pairs \emph{items} as {<span style="color: rgb(32, 121, 77);">'key'</span>: <span style="color: rgb(32, 121, 77);">'value'</span>} in curly brackets, and separate each pair using a comma. However, it is good practice to write one *item* per line and use indentations as it makes it considerably easier to read the code and understand the hierarchy.
 
 ::::::::::::::::::::::::::::::::::::
 
@@ -108,11 +108,12 @@ print(type(protein_kinases))
 :::::::::::::::::::::::::::::: challenge
 
 ## Practice Exercise 1
-Use [Universal Protein Resource](https://uniprot.org/) (UniProt) to find the following proteins for humans:
+Use the [Universal Protein Resource](https://uniprot.org/) (UniProt) database to find the following human proteins:
+
   - Axin-1
 	- Rhodopsin
 
-Construct a dictionary for these proteins and the number amino acids for each of them. The *keys* should represent the name of the protein. Display the result.
+Construct a dictionary for these proteins and the number amino acids within each of them. The *keys* should represent the name of the protein. Display the result.
 
 ::::::::::::::::: solution
 
@@ -164,7 +165,7 @@ False
 
 ## Practice Exercise 2
 
-Using the dictionary you created in [Practice Exercise 1](#diy:firstDictExample), test to see whether or not a protein called **ERK** exists as a *key* in your dictionary? Display the result as a Boolean value.
+Using the dictionary you created in [Practice Exercise 1](#diy:firstDictExample), test to determine whether or not a protein called **ERK** exists as a *key* in your dictionary. Display the result as a Boolean value.
 
 
 ::::::::::::::::: solution
@@ -184,7 +185,7 @@ False
 :::::::::::::::::::::::::::::::
 
 ### **Interacting with a dictionary** {#subsec:dict:InteractingWithDicts}
-We have already learnt that in programming, the more explicit our code, the better it is. Interacting with dictionaries in Python is very easy, coherent, and explicit. This makes them a powerful tool that we can exploit for different purposes.
+In programming, we have already learned that the more explicit our code is, the better it is. Interacting with dictionaries in Python is very easy, coherent and explicit. This makes them a powerful tool that we can exploit for different purposes.
 
 In arrays, specifically in ```list``` and ```tuple```, we routinely use [indexing](#sec:list:indexing) techniques to retrieve *values*. In dictionaries, however, we use *keys* to do that. Because we can define the *keys* of a dictionary ourselves, we no longer have to rely exclusively on numeric indices.
 
@@ -304,7 +305,7 @@ print(test_dict)
 {('a', 'b'): 'some value'}
 ```
 
-If we define a *key* more than once, the Python interpreter constructs the entry in ```dict``` using the last instance.
+If we define a *key* more than once, the Python interpreter constructs the entry in ```dict``` using the last defined instance of that key.
 
 In the following example, we repeat the *key* <span style="color: rgb(32, 121, 77);">'pathway'</span> twice; and as expected, the interpreter only uses the last instance, which in this case represents the value <span style="color: rgb(32, 121, 77);">'Canonical'</span>:
 
@@ -324,7 +325,7 @@ print(signal)
 ```
 
 ### **Mutability**
-Dictionaries are mutable. This means that we can alter their contents. We can make any alterations to a dictionary as long as we use *immutable* values for the *keys*.
+Like lists, dictionaries are mutable. This means that we can alter the contents of a dictionary, after it has been instantiated. We can make any alterations to a dictionary as long as we use *immutable* values for the *keys*.
 
 Suppose we have a dictionary stored in a variable called ```protein```, holding some information about a specific protein:
 
@@ -357,7 +358,7 @@ print(protein['chromosome'])
 ```
 
 
-We can also alter an existing *value* in a dictionary using its *key*. To do so, we simply access the *value* using its *key*, and treat it as a normal variable; i.e. the same way we do with members of a ```list```:
+We can also alter an existing *value* in a dictionary using its *key*. To do so, we simply access the *value* using its *key*, and treat it as a normal variable; the same way we would treat members of a ```list```:
 
 
 ``` python
@@ -418,11 +419,11 @@ print(signal)
 
 :::::::::::::::::::::::::::::::::::: callout
 ## Advanced Topic
-Displaying an entire dictionary using the <kbd>print()</kbd> function can look a little messy because it is not properly structured. There is, however, an external library called ```pprint``` (Pretty-Print) that behaves in very similar way to the default <kbd>print()</kbd> function, but structures dictionaries and other arrays in a more presentable way before displaying them. We do not discuss ``Pretty-Print'' in this course, but it is a part of Python's default library and is therefore installed with Python automatically. To learn more it, have a read through the [official documentations](https://docs.python.org/3/library/pprint.html\#module-pprint) for the library and review the [examples](https://docs.python.org/3/library/pprint.html\#example).
+Displaying an entire dictionary using the <kbd>print()</kbd> function can look a little messy because it is not properly structured. There is, however, an external library called ```pprint``` (Pretty-Print) that behaves in very similar way to the default <kbd>print()</kbd> function, but structures dictionaries and other arrays in a more presentable way before displaying them. We do not elaborate on Pretty-Print in this course, but it is a part of Python's default library, and is therefore installed with Python automatically. To learn more about it, have a read through the [official documentation](https://docs.python.org/3/library/pprint.html\#module-pprint) for the library and review the [examples](https://docs.python.org/3/library/pprint.html\#example).
 
 ::::::::::::::::::::::::::::::::::::
 
-Because the *keys* are immutable, they cannot be altered. However, we can get around this limitation by introducing a new *key* and assigning the *values* of the old *key* to the new one. Once we do that, we can go ahead and *remove* the old *item*. The easiest way to remove an *item* from a dictionary is to use the syntax <kbd>del</kbd>:
+Because a dictionary’s *keys* are immutable, they cannot be altered. However, we can get around this limitation in the following manner. It is possible to introduce a new *key* and assigning the *values* of the old *key* to this new key. Once we have done this, we can go ahead and *remove* the old *item*. The easiest way to remove an *item* from a dictionary is to use the syntax <kbd>del</kbd>:
 
 
 ``` python
@@ -518,7 +519,7 @@ Contains the new key, but not the old one.
 :::::::::::::::::::::::::::::::
 
 ### **Nested dictionaries**
-As explained earlier the section, dictionaries are amongst the most powerful built-in tools in Python. It is possible to construct nested dictionaries to organise data in a hierarchical fashion. This useful technique is outlined extensively in [example](#ex:dict:dictExample).
+As explained earlier the section, dictionaries are among the most powerful built-in tools in Python. As we have previously done with arrays, it is also possible to construct nested dictionaries in order to organise data in a hierarchical fashion. This useful technique is outlined extensively in [example](#ex:dict:dictExample).
 
 It is very easy to implement nested dictionaries:
 
@@ -542,7 +543,7 @@ pkc_family = {
 }
 ```
 
-and we follow similar principles to access, alter, or remove the *values* stored in nested dictionaries:
+and we follow similar principles to access, alter or remove the *values* stored in nested dictionaries:
 
 
 ``` python
@@ -650,16 +651,16 @@ F8
 
 ::::::::::::::::::::::::::::::: discussion
 ### EXAMPLE: Nested dictionaries in practice {#ex:dict:dictExample}
-We would like to store and analyse the structure of several proteins involved in the *Lac operon*. To do so, we create a Python ```dict``` to help us organise our data.
+We would like to store and analyse the structure of several proteins involved in the *Lac operon* - a commonly-studied operon fundamental to the metabolism and transport of lactose in many species of enteric bacteria. To do so, let's create a Python ```dict``` to help us organise our data.
 
-We start off by creating an empty dictionary that will store our structures:
+Let’s begin by creating an empty dictionary to store our structures:
 
 
 ``` python
 structures = dict()
 ```
 
-We then move onto depositing our individual entries to <span style="color: rgb(32, 121, 77);">structure</span> by adding new *items* to it.
+We then move on to depositing our individual entries to <span style="color: rgb(32, 121, 77);">structures</span> by adding new *items* to it.
 
 Each *item* has a *key* that represents the name of the protein we are depositing, and a *value* that is itself a dictionary consisting of information regarding the structure of that protein:
 
@@ -694,7 +695,7 @@ structures['Lactose Permease'] = {
 ```
 
 
-Dictionaries don't have to be homogeneous. In other words, there can be different *items* in each entry.
+Dictionaries don't have to be homogeneous. In other words, each entry can contain different *items* within it.
 
 For instance, the <span style="color: rgb(32, 121, 77);">'LacY'</span> protein contains an additional *key* entitled <span style="color: rgb(32, 121, 77);">'note'</span>:
 
@@ -763,7 +764,7 @@ print(structures['Beta-Galactosidase']['authors'][0])
 Jacobson, R.H.
 ```
 
-Sometimes, especially when creating longer dictionaries, it might be easier to store individual entries in a variable beforehand and add them to the parent dictionary later on.
+Sometimes, particularly when creating longer dictionaries, it might be easier to store individual entries in a variable beforehand and add them to the parent dictionary later on.
 
 Note that our parent dictionary in this case is represented by the variable <span style="color: rgb(32, 121, 77);">structure</span>.
 
@@ -797,7 +798,7 @@ print(structures['Lac Repressor'])
 {'pdb id': '1LBI', 'deposit data': '1996-02-17', 'organism': 'Escherichia coli', 'method': 'x-ray', 'resolution': 2.7, 'authors': ('Lewis, M.', 'Chang, G.', 'Horton, N.C.', 'Kercher, M.A.', 'Pace, H.C.', 'Lu, P.')}
 ```
 
-We sometimes need to see what *keys* our dictionary contains. To obtain an array of *keys*, we use the method <kbd>.keys()</kbd> as follows:
+Sometimes, we need to see what *keys* our dictionary contains. In order to obtain an array of *keys*, we use the method <kbd>.keys()</kbd> as follows:
 
 
 ``` python
@@ -845,7 +846,7 @@ print(average_resolution)
 :::::::::::::::::::::::::::::::
 
 ### **Useful methods for dictionary** {#subsec:dict:usefulMethods}
-Now we use some snippets to demonstrate some of the useful *methods* associated with ```dict``` in Python.
+Next, we can demonstrate some of the useful *methods* that are associated with ```dict``` in Python.
 
 Given a dictionary as:
 
@@ -872,7 +873,7 @@ dict_items([('pdb id', '1LBI'), ('deposit data', '1996-02-17'), ('organism', 'Es
 ```
 
 
-Similar to the <kbd>enumerate()</kbd> function, the <kbd>.items()</kbd> method also returns an array of ```tuple``` members. Each ```tuple``` itself consists of 2 members, and is structured as (<span style="color: rgb(32, 121, 77);">'key'</span>: <span style="color: rgb(32, 121, 77);">'value'</span>). On that account, we can use its output in the context of a ```for```--loop as follows:
+Similar to the <kbd>enumerate()</kbd> function, the <kbd>.items()</kbd> method also returns an array of ```tuple``` members. Each ```tuple``` itself consists of two members, and is structured as (<span style="color: rgb(32, 121, 77);">'key'</span>: <span style="color: rgb(32, 121, 77);">'value'</span>). On that account, we can use its output in the context of a ```for```--loop as follows:
 
 
 ``` python
@@ -893,7 +894,7 @@ resolution: 2.7
 
 ## Practice Exercise 7
 
-Try <kbd>.items()</kbd> on a nested ```dict``` and see how it works.
+Try <kbd>.items()</kbd> on a nested ```dict```, and see how it works.
 
 
 ::::::::::::::::: solution
@@ -924,7 +925,7 @@ dict_items([('L1-a', {'L2-Ka': 'L2_Va', 'L2-Kb': 'L2_Vb'}), ('L1-b', {'L2-Kc': '
 
 :::::::::::::::::::::::::::::::
 
-We learned earlier that if we ask for a *key* that is not in the ```dict```, a ```KeyError``` will be raised. If we anticipate this, we can handle it using the <kbd>.get()</kbd> method. The method takes in the *key* and searches the dictionary to find it. If found, the associating *value* is returned. Otherwise, the method returns ```None``` by default. We can also pass a second value to <kbd>.get()</kbd> to replace ```None``` in cases that the requested *key* does not exist:
+We learned earlier that if we try to retrieve  a *key* that is not in the ```dict```, a ```KeyError``` will be raised. If we anticipate this, we can handle it using the <kbd>.get()</kbd> method. The method takes in the *key* and searches the dictionary to find it. If found, the associated *value* is returned. Otherwise, the method returns ```None``` by default. We can also pass a second value to <kbd>.get()</kbd> to replace ```None``` in cases that the requested *key* does not exist:
 
 
 ``` python
@@ -1002,11 +1003,11 @@ for key in requested_keys:
 
 :::::::::::::::::::::::::::::::
 ### ```for```-loop and dictionary
-Dictionaries and ```for```-loops create a powerful combination. We can leverage the accessibility of dictionary *values* through specific *keys* that we define ourselves in a loop to extract data iteratively and repeatedly.
+Dictionaries and ```for```-loops used together can synergise into a powerful combination. We can leverage the accessibility of dictionary *values* through specific *keys* that we define ourselves in a loop in order to extract data iteratively, and repeatedly.
 
 One of the most useful tools that we can create using nothing more than a ```for```-loop and a dictionary, in only a few lines of code, is a sequence converter.
 
-Here, we are essentially iterating through a sequence of DNA nucleotides (<span style="color: rgb(32, 121, 77);">sequence</span>), extracting one character per loop cycle from our string (<span style="color: rgb(32, 121, 77);">nucleotide</span>). We then use that character as a *key* to retrieve its corresponding *value* from our a dictionary (<span style="color: rgb(32, 121, 77);">dna2rna</span>). Once we get the *value*, we add it to the variable that we initialised using an empty string outside the scope of our ```for```-loop (<span style="color: rgb(32, 121, 77);">rna_sequence</span>) as discussed in [subsection](#subsubsec:mathematicalOperations:nonNumerics). At the end of the process, the variable <span style="color: rgb(32, 121, 77);">rna_sequence</span> will contain a converted version of our sequence.
+Here, we are essentially iterating through a sequence of DNA nucleotides (<span style="color: rgb(32, 121, 77);">sequence</span>), extracting one character per loop cycle from our string (<span style="color: rgb(32, 121, 77);">nucleotide</span>). We then use that character as a *key* to retrieve its corresponding *value* from our dictionary (<span style="color: rgb(32, 121, 77);">dna2rna</span>). Once we get the *value*, we add it to the variable that we initialised using an empty string outside the scope of our ```for```-loop (<span style="color: rgb(32, 121, 77);">rna_sequence</span>) as discussed [here](#subsubsec:mathematicalOperations:nonNumerics). At the end of the process, the variable <span style="color: rgb(32, 121, 77);">rna_sequence</span> will contain a converted version of our sequence.
 
 
 ``` python
@@ -1032,14 +1033,14 @@ RNA: GGGUAGAAUUCUGAAGUGUUCUGAACACUUUAGUCUGGUGACGAGUUACGCCUUGCGGGC
 
 ## Practice Exercise 9
 
-We know that in reverse transcription, RNA nucleotides are converted to their complementary DNA as shown:
+We know that in reverse transcription, RNA nucleotides are converted to their complementary DNA nucleotides as shown:
 
 | Type | Direction | Nucleotides  |
 |:---------------------------:|:---:|:---:|
 | RNA | 5'...' | U A G C |
 | cDNA | 5'...' | A T C G |
 
-with that in mind:
+with this in mind:
 
 1. Use the table to construct a dictionary for reverse transcription, and another dictionary for the conversion of cDNA to DNA.
 
@@ -1106,24 +1107,24 @@ TACCTACACTGAAGGGTTCGGGCCCCGCACCCGGACCTCTACATGGGTCCGTGGCGCGTCGGACGCCGGGGGTTGTGGTG
 :::::::::::::::::::::::::::::::
 
 ## Summary
-In this section we talked about dictionaries, which are one the most powerful built-in types in Python. We learned:
+In this section we explored dictionaries: one of the most powerful in-built types in Python. We covered:
 
-- how to create dictionaries in Python,
-- methods to alter or manipulate normal and nested dictionaries,
-- two different techniques for changing an existing *key*,
-- examples on how dictionaries help us organise our data and retrieve them when needed,
+- How to create dictionaries in Python.
+- Methods to alter or manipulate both normal and nested dictionaries.
+- Two different techniques for changing an existing *key*.
+- Examples of how dictionaries can organise data and retrieve specific items and entries as and when required.
 
 
-Finally, we also learned that we can create an *iterable* (discussed in [section](#for-loop)) from dictionary *keys* or *values* using the <kbd>.key()</kbd>, the <kbd>.values()</kbd>, or the <kbd>.items()</kbd> methods.
+Finally, we also explored instantiating *iterables* (discussed [here](#for-loop)) from dictionary *keys* or *values* using the <kbd>.key()</kbd>, the <kbd>.values()</kbd>, and/or <kbd>.items()</kbd> methods.
 
 ## Exercises
 :::::::::::::::::::::::::::::::::::::::: challenge
 
 ### End of chapter Exercises
 
-We know that the process of protein translation starts by transcribing a gene from DNA to RNA *nucleotides*, followed by translating the RNA *codons* to protein.
+We know that the process of protein translation begins by transcribing a gene from DNA to RNA *nucleotides*, followed by translating the RNA *codons* into protein.
 
-Conventionally, we write a DNA sequence from the <span style="color: rgb(32, 121, 77);">5'</span>-end to the <span style="color: rgb(32, 121, 77);">3'</span>-end. The transcription process, however, starts from the <span style="color: rgb(32, 121, 77);">3'</span>-end of a gene to the <span style="color: rgb(32, 121, 77);">5'</span>-end (anti-sense strand), resulting in a sense mRNA sequence complementing the sense DNA strand. This is because RNA polymerase can only add nucleotides to the <span style="color: rgb(32, 121, 77);">3'</span>-end of the growing mRNA chain, which eliminates the need for the [Okazaki fragments](https://en.wikipedia.org/wiki/Okazaki_fragments) as seen in DNA replication.
+Conventionally, we write DNA sequences from their <span style="color: rgb(32, 121, 77);">5'</span>-end to their <span style="color: rgb(32, 121, 77);">3'</span>-end. The transcription process, however, begins from the <span style="color: rgb(32, 121, 77);">3'</span>-end of a gene, through to the <span style="color: rgb(32, 121, 77);">5'</span>-end (anti-sense strand), resulting in a sense mRNA sequence complementing the sense DNA strand. This is because RNA polymerase can only add nucleotides to the <span style="color: rgb(32, 121, 77);">3'</span>-end of the growing mRNA chain, which eliminates the need for the [Okazaki fragments](https://en.wikipedia.org/wiki/Okazaki_fragments) as seen in DNA replication.
 
 **Example:** The DNA sequence <span style="color: rgb(32, 121, 77);">ATGTCTAAA</span> is transcribed into <span style="color: rgb(32, 121, 77);">AUGUCUAAA</span>.
 
@@ -1151,7 +1152,7 @@ dna_sequence = (
 
 Use the DNA sequence and the conversion table to:
 
-1. Write a Python script to *transcribe* this sequence to mRNA as it occurs in a biological organism. That is, determine the complimentary DNA first, and use that to work out the mRNA.
+1. Write a Python script to *transcribe* this sequence to mRNA as it occurs in a biological organism. That is, determine the complimentary DNA first, and use this to produce the mRNA sequence.
 
 2. Use the following dictionary in a Python script to obtain the translation (protein sequence) of the Green Fluorescent Protein using the mRNA sequence you obtained.
 
@@ -1184,7 +1185,7 @@ codon2aa = {
 ::::::::::::::::::::::::::::::::::::: keypoints
 
 - Dictionaries associate a set of *values* with a number of *keys*.
-- *keys* are used to access the values of a dictionary.
+- *Keys* are used to access the values of a dictionary.
 - Dictionaries are mutable.
 - Nested dictionaries are constructed to organise data in a hierarchical fashion.
 - Some of the useful methods to work with dictionaries are: <kbd>.items()</kbd>, <kbd>.get()</kbd>
